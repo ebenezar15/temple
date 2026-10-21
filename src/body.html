@@ -1,0 +1,567 @@
+<header class="topbar" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="Where Heaven Meets Earth, back to top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><circle cx="16" cy="16" r="9" fill="none" stroke="var(--accent)" stroke-width="1.5"/><path d="M6 25 L16 9 L26 25 Z" fill="var(--eden)"/><circle cx="16" cy="10" r="3" fill="var(--accent)"/></svg>
+      <span>Where Heaven Meets Earth</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#part1">Garden-Temple</a>
+      <a href="#tabernacle">Tabernacle</a>
+      <a href="#ark">Ark</a>
+      <a href="#part2">Babel &amp; Babylon</a>
+      <a href="#pentecost">Pentecost</a>
+      <a href="#cities">Two Cities</a>
+      <a href="#web">Connections</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+    <button class="scheme-btn" id="schemeBtn" aria-expanded="false" aria-controls="schemePanel">
+      <span class="dots" aria-hidden="true"><i style="background:var(--eden)"></i><i style="background:var(--accent)"></i><i style="background:var(--babel)"></i></span>
+      <span class="lbl">Colours</span>
+    </button>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<div class="scheme-panel" id="schemePanel" hidden role="dialog" aria-label="Colour scheme">
+  <h4>Colour scheme</h4>
+  <div class="scheme-grid" id="schemeGrid"></div>
+  <div class="accent-row">
+    <label for="accentPick">Custom highlight colour</label>
+    <input type="color" id="accentPick" value="#a87a1c">
+  </div>
+  <button class="linkish" id="accentReset" type="button">Reset highlight to scheme default</button>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">An interactive journey through Scripture</p>
+      <h1>Where <em>Heaven</em> Meets Earth</h1>
+      <p class="lede">One story runs from Genesis to Revelation: God making a home with people, and people trying to build one without him.</p>
+      <div class="hero-ctas">
+        <a class="btn primary" href="#part1"><span class="num">PART I</span> The Garden-Temple</a>
+        <a class="btn" href="#part2"><span class="num">PART II</span> Babel &amp; the City of God</a>
+      </div>
+      <div class="hero-meta">
+        <div><b>Eden → New Jerusalem</b>Garden, mountain, tabernacle, temple</div>
+        <div><b>Babel → Pentecost</b>Ziggurat, Babylon, the nations</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 560 460" id="heroSvg">
+        <defs>
+          <linearGradient id="mtn" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="var(--eden)"/>
+            <stop offset="1" stop-color="var(--eden)" stop-opacity=".55"/>
+          </linearGradient>
+          <radialGradient id="halo"><stop offset="0" stop-color="var(--accent)" stop-opacity=".55"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></radialGradient>
+        </defs>
+        <g id="heroStars"></g>
+        <circle cx="250" cy="138" r="120" fill="url(#halo)"/>
+        <g fill="none" stroke="var(--accent)">
+          <circle cx="250" cy="138" r="56" stroke-width="1.5" opacity=".9" stroke-dasharray="2 6" class="spin-slow"/>
+          <circle cx="250" cy="138" r="96" stroke-width="1" opacity=".55"/>
+          <circle cx="250" cy="138" r="140" stroke-width="1" opacity=".3" stroke-dasharray="1 8"/>
+          <circle cx="250" cy="138" r="186" stroke-width="1" opacity=".18"/>
+        </g>
+        <path d="M14 432 L196 176 Q250 118 304 176 L486 432 Z" fill="url(#mtn)"/>
+        <path d="M196 176 Q250 118 304 176 L280 196 Q250 172 220 196 Z" fill="var(--accent)" opacity=".25"/>
+        <!-- the river out of Eden, parting into four heads -->
+        <g fill="none" stroke="var(--surface)" stroke-width="3" stroke-linecap="round">
+          <path class="flow" d="M250 170 C250 220 250 240 250 262"/>
+          <path class="flow" d="M250 262 C220 300 150 350 92 430"/>
+          <path class="flow" d="M250 262 C240 320 210 380 196 430"/>
+          <path class="flow" d="M250 262 C262 320 292 380 306 430"/>
+          <path class="flow" d="M250 262 C282 300 352 350 410 430"/>
+        </g>
+        <!-- tree of life -->
+        <g class="float">
+          <rect x="246" y="120" width="8" height="40" rx="3" fill="var(--ink)" opacity=".7"/>
+          <circle cx="250" cy="112" r="22" fill="var(--accent)"/>
+          <circle cx="232" cy="124" r="13" fill="var(--accent)" opacity=".85"/>
+          <circle cx="268" cy="124" r="13" fill="var(--accent)" opacity=".85"/>
+        </g>
+        <!-- ziggurat on the plain -->
+        <g id="heroZig" transform="translate(372 0)">
+          <rect x="0" y="406" width="170" height="26" fill="var(--babel)"/>
+          <rect x="16" y="382" width="138" height="24" fill="var(--babel)" opacity=".92"/>
+          <rect x="32" y="360" width="106" height="22" fill="var(--babel)" opacity=".84"/>
+          <rect x="47" y="340" width="76" height="20" fill="var(--babel)" opacity=".76"/>
+          <rect x="62" y="322" width="46" height="18" fill="var(--babel)" opacity=".68"/>
+          <rect x="74" y="306" width="22" height="16" fill="var(--accent)"/>
+          <path d="M80 432 L80 360 L90 360 L90 432 Z" fill="var(--surface)" opacity=".35"/>
+          <line x1="85" y1="300" x2="85" y2="230" stroke="var(--babel)" stroke-width="2" stroke-dasharray="3 6" class="flow"/>
+          <text x="85" y="220" text-anchor="middle" font-size="22" font-weight="700" fill="var(--babel)">?</text>
+        </g>
+        <line x1="0" y1="432" x2="560" y2="432" stroke="var(--line)" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PART I ============ -->
+<div class="part-banner" id="part1">
+  <div class="wrap">
+    <div class="part-num" aria-hidden="true">I</div>
+    <div>
+      <p class="eyebrow">Part one</p>
+      <h2>The Garden Was a Temple</h2>
+      <p>Read Genesis 2–3 slowly and in Hebrew, next to the rest of the Bible and the ancient world, and Eden looks less like a park and more like God’s sanctuary on a mountain, with Adam serving as its first priest.</p>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="clues">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Eight clues in the text</p>
+      <h2>Why Eden reads like a sanctuary</h2>
+      <p>Tap each card to turn it over. Every clue in Genesis has a matching detail in the Tabernacle or Temple.</p>
+    </div>
+    <div class="clues" id="clueGrid"></div>
+    <div class="clue-count"><span id="clueLabel" class="muted">0 of 8 clues uncovered</span><div class="meter"><i id="clueMeter"></i></div><button class="btn small" id="clueAll" type="button">Reveal all</button></div>
+  </div>
+</section>
+
+<section class="block alt" id="mountain">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Cosmic geography</p>
+      <h2>The mountain of God, in three rings</h2>
+      <p>In the ancient Near East the gods lived on a cosmic mountain, the high centre of the world where life-giving water flowed out and heaven touched earth. Eden, Sinai and the Tabernacle share the same three zones of holiness. Switch between them.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="mtnStage"></div>
+      <div class="panel">
+        <div class="chips" role="group" aria-label="Choose a sanctuary" id="mtnModes"></div>
+        <h3 id="mtnTitle"></h3>
+        <p class="muted" id="mtnIntro"></p>
+        <div class="zones" id="mtnZones"></div>
+      </div>
+    </div>
+    <div class="callout mt reveal">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 8 L20 32 M8 20 L32 20" stroke="currentColor" stroke-width="2"/><path d="M27 13 L32 20 L27 27" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <div><b>East means away from God</b>Exiles from God’s presence keep moving east: Adam and Eve are driven out on the east (<span class="ref">Gen 3:24</span>), Cain settles “east of Eden” (<span class="ref">Gen 4:16</span>), Babel’s builders migrate east to Shinar (<span class="ref">Gen 11:2</span>), and Lot chooses the east toward Sodom (<span class="ref">Gen 13:11</span>). The Tabernacle and Temple face east, so every worshipper walks <em>west</em>, back toward the presence.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="tabernacle">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">A portable Eden · Exodus 25–40</p>
+      <h2>Walk through the Tabernacle</h2>
+      <p>“Let them make me a sanctuary, that I may dwell in their midst” (<span class="ref">Exod 25:8</span>). Select any object, or press <b>Walk west</b> to enter from the eastern gate and move toward the presence.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="tabStage"></div>
+      <div class="panel" id="tabPanel" aria-live="polite"></div>
+    </div>
+    <div class="htl-controls">
+      <button class="btn primary small" id="tabWalk" type="button">Walk west ▸</button>
+      <button class="btn small" id="tabReset" type="button">Back to the gate</button>
+      <span class="legend"><span><i style="background:var(--babel)"></i>Blue</span><span><i style="background:#6b3a8f"></i>Purple</span><span><i style="background:var(--flame)"></i>Scarlet</span><span><i style="background:var(--accent)"></i>Gold</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="ark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The footstool of God’s throne</p>
+      <h2>The Ark of the Covenant</h2>
+      <p>A gold-covered chest about 2.5 × 1.5 × 1.5 cubits (roughly 115 × 70 × 70 cm), the Ark sat in the Most Holy Place beneath two cherubim. David called it “the footstool of our God” (<span class="ref">1 Chr 28:2</span>). Explore its parts, then follow its journey on the map.</p>
+    </div>
+    <div class="split even">
+      <div class="stage" id="arkStage"></div>
+      <div class="panel" id="arkPanel" aria-live="polite"></div>
+    </div>
+
+    <div class="sec-head mt reveal">
+      <h3>The Ark’s journey</h3>
+      <p>From Sinai to Solomon’s Temple, and then out of history. Step through it or press play.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="arkMapStage"></div>
+      <div class="panel" id="arkJourneyPanel" aria-live="polite"></div>
+    </div>
+    <div class="htl-controls">
+      <button class="btn primary small" id="arkPlay" type="button">Play journey ▸</button>
+      <button class="btn small" id="arkPrev" type="button">◂ Previous</button>
+      <button class="btn small" id="arkNext" type="button">Next ▸</button>
+      <span class="muted" id="arkStepLabel"></span>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="adam">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Man in the sanctuary</p>
+      <h2>Adam: image, priest and king</h2>
+      <p>Ancient kings set up statues of themselves to mark the lands they ruled, and temples were not finished until the god’s image was installed. Genesis says God placed his own living image, humanity, inside his garden-temple to serve, guard and rule.</p>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card word"><span class="heb">עָבַד</span><b>ʿāvad · to serve, to work</b><small>“to work it” <span class="ref">Gen 2:15</span> · the Levites’ “service of the tabernacle” <span class="ref">Num 3:7–8</span></small></div>
+      <div class="card word"><span class="heb">שָׁמַר</span><b>shāmar · to guard, to keep</b><small>“to keep it” <span class="ref">Gen 2:15</span> · priests “guard” the sanctuary <span class="ref">Num 18:5–7</span></small></div>
+      <div class="card word"><span class="heb">צֶלֶם</span><b>tselem · image</b><small>“Let us make man in our image … and let them have dominion” <span class="ref">Gen 1:26</span></small></div>
+    </div>
+    <div class="tabs mt" role="tablist" aria-label="Compare the priest-kings" id="adamTabs"></div>
+    <div id="adamPanels"></div>
+
+    <div class="sec-head mt reveal">
+      <h3>Creation as a temple dedication</h3>
+      <p>Scholars such as John Walton and G. K. Beale note that the seven days of Genesis 1 follow the pattern of building and inaugurating a temple, which ends with the deity coming to “rest” in it.</p>
+    </div>
+    <div class="ctable-wrap reveal">
+      <table class="ctable">
+        <thead><tr><th>Pattern</th><th>Creation</th><th>Tabernacle</th><th>Solomon’s Temple</th></tr></thead>
+        <tbody>
+          <tr><td>Sevens</td><td>Seven days<span class="ref">Gen 1:1–2:3</span></td><td>Seven speeches, each “The LORD said to Moses”<span class="ref">Exod 25–31</span></td><td>Seven years to build; dedicated in the seventh month<span class="ref">1 Kgs 6:38; 8:2</span></td></tr>
+          <tr><td>Completion</td><td>“God finished his work”<span class="ref">Gen 2:2</span></td><td>“Moses finished the work”<span class="ref">Exod 40:33</span></td><td>“All the work … was finished”<span class="ref">1 Kgs 7:51</span></td></tr>
+          <tr><td>Blessing</td><td>God blessed the seventh day<span class="ref">Gen 2:3</span></td><td>Moses blessed them<span class="ref">Exod 39:43</span></td><td>Solomon blessed the assembly<span class="ref">1 Kgs 8:14</span></td></tr>
+          <tr><td>Rest</td><td>God rested on the seventh day<span class="ref">Gen 2:2</span></td><td>The Sabbath sign closes the instructions<span class="ref">Exod 31:12–17</span></td><td>“Arise, O LORD, to your resting place”<span class="ref">Ps 132:8, 14</span></td></tr>
+          <tr><td>Glory</td><td>The world is “very good”<span class="ref">Gen 1:31</span></td><td>The glory fills the tent<span class="ref">Exod 40:34</span></td><td>The cloud fills the house<span class="ref">1 Kgs 8:10–11</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="tree">
+  <div class="wrap">
+    <div class="split even">
+      <div class="stack reveal">
+        <p class="eyebrow">Tree of life → lampstand</p>
+        <h2>A golden tree in the holy place</h2>
+        <div class="prose">
+          <p>The menorah was hammered from one piece of pure gold, with branches, almond blossoms, buds and flowers (<span class="ref">Exod 25:31–40</span>). It stood just outside the veil like a stylised tree of life, burning in the presence of God.</p>
+          <p>Aaron’s staff, kept beside the Ark, “sprouted and put forth buds and produced blossoms, and it bore ripe almonds” (<span class="ref">Num 17:8</span>). Life springs up again near the throne.</p>
+          <p>In <span class="ref">Revelation 1:12–20</span> the risen Christ walks among seven golden lampstands, his churches. In <span class="ref">Revelation 22:2</span> the tree of life stands in the city again.</p>
+        </div>
+      </div>
+      <div class="stage" id="menorahStage"></div>
+    </div>
+    <div class="mt" id="menorahPhoto"></div>
+  </div>
+</section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">One plan from Genesis 2 to Revelation 22</p>
+      <h2>God’s dwelling through history</h2>
+      <p>The barriers change, but the goal stays the same: “I will walk among you and will be your God” (<span class="ref">Lev 26:12</span>). Select a moment or step through the story.</p>
+    </div>
+    <div class="htl" id="storyTl"></div>
+    <div class="htl-controls">
+      <button class="btn small" id="storyPrev" type="button">◂ Previous</button>
+      <button class="btn primary small" id="storyNext" type="button">Next ▸</button>
+    </div>
+    <div class="htl-detail panel" id="storyDetail" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="block alt" id="restored">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The story comes home</p>
+      <h2>Genesis 2–3 ↔ Revelation 21–22</h2>
+      <p>The Bible ends where it began, only better. Hover or tap a line to see its match. The New Jerusalem is Eden as it was always meant to become: a garden-city-temple filling the earth.</p>
+    </div>
+    <div class="mirror" id="mirror">
+      <div class="mirror-col" id="mirrorL"><h3>In the beginning</h3></div>
+      <div class="mirror-mid"><svg id="mirrorSvg" aria-hidden="true"></svg></div>
+      <div class="mirror-col" id="mirrorR"><h3>In the end</h3></div>
+    </div>
+    <div class="cubes">
+      <div class="card cube-card reveal">
+        <div class="cube-scene" aria-hidden="true"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div><h3>The Most Holy Place: a perfect cube</h3><p>20 × 20 × 20 cubits, overlaid with pure gold (<span class="ref">1 Kgs 6:20</span>). Only the high priest entered, once a year.</p></div>
+      </div>
+      <div class="card cube-card reveal">
+        <div class="cube-scene" aria-hidden="true"><div class="cube big"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div><h3>The New Jerusalem: a cube of gold</h3><p>“Its length and width and height are equal”, 12,000 stadia each (<span class="ref">Rev 21:16</span>), pure gold like glass. The whole city has become the Most Holy Place. “I saw no temple in the city, for its temple is the Lord God the Almighty and the Lamb” (<span class="ref">Rev 21:22</span>).</p></div>
+      </div>
+    </div>
+    <div class="gallery mt" id="part1Gallery"></div>
+  </div>
+</section>
+
+<!-- ============ PART II ============ -->
+<div class="part-banner" id="part2">
+  <div class="wrap">
+    <div class="part-num" aria-hidden="true">II</div>
+    <div>
+      <p class="eyebrow">Part two</p>
+      <h2>Babel, Babylon and the City of God</h2>
+      <p>Humanity keeps trying to build its own mountain of God: a city, a tower and a name, with a god kept on retainer. Scripture answers with a city God designs and builds himself.</p>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="babel">
+  <div class="wrap">
+    <div class="split even">
+      <div class="stack reveal">
+        <p class="eyebrow">Genesis 11:1–9</p>
+        <h2>The tower everyone pictures</h2>
+        <div class="prose">
+          <p>Pieter Bruegel the Elder’s 1563 painting is the image most of us carry: a spiralling, cloud-piercing tower swarming with workers. The usual moral follows: proud people tried to climb up to God, so God scrambled their languages.</p>
+          <p>Ancient readers would have seen something else. The text gives a location (Shinar, southern Mesopotamia), a building method (fired brick and bitumen) and a phrase (“its top in the heavens”) that together point to one kind of building: a <b>ziggurat</b>, a temple-tower.</p>
+        </div>
+        <div class="tabs" role="tablist" id="mythTabs" aria-label="Myth or text"></div>
+        <div id="mythPanels"></div>
+      </div>
+      <div id="bruegelPhoto"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="map">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The land of Shinar and beyond</p>
+      <h2>Map of the story</h2>
+      <p>Turn on layers to trace the rivers of Eden, the cities of Babel, Abraham’s call out of Ur, the exile to Babylon, and the nations gathered at Pentecost.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="mapStage" style="padding:0"></div>
+      <div class="panel">
+        <div class="chips" id="mapLayers" role="group" aria-label="Map layers"></div>
+        <div id="mapInfo" class="stack" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ziggurat">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Anatomy of a temple-tower</p>
+      <h2>What is a ziggurat?</h2>
+      <p>A ziggurat was not a ladder for people to climb up to heaven. It was a man-made holy mountain, built so that a god would come <em>down</em>, live in the shrine at its top, and bless the city below. Build one, then watch what Genesis 11:5 does to it.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="zigStage"></div>
+      <div class="panel" id="zigPanel" aria-live="polite"></div>
+    </div>
+    <div class="htl-controls">
+      <button class="btn primary small" id="zigBuild" type="button">Build the tower ▸</button>
+      <button class="btn small" id="zigDescend" type="button">“The LORD came down to see” ▾</button>
+      <button class="btn small" id="zigReset" type="button">Reset</button>
+    </div>
+
+    <div class="grid-2 mt">
+      <div class="stack reveal">
+        <h3>Names carved in brick</h3>
+        <p class="muted">Ziggurat names describe what the building was for, not how tall it was.</p>
+        <div class="stack" id="zigNames"></div>
+      </div>
+      <div class="stack reveal">
+        <h3>“Its top in the heavens”, to scale</h3>
+        <p class="muted">Babylon’s great ziggurat, Etemenanki, stood about 91 m tall. Here it is beside other tall structures.</p>
+        <div class="stage scale-chart" id="scaleChart"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="sin">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">What actually went wrong</p>
+      <h2>Three layers of Babel’s rebellion</h2>
+    </div>
+    <div class="tabs" role="tablist" id="sinTabs" aria-label="Layers of the sin"></div>
+    <div id="sinPanels"></div>
+  </div>
+</section>
+
+<section class="block" id="shem">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">A Hebrew wordplay</p>
+      <h2>“Let us make a <span class="heb">שֵׁם</span> <i>shem</i> for ourselves”</h2>
+      <p>The word for “name” is <i>shem</i>, which is also the name of Noah’s son. Babel tries to build a name out of brick. The very next paragraph is “the generations of Shem” (<span class="ref">Gen 11:10</span>), a family line God builds out of people, ending in Abram, to whom God says: “I will make your <i>name</i> great” (<span class="ref">Gen 12:2</span>). Trace the line.</p>
+    </div>
+    <div class="gen" id="genLine"></div>
+    <div class="panel mt" id="genPanel" aria-live="polite"></div>
+    <div class="htl-controls"><button class="btn primary small" id="genPlay" type="button">Trace the line ▸</button></div>
+
+    <div class="grid-2 mt">
+      <div class="stack reveal">
+        <h3>“Come, let us…”: God answers in the same words</h3>
+        <div class="letus" id="letus"></div>
+      </div>
+      <div class="stack reveal">
+        <h3>The name that is given</h3>
+        <div class="card"><p><b>Babel:</b> “Let us make a name for ourselves” <span class="ref">Gen 11:4</span></p></div>
+        <div class="card"><p><b>Abram:</b> “I will make your name great, so that you will be a blessing … in you all the families of the earth shall be blessed” <span class="ref">Gen 12:2–3</span></p></div>
+        <div class="card"><p><b>Pentecost:</b> “Repent and be baptized every one of you in the name of Jesus Christ” <span class="ref">Acts 2:38</span></p></div>
+        <div class="card"><p><b>Exalted:</b> “God has highly exalted him and bestowed on him the name that is above every name” <span class="ref">Phil 2:9</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="nations">
+  <div class="wrap">
+    <div class="nations-wrap">
+      <div class="stage" id="nationsStage"></div>
+      <div class="stack reveal">
+        <p class="eyebrow">Deuteronomy 32:8–9 · the Table of Nations</p>
+        <h2>Seventy nations and one portion</h2>
+        <div class="prose">
+          <p>Genesis 10 lists about seventy nations descended from Noah’s sons. Deuteronomy 32 remembers Babel this way: “When the Most High gave to the nations their inheritance, when he divided mankind, he fixed the borders of the peoples according to the number of the sons of God. But the LORD’s portion is his people, Jacob his allotted heritage.”</p>
+          <p>The reading “sons of God” comes from the Dead Sea Scrolls (4QDeut<sup>j</sup>) and is reflected in the Greek Septuagint; the later Masoretic text reads “sons of Israel.” Many scholars, including Michael Heiser, take the older reading to mean God placed the scattered nations under lesser spiritual beings, who later demanded worship as the “gods of the nations” (<span class="ref">Deut 4:19–20; Ps 82</span>), while he kept one people for himself, a nation that did not exist yet.</p>
+          <p>Then, in the very next chapter, he calls Abram.</p>
+        </div>
+        <div class="htl-controls"><button class="btn primary small" id="divideBtn" type="button">Divide the nations ▸</button><button class="btn small" id="gatherBtn" type="button">Gather again (Acts 2)</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="gate">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Two gates</p>
+      <h2>“Gate of the gods” and “the gate of heaven”</h2>
+      <p>Babylon’s own name, <i>Bāb-ilim</i>, means “gate of the god(s)”. Genesis gives the true gate in the next generations, and it is not built by anyone.</p>
+    </div>
+    <div class="split even">
+      <div class="stage" id="ladderStage"></div>
+      <div class="stack">
+        <div class="card"><p class="eyebrow">Babylon</p><h3><span class="cun">𒆍𒀭𒊏𒆠</span> · Bāb-ilim</h3><p>“Gate of the gods”. A city built around a ziggurat whose stairway was meant to bring a god down to his shrine on human terms.</p></div>
+        <div class="card"><p class="eyebrow">Bethel · Genesis 28:12–17</p><h3>A stairway Jacob did not build</h3><p>Fleeing, alone, with a stone for a pillow, Jacob dreams of a <i>sullam</i> (a stairway, likely evoking a ziggurat ramp) set on earth with its top reaching heaven, angels going up and down, and the LORD standing above it. God speaks promises unasked. Jacob wakes: “This is none other than the house of God, and this is the gate of heaven.”</p></div>
+        <div class="card"><p class="eyebrow">John 1:51</p><h3>The stairway is a person</h3><p>Jesus to Nathanael: “You will see heaven opened, and the angels of God ascending and descending on the Son of Man.” The meeting place of heaven and earth is Jesus himself.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="pentecost">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Genesis 11 ↔ Acts 2</p>
+      <h2>Pentecost: Babel in reverse</h2>
+      <p>Drag the divider. At Babel, people build up so a god will come down, and God comes down to scatter them. At Pentecost, people only wait, and God comes down to gather them.</p>
+    </div>
+    <div class="compare" id="compare">
+      <div class="side babel-side"><div class="inner">
+        <p class="eyebrow" style="color:inherit;opacity:.8">Babel · Genesis 11</p>
+        <h3>Many scattered</h3>
+        <ul>
+          <li>Humans take the initiative: “Come, let us build.”</li>
+          <li>A ziggurat is built to summon a god on the city’s terms.</li>
+          <li>God comes down to confuse.</li>
+          <li>One language becomes many; understanding collapses.</li>
+          <li>The people are scattered over the earth.</li>
+          <li>“Let us make a name for ourselves.”</li>
+        </ul>
+      </div></div>
+      <div class="side pent-side"><div class="inner">
+        <p class="eyebrow">Pentecost · Acts 2</p>
+        <h3>Scattered gathered</h3>
+        <ul>
+          <li>God takes the initiative; the disciples simply wait (<span class="ref">Acts 1:4</span>).</li>
+          <li>No shrine and no ritual: an upper room.</li>
+          <li>The Spirit comes down as wind and divided tongues of fire.</li>
+          <li>Many languages remain, yet “each one was hearing them speak in his own language” (<span class="ref">Acts 2:6</span>).</li>
+          <li>Devout people “from every nation under heaven” are gathered (<span class="ref">Acts 2:5</span>).</li>
+          <li>“…in the name of Jesus Christ” (<span class="ref">Acts 2:38</span>).</li>
+        </ul>
+      </div></div>
+      <div class="handle" aria-hidden="true"></div>
+      <input type="range" min="5" max="95" value="50" id="compareRange" aria-label="Compare Babel and Pentecost">
+    </div>
+    <div class="tongues" aria-live="polite">
+      <div>
+        <div class="tongue-lang" id="tongueLang">Greek · Acts 2:11</div>
+        <div class="tongue-text" id="tongueText">τὰ μεγαλεῖα τοῦ θεοῦ</div>
+        <p class="muted" style="font-size:.9rem">“We hear them telling in our own tongues the mighty works of God.” Diversity is not erased; the barrier is.</p>
+      </div>
+      <button class="btn small" id="tongueBtn" type="button">Hear another tongue</button>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="cities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">A tale of two cities</p>
+      <h2>The city of man and the city of God</h2>
+      <p>From Cain’s first city to “Babylon the great”, people build cities to secure themselves without God. Running alongside is another city that Abraham waited for, “the city that has foundations, whose designer and builder is God” (<span class="ref">Heb 11:10</span>). Select a city.</p>
+    </div>
+    <div class="lanes" id="lanes"></div>
+    <div class="panel mt" id="cityPanel" aria-live="polite"></div>
+    <blockquote class="big mt reveal">“Two cities have been formed by two loves: the earthly by the love of self, even to the contempt of God; the heavenly by the love of God, even to the contempt of self.”<cite>Augustine of Hippo, <i>The City of God</i> XIV.28 (AD 426)</cite></blockquote>
+  </div>
+</section>
+
+<section class="block alt" id="two-cities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Revelation 17–18 ↔ 21–22</p>
+      <h2>Babylon the great, or the New Jerusalem</h2>
+      <p>John sees two women who are two cities, and the reader is invited to leave one and enter the other.</p>
+    </div>
+    <div class="ctable-wrap reveal">
+      <table class="ctable">
+        <thead><tr><th>Theme</th><th style="color:var(--babel)">Babylon</th><th style="color:var(--accent)">New Jerusalem</th></tr></thead>
+        <tbody id="cityTable"></tbody>
+      </table>
+    </div>
+    <div class="gallery mt" id="part2Gallery"></div>
+    <div class="callout mt reveal">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 34 L12 22 L18 28 L26 14 L36 34 Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <div><b>Babylon’s counterfeit Eden</b>Babylon offered its own version of every Eden image: an artificial mountain (Etemenanki), a gate of the gods (the blue-glazed Ishtar Gate on the Processional Way) and, according to the later writer Berossus, terraced “hanging gardens” Nebuchadnezzar built because his wife missed her green mountains. “Is not this great Babylon, which I have built … by my mighty power … for the glory of my majesty?” (<span class="ref">Dan 4:30</span>).</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONNECTIONS + QUIZ ============ -->
+<section class="block" id="web">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Everything connects</p>
+      <h2>The web of connections</h2>
+      <p>Select any idea to light up the threads that tie it to the rest of the story.</p>
+    </div>
+    <div class="web-wrap">
+      <div class="stage web" id="webStage"></div>
+      <div class="panel" id="webPanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="quiz">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Check what you have seen</p>
+      <h2>Ten-question quiz</h2>
+    </div>
+    <div class="quiz" id="quizBox"></div>
+  </div>
+</section>
+
+<section class="block" id="sources">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Go deeper</p>
+      <h2>Further reading</h2>
+      <p>The ideas here draw on these scholars. Scripture quotations follow the ESV unless noted.</p>
+    </div>
+    <div class="sources" id="sourceList"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Where Heaven Meets Earth</b>: an interactive Bible study on the garden-temple and the two cities.</p>
+    <p>Artwork via Wikimedia Commons (public domain or as credited on each image). Maps and diagrams are simplified illustrations.</p>
+    <p><a href="#hero">Back to top ↑</a></p>
+  </div>
+</footer>
