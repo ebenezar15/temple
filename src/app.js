@@ -93,7 +93,13 @@
     wings: "M12 12 C8 4 3 5 2 9 C5 9 8 11 12 12 C16 11 19 9 22 9 C21 5 16 4 12 12 Z M12 12 L12 21",
     gem: "M6 4 L18 4 L22 9 L12 21 L2 9 Z M2 9 L22 9 M9 4 L7 9 L12 21 L17 9 L15 4",
     tree: "M12 21 L12 11 M12 14 L8 10 M12 12 L16 8 M12 3 C7 3 5 7 7 10 C4 12 7 16 12 15 C17 16 20 12 17 10 C19 7 17 3 12 3 Z",
-    robe: "M9 3 L15 3 L19 7 L17 10 L16 9 L17 21 L7 21 L8 9 L7 10 L5 7 Z M12 3 L12 8"
+    robe: "M9 3 L15 3 L19 7 L17 10 L16 9 L17 21 L7 21 L8 9 L7 10 L5 7 Z M12 3 L12 8",
+    speak: "M4 5 H20 V15 H11 L6 19 V15 H4 Z M8 9 H16 M8 12 H13",
+    scroll: "M6 4 H17 C19 4 19 7 17 7 H8 V18 C8 20 5 20 5 18 V6 C5 4 6 4 6 4 Z M8 7 V18 C8 20 19 20 19 18 V7",
+    scale: "M12 4 V20 M6 20 H18 M5 8 H19 M5 8 L2 14 H8 Z M19 8 L16 14 H22 Z",
+    council: "M12 4 A2 2 0 1 1 12 8 A2 2 0 1 1 12 4 M5 9 A2 2 0 1 1 5 13 A2 2 0 1 1 5 9 M19 9 A2 2 0 1 1 19 13 A2 2 0 1 1 19 9 M9 20 C9 14 15 14 15 20 M2 20 C2 16 8 16 8 20 M16 20 C16 16 22 16 22 20",
+    temple: "M3 20 H21 M5 20 V10 M19 20 V10 M9 20 V10 M15 20 V10 M3 10 L12 4 L21 10 Z",
+    dust: "M4 18 C8 16 16 16 20 18 M6 14 C9 12 13 13 15 11 C17 9 20 10 20 10 M7 21 H17"
   };
   function icon(name, cls) {
     return sv("svg", { viewBox: "0 0 24 24", class: cls || "icon", "aria-hidden": "true", fill: "none", stroke: "currentColor", "stroke-width": "1.6", "stroke-linecap": "round", "stroke-linejoin": "round" },
@@ -648,6 +654,8 @@
       menorah: () => [sv("path", { d: "M0 40 L0 -50 M-60 -50 A60 60 0 0 0 60 -50 M-40 -50 A40 40 0 0 0 40 -50 M-20 -50 A20 20 0 0 0 20 -50", fill: "none", stroke: gold, "stroke-width": 6 })],
       tower: () => [...[0, 1, 2, 3, 4, 5].map(i => sv("ellipse", { cx: 0, cy: 30 - i * 22, rx: 120 - i * 17, ry: 12, fill: blue, opacity: .35 + i * .1 })), sv("path", { d: "M-60 -110 Q0 -150 60 -110", fill: "none", stroke: "var(--muted)", "stroke-width": 3, opacity: .5 })],
       gate: () => [sv("rect", { x: -110, y: -80, width: 220, height: 120, fill: blue }), sv("path", { d: "M-40 40 L-40 -20 A40 40 0 0 1 40 -20 L40 40 Z", fill: "var(--bg-2)" }), ...[-80, 60].map(x => sv("rect", { x, y: -60, width: 20, height: 14, fill: gold }))],
+      serpent: () => [sv("path", { d: "M-150 40 C-100 -20 -60 80 0 20 C60 -40 100 60 150 -10", fill: "none", stroke: green, "stroke-width": 16, "stroke-linecap": "round" }), sv("circle", { cx: 150, cy: -10, r: 14, fill: green }), sv("circle", { cx: 0, cy: -70, r: 30, fill: gold, opacity: .25 })],
+      pole: () => [sv("rect", { x: -4, y: -110, width: 8, height: 160, fill: "var(--muted)" }), sv("path", { d: "M0 -90 C30 -80 -30 -60 0 -50 C30 -40 -30 -20 0 -10", fill: "none", stroke: gold, "stroke-width": 8 })],
       zig: () => [...[0, 1, 2].map(i => sv("rect", { x: -140 + i * 40, y: 10 - i * 34, width: 280 - i * 80, height: 34, fill: "#b08a5a", opacity: .6 + i * .12 })), sv("rect", { x: -8, y: -20, width: 16, height: 30, fill: "var(--bg-2)" })]
     };
     g.append(...(art[kind] || art.garden)());
@@ -971,7 +979,7 @@
   /* ---------------- Connections web ---------------- */
   function initWeb() {
     const W = 600, C = W / 2, R = 228;
-    const order = ["eden", "mountain", "adam", "tabernacle", "ark", "temple", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
+    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
     const nodes = order.map(id => DATA.web.nodes.find(n => n.id === id));
     const pos = {};
     nodes.forEach((n, i) => { const a = -Math.PI / 2 + i / nodes.length * Math.PI * 2; pos[n.id] = [C + Math.cos(a) * R, C + Math.sin(a) * R, a]; });
@@ -985,7 +993,7 @@
       gE.append(p);
       return { a, b, label, p };
     });
-    const colour = g => g === 1 ? "var(--eden)" : g === 2 ? "var(--babel)" : "var(--accent)";
+    const colour = g => g === 1 ? "var(--eden)" : g === 2 ? "var(--babel)" : g === 4 ? "var(--flame)" : "var(--accent)";
     const nEls = {};
     nodes.forEach(n => {
       const [x, y, a] = pos[n.id];
@@ -1007,7 +1015,7 @@
       mine.forEach(e => { linked.add(e.a); linked.add(e.b); });
       edges.forEach(e => { const on = mine.includes(e); e.p.classList.toggle("on", on); e.p.classList.toggle("dim", !on); });
       Object.entries(nEls).forEach(([k, g]) => { g.classList.toggle("on", k === id); g.classList.toggle("dim", !linked.has(k)); });
-      $("#webPanel").replaceChildren(el("p", { class: "eyebrow", text: n.g === 1 ? "Part I" : n.g === 2 ? "Part II" : "Fulfilment" }), el("h3", { text: n.n }), el("p", { html: refify(n.d) }),
+      $("#webPanel").replaceChildren(el("p", { class: "eyebrow", text: n.g === 1 ? "Part I" : n.g === 4 ? "Part II" : n.g === 2 ? "Part III" : "Fulfilment" }), el("h3", { text: n.n }), el("p", { html: refify(n.d) }),
         el("div", { class: "row" }, el("b", { text: `${mine.length} connections` })),
         el("div", { class: "stack", style: { gap: "8px" } }, mine.map(e => {
           const other = e.a === id ? e.b : e.a;
@@ -1024,7 +1032,7 @@
     let qi = 0, score = 0;
     function render() {
       if (qi >= DATA.quiz.length) {
-        const msg = score === DATA.quiz.length ? "Perfect. You have walked from Eden to the New Jerusalem." : score >= 7 ? "Well done. A few threads to revisit above." : "A good start. Scroll back through the sections and try again.";
+        const msg = score === DATA.quiz.length ? "Perfect. You have walked from Eden to the New Jerusalem." : score >= DATA.quiz.length * 0.7 ? "Well done. A few threads to revisit above." : "A good start. Scroll back through the sections and try again.";
         box.replaceChildren(el("div", { class: "qcard" }, el("p", { class: "eyebrow", text: "Your score" }), el("h3", { style: { fontSize: "var(--step-3)" }, text: `${score} / ${DATA.quiz.length}` }), el("p", { text: msg }),
           el("div", {}, el("button", { class: "btn primary", type: "button", onclick: () => { qi = 0; score = 0; render(); }, text: "Try again" }))));
         return;
@@ -1071,8 +1079,289 @@
     }
   }
 
+  /* ================ Part II: the serpent and the seed ================ */
+  function initNachash() {
+    const svg = sv("svg", { viewBox: "0 0 600 430", class: "venn", role: "img", "aria-label": "Three overlapping meanings of the Hebrew word nachash" });
+    const grad = sv("linearGradient", { id: "nachGrad", x1: 0, y1: 0, x2: 1, y2: 0 },
+      sv("stop", { offset: 0, "stop-color": "var(--ink)" }), sv("stop", { offset: .5, "stop-color": "var(--accent)" }, reduceMotion ? null : sv("animate", { attributeName: "offset", values: "0;1;0", dur: "6s", repeatCount: "indefinite" })), sv("stop", { offset: 1, "stop-color": "var(--ink)" }));
+    svg.append(sv("defs", {}, grad));
+    svg.append(sv("text", { x: 300, y: 92, "text-anchor": "middle", "font-size": 84, fill: "url(#nachGrad)", style: { fontFamily: "var(--font-hebrew)" } }, "נָחָשׁ"));
+    svg.append(sv("text", { x: 300, y: 122, "text-anchor": "middle", "font-size": 14, "letter-spacing": 4, "font-weight": 700, fill: "var(--muted)" }, "N · Ḥ · Š"));
+    const spec = { serpent: [232, 238, "var(--eden)"], diviner: [368, 238, "var(--babel)"], shining: [300, 330, "var(--accent)"] };
+    const rings = {};
+    Object.entries(spec).forEach(([k, [cx, cy, c]]) => {
+      const r = sv("circle", { class: "ring", cx, cy, r: 92, fill: c, "fill-opacity": .2, stroke: c, "stroke-width": 2 });
+      rings[k] = r; svg.append(r);
+    });
+    // icons inside each ring
+    svg.append(sv("path", { d: "M170 250 C180 220 200 260 210 230 C218 206 236 222 230 200", fill: "none", stroke: "var(--eden)", "stroke-width": 6, "stroke-linecap": "round" }), sv("circle", { cx: 231, cy: 197, r: 6, fill: "var(--eden)" }));
+    svg.append(sv("path", { d: "M378 222 Q406 196 434 222 Q406 248 378 222 Z", fill: "none", stroke: "var(--babel)", "stroke-width": 3 }), sv("circle", { cx: 406, cy: 222, r: 7, fill: "var(--babel)" }));
+    const star = sv("g", { transform: "translate(300 372)" });
+    for (let i = 0; i < 8; i++) star.append(sv("line", { x1: 0, y1: 0, x2: 0, y2: -20, stroke: "var(--accent)", "stroke-width": 3, "stroke-linecap": "round", transform: `rotate(${i * 45})` }));
+    star.append(sv("circle", { r: 7, fill: "var(--accent)" }));
+    svg.append(star);
+    svg.append(sv("text", { class: "lbl", x: 140, y: 168, fill: "var(--eden)" }, "serpent"), sv("text", { class: "lbl", x: 460, y: 168, "text-anchor": "end", fill: "var(--babel)" }, "diviner"),
+      sv("text", { class: "lbl", x: 412, y: 405, fill: "var(--accent)" }, "shining one"));
+    const core = sv("g", {}, sv("circle", { cx: 300, cy: 270, r: 26, fill: "var(--flame)", opacity: .25, class: "pulse" }), sv("text", { x: 300, y: 268, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: "var(--ink)" }, "a divine"), sv("text", { x: 300, y: 281, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: "var(--ink)" }, "being"));
+    svg.append(core);
+    $("#nachashStage").append(svg);
+    const chips = $("#nachashChips");
+    const keys = Object.keys(DATA.nachash);
+    keys.forEach(k => chips.append(el("button", { class: "chip", type: "button", "data-k": k, text: DATA.nachash[k].label, onclick: () => set(k) })));
+    function set(k) {
+      const d = DATA.nachash[k];
+      $$(".chip", chips).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.k === k)));
+      Object.entries(rings).forEach(([rk, r]) => { const on = k === "all" || k === rk; r.style.opacity = on ? 1 : .25; r.setAttribute("fill-opacity", on ? (k === "all" ? .28 : .35) : .1); r.setAttribute("stroke-width", on ? 3 : 1); });
+      core.style.opacity = k === "all" ? 1 : .35;
+      $("#nachashHeb").textContent = d.heb;
+      $("#nachashHead").textContent = d.head;
+      $("#nachashText").innerHTML = refify(d.text);
+    }
+    set("all");
+  }
+
+  function initNotSnake() {
+    $("#notSnake").append(...DATA.notSnake.map(c => el("div", { class: "card reveal" }, icon(c.icon, "icon"), el("h3", { text: c.title }), el("p", { html: refify(c.text) }))));
+    $$("#notSnake .icon").forEach(i => { i.style.width = "36px"; i.style.height = "36px"; i.style.color = "var(--flame)"; });
+  }
+
+  function initCherub() {
+    const gems = $("#gems");
+    DATA.breastpiece.forEach(([n, c, on]) => gems.append(el("div", { class: "gem" + (on ? "" : " off"), style: { background: c, color: n === "Diamond" ? "#333" : "#fff", textShadow: n === "Diamond" ? "none" : "" }, text: n })));
+    const box = $("#verses");
+    const btns = DATA.ezekiel.map((v, i) => {
+      const b = el("button", { class: "verse", type: "button", "aria-pressed": "false", onclick: () => sel(i) }, el("small", { text: "Ezekiel " + v.v }), v.text);
+      box.append(b); return b;
+    });
+    function sel(i) {
+      const v = DATA.ezekiel[i];
+      btns.forEach((b, j) => b.setAttribute("aria-pressed", String(j === i)));
+      $("#verseRef").textContent = "Ezekiel " + v.v;
+      $("#verseNote").innerHTML = refify(v.note);
+      gems.classList.toggle("spot", !!v.gems);
+    }
+    sel(1);
+  }
+
+  function initMorningStar() {
+    const svg = sv("svg", { viewBox: "0 0 600 400", role: "img", "aria-label": "The morning star climbing toward the mountain of assembly, then falling at sunrise" });
+    const sky = sv("linearGradient", { id: "skyG", x1: 0, y1: 0, x2: 0, y2: 1 }, sv("stop", { offset: 0, "stop-color": "var(--babel)", "stop-opacity": .35 }), sv("stop", { offset: 1, "stop-color": "var(--bg)", "stop-opacity": 1 }));
+    svg.append(sv("defs", {}, sky), sv("rect", { width: 600, height: 300, fill: "url(#skyG)" }));
+    let seed = 21; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+    for (let i = 0; i < 40; i++) svg.append(sv("circle", { cx: rnd() * 600, cy: rnd() * 260, r: .6 + rnd() * 1.3, fill: "var(--muted)", class: i % 3 ? "" : "twinkle" }));
+    svg.append(sv("polygon", { points: "370,300 482,118 600,300", fill: "var(--muted)", "fill-opacity": .28 }),
+      sv("text", { x: 486, y: 142, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: "var(--ink)" }, "mount of assembly"),
+      sv("text", { x: 486, y: 156, "text-anchor": "middle", "font-size": 10, fill: "var(--muted)" }, "“far reaches of the north” (Zaphon)"));
+    const sun = sv("g", { style: { transition: reduceMotion ? "none" : "transform 1.6s ease, opacity 1.2s" }, opacity: 0 },
+      sv("circle", { cx: 130, cy: 300, r: 90, fill: "var(--accent)", opacity: .18 }), sv("circle", { cx: 130, cy: 300, r: 46, fill: "var(--accent)" }));
+    sun.style.transform = "translateY(60px)";
+    svg.append(sun);
+    svg.append(sv("rect", { x: 0, y: 300, width: 600, height: 100, fill: "var(--ink)", "fill-opacity": .12 }), sv("line", { x1: 0, y1: 300, x2: 600, y2: 300, stroke: "var(--line)", "stroke-width": 2 }),
+      sv("text", { x: 20, y: 386, "font-size": 12, "font-weight": 800, fill: "var(--muted)", "letter-spacing": 2 }, "SHEOL · THE PIT"));
+    const P = [[80, 286], [160, 236], [240, 192], [320, 156], [400, 126], [482, 92]];
+    svg.append(sv("polyline", { points: P.map(p => p.join(",")).join(" "), fill: "none", stroke: "var(--accent)", "stroke-width": 1.5, "stroke-dasharray": "3 6", opacity: .5 }));
+    const trail = sv("polyline", { fill: "none", stroke: "var(--accent)", "stroke-width": 3, "stroke-linecap": "round" });
+    svg.append(trail);
+    const venus = sv("g", { style: { transition: reduceMotion ? "none" : "transform 1s cubic-bezier(.4,.1,.2,1), opacity .8s" } },
+      sv("circle", { r: 18, fill: "var(--accent)", opacity: .25, class: "pulse" }), sv("circle", { r: 6, fill: "var(--surface)", stroke: "var(--accent)", "stroke-width": 2 }));
+    svg.append(venus);
+    const lbl = sv("text", { x: 300, y: 30, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "");
+    svg.append(lbl);
+    $("#starStage").append(svg);
+    const list = $("#iwill");
+    const items = DATA.iwill.map(w => { const li = el("li", { class: "iw", text: "“" + w.t + "”" }); list.append(li); return li; });
+    const fall = $("#iwFall");
+    let step = 0;
+    function render() {
+      items.forEach((li, i) => li.classList.toggle("on", i < step));
+      fall.classList.toggle("on", step > 5);
+      if (step <= 5) {
+        const [x, y] = P[step];
+        venus.style.transform = `translate(${x}px, ${y}px)`; venus.style.opacity = 1;
+        trail.setAttribute("points", P.slice(0, step + 1).map(p => p.join(",")).join(" "));
+        sun.style.opacity = 0; sun.style.transform = "translateY(60px)";
+        lbl.textContent = step === 0 ? "Before dawn: the brightest star rises" : step === 5 ? "“I will make myself like the Most High”" : "";
+      } else {
+        venus.style.transform = "translate(482px, 360px)"; venus.style.opacity = .6;
+        trail.setAttribute("points", P.map(p => p.join(",")).join(" ") + " 482,360");
+        sun.style.opacity = 1; sun.style.transform = "translateY(0)";
+        lbl.textContent = "Sunrise: “How you are fallen from heaven, O Day Star!”";
+      }
+      $("#starNext").textContent = step < 5 ? "Next “I will” ▸" : step === 5 ? "Sunrise ▾" : "Done";
+      $("#starNext").disabled = step > 5;
+    }
+    $("#starNext").addEventListener("click", () => { step = Math.min(6, step + 1); render(); });
+    $("#starReset").addEventListener("click", () => { step = 0; render(); });
+    render();
+
+    // two trajectories
+    const ps = sv("svg", { viewBox: "0 0 900 310", role: "img", "aria-label": "The rebel climbs and falls; Christ descends to the cross and is exalted" });
+    [[45, "God’s throne"], [170, "the created order"], [282, "death · the pit"]].forEach(([y, t]) => ps.append(sv("line", { x1: 20, y1: y, x2: 880, y2: y, stroke: "var(--line)", "stroke-dasharray": y === 170 ? "" : "4 6" }), sv("text", { x: 24, y: y - 6, "font-size": 11, "font-weight": 700, fill: "var(--muted)" }, t)));
+    const helel = sv("path", { d: "M60 160 C160 150 260 90 370 58 C400 52 420 120 470 286", fill: "none", stroke: "var(--flame)", "stroke-width": 4, "stroke-linecap": "round", class: "draw" });
+    const christ = sv("path", { d: "M500 40 C540 60 570 160 610 172 C650 184 670 280 700 282 C740 284 780 80 860 26", fill: "none", stroke: "var(--accent)", "stroke-width": 4, "stroke-linecap": "round", class: "draw" });
+    ps.append(helel, christ);
+    const t = (x, y, s, c, a) => ps.append(sv("text", { x, y, "font-size": 12, "font-weight": 700, fill: c || "var(--ink)", "text-anchor": a || "start", "paint-order": "stroke", stroke: "var(--surface)", "stroke-width": 4 }, s));
+    t(60, 150, "Day Star rises", "var(--flame)"); t(370, 50, "“I will be like the Most High”", "var(--flame)", "middle"); t(478, 300, "brought down to the pit", "var(--flame)");
+    t(500, 32, "“in the form of God”", "var(--accent)"); t(618, 166, "“emptied himself”"); t(700, 300, "“death on a cross”", "var(--accent)", "middle"); t(860, 18, "“highly exalted”", "var(--accent)", "end");
+    ps.append(sv("circle", { cx: 860, cy: 26, r: 7, fill: "var(--accent)" }), sv("circle", { cx: 470, cy: 286, r: 6, fill: "var(--flame)" }));
+    const wrap = el("div", { class: "scroll-x" }, ps);
+    $("#pathsStage").append(wrap);
+    [helel, christ].forEach(p => { p.style.setProperty("--len", p.getTotalLength()); });
+    const go = () => { helel.classList.add("go"); setTimeout(() => christ.classList.add("go"), reduceMotion ? 0 : 900); };
+    if ("IntersectionObserver" in window && !reduceMotion) {
+      const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { go(); io.disconnect(); } }, { threshold: .3 });
+      io.observe(wrap);
+      setTimeout(go, 4000);
+    } else go();
+  }
+
+  function initSeraph() {
+    const svg = sv("svg", { viewBox: "0 0 520 320", role: "img", "aria-label": "A winged serpent guardian beside a winged cherub guardian" });
+    // seraph: rearing winged serpent
+    const s = sv("g", { transform: "translate(130 0)" });
+    s.append(sv("path", { d: "M-70 120 Q-120 60 -100 30 Q-60 70 -20 110 Z", fill: "var(--accent)", opacity: .75 }), sv("path", { d: "M70 120 Q120 60 100 30 Q60 70 20 110 Z", fill: "var(--accent)", opacity: .75 }));
+    s.append(sv("path", { d: "M-40 280 C-80 270 -60 240 0 240 C60 240 70 210 20 200 C-20 192 -20 160 0 140 L0 90", fill: "none", stroke: "var(--flame)", "stroke-width": 16, "stroke-linecap": "round" }));
+    s.append(sv("ellipse", { cx: 0, cy: 92, rx: 22, ry: 30, fill: "var(--flame)" }), sv("circle", { cx: -7, cy: 84, r: 3, fill: "var(--accent-ink)" }), sv("circle", { cx: 7, cy: 84, r: 3, fill: "var(--accent-ink)" }));
+    [-30, 0, 30].forEach((x, i) => { const f = sv("path", { d: `M${x} 60 C${x - 8} 46 ${x - 4} 38 ${x} 28 C${x + 4} 38 ${x + 8} 46 ${x} 60 Z`, fill: "var(--accent)" }); if (!reduceMotion) { f.classList.add("pulse"); f.style.animationDelay = i * .3 + "s"; } s.append(f); });
+    s.append(sv("text", { x: 0, y: 306, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, "Seraph · śārāph"));
+    svg.append(s);
+    // cherub: winged lion with human face
+    const c = sv("g", { transform: "translate(390 0)" });
+    c.append(sv("path", { d: "M-10 170 Q-40 60 60 40 Q20 90 30 160 Z", fill: "var(--babel)", opacity: .75 }));
+    c.append(sv("rect", { x: -70, y: 170, width: 130, height: 60, rx: 28, fill: "var(--babel)" }));
+    [-60, -30, 20, 46].forEach(x => c.append(sv("rect", { x, y: 222, width: 14, height: 50, rx: 6, fill: "var(--babel)" })));
+    c.append(sv("circle", { cx: -78, cy: 160, r: 24, fill: "var(--babel)" }), sv("circle", { cx: -84, cy: 156, r: 3, fill: "var(--surface)" }), sv("path", { d: "M60 190 Q90 200 84 230", fill: "none", stroke: "var(--babel)", "stroke-width": 6, "stroke-linecap": "round" }));
+    c.append(sv("text", { x: -10, y: 306, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, "Cherub · kərûb"));
+    svg.append(c);
+    svg.append(sv("text", { x: 260, y: 24, "text-anchor": "middle", "font-size": 12, "font-weight": 700, fill: "var(--muted)" }, "two pictures of a throne-guardian"));
+    $("#seraphStage").append(svg);
+  }
+
+  function initCurse() {
+    const box = $("#curseLines");
+    const btns = DATA.curseLines.map((c, i) => { const b = el("button", { class: "verse", type: "button", "aria-pressed": "false", onclick: () => sel(i) }, el("small", { text: c.ref }), c.t); box.append(b); return b; });
+    function sel(i) {
+      btns.forEach((b, j) => b.setAttribute("aria-pressed", String(j === i)));
+      const c = DATA.curseLines[i];
+      $("#curseNote").replaceChildren(el("p", { class: "eyebrow", text: c.ref }), el("p", { html: refify(c.note) }));
+    }
+    sel(2);
+    // descent diagram
+    const L = [["Mountain of God", 60], ["Heaven", 140], ["Earth · ʾereṣ", 230], ["Dust", 310], ["Sheol · the pit · abyss", 400], ["Lake of fire", 490]];
+    const svg = sv("svg", { viewBox: "0 0 420 540", role: "img", "aria-label": "The serpent's descent through Scripture from God's mountain to the lake of fire" });
+    svg.append(sv("polygon", { points: "300,92 360,26 420,92", fill: "var(--eden)", "fill-opacity": .45 }));
+    const tree = sv("g", { opacity: 0, style: { transition: "opacity .8s" } }, sv("circle", { cx: 360, cy: 30, r: 26, fill: "var(--accent)", opacity: .3, class: "pulse" }), sv("rect", { x: 357, y: 26, width: 6, height: 22, fill: "var(--ink)", opacity: .6 }), sv("circle", { cx: 360, cy: 22, r: 13, fill: "var(--eden)" }));
+    svg.append(tree);
+    svg.append(sv("rect", { x: 0, y: 470, width: 420, height: 70, fill: "var(--flame)", "fill-opacity": .18 }), sv("rect", { x: 0, y: 380, width: 420, height: 90, fill: "var(--ink)", "fill-opacity": .07 }));
+    L.forEach(([n, y]) => svg.append(sv("line", { x1: 150, y1: y, x2: 410, y2: y, stroke: "var(--line)", "stroke-dasharray": "3 5" }), sv("text", { x: 146, y: y + 4, "text-anchor": "end", "font-size": 11, "font-weight": 700, fill: "var(--muted)" }, n)));
+    const trail = sv("polyline", { fill: "none", stroke: "var(--flame)", "stroke-width": 2.5, "stroke-dasharray": "5 5", "stroke-linecap": "round" });
+    svg.append(trail);
+    const marker = sv("g", { style: { transition: reduceMotion ? "none" : "transform .9s cubic-bezier(.4,.1,.2,1), opacity .6s" } },
+      sv("circle", { r: 16, fill: "var(--flame)", opacity: .2, class: "pulse" }),
+      sv("path", { d: "M-11 6 C-6 -6 0 10 5 -2 C8 -9 12 -6 12 -6", fill: "none", stroke: "var(--flame)", "stroke-width": 4, "stroke-linecap": "round" }), sv("circle", { cx: 12, cy: -6, r: 3.5, fill: "var(--flame)" }));
+    svg.append(marker);
+    $("#descentStage").append(svg);
+    const D = DATA.descent;
+    const pos = i => { const d = D[i]; return [175 + i * 27, d.lvl < 0 ? 30 : L[d.lvl][1]]; };
+    let i = 0;
+    function go(n) {
+      i = Math.max(0, Math.min(D.length - 1, n));
+      const d = D[i], [x, y] = pos(i);
+      marker.style.transform = `translate(${x}px, ${y}px)`;
+      marker.style.opacity = d.lvl < 0 ? 0 : 1;
+      tree.setAttribute("opacity", d.lvl < 0 ? 1 : 0);
+      trail.setAttribute("points", D.slice(0, i + 1).filter(s => s.lvl >= 0).map((s, j) => pos(j).join(",")).join(" "));
+      $("#descentPanel").replaceChildren(el("p", { class: "eyebrow", text: `Step ${i + 1} of ${D.length}` }), el("h3", { text: d.title }), el("span", { class: "ref", text: d.ref }), el("p", { html: refify(d.text) }));
+      $("#descNext").disabled = i === D.length - 1;
+    }
+    $("#descNext").addEventListener("click", () => go(i + 1));
+    $("#descPrev").addEventListener("click", () => go(i - 1));
+    go(0);
+  }
+
+  function initSeedWar() {
+    const E = DATA.seedWar, W = 1300, H = 340, dx = (W - 210) / (E.length - 1);
+    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Timeline of the woman's seed and the serpent's attacks from Genesis to Revelation" });
+    const yS = 128, yA = 236;
+    svg.append(sv("text", { x: 14, y: 30, "font-size": 12, "font-weight": 800, fill: "var(--accent)", "letter-spacing": 2 }, "THE WOMAN’S SEED"), sv("text", { x: 14, y: H - 12, "font-size": 12, "font-weight": 800, fill: "var(--flame)", "letter-spacing": 2 }, "THE SERPENT STRIKES"));
+    const X = i => 50 + i * dx;
+    let d = `M${X(0)} ${yS}`;
+    for (let i = 1; i < E.length; i++) { const mx = (X(i - 1) + X(i)) / 2; d += ` Q${mx} ${yS + (i % 2 ? -18 : 18)} ${X(i)} ${yS}`; }
+    const line = sv("path", { d, fill: "none", stroke: "var(--accent)", "stroke-width": 4, "stroke-linecap": "round", class: "draw" });
+    const snake = sv("path", { d: E.map((e, i) => `${i ? "L" : "M"}${X(i)} ${yA + (i % 2 ? 10 : -10)}`).join(" "), fill: "none", stroke: "var(--flame)", "stroke-width": 2, "stroke-dasharray": "2 7", opacity: .6 });
+    svg.append(snake, line);
+    const evs = E.map((e, i) => {
+      const x = X(i), seedK = e.k === "seed";
+      const g = sv("g", { class: "ev", tabindex: "0", role: "button", "aria-label": e.n });
+      if (!seedK) g.append(sv("path", { d: `M${x} ${yA - 12} L${x - 6} ${yA - 46} L${x + 5} ${yA - 56} L${x - 2} ${yS + 10}`, fill: "none", stroke: "var(--flame)", "stroke-width": 2.5, "stroke-linejoin": "round" }));
+      const y = seedK ? yS : yA;
+      g.append(sv("circle", { cx: x, cy: y, r: seedK ? 9 : 8, fill: seedK ? "var(--accent)" : "var(--flame)", stroke: "var(--surface)", "stroke-width": 2 }));
+      const ty = seedK ? yS - 22 : yA + 24;
+      g.append(sv("text", { x, y: ty, transform: `rotate(${seedK ? -28 : 28} ${x} ${ty})`, "text-anchor": seedK ? "start" : "start" }, e.n));
+      g.addEventListener("click", () => { stop(); sel(i); });
+      g.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); stop(); sel(i); } });
+      svg.append(g);
+      return g;
+    });
+    $("#seedWar").append(svg);
+    line.style.setProperty("--len", line.getTotalLength());
+    line.classList.add("go");
+    function sel(i) {
+      evs.forEach((g, j) => g.classList.toggle("on", j === i));
+      const e = E[i];
+      $("#seedPanel").replaceChildren(el("p", { class: "eyebrow", style: { color: e.k === "seed" ? "var(--accent)" : "var(--flame)" }, text: (e.k === "seed" ? "The woman’s seed" : "The serpent strikes") + ` · ${i + 1} of ${E.length}` }),
+        el("h3", { text: e.n }), el("span", { class: "ref", text: e.ref }), el("p", { html: refify(e.text) }));
+      const wrap = $("#seedWar");
+      const x = X(i) / W * wrap.scrollWidth - wrap.clientWidth / 2;
+      if (wrap.scrollWidth > wrap.clientWidth) wrap.scrollTo({ left: Math.max(0, x), behavior: reduceMotion ? "auto" : "smooth" });
+    }
+    let timer = null;
+    function stop() { clearInterval(timer); evs.forEach(g => g.classList.remove("hide")); }
+    $("#seedPlay").addEventListener("click", () => {
+      clearInterval(timer);
+      line.classList.remove("go"); void line.getBoundingClientRect();
+      evs.forEach(g => g.classList.add("hide"));
+      let i = 0;
+      const step = () => { evs[i].classList.remove("hide"); sel(i); i++; if (i >= E.length) clearInterval(timer); };
+      requestAnimationFrame(() => { line.style.transition = `stroke-dashoffset ${E.length * 1.6}s linear`; line.classList.add("go"); });
+      step(); timer = setInterval(step, 1600);
+    });
+    sel(0);
+  }
+
+  function initBronze() {
+    const svg = sv("svg", { viewBox: "0 0 400 380", role: "img", "aria-label": "The bronze serpent on a pole, with bitten people looking up and being healed" });
+    svg.append(sv("circle", { cx: 200, cy: 150, r: 110, fill: "var(--accent)", opacity: .12, class: "pulse" }));
+    svg.append(sv("rect", { x: 196, y: 60, width: 8, height: 280, rx: 3, fill: "#8c6a2c" }), sv("rect", { x: 170, y: 74, width: 60, height: 7, rx: 3, fill: "#8c6a2c" }));
+    let d = "M200 92";
+    for (let y = 92, k = 0; y < 250; y += 20, k++) d += ` Q${k % 2 ? 176 : 224} ${y + 10} 200 ${y + 20}`;
+    svg.append(sv("path", { d, fill: "none", stroke: "var(--accent)", "stroke-width": 9, "stroke-linecap": "round" }), sv("path", { d: "M200 92 Q214 70 236 76", fill: "none", stroke: "var(--accent)", "stroke-width": 9, "stroke-linecap": "round" }), sv("circle", { cx: 238, cy: 76, r: 8, fill: "var(--accent)" }));
+    const sights = sv("g", { opacity: 0, style: { transition: "opacity .8s" } });
+    svg.append(sights);
+    const people = [];
+    for (let i = 0; i < 14; i++) {
+      const a = Math.PI * (0.08 + 0.84 * i / 13), x = 200 - Math.cos(a) * 170, y = 352 - Math.sin(a) * 34;
+      sights.append(sv("line", { x1: x, y1: y - 18, x2: 220, y2: 150, stroke: "var(--accent)", "stroke-width": 1, "stroke-dasharray": "2 5" }));
+      const p = sv("g", { class: "person", style: { transformBox: "fill-box" } }, sv("circle", { cx: x, cy: y - 22, r: 6 }), sv("rect", { x: x - 6, y: y - 15, width: 12, height: 18, rx: 5 }));
+      p.setAttribute("fill", "var(--flame)");
+      people.push(p); svg.append(p);
+    }
+    $("#poleStage").append(svg);
+    let t = [];
+    $("#lookBtn").addEventListener("click", () => {
+      t.forEach(clearTimeout); t = [];
+      sights.setAttribute("opacity", 1);
+      people.forEach((p, i) => t.push(setTimeout(() => { p.setAttribute("fill", "var(--eden)"); p.style.transform = "translateY(-6px)"; }, reduceMotion ? 0 : 200 + i * 160)));
+    });
+    $("#lookReset").addEventListener("click", () => { t.forEach(clearTimeout); sights.setAttribute("opacity", 0); people.forEach(p => { p.setAttribute("fill", "var(--flame)"); p.style.transform = ""; }); });
+    $("#neboPhoto").append(photo("nebo"));
+    ["fall", "dragon"].forEach(k => $("#serpentGallery").append(photo(k)));
+    $("#serpentGallery").style.gridTemplateColumns = "repeat(auto-fit, minmax(260px, 1fr))";
+  }
+
   function boot() {
     const steps = [initSchemes, initHero, initClues, initMountain, initTabernacle, initArk, initArkMap, initTabsContent, initMenorah, initStory, initPhotos, initMirror,
+      initNachash, initNotSnake, initCherub, initMorningStar, initSeraph, initCurse, initSeedWar, initBronze,
       initMap, initZiggurat, initGen, initNations, initLadder, initPentecost, initCities, initWeb, initQuiz, initSources, initScroll];
     steps.forEach(fn => { try { fn(); } catch (err) { console.error(fn.name, err); } });
   }

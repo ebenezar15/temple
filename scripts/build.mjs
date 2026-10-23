@@ -22,6 +22,7 @@ ${read("styles.css")}
 const body = `${read("body.html")}
 <script>
 ${read("data.js")}
+${read("data-serpent.js")}
 ${read("app.js")}
 </script>`;
 

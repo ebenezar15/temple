@@ -149,7 +149,8 @@ p { margin: 0; }
 .topbar .wrap { display: flex; align-items: center; gap: 12px; min-height: 60px; padding-block: 8px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -.01em; text-decoration: none; color: var(--ink); white-space: nowrap; }
 .brand svg { width: 28px; height: 28px; }
-.nav { display: flex; gap: 4px; margin-left: auto; flex-wrap: wrap; }
+.nav { display: flex; gap: 2px; margin-left: auto; flex-wrap: nowrap; }
+.nav a { white-space: nowrap; }
 .nav a {
   text-decoration: none; color: var(--muted); font-weight: 600; font-size: .9rem;
   padding: 6px 10px; border-radius: 999px; transition: color .2s, background .2s;
@@ -471,6 +472,10 @@ footer .wrap { display: grid; gap: 8px; }
 .word .heb { font-size: 2rem; color: var(--accent); line-height: 1.2; }
 .word small { color: var(--muted); }
 
+@media (max-width: 1100px) {
+  .nav { display: none; }
+  .scheme-btn { margin-left: auto; }
+}
 @media (max-width: 980px) {
   .clues { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .split, .split.even, .nations-wrap, .web-wrap { grid-template-columns: minmax(0, 1fr); }
@@ -506,6 +511,40 @@ footer .wrap { display: grid; gap: 8px; }
   .reveal.pre { transform: none; opacity: 1; }
 }
 
+/* ---------- Part II: the serpent and the seed ---------- */
+.heb-label { font-family: var(--font-hebrew); font-size: 1.6rem; color: var(--accent); line-height: 1.2; }
+.venn circle.ring { transition: opacity .5s, fill-opacity .5s, stroke-width .3s; }
+.venn .lbl { font-weight: 800; font-size: 15px; }
+.verses { display: grid; gap: 8px; }
+.verse { text-align: left; border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 10px 14px; cursor: pointer; transition: border-color .2s, box-shadow .2s, background .2s; font-size: .98rem; line-height: 1.45; }
+.verse:hover { border-color: var(--accent); }
+.verse[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 3px var(--glow); background: color-mix(in srgb, var(--accent) 6%, var(--surface)); }
+.verse small { display: block; color: var(--accent); font-weight: 700; font-size: .78rem; letter-spacing: .08em; margin-bottom: 2px; }
+.gem-block { display: grid; gap: 10px; border-top: 1px solid var(--line); padding-top: 14px; }
+.gem-title { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.gem-cap { font-size: .85rem; }
+.gems { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; max-width: 330px; }
+.gem { aspect-ratio: 1.35; border-radius: 10px; display: grid; place-items: end center; padding: 6px 4px; font-size: .72rem; font-weight: 700; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.6); border: 1px solid var(--line); transition: opacity .5s, transform .5s, filter .5s, box-shadow .5s; position: relative; overflow: hidden; }
+.gem::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.45), transparent 45%); }
+.gem.off { opacity: .28; filter: grayscale(.85); }
+.gems.spot .gem:not(.off) { box-shadow: 0 0 0 2px var(--accent), 0 0 18px var(--glow); transform: translateY(-2px); }
+.iwill { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; counter-reset: iw; }
+.iw { counter-increment: iw; padding: 10px 14px 10px 44px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); position: relative; opacity: .5; transition: opacity .4s, border-color .4s, background .4s; }
+.iwill .iw::before { content: counter(iw); position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: .75rem; font-weight: 800; background: var(--line); color: var(--ink); }
+.iw.on { opacity: 1; border-color: var(--accent); background: var(--glow); }
+.iwill .iw.on::before { background: var(--accent); color: var(--accent-ink); }
+p.iw.fall { padding-left: 14px; }
+.iw.fall.on { border-color: var(--flame); background: color-mix(in srgb, var(--flame) 12%, var(--surface)); }
+.scroll-x { overflow-x: auto; }
+.scroll-x svg { min-width: 680px; }
+.seedwar { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.seedwar svg { display: block; min-width: 1180px; width: 100%; height: auto; }
+.seedwar .ev { cursor: pointer; transition: opacity .4s; }
+.seedwar .ev.hide { opacity: 0; }
+.seedwar .ev.on circle { stroke: var(--ink); stroke-width: 3; }
+.seedwar text { font-family: var(--font-body); font-size: 12px; font-weight: 700; fill: var(--ink); }
+.person { transition: transform .5s cubic-bezier(.3,1.5,.5,1), fill .5s; }
+
 </style>
 </head>
 <body>
@@ -517,10 +556,9 @@ footer .wrap { display: grid; gap: 8px; }
     </a>
     <nav class="nav" aria-label="Sections">
       <a href="#part1">Garden-Temple</a>
-      <a href="#tabernacle">Tabernacle</a>
       <a href="#ark">Ark</a>
+      <a href="#serpent">Serpent</a>
       <a href="#part2">Babel &amp; Babylon</a>
-      <a href="#pentecost">Pentecost</a>
       <a href="#cities">Two Cities</a>
       <a href="#web">Connections</a>
       <a href="#quiz">Quiz</a>
@@ -552,10 +590,12 @@ footer .wrap { display: grid; gap: 8px; }
       <p class="lede">One story runs from Genesis to Revelation: God making a home with people, and people trying to build one without him.</p>
       <div class="hero-ctas">
         <a class="btn primary" href="#part1"><span class="num">PART I</span> The Garden-Temple</a>
-        <a class="btn" href="#part2"><span class="num">PART II</span> Babel &amp; the City of God</a>
+        <a class="btn" href="#serpent"><span class="num">PART II</span> The Serpent &amp; the Seed</a>
+        <a class="btn" href="#part2"><span class="num">PART III</span> Babel &amp; the City of God</a>
       </div>
       <div class="hero-meta">
         <div><b>Eden → New Jerusalem</b>Garden, mountain, tabernacle, temple</div>
+        <div><b>Serpent → Seed</b>Genesis 3:15 to Revelation 12</div>
         <div><b>Babel → Pentecost</b>Ziggurat, Babylon, the nations</div>
       </div>
     </div>
@@ -800,12 +840,204 @@ footer .wrap { display: grid; gap: 8px; }
   </div>
 </section>
 
-<!-- ============ PART II ============ -->
-<div class="part-banner" id="part2">
+<!-- ============ PART II: SERPENT ============ -->
+<div class="part-banner" id="serpent">
   <div class="wrap">
     <div class="part-num" aria-hidden="true">II</div>
     <div>
       <p class="eyebrow">Part two</p>
+      <h2>The Serpent and the Seed</h2>
+      <p>Who, or what, spoke to Eve in God’s garden? Read Genesis 3 slowly, in Hebrew and beside Ezekiel and Isaiah, and the “snake” turns out to be a shining throne-guardian who rebelled. His curse contains the Bible’s first promise of a rescuer.</p>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="nachash">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Genesis 3:1 · one Hebrew word</p>
+      <h2>Nāḥāš: serpent, diviner, shining one</h2>
+      <p>English Bibles say “the serpent”. The Hebrew word <span class="heb">נָחָשׁ</span> sits in a cluster of words that also mean “to divine” and “bronze”. Choose a meaning, then see what they describe together.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="nachashStage"></div>
+      <div class="panel" aria-live="polite">
+        <div class="chips" id="nachashChips" role="group" aria-label="Meanings of nachash"></div>
+        <p class="heb-label" id="nachashHeb"></p>
+        <h3 id="nachashHead"></h3>
+        <p id="nachashText"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="not-snake">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Reading Genesis 3 carefully</p>
+      <h2>Six things a garden snake can’t do</h2>
+    </div>
+    <div class="grid-3" id="notSnake"></div>
+    <div class="callout mt reveal">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 30 C14 30 12 18 20 18 C28 18 26 8 34 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="34" cy="8" r="3" fill="currentColor"/></svg>
+      <div><b>Naked and crafty: a wordplay</b>Genesis 2:25 ends, “the man and his wife were both naked (<i>ʿărûmmîm</i>) and were not ashamed.” The next verse begins, “Now the serpent was more crafty (<i>ʿārûm</i>)…”. Innocence meets cunning in two almost identical words. After eating, “they knew that they were naked (<i>ʿêrummîm</i>)” (<span class="ref">Gen 3:7</span>).</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="cherub">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Ezekiel 28:12–19</p>
+      <h2>The guardian cherub who fell</h2>
+      <p>Ezekiel’s lament over the king of Tyre suddenly describes someone who was in Eden, on God’s mountain, covered in priestly jewels. Many readers, ancient and modern, see an older cosmic story behind the human king. Step through the lines.</p>
+    </div>
+    <div class="split">
+      <div class="stack">
+        <div class="verses" id="verses"></div>
+      </div>
+      <div class="panel" aria-live="polite">
+        <p class="eyebrow" id="verseRef"></p>
+        <p id="verseNote"></p>
+        <div class="gem-block">
+          <b class="gem-title">The high priest’s breastpiece · Exod 28:17–20</b>
+          <div class="gems" id="gems"></div>
+          <p class="muted gem-cap">Lit: the nine stones named in Ezekiel 28:13. Dim: the three not listed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="morning-star">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Isaiah 14:12–15</p>
+      <h2>“Day Star, son of Dawn”</h2>
+      <p>Isaiah taunts the king of Babylon as <i>Hêlēl ben Šāḥar</i>, “Shining one, son of Dawn”: the planet Venus, brightest in the pre-dawn sky, climbing high and then vanishing as the sun rises. Latin translated it <i>lucifer</i>, “light-bearer”. Press through the five “I will”s.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="starStage"></div>
+      <div class="panel">
+        <ol class="iwill" id="iwill"></ol>
+        <p class="iw fall" id="iwFall">“But you are brought down to Sheol, to the far reaches of the pit.” <span class="ref">Isa 14:15</span></p>
+        <div class="htl-controls" style="margin-top:0">
+          <button class="btn primary small" id="starNext" type="button">Next “I will” ▸</button>
+          <button class="btn small" id="starReset" type="button">Reset</button>
+        </div>
+      </div>
+    </div>
+    <div class="sec-head mt reveal">
+      <h3>Two paths: grasping up, or stooping down</h3>
+      <p>The Day Star tries to climb to God’s throne and falls. Christ “did not count equality with God a thing to be grasped, but emptied himself … to the point of death, even death on a cross. Therefore God has highly exalted him” (<span class="ref">Phil 2:6–9</span>). He, not the rebel, is “the bright morning star” (<span class="ref">Rev 22:16</span>).</p>
+    </div>
+    <div class="stage" id="pathsStage"></div>
+  </div>
+</section>
+
+<section class="block" id="seraph">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Throne guardians</p>
+      <h2>Seraphim: the burning serpents</h2>
+      <p>In Isaiah 6 the beings around God’s throne are <i>śərāphîm</i>, usually “burning ones”. But <i>śārāph</i> is also a word for a serpent. A serpentine guardian at the throne was a familiar idea to ancient readers, which makes the nāḥāš in God’s garden less strange.</p>
+    </div>
+    <div class="split even">
+      <div class="stage" id="seraphStage"></div>
+      <div class="grid-2">
+        <div class="card"><p class="eyebrow">Isaiah 6:2</p><h3>Above the throne</h3><p>“Above him stood the seraphim. Each had six wings: with two he covered his face, and with two he covered his feet, and with two he flew.”</p></div>
+        <div class="card"><p class="eyebrow">Numbers 21:6</p><h3>Fiery serpents</h3><p>“The LORD sent fiery serpents (<i>hannəḥāšîm haśśərāphîm</i>) among the people.” Both words, side by side.</p></div>
+        <div class="card"><p class="eyebrow">Isaiah 14:29; 30:6</p><h3>Flying seraph</h3><p>Isaiah twice mentions “a flying fiery serpent” (<i>śārāph məʿôpēph</i>): a winged serpent.</p></div>
+        <div class="card"><p class="eyebrow">Egypt</p><h3>The uraeus</h3><p>Egyptian royal and divine images were guarded by the rearing, often winged, cobra. It is the regional counterpart of the cherub, the hybrid guardian of Mesopotamia and Phoenicia.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="curse">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Genesis 3:14–15</p>
+      <h2>The curse, decoded</h2>
+      <p>Read as zoology, the curse misfires. Read as a fall in status, from God’s mountain to the dust of death, it makes sense, and it ends with a promise. Tap each line, then follow the serpent’s long way down through Scripture.</p>
+    </div>
+    <div class="split">
+      <div class="stack">
+        <div class="verses" id="curseLines"></div>
+        <div class="panel" id="curseNote" aria-live="polite"></div>
+      </div>
+      <div class="stack">
+        <div class="stage" id="descentStage"></div>
+        <div class="panel" id="descentPanel" aria-live="polite"></div>
+        <div class="htl-controls" style="margin-top:0">
+          <button class="btn small" id="descPrev" type="button">◂ Back</button>
+          <button class="btn primary small" id="descNext" type="button">Next fall ▾</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="seed">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Zeraʿ · “offspring, seed”</p>
+      <h2>The war of the two seeds</h2>
+      <p>Genesis 3:15 sets two lines against each other. The woman’s seed runs through Seth, Noah, Abraham, Judah and David to one person, while the serpent strikes again and again to cut it off. Press play, or choose any moment.</p>
+    </div>
+    <div class="seedwar" id="seedWar"></div>
+    <div class="htl-controls">
+      <button class="btn primary small" id="seedPlay" type="button">Play the story ▸</button>
+      <span class="legend"><span><i style="background:var(--accent)"></i>The woman’s seed</span><span><i style="background:var(--flame)"></i>The serpent strikes</span></span>
+    </div>
+    <div class="panel mt" id="seedPanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="block alt" id="bronze">
+  <div class="wrap">
+    <div class="split even">
+      <div class="stack reveal">
+        <p class="eyebrow">Numbers 21:4–9 · John 3:14–15</p>
+        <h2>Look and live</h2>
+        <div class="prose">
+          <p>In the wilderness God sends fiery serpents as judgment. Moses intercedes, and God tells him to make a serpent and set it on a pole: “if a serpent bit anyone, he would look at the bronze serpent and live.” It was a <i>nəḥaš nəḥōšet</i>, a shining serpent.</p>
+          <p>These serpents are God’s instruments, not the rebel of Eden, so the two should not be merged. Yet Jesus takes up the image: “As Moses lifted up the serpent in the wilderness, so must the Son of Man be lifted up, that whoever believes in him may have eternal life.” The symbol of death and deception becomes the sign of healing, because he was “made to be sin” for us (<span class="ref">2 Cor 5:21</span>).</p>
+          <p>Centuries later Israel was burning incense to the bronze serpent, and King Hezekiah smashed it. He called it <b>Nehushtan</b> (<span class="ref">2 Kgs 18:4</span>), a pun on <i>nāḥāš</i> and <i>nəḥōšet</i>: “just a bronze snake thing.” A gift of healing had become an idol.</p>
+        </div>
+        <div class="htl-controls"><button class="btn primary small" id="lookBtn" type="button">Look and live ▸</button><button class="btn small" id="lookReset" type="button">Reset</button></div>
+      </div>
+      <div class="stack">
+        <div class="stage" id="poleStage"></div>
+        <div id="neboPhoto"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="dragon">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Revelation 12:9 · 20:2</p>
+      <h2>“That ancient serpent”</h2>
+      <p>Revelation names him outright: “the great dragon … that ancient serpent, who is called the devil and Satan, the deceiver of the whole world.” He is not a new character. He is the one from the garden, and the whole Bible traces his defeat.</p>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card"><p class="eyebrow">Psalm 74:13–14</p><h3>Leviathan’s heads crushed</h3><p>“You broke the heads of the sea monsters on the waters. You crushed the heads of Leviathan.” Chaos-serpent imagery, with heads crushed, as in Genesis 3:15.</p></div>
+      <div class="card"><p class="eyebrow">Isaiah 27:1</p><h3>The twisting serpent</h3><p>“In that day the LORD with his hard and great and strong sword will punish Leviathan the fleeing serpent (<i>nāḥāš</i>), Leviathan the twisting serpent.”</p></div>
+      <div class="card"><p class="eyebrow">Hebrews 2:14 · 1 John 3:8</p><h3>Destroyed by the seed</h3><p>He shared our flesh “that through death he might destroy the one who has the power of death, that is, the devil.” “The reason the Son of God appeared was to destroy the works of the devil.”</p></div>
+    </div>
+    <div class="gallery mt" id="serpentGallery"></div>
+    <blockquote class="big mt reveal">“He shall bruise your head, and you shall bruise his heel.” The first promise in the Bible is spoken to the serpent, inside his own curse.<cite>Genesis 3:15</cite></blockquote>
+  </div>
+</section>
+
+<!-- ============ PART III ============ -->
+<div class="part-banner" id="part2">
+  <div class="wrap">
+    <div class="part-num" aria-hidden="true">III</div>
+    <div>
+      <p class="eyebrow">Part three</p>
       <h2>Babel, Babylon and the City of God</h2>
       <p>Humanity keeps trying to build its own mountain of God: a city, a tower and a name, with a god kept on retainer. Scripture answers with a city God designs and builds himself.</p>
     </div>
@@ -1052,7 +1284,7 @@ footer .wrap { display: grid; gap: 8px; }
   <div class="wrap">
     <div class="sec-head reveal">
       <p class="eyebrow">Check what you have seen</p>
-      <h2>Ten-question quiz</h2>
+      <h2>Test yourself</h2>
     </div>
     <div class="quiz" id="quizBox"></div>
   </div>
@@ -1071,7 +1303,7 @@ footer .wrap { display: grid; gap: 8px; }
 
 <footer>
   <div class="wrap">
-    <p><b>Where Heaven Meets Earth</b>: an interactive Bible study on the garden-temple and the two cities.</p>
+    <p><b>Where Heaven Meets Earth</b>: an interactive Bible study on the garden-temple, the serpent and the seed, and the two cities.</p>
     <p>Artwork via Wikimedia Commons (public domain or as credited on each image). Maps and diagrams are simplified illustrations.</p>
     <p><a href="#hero">Back to top ↑</a></p>
   </div>
@@ -1581,6 +1813,138 @@ DATA.images = {
   tongues: { file: "Confusion_of_Tongues.png", cap: "Gustave Doré, <i>The Confusion of Tongues</i> (1865–66)", ar: "4/5", art: "tower" }
 };
 
+/* Part II: The Serpent and the Seed */
+DATA.nachash = {
+  serpent: { label: "Serpent", color: "var(--eden)", heb: "נָחָשׁ · nāḥāš",
+    head: "The noun: a serpent",
+    text: "The plain meaning, and the one every translation gives: “the serpent was more crafty than any other beast of the field” (Gen 3:1). The same noun names the fiery serpents of the wilderness (Num 21:6–9), the serpent at the bottom of the sea (Amos 9:3) and Leviathan, “the fleeing serpent” (Isa 27:1)." },
+  diviner: { label: "Diviner", color: "var(--babel)", heb: "נִחֵשׁ · niḥēš",
+    head: "The verb: to divine, to read omens",
+    text: "As a verb the same consonants mean to practise divination: to obtain hidden knowledge from the spirit realm. Joseph’s silver cup is the one he “uses for divination” (Gen 44:5, 15). Israel is told, “You shall not interpret omens” (Lev 19:26) and “There shall not be found among you … anyone who practises divination” (Deut 18:10). In Eden the nāḥāš offers exactly that: knowledge from the divine side, against God’s word." },
+  shining: { label: "Shining one", color: "var(--accent)", heb: "נְחֹשֶׁת · nəḥōšet",
+    head: "Bronze: the shining one",
+    text: "A closely related word means bronze or copper, which gleams when polished. Divine beings are described this way: the cherubim’s feet “sparkled like burnished bronze” (Ezek 1:7), the heavenly man in Daniel 10:6 had arms and legs “like the gleam of burnished bronze”, and the risen Christ’s feet are “like burnished bronze” (Rev 1:15). Moses’ bronze serpent is literally a nəḥaš nəḥōšet (Num 21:9)." },
+  all: { label: "All three", color: "var(--flame)", heb: "a profile, not a pet",
+    head: "Put together: a divine being",
+    text: "Serpentine in form, a source of knowledge from the divine realm, and radiant: the word describes a profile, not a reptile. An Israelite ear would have heard all three at once, which English loses when it can only say “serpent”. Scholars debate whether these are one root or sound-alike words; Michael Heiser and others argue the author chose nāḥāš precisely because it carries all three." }
+};
+
+DATA.notSnake = [
+  { icon: "speak", title: "It speaks", text: "The only other speaking animal in the Old Testament is Balaam’s donkey, and only because “the LORD opened the mouth of the donkey” (Num 22:28). Here no explanation is given." },
+  { icon: "scroll", title: "It knows God’s words", text: "It quotes and twists the command: “Did God actually say, ‘You shall not eat of any tree’?” (Gen 3:1), when God had said the opposite (Gen 2:16–17)." },
+  { icon: "scale", title: "It argues about God", text: "It attacks God’s motives: “God knows that when you eat of it your eyes will be opened” (Gen 3:5). This is theology, not instinct." },
+  { icon: "council", title: "It talks like the council", text: "“You will be like God (kēʾlōhîm)”. God later confirms, “the man has become like one of us” (Gen 3:22). The plural echoes the heavenly council (Gen 1:26; Ps 82:1; 1 Kgs 22:19–22; Job 1:6)." },
+  { icon: "temple", title: "It is inside the sanctuary", text: "Eden is God’s dwelling (Part I). The nāḥāš is not wandering in from outside; it already has access to God’s house." },
+  { icon: "dust", title: "The curse doesn’t fit biology", text: "Snakes do not eat dust, and fear of snakes is not universal. “Belly” and “dust” are the Bible’s language for humiliation and death (Ps 72:9; Mic 7:17; Gen 3:19)." }
+];
+
+DATA.ezekiel = [
+  { v: "28:12", text: "You were the signet of perfection, full of wisdom and perfect in beauty.", note: "The chapter begins as a lament (qînâ) over the human king of Tyre, a proud island trading city. Then the imagery outgrows any human king." },
+  { v: "28:13", text: "You were in Eden, the garden of God; every precious stone was your covering.", note: "No king of Tyre was ever in Eden. The nine stones listed match nine of the twelve on the high priest’s breastpiece (Exod 28:17–20): a priestly guardian of sacred space. See the breastpiece beside this list.", gems: true },
+  { v: "28:14", text: "You were an anointed guardian cherub. I placed you; you were on the holy mountain of God.", note: "A cherub is a throne-guardian (Gen 3:24; Exod 25:20). Eden is “the holy mountain of God”, the cosmic mountain of Part I. (The Greek translation reads “with the cherub”, making the figure a human placed beside a cherub; either way the setting is Eden.)" },
+  { v: "28:14", text: "In the midst of the stones of fire you walked.", note: "The fiery divine realm around God’s throne, compare the burning coals among the living creatures (Ezek 1:13)." },
+  { v: "28:15", text: "You were blameless in your ways from the day you were created, till unrighteousness was found in you.", note: "Created, not born. Blameless at first: evil was not built in, it was found later." },
+  { v: "28:17", text: "Your heart was proud because of your beauty; you corrupted your wisdom for the sake of your splendor.", note: "Pride is the root. Beauty and wisdom, gifts from God, become reasons to grasp." },
+  { v: "28:16–17", text: "I cast you as a profane thing from the mountain of God … I cast you to the ground.", note: "Expelled from the holy mountain and thrown to the ʾereṣ, the ground, the same word used of the underworld. Compare Adam and Eve driven from the garden (Gen 3:24)." }
+];
+
+DATA.breastpiece = [
+  ["Sardius", "#b3312c", true], ["Topaz", "#d9b44a", true], ["Carbuncle", "#8f1d33", true],
+  ["Emerald", "#2e8b57", true], ["Sapphire", "#2851a3", true], ["Diamond", "#dfe7ee", true],
+  ["Jacinth", "#e07b39", false], ["Agate", "#9c8a74", false], ["Amethyst", "#8e5bb5", false],
+  ["Beryl", "#6fbdb4", true], ["Onyx", "#2b2b2b", true], ["Jasper", "#6e8b3d", true]
+];
+
+DATA.iwill = [
+  { t: "I will ascend to heaven", y: 0 },
+  { t: "above the stars of God I will set my throne on high", y: 1 },
+  { t: "I will sit on the mount of assembly in the far reaches of the north", y: 2 },
+  { t: "I will ascend above the heights of the clouds", y: 3 },
+  { t: "I will make myself like the Most High", y: 4 }
+];
+
+DATA.descent = [
+  { lvl: 0, title: "Guardian on the mountain", ref: "Ezek 28:14", text: "An anointed guardian cherub on the holy mountain of God, walking among the stones of fire." },
+  { lvl: 2, title: "Cast to the ground", ref: "Ezek 28:16–17", text: "“I cast you as a profane thing from the mountain of God … I cast you to the ground (ʾereṣ).”" },
+  { lvl: 3, title: "Belly and dust", ref: "Gen 3:14", text: "“On your belly you shall go, and dust you shall eat all the days of your life.” From the highest place to the lowest; dust is the realm of death (Gen 3:19; Isa 65:25)." },
+  { lvl: 4, title: "Down to Sheol", ref: "Isa 14:12–15", text: "“How you are fallen from heaven, O Day Star, son of Dawn! … You are brought down to Sheol, to the far reaches of the pit.” The ʾereṣ can mean the underworld itself, “the land whose bars closed upon me” (Jonah 2:6)." },
+  { lvl: 2, title: "Falling like lightning", ref: "Luke 10:18; John 12:31", text: "As the kingdom advances, Jesus says, “I saw Satan fall like lightning from heaven,” and before the cross, “now will the ruler of this world be cast out.”" },
+  { lvl: 2, title: "Thrown down", ref: "Rev 12:9", text: "“The great dragon was thrown down, that ancient serpent, who is called the devil and Satan, the deceiver of the whole world.”" },
+  { lvl: 4, title: "Bound in the abyss", ref: "Rev 20:1–3", text: "An angel “seized the dragon, that ancient serpent … and bound him for a thousand years, and threw him into the pit.”" },
+  { lvl: 5, title: "The lake of fire", ref: "Rev 20:10", text: "“The devil who had deceived them was thrown into the lake of fire.” The downward path that began in Genesis 3 ends." },
+  { lvl: -1, title: "The garden without a serpent", ref: "Rev 22:1–5", text: "River, tree, God’s face, “no longer will there be anything accursed.” The garden-temple is restored, and the nāḥāš is nowhere in it." }
+];
+
+DATA.curseLines = [
+  { t: "Because you have done this, cursed are you above all livestock and above all beasts of the field;", ref: "Gen 3:14a", note: "A demotion: the one who was “more crafty than any beast” (3:1) is now cursed below them all." },
+  { t: "on your belly you shall go,", ref: "Gen 3:14b", note: "The posture of a defeated enemy: “May his enemies lick the dust” (Ps 72:9); nations “lick the dust like a serpent” (Mic 7:17)." },
+  { t: "and dust you shall eat all the days of your life.", ref: "Gen 3:14c", note: "Dust belongs to death: “to dust you shall return” (Gen 3:19); the dead “dwell in the dust” (Isa 26:19). Even in the new creation, “dust shall be the serpent’s food” (Isa 65:25)." },
+  { t: "I will put enmity between you and the woman, and between your offspring and her offspring;", ref: "Gen 3:15a", note: "Two lines of “seed” (zeraʿ) at war through history. Trace them in the timeline below." },
+  { t: "he shall bruise your head, and you shall bruise his heel.", ref: "Gen 3:15b", note: "The protoevangelium, the first gospel. A head wound is fatal; a heel wound is painful but not final. “The God of peace will soon crush Satan under your feet” (Rom 16:20)." }
+];
+
+DATA.seedWar = [
+  { k: "seed", n: "The promise", ref: "Gen 3:15", text: "Before Abraham, Sinai or David, God announces that the woman’s offspring will crush the serpent’s head." },
+  { k: "seed", n: "“A man: the LORD”", ref: "Gen 4:1", text: "Eve names Cain (qayin) saying, literally, “I have gotten a man, the LORD” (ʾet-YHWH). Some ancient readers heard her hoping Cain was the promised one." },
+  { k: "attack", n: "Cain kills Abel", ref: "Gen 4:8; 1 John 3:12", text: "The first murder. John says Cain “was of the evil one and murdered his brother.” The serpent’s line strikes first." },
+  { k: "seed", n: "Seth: “another offspring”", ref: "Gen 4:25", text: "“God has appointed for me another offspring (zeraʿ) instead of Abel.” The word from Genesis 3:15 returns, and the line continues." },
+  { k: "seed", n: "Noah", ref: "Gen 5:29; 6:8", text: "His father hopes, “Out of the ground that the LORD has cursed, this one shall bring us relief.” Noah finds favour and the line survives the flood." },
+  { k: "seed", n: "Abraham", ref: "Gen 22:18", text: "“In your offspring shall all the nations of the earth be blessed.” The seed is now tied to one family." },
+  { k: "seed", n: "Judah", ref: "Gen 49:10", text: "“The scepter shall not depart from Judah … until tribute comes to him; and to him shall be the obedience of the peoples.” A royal seed." },
+  { k: "attack", n: "Pharaoh’s decree", ref: "Exod 1:16, 22", text: "“Every son that is born to the Hebrews you shall cast into the Nile.” Moses is drawn out of the water alive." },
+  { k: "seed", n: "David", ref: "2 Sam 7:12–16", text: "“I will raise up your offspring after you … I will establish the throne of his kingdom forever.”" },
+  { k: "attack", n: "Athaliah", ref: "2 Kgs 11:1–3", text: "Queen Athaliah “destroyed all the royal family.” One baby, Joash, is hidden in the Temple for six years. The line of David hangs by a thread." },
+  { k: "seed", n: "Immanuel", ref: "Isa 7:14", text: "“The virgin shall conceive and bear a son, and shall call his name Immanuel.”" },
+  { k: "attack", n: "Haman", ref: "Esth 3:6, 13", text: "A decree “to destroy, to kill, and to annihilate all Jews, young and old, women and children, in one day.” It is overturned." },
+  { k: "seed", n: "Born of woman", ref: "Gal 4:4; Gal 3:16", text: "“God sent forth his Son, born of woman.” Paul: the promise was “not ‘and to offsprings,’ referring to many, but … ‘and to your offspring,’ who is Christ.”" },
+  { k: "attack", n: "Herod", ref: "Matt 2:16", text: "Herod kills every boy in Bethlehem two years old and under. The child escapes to Egypt." },
+  { k: "attack", n: "The heel struck", ref: "Luke 22:3, 53; John 13:2", text: "Satan enters Judas; “this is your hour, and the power of darkness.” The cross is the bruised heel." },
+  { k: "seed", n: "The head crushed", ref: "Col 2:15; Heb 2:14", text: "“Through death he might destroy the one who has the power of death, that is, the devil.” He “disarmed the rulers and authorities … triumphing over them.”" },
+  { k: "seed", n: "Under your feet", ref: "Rom 16:20", text: "“The God of peace will soon crush Satan under your feet.” The church shares in the victory of the seed." },
+  { k: "attack", n: "The dragon’s last war", ref: "Rev 12:4, 17", text: "The dragon waits to devour the woman’s child, fails, and makes war “on the rest of her offspring.” Then it is thrown down." }
+];
+
+DATA.serpentQuiz = [
+  { q: "Which three ideas can the Hebrew word nāḥāš suggest?", a: ["Serpent, diviner, shining (bronze)", "Snake, dragon, lizard", "Tree, fruit, garden", "Angel, king, priest"], c: 0,
+    x: "Serpent (noun), to divine (verb) and bronze or shining (nəḥōšet): the three senses an Israelite reader would catch together." },
+  { q: "The stones covering the figure in Ezekiel 28:13 match which object?", a: ["The Ark’s mercy seat", "The high priest’s breastpiece", "Solomon’s throne", "The walls of Babylon"], c: 1,
+    x: "Nine of the twelve breastpiece stones of Exodus 28:17–20 appear in Ezekiel 28:13: a priestly guardian in Eden." },
+  { q: "What did King Hezekiah call the bronze serpent when he destroyed it?", a: ["Leviathan", "Nehushtan", "Seraph", "Behemoth"], c: 1,
+    x: "Nehushtan (2 Kgs 18:4), a pun on nāḥāš (serpent) and nəḥōšet (bronze). Israel had begun burning incense to it." },
+  { q: "According to Galatians 3:16, the promised “offspring” is…", a: ["All of Israel", "Every believer", "One person, Christ", "The prophets"], c: 2,
+    x: "Paul notes the singular: “to your offspring, who is Christ.”" }
+];
+
+Object.assign(DATA.images, {
+  fall: { file: "Michelangelo,_Fall_and_Expulsion_from_Garden_of_Eden_00.jpg", cap: "Michelangelo, <i>The Fall and Expulsion from the Garden of Eden</i> (1508–12), Sistine Chapel ceiling. He paints the serpent with a human upper body.", ar: "16/9", art: "serpent" },
+  nebo: { file: "Brazen_Serpent_Sculpture.jpg", cap: "Giovanni Fantoni’s bronze serpent sculpture on Mount Nebo, Jordan, recalling Numbers 21 and John 3:14", ar: "3/4", art: "pole" },
+  dragon: { file: "William_Blake_-_The_Great_Red_Dragon_and_the_Woman_Clothed_with_the_Sun_-_Google_Art_Project.jpg", cap: "William Blake, <i>The Great Red Dragon and the Woman Clothed with the Sun</i> (c. 1803–05), Revelation 12", ar: "3/4", art: "serpent" }
+});
+
+DATA.quiz.push(...DATA.serpentQuiz);
+
+DATA.web.nodes.push(
+  { id: "serpent", n: "The serpent", g: 4, d: "The nāḥāš: a shining, divining, serpentine being inside God’s sanctuary, cast down and finally destroyed." },
+  { id: "seed", n: "The seed", g: 4, d: "The woman’s offspring promised in Genesis 3:15, traced through Seth, Abraham and David to Christ." }
+);
+DATA.web.edges.push(
+  ["serpent", "eden", "Appears inside God’s sanctuary (Gen 3:1)"],
+  ["serpent", "adam", "The guardian fails to guard"],
+  ["serpent", "mountain", "Cast from the mountain of God (Ezek 28:16)"],
+  ["serpent", "babylon", "Isaiah 14’s “Day Star” taunt is aimed at Babylon’s king"],
+  ["serpent", "jesus", "“As Moses lifted up the serpent …” (John 3:14)"],
+  ["serpent", "newjer", "No serpent and no curse in the restored garden (Rev 22:3)"],
+  ["seed", "serpent", "Enmity between the two seeds (Gen 3:15)"],
+  ["seed", "abraham", "“In your offspring all nations blessed” (Gen 22:18)"],
+  ["seed", "jesus", "The one offspring, Christ (Gal 3:16)"],
+  ["seed", "shem", "The line runs through Shem (Gen 11:10–26)"]
+);
+
+DATA.sources.push(
+  ["Gordon J. Wenham", "Genesis 1–15, Word Biblical Commentary (1987)", "Careful reading of Genesis 3, the serpent and the curse."],
+  ["James M. Hamilton Jr.", "“The Skull Crushing Seed of the Woman” (2006)", "How Genesis 3:15 echoes through the rest of Scripture."]
+);
+
 /* Where Heaven Meets Earth — interactive behaviour */
 (function () {
   "use strict";
@@ -1676,7 +2040,13 @@ DATA.images = {
     wings: "M12 12 C8 4 3 5 2 9 C5 9 8 11 12 12 C16 11 19 9 22 9 C21 5 16 4 12 12 Z M12 12 L12 21",
     gem: "M6 4 L18 4 L22 9 L12 21 L2 9 Z M2 9 L22 9 M9 4 L7 9 L12 21 L17 9 L15 4",
     tree: "M12 21 L12 11 M12 14 L8 10 M12 12 L16 8 M12 3 C7 3 5 7 7 10 C4 12 7 16 12 15 C17 16 20 12 17 10 C19 7 17 3 12 3 Z",
-    robe: "M9 3 L15 3 L19 7 L17 10 L16 9 L17 21 L7 21 L8 9 L7 10 L5 7 Z M12 3 L12 8"
+    robe: "M9 3 L15 3 L19 7 L17 10 L16 9 L17 21 L7 21 L8 9 L7 10 L5 7 Z M12 3 L12 8",
+    speak: "M4 5 H20 V15 H11 L6 19 V15 H4 Z M8 9 H16 M8 12 H13",
+    scroll: "M6 4 H17 C19 4 19 7 17 7 H8 V18 C8 20 5 20 5 18 V6 C5 4 6 4 6 4 Z M8 7 V18 C8 20 19 20 19 18 V7",
+    scale: "M12 4 V20 M6 20 H18 M5 8 H19 M5 8 L2 14 H8 Z M19 8 L16 14 H22 Z",
+    council: "M12 4 A2 2 0 1 1 12 8 A2 2 0 1 1 12 4 M5 9 A2 2 0 1 1 5 13 A2 2 0 1 1 5 9 M19 9 A2 2 0 1 1 19 13 A2 2 0 1 1 19 9 M9 20 C9 14 15 14 15 20 M2 20 C2 16 8 16 8 20 M16 20 C16 16 22 16 22 20",
+    temple: "M3 20 H21 M5 20 V10 M19 20 V10 M9 20 V10 M15 20 V10 M3 10 L12 4 L21 10 Z",
+    dust: "M4 18 C8 16 16 16 20 18 M6 14 C9 12 13 13 15 11 C17 9 20 10 20 10 M7 21 H17"
   };
   function icon(name, cls) {
     return sv("svg", { viewBox: "0 0 24 24", class: cls || "icon", "aria-hidden": "true", fill: "none", stroke: "currentColor", "stroke-width": "1.6", "stroke-linecap": "round", "stroke-linejoin": "round" },
@@ -2231,6 +2601,8 @@ DATA.images = {
       menorah: () => [sv("path", { d: "M0 40 L0 -50 M-60 -50 A60 60 0 0 0 60 -50 M-40 -50 A40 40 0 0 0 40 -50 M-20 -50 A20 20 0 0 0 20 -50", fill: "none", stroke: gold, "stroke-width": 6 })],
       tower: () => [...[0, 1, 2, 3, 4, 5].map(i => sv("ellipse", { cx: 0, cy: 30 - i * 22, rx: 120 - i * 17, ry: 12, fill: blue, opacity: .35 + i * .1 })), sv("path", { d: "M-60 -110 Q0 -150 60 -110", fill: "none", stroke: "var(--muted)", "stroke-width": 3, opacity: .5 })],
       gate: () => [sv("rect", { x: -110, y: -80, width: 220, height: 120, fill: blue }), sv("path", { d: "M-40 40 L-40 -20 A40 40 0 0 1 40 -20 L40 40 Z", fill: "var(--bg-2)" }), ...[-80, 60].map(x => sv("rect", { x, y: -60, width: 20, height: 14, fill: gold }))],
+      serpent: () => [sv("path", { d: "M-150 40 C-100 -20 -60 80 0 20 C60 -40 100 60 150 -10", fill: "none", stroke: green, "stroke-width": 16, "stroke-linecap": "round" }), sv("circle", { cx: 150, cy: -10, r: 14, fill: green }), sv("circle", { cx: 0, cy: -70, r: 30, fill: gold, opacity: .25 })],
+      pole: () => [sv("rect", { x: -4, y: -110, width: 8, height: 160, fill: "var(--muted)" }), sv("path", { d: "M0 -90 C30 -80 -30 -60 0 -50 C30 -40 -30 -20 0 -10", fill: "none", stroke: gold, "stroke-width": 8 })],
       zig: () => [...[0, 1, 2].map(i => sv("rect", { x: -140 + i * 40, y: 10 - i * 34, width: 280 - i * 80, height: 34, fill: "#b08a5a", opacity: .6 + i * .12 })), sv("rect", { x: -8, y: -20, width: 16, height: 30, fill: "var(--bg-2)" })]
     };
     g.append(...(art[kind] || art.garden)());
@@ -2554,7 +2926,7 @@ DATA.images = {
   /* ---------------- Connections web ---------------- */
   function initWeb() {
     const W = 600, C = W / 2, R = 228;
-    const order = ["eden", "mountain", "adam", "tabernacle", "ark", "temple", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
+    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
     const nodes = order.map(id => DATA.web.nodes.find(n => n.id === id));
     const pos = {};
     nodes.forEach((n, i) => { const a = -Math.PI / 2 + i / nodes.length * Math.PI * 2; pos[n.id] = [C + Math.cos(a) * R, C + Math.sin(a) * R, a]; });
@@ -2568,7 +2940,7 @@ DATA.images = {
       gE.append(p);
       return { a, b, label, p };
     });
-    const colour = g => g === 1 ? "var(--eden)" : g === 2 ? "var(--babel)" : "var(--accent)";
+    const colour = g => g === 1 ? "var(--eden)" : g === 2 ? "var(--babel)" : g === 4 ? "var(--flame)" : "var(--accent)";
     const nEls = {};
     nodes.forEach(n => {
       const [x, y, a] = pos[n.id];
@@ -2590,7 +2962,7 @@ DATA.images = {
       mine.forEach(e => { linked.add(e.a); linked.add(e.b); });
       edges.forEach(e => { const on = mine.includes(e); e.p.classList.toggle("on", on); e.p.classList.toggle("dim", !on); });
       Object.entries(nEls).forEach(([k, g]) => { g.classList.toggle("on", k === id); g.classList.toggle("dim", !linked.has(k)); });
-      $("#webPanel").replaceChildren(el("p", { class: "eyebrow", text: n.g === 1 ? "Part I" : n.g === 2 ? "Part II" : "Fulfilment" }), el("h3", { text: n.n }), el("p", { html: refify(n.d) }),
+      $("#webPanel").replaceChildren(el("p", { class: "eyebrow", text: n.g === 1 ? "Part I" : n.g === 4 ? "Part II" : n.g === 2 ? "Part III" : "Fulfilment" }), el("h3", { text: n.n }), el("p", { html: refify(n.d) }),
         el("div", { class: "row" }, el("b", { text: `${mine.length} connections` })),
         el("div", { class: "stack", style: { gap: "8px" } }, mine.map(e => {
           const other = e.a === id ? e.b : e.a;
@@ -2607,7 +2979,7 @@ DATA.images = {
     let qi = 0, score = 0;
     function render() {
       if (qi >= DATA.quiz.length) {
-        const msg = score === DATA.quiz.length ? "Perfect. You have walked from Eden to the New Jerusalem." : score >= 7 ? "Well done. A few threads to revisit above." : "A good start. Scroll back through the sections and try again.";
+        const msg = score === DATA.quiz.length ? "Perfect. You have walked from Eden to the New Jerusalem." : score >= DATA.quiz.length * 0.7 ? "Well done. A few threads to revisit above." : "A good start. Scroll back through the sections and try again.";
         box.replaceChildren(el("div", { class: "qcard" }, el("p", { class: "eyebrow", text: "Your score" }), el("h3", { style: { fontSize: "var(--step-3)" }, text: `${score} / ${DATA.quiz.length}` }), el("p", { text: msg }),
           el("div", {}, el("button", { class: "btn primary", type: "button", onclick: () => { qi = 0; score = 0; render(); }, text: "Try again" }))));
         return;
@@ -2654,8 +3026,289 @@ DATA.images = {
     }
   }
 
+  /* ================ Part II: the serpent and the seed ================ */
+  function initNachash() {
+    const svg = sv("svg", { viewBox: "0 0 600 430", class: "venn", role: "img", "aria-label": "Three overlapping meanings of the Hebrew word nachash" });
+    const grad = sv("linearGradient", { id: "nachGrad", x1: 0, y1: 0, x2: 1, y2: 0 },
+      sv("stop", { offset: 0, "stop-color": "var(--ink)" }), sv("stop", { offset: .5, "stop-color": "var(--accent)" }, reduceMotion ? null : sv("animate", { attributeName: "offset", values: "0;1;0", dur: "6s", repeatCount: "indefinite" })), sv("stop", { offset: 1, "stop-color": "var(--ink)" }));
+    svg.append(sv("defs", {}, grad));
+    svg.append(sv("text", { x: 300, y: 92, "text-anchor": "middle", "font-size": 84, fill: "url(#nachGrad)", style: { fontFamily: "var(--font-hebrew)" } }, "נָחָשׁ"));
+    svg.append(sv("text", { x: 300, y: 122, "text-anchor": "middle", "font-size": 14, "letter-spacing": 4, "font-weight": 700, fill: "var(--muted)" }, "N · Ḥ · Š"));
+    const spec = { serpent: [232, 238, "var(--eden)"], diviner: [368, 238, "var(--babel)"], shining: [300, 330, "var(--accent)"] };
+    const rings = {};
+    Object.entries(spec).forEach(([k, [cx, cy, c]]) => {
+      const r = sv("circle", { class: "ring", cx, cy, r: 92, fill: c, "fill-opacity": .2, stroke: c, "stroke-width": 2 });
+      rings[k] = r; svg.append(r);
+    });
+    // icons inside each ring
+    svg.append(sv("path", { d: "M170 250 C180 220 200 260 210 230 C218 206 236 222 230 200", fill: "none", stroke: "var(--eden)", "stroke-width": 6, "stroke-linecap": "round" }), sv("circle", { cx: 231, cy: 197, r: 6, fill: "var(--eden)" }));
+    svg.append(sv("path", { d: "M378 222 Q406 196 434 222 Q406 248 378 222 Z", fill: "none", stroke: "var(--babel)", "stroke-width": 3 }), sv("circle", { cx: 406, cy: 222, r: 7, fill: "var(--babel)" }));
+    const star = sv("g", { transform: "translate(300 372)" });
+    for (let i = 0; i < 8; i++) star.append(sv("line", { x1: 0, y1: 0, x2: 0, y2: -20, stroke: "var(--accent)", "stroke-width": 3, "stroke-linecap": "round", transform: `rotate(${i * 45})` }));
+    star.append(sv("circle", { r: 7, fill: "var(--accent)" }));
+    svg.append(star);
+    svg.append(sv("text", { class: "lbl", x: 140, y: 168, fill: "var(--eden)" }, "serpent"), sv("text", { class: "lbl", x: 460, y: 168, "text-anchor": "end", fill: "var(--babel)" }, "diviner"),
+      sv("text", { class: "lbl", x: 412, y: 405, fill: "var(--accent)" }, "shining one"));
+    const core = sv("g", {}, sv("circle", { cx: 300, cy: 270, r: 26, fill: "var(--flame)", opacity: .25, class: "pulse" }), sv("text", { x: 300, y: 268, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: "var(--ink)" }, "a divine"), sv("text", { x: 300, y: 281, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: "var(--ink)" }, "being"));
+    svg.append(core);
+    $("#nachashStage").append(svg);
+    const chips = $("#nachashChips");
+    const keys = Object.keys(DATA.nachash);
+    keys.forEach(k => chips.append(el("button", { class: "chip", type: "button", "data-k": k, text: DATA.nachash[k].label, onclick: () => set(k) })));
+    function set(k) {
+      const d = DATA.nachash[k];
+      $$(".chip", chips).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.k === k)));
+      Object.entries(rings).forEach(([rk, r]) => { const on = k === "all" || k === rk; r.style.opacity = on ? 1 : .25; r.setAttribute("fill-opacity", on ? (k === "all" ? .28 : .35) : .1); r.setAttribute("stroke-width", on ? 3 : 1); });
+      core.style.opacity = k === "all" ? 1 : .35;
+      $("#nachashHeb").textContent = d.heb;
+      $("#nachashHead").textContent = d.head;
+      $("#nachashText").innerHTML = refify(d.text);
+    }
+    set("all");
+  }
+
+  function initNotSnake() {
+    $("#notSnake").append(...DATA.notSnake.map(c => el("div", { class: "card reveal" }, icon(c.icon, "icon"), el("h3", { text: c.title }), el("p", { html: refify(c.text) }))));
+    $$("#notSnake .icon").forEach(i => { i.style.width = "36px"; i.style.height = "36px"; i.style.color = "var(--flame)"; });
+  }
+
+  function initCherub() {
+    const gems = $("#gems");
+    DATA.breastpiece.forEach(([n, c, on]) => gems.append(el("div", { class: "gem" + (on ? "" : " off"), style: { background: c, color: n === "Diamond" ? "#333" : "#fff", textShadow: n === "Diamond" ? "none" : "" }, text: n })));
+    const box = $("#verses");
+    const btns = DATA.ezekiel.map((v, i) => {
+      const b = el("button", { class: "verse", type: "button", "aria-pressed": "false", onclick: () => sel(i) }, el("small", { text: "Ezekiel " + v.v }), v.text);
+      box.append(b); return b;
+    });
+    function sel(i) {
+      const v = DATA.ezekiel[i];
+      btns.forEach((b, j) => b.setAttribute("aria-pressed", String(j === i)));
+      $("#verseRef").textContent = "Ezekiel " + v.v;
+      $("#verseNote").innerHTML = refify(v.note);
+      gems.classList.toggle("spot", !!v.gems);
+    }
+    sel(1);
+  }
+
+  function initMorningStar() {
+    const svg = sv("svg", { viewBox: "0 0 600 400", role: "img", "aria-label": "The morning star climbing toward the mountain of assembly, then falling at sunrise" });
+    const sky = sv("linearGradient", { id: "skyG", x1: 0, y1: 0, x2: 0, y2: 1 }, sv("stop", { offset: 0, "stop-color": "var(--babel)", "stop-opacity": .35 }), sv("stop", { offset: 1, "stop-color": "var(--bg)", "stop-opacity": 1 }));
+    svg.append(sv("defs", {}, sky), sv("rect", { width: 600, height: 300, fill: "url(#skyG)" }));
+    let seed = 21; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+    for (let i = 0; i < 40; i++) svg.append(sv("circle", { cx: rnd() * 600, cy: rnd() * 260, r: .6 + rnd() * 1.3, fill: "var(--muted)", class: i % 3 ? "" : "twinkle" }));
+    svg.append(sv("polygon", { points: "370,300 482,118 600,300", fill: "var(--muted)", "fill-opacity": .28 }),
+      sv("text", { x: 486, y: 142, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: "var(--ink)" }, "mount of assembly"),
+      sv("text", { x: 486, y: 156, "text-anchor": "middle", "font-size": 10, fill: "var(--muted)" }, "“far reaches of the north” (Zaphon)"));
+    const sun = sv("g", { style: { transition: reduceMotion ? "none" : "transform 1.6s ease, opacity 1.2s" }, opacity: 0 },
+      sv("circle", { cx: 130, cy: 300, r: 90, fill: "var(--accent)", opacity: .18 }), sv("circle", { cx: 130, cy: 300, r: 46, fill: "var(--accent)" }));
+    sun.style.transform = "translateY(60px)";
+    svg.append(sun);
+    svg.append(sv("rect", { x: 0, y: 300, width: 600, height: 100, fill: "var(--ink)", "fill-opacity": .12 }), sv("line", { x1: 0, y1: 300, x2: 600, y2: 300, stroke: "var(--line)", "stroke-width": 2 }),
+      sv("text", { x: 20, y: 386, "font-size": 12, "font-weight": 800, fill: "var(--muted)", "letter-spacing": 2 }, "SHEOL · THE PIT"));
+    const P = [[80, 286], [160, 236], [240, 192], [320, 156], [400, 126], [482, 92]];
+    svg.append(sv("polyline", { points: P.map(p => p.join(",")).join(" "), fill: "none", stroke: "var(--accent)", "stroke-width": 1.5, "stroke-dasharray": "3 6", opacity: .5 }));
+    const trail = sv("polyline", { fill: "none", stroke: "var(--accent)", "stroke-width": 3, "stroke-linecap": "round" });
+    svg.append(trail);
+    const venus = sv("g", { style: { transition: reduceMotion ? "none" : "transform 1s cubic-bezier(.4,.1,.2,1), opacity .8s" } },
+      sv("circle", { r: 18, fill: "var(--accent)", opacity: .25, class: "pulse" }), sv("circle", { r: 6, fill: "var(--surface)", stroke: "var(--accent)", "stroke-width": 2 }));
+    svg.append(venus);
+    const lbl = sv("text", { x: 300, y: 30, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "");
+    svg.append(lbl);
+    $("#starStage").append(svg);
+    const list = $("#iwill");
+    const items = DATA.iwill.map(w => { const li = el("li", { class: "iw", text: "“" + w.t + "”" }); list.append(li); return li; });
+    const fall = $("#iwFall");
+    let step = 0;
+    function render() {
+      items.forEach((li, i) => li.classList.toggle("on", i < step));
+      fall.classList.toggle("on", step > 5);
+      if (step <= 5) {
+        const [x, y] = P[step];
+        venus.style.transform = `translate(${x}px, ${y}px)`; venus.style.opacity = 1;
+        trail.setAttribute("points", P.slice(0, step + 1).map(p => p.join(",")).join(" "));
+        sun.style.opacity = 0; sun.style.transform = "translateY(60px)";
+        lbl.textContent = step === 0 ? "Before dawn: the brightest star rises" : step === 5 ? "“I will make myself like the Most High”" : "";
+      } else {
+        venus.style.transform = "translate(482px, 360px)"; venus.style.opacity = .6;
+        trail.setAttribute("points", P.map(p => p.join(",")).join(" ") + " 482,360");
+        sun.style.opacity = 1; sun.style.transform = "translateY(0)";
+        lbl.textContent = "Sunrise: “How you are fallen from heaven, O Day Star!”";
+      }
+      $("#starNext").textContent = step < 5 ? "Next “I will” ▸" : step === 5 ? "Sunrise ▾" : "Done";
+      $("#starNext").disabled = step > 5;
+    }
+    $("#starNext").addEventListener("click", () => { step = Math.min(6, step + 1); render(); });
+    $("#starReset").addEventListener("click", () => { step = 0; render(); });
+    render();
+
+    // two trajectories
+    const ps = sv("svg", { viewBox: "0 0 900 310", role: "img", "aria-label": "The rebel climbs and falls; Christ descends to the cross and is exalted" });
+    [[45, "God’s throne"], [170, "the created order"], [282, "death · the pit"]].forEach(([y, t]) => ps.append(sv("line", { x1: 20, y1: y, x2: 880, y2: y, stroke: "var(--line)", "stroke-dasharray": y === 170 ? "" : "4 6" }), sv("text", { x: 24, y: y - 6, "font-size": 11, "font-weight": 700, fill: "var(--muted)" }, t)));
+    const helel = sv("path", { d: "M60 160 C160 150 260 90 370 58 C400 52 420 120 470 286", fill: "none", stroke: "var(--flame)", "stroke-width": 4, "stroke-linecap": "round", class: "draw" });
+    const christ = sv("path", { d: "M500 40 C540 60 570 160 610 172 C650 184 670 280 700 282 C740 284 780 80 860 26", fill: "none", stroke: "var(--accent)", "stroke-width": 4, "stroke-linecap": "round", class: "draw" });
+    ps.append(helel, christ);
+    const t = (x, y, s, c, a) => ps.append(sv("text", { x, y, "font-size": 12, "font-weight": 700, fill: c || "var(--ink)", "text-anchor": a || "start", "paint-order": "stroke", stroke: "var(--surface)", "stroke-width": 4 }, s));
+    t(60, 150, "Day Star rises", "var(--flame)"); t(370, 50, "“I will be like the Most High”", "var(--flame)", "middle"); t(478, 300, "brought down to the pit", "var(--flame)");
+    t(500, 32, "“in the form of God”", "var(--accent)"); t(618, 166, "“emptied himself”"); t(700, 300, "“death on a cross”", "var(--accent)", "middle"); t(860, 18, "“highly exalted”", "var(--accent)", "end");
+    ps.append(sv("circle", { cx: 860, cy: 26, r: 7, fill: "var(--accent)" }), sv("circle", { cx: 470, cy: 286, r: 6, fill: "var(--flame)" }));
+    const wrap = el("div", { class: "scroll-x" }, ps);
+    $("#pathsStage").append(wrap);
+    [helel, christ].forEach(p => { p.style.setProperty("--len", p.getTotalLength()); });
+    const go = () => { helel.classList.add("go"); setTimeout(() => christ.classList.add("go"), reduceMotion ? 0 : 900); };
+    if ("IntersectionObserver" in window && !reduceMotion) {
+      const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { go(); io.disconnect(); } }, { threshold: .3 });
+      io.observe(wrap);
+      setTimeout(go, 4000);
+    } else go();
+  }
+
+  function initSeraph() {
+    const svg = sv("svg", { viewBox: "0 0 520 320", role: "img", "aria-label": "A winged serpent guardian beside a winged cherub guardian" });
+    // seraph: rearing winged serpent
+    const s = sv("g", { transform: "translate(130 0)" });
+    s.append(sv("path", { d: "M-70 120 Q-120 60 -100 30 Q-60 70 -20 110 Z", fill: "var(--accent)", opacity: .75 }), sv("path", { d: "M70 120 Q120 60 100 30 Q60 70 20 110 Z", fill: "var(--accent)", opacity: .75 }));
+    s.append(sv("path", { d: "M-40 280 C-80 270 -60 240 0 240 C60 240 70 210 20 200 C-20 192 -20 160 0 140 L0 90", fill: "none", stroke: "var(--flame)", "stroke-width": 16, "stroke-linecap": "round" }));
+    s.append(sv("ellipse", { cx: 0, cy: 92, rx: 22, ry: 30, fill: "var(--flame)" }), sv("circle", { cx: -7, cy: 84, r: 3, fill: "var(--accent-ink)" }), sv("circle", { cx: 7, cy: 84, r: 3, fill: "var(--accent-ink)" }));
+    [-30, 0, 30].forEach((x, i) => { const f = sv("path", { d: `M${x} 60 C${x - 8} 46 ${x - 4} 38 ${x} 28 C${x + 4} 38 ${x + 8} 46 ${x} 60 Z`, fill: "var(--accent)" }); if (!reduceMotion) { f.classList.add("pulse"); f.style.animationDelay = i * .3 + "s"; } s.append(f); });
+    s.append(sv("text", { x: 0, y: 306, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, "Seraph · śārāph"));
+    svg.append(s);
+    // cherub: winged lion with human face
+    const c = sv("g", { transform: "translate(390 0)" });
+    c.append(sv("path", { d: "M-10 170 Q-40 60 60 40 Q20 90 30 160 Z", fill: "var(--babel)", opacity: .75 }));
+    c.append(sv("rect", { x: -70, y: 170, width: 130, height: 60, rx: 28, fill: "var(--babel)" }));
+    [-60, -30, 20, 46].forEach(x => c.append(sv("rect", { x, y: 222, width: 14, height: 50, rx: 6, fill: "var(--babel)" })));
+    c.append(sv("circle", { cx: -78, cy: 160, r: 24, fill: "var(--babel)" }), sv("circle", { cx: -84, cy: 156, r: 3, fill: "var(--surface)" }), sv("path", { d: "M60 190 Q90 200 84 230", fill: "none", stroke: "var(--babel)", "stroke-width": 6, "stroke-linecap": "round" }));
+    c.append(sv("text", { x: -10, y: 306, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, "Cherub · kərûb"));
+    svg.append(c);
+    svg.append(sv("text", { x: 260, y: 24, "text-anchor": "middle", "font-size": 12, "font-weight": 700, fill: "var(--muted)" }, "two pictures of a throne-guardian"));
+    $("#seraphStage").append(svg);
+  }
+
+  function initCurse() {
+    const box = $("#curseLines");
+    const btns = DATA.curseLines.map((c, i) => { const b = el("button", { class: "verse", type: "button", "aria-pressed": "false", onclick: () => sel(i) }, el("small", { text: c.ref }), c.t); box.append(b); return b; });
+    function sel(i) {
+      btns.forEach((b, j) => b.setAttribute("aria-pressed", String(j === i)));
+      const c = DATA.curseLines[i];
+      $("#curseNote").replaceChildren(el("p", { class: "eyebrow", text: c.ref }), el("p", { html: refify(c.note) }));
+    }
+    sel(2);
+    // descent diagram
+    const L = [["Mountain of God", 60], ["Heaven", 140], ["Earth · ʾereṣ", 230], ["Dust", 310], ["Sheol · the pit · abyss", 400], ["Lake of fire", 490]];
+    const svg = sv("svg", { viewBox: "0 0 420 540", role: "img", "aria-label": "The serpent's descent through Scripture from God's mountain to the lake of fire" });
+    svg.append(sv("polygon", { points: "300,92 360,26 420,92", fill: "var(--eden)", "fill-opacity": .45 }));
+    const tree = sv("g", { opacity: 0, style: { transition: "opacity .8s" } }, sv("circle", { cx: 360, cy: 30, r: 26, fill: "var(--accent)", opacity: .3, class: "pulse" }), sv("rect", { x: 357, y: 26, width: 6, height: 22, fill: "var(--ink)", opacity: .6 }), sv("circle", { cx: 360, cy: 22, r: 13, fill: "var(--eden)" }));
+    svg.append(tree);
+    svg.append(sv("rect", { x: 0, y: 470, width: 420, height: 70, fill: "var(--flame)", "fill-opacity": .18 }), sv("rect", { x: 0, y: 380, width: 420, height: 90, fill: "var(--ink)", "fill-opacity": .07 }));
+    L.forEach(([n, y]) => svg.append(sv("line", { x1: 150, y1: y, x2: 410, y2: y, stroke: "var(--line)", "stroke-dasharray": "3 5" }), sv("text", { x: 146, y: y + 4, "text-anchor": "end", "font-size": 11, "font-weight": 700, fill: "var(--muted)" }, n)));
+    const trail = sv("polyline", { fill: "none", stroke: "var(--flame)", "stroke-width": 2.5, "stroke-dasharray": "5 5", "stroke-linecap": "round" });
+    svg.append(trail);
+    const marker = sv("g", { style: { transition: reduceMotion ? "none" : "transform .9s cubic-bezier(.4,.1,.2,1), opacity .6s" } },
+      sv("circle", { r: 16, fill: "var(--flame)", opacity: .2, class: "pulse" }),
+      sv("path", { d: "M-11 6 C-6 -6 0 10 5 -2 C8 -9 12 -6 12 -6", fill: "none", stroke: "var(--flame)", "stroke-width": 4, "stroke-linecap": "round" }), sv("circle", { cx: 12, cy: -6, r: 3.5, fill: "var(--flame)" }));
+    svg.append(marker);
+    $("#descentStage").append(svg);
+    const D = DATA.descent;
+    const pos = i => { const d = D[i]; return [175 + i * 27, d.lvl < 0 ? 30 : L[d.lvl][1]]; };
+    let i = 0;
+    function go(n) {
+      i = Math.max(0, Math.min(D.length - 1, n));
+      const d = D[i], [x, y] = pos(i);
+      marker.style.transform = `translate(${x}px, ${y}px)`;
+      marker.style.opacity = d.lvl < 0 ? 0 : 1;
+      tree.setAttribute("opacity", d.lvl < 0 ? 1 : 0);
+      trail.setAttribute("points", D.slice(0, i + 1).filter(s => s.lvl >= 0).map((s, j) => pos(j).join(",")).join(" "));
+      $("#descentPanel").replaceChildren(el("p", { class: "eyebrow", text: `Step ${i + 1} of ${D.length}` }), el("h3", { text: d.title }), el("span", { class: "ref", text: d.ref }), el("p", { html: refify(d.text) }));
+      $("#descNext").disabled = i === D.length - 1;
+    }
+    $("#descNext").addEventListener("click", () => go(i + 1));
+    $("#descPrev").addEventListener("click", () => go(i - 1));
+    go(0);
+  }
+
+  function initSeedWar() {
+    const E = DATA.seedWar, W = 1300, H = 340, dx = (W - 210) / (E.length - 1);
+    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Timeline of the woman's seed and the serpent's attacks from Genesis to Revelation" });
+    const yS = 128, yA = 236;
+    svg.append(sv("text", { x: 14, y: 30, "font-size": 12, "font-weight": 800, fill: "var(--accent)", "letter-spacing": 2 }, "THE WOMAN’S SEED"), sv("text", { x: 14, y: H - 12, "font-size": 12, "font-weight": 800, fill: "var(--flame)", "letter-spacing": 2 }, "THE SERPENT STRIKES"));
+    const X = i => 50 + i * dx;
+    let d = `M${X(0)} ${yS}`;
+    for (let i = 1; i < E.length; i++) { const mx = (X(i - 1) + X(i)) / 2; d += ` Q${mx} ${yS + (i % 2 ? -18 : 18)} ${X(i)} ${yS}`; }
+    const line = sv("path", { d, fill: "none", stroke: "var(--accent)", "stroke-width": 4, "stroke-linecap": "round", class: "draw" });
+    const snake = sv("path", { d: E.map((e, i) => `${i ? "L" : "M"}${X(i)} ${yA + (i % 2 ? 10 : -10)}`).join(" "), fill: "none", stroke: "var(--flame)", "stroke-width": 2, "stroke-dasharray": "2 7", opacity: .6 });
+    svg.append(snake, line);
+    const evs = E.map((e, i) => {
+      const x = X(i), seedK = e.k === "seed";
+      const g = sv("g", { class: "ev", tabindex: "0", role: "button", "aria-label": e.n });
+      if (!seedK) g.append(sv("path", { d: `M${x} ${yA - 12} L${x - 6} ${yA - 46} L${x + 5} ${yA - 56} L${x - 2} ${yS + 10}`, fill: "none", stroke: "var(--flame)", "stroke-width": 2.5, "stroke-linejoin": "round" }));
+      const y = seedK ? yS : yA;
+      g.append(sv("circle", { cx: x, cy: y, r: seedK ? 9 : 8, fill: seedK ? "var(--accent)" : "var(--flame)", stroke: "var(--surface)", "stroke-width": 2 }));
+      const ty = seedK ? yS - 22 : yA + 24;
+      g.append(sv("text", { x, y: ty, transform: `rotate(${seedK ? -28 : 28} ${x} ${ty})`, "text-anchor": seedK ? "start" : "start" }, e.n));
+      g.addEventListener("click", () => { stop(); sel(i); });
+      g.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); stop(); sel(i); } });
+      svg.append(g);
+      return g;
+    });
+    $("#seedWar").append(svg);
+    line.style.setProperty("--len", line.getTotalLength());
+    line.classList.add("go");
+    function sel(i) {
+      evs.forEach((g, j) => g.classList.toggle("on", j === i));
+      const e = E[i];
+      $("#seedPanel").replaceChildren(el("p", { class: "eyebrow", style: { color: e.k === "seed" ? "var(--accent)" : "var(--flame)" }, text: (e.k === "seed" ? "The woman’s seed" : "The serpent strikes") + ` · ${i + 1} of ${E.length}` }),
+        el("h3", { text: e.n }), el("span", { class: "ref", text: e.ref }), el("p", { html: refify(e.text) }));
+      const wrap = $("#seedWar");
+      const x = X(i) / W * wrap.scrollWidth - wrap.clientWidth / 2;
+      if (wrap.scrollWidth > wrap.clientWidth) wrap.scrollTo({ left: Math.max(0, x), behavior: reduceMotion ? "auto" : "smooth" });
+    }
+    let timer = null;
+    function stop() { clearInterval(timer); evs.forEach(g => g.classList.remove("hide")); }
+    $("#seedPlay").addEventListener("click", () => {
+      clearInterval(timer);
+      line.classList.remove("go"); void line.getBoundingClientRect();
+      evs.forEach(g => g.classList.add("hide"));
+      let i = 0;
+      const step = () => { evs[i].classList.remove("hide"); sel(i); i++; if (i >= E.length) clearInterval(timer); };
+      requestAnimationFrame(() => { line.style.transition = `stroke-dashoffset ${E.length * 1.6}s linear`; line.classList.add("go"); });
+      step(); timer = setInterval(step, 1600);
+    });
+    sel(0);
+  }
+
+  function initBronze() {
+    const svg = sv("svg", { viewBox: "0 0 400 380", role: "img", "aria-label": "The bronze serpent on a pole, with bitten people looking up and being healed" });
+    svg.append(sv("circle", { cx: 200, cy: 150, r: 110, fill: "var(--accent)", opacity: .12, class: "pulse" }));
+    svg.append(sv("rect", { x: 196, y: 60, width: 8, height: 280, rx: 3, fill: "#8c6a2c" }), sv("rect", { x: 170, y: 74, width: 60, height: 7, rx: 3, fill: "#8c6a2c" }));
+    let d = "M200 92";
+    for (let y = 92, k = 0; y < 250; y += 20, k++) d += ` Q${k % 2 ? 176 : 224} ${y + 10} 200 ${y + 20}`;
+    svg.append(sv("path", { d, fill: "none", stroke: "var(--accent)", "stroke-width": 9, "stroke-linecap": "round" }), sv("path", { d: "M200 92 Q214 70 236 76", fill: "none", stroke: "var(--accent)", "stroke-width": 9, "stroke-linecap": "round" }), sv("circle", { cx: 238, cy: 76, r: 8, fill: "var(--accent)" }));
+    const sights = sv("g", { opacity: 0, style: { transition: "opacity .8s" } });
+    svg.append(sights);
+    const people = [];
+    for (let i = 0; i < 14; i++) {
+      const a = Math.PI * (0.08 + 0.84 * i / 13), x = 200 - Math.cos(a) * 170, y = 352 - Math.sin(a) * 34;
+      sights.append(sv("line", { x1: x, y1: y - 18, x2: 220, y2: 150, stroke: "var(--accent)", "stroke-width": 1, "stroke-dasharray": "2 5" }));
+      const p = sv("g", { class: "person", style: { transformBox: "fill-box" } }, sv("circle", { cx: x, cy: y - 22, r: 6 }), sv("rect", { x: x - 6, y: y - 15, width: 12, height: 18, rx: 5 }));
+      p.setAttribute("fill", "var(--flame)");
+      people.push(p); svg.append(p);
+    }
+    $("#poleStage").append(svg);
+    let t = [];
+    $("#lookBtn").addEventListener("click", () => {
+      t.forEach(clearTimeout); t = [];
+      sights.setAttribute("opacity", 1);
+      people.forEach((p, i) => t.push(setTimeout(() => { p.setAttribute("fill", "var(--eden)"); p.style.transform = "translateY(-6px)"; }, reduceMotion ? 0 : 200 + i * 160)));
+    });
+    $("#lookReset").addEventListener("click", () => { t.forEach(clearTimeout); sights.setAttribute("opacity", 0); people.forEach(p => { p.setAttribute("fill", "var(--flame)"); p.style.transform = ""; }); });
+    $("#neboPhoto").append(photo("nebo"));
+    ["fall", "dragon"].forEach(k => $("#serpentGallery").append(photo(k)));
+    $("#serpentGallery").style.gridTemplateColumns = "repeat(auto-fit, minmax(260px, 1fr))";
+  }
+
   function boot() {
     const steps = [initSchemes, initHero, initClues, initMountain, initTabernacle, initArk, initArkMap, initTabsContent, initMenorah, initStory, initPhotos, initMirror,
+      initNachash, initNotSnake, initCherub, initMorningStar, initSeraph, initCurse, initSeedWar, initBronze,
       initMap, initZiggurat, initGen, initNations, initLadder, initPentecost, initCities, initWeb, initQuiz, initSources, initScroll];
     steps.forEach(fn => { try { fn(); } catch (err) { console.error(fn.name, err); } });
   }
