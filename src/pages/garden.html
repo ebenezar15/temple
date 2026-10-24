@@ -1,0 +1,189 @@
+<!-- ============ PART I ============ -->
+<div class="part-banner" id="part1">
+  <div class="wrap">
+    <div class="part-num" aria-hidden="true">I</div>
+    <div>
+      <p class="eyebrow">Part one</p>
+      <h2>The Garden Was a Temple</h2>
+      <p>Read Genesis 2–3 slowly and in Hebrew, next to the rest of the Bible and the ancient world, and Eden looks less like a park and more like God’s sanctuary on a mountain, with Adam serving as its first priest.</p>
+      <nav class="toc" aria-label="On this page"></nav>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="clues">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Eight clues in the text</p>
+      <h2>Why Eden reads like a sanctuary</h2>
+      <p>Tap each card to turn it over. Every clue in Genesis has a matching detail in the Tabernacle or Temple.</p>
+    </div>
+    <div class="clues" id="clueGrid"></div>
+    <div class="clue-count"><span id="clueLabel" class="muted">0 of 8 clues uncovered</span><div class="meter"><i id="clueMeter"></i></div><button class="btn small" id="clueAll" type="button">Reveal all</button></div>
+  </div>
+</section>
+
+<section class="block alt" id="mountain">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Cosmic geography</p>
+      <h2>The mountain of God, in three rings</h2>
+      <p>In the ancient Near East the gods lived on a cosmic mountain, the high centre of the world where life-giving water flowed out and heaven touched earth. Eden, Sinai and the Tabernacle share the same three zones of holiness. Switch between them.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="mtnStage"></div>
+      <div class="panel">
+        <div class="chips" role="group" aria-label="Choose a sanctuary" id="mtnModes"></div>
+        <h3 id="mtnTitle"></h3>
+        <p class="muted" id="mtnIntro"></p>
+        <div class="zones" id="mtnZones"></div>
+      </div>
+    </div>
+    <div class="callout mt reveal">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 8 L20 32 M8 20 L32 20" stroke="currentColor" stroke-width="2"/><path d="M27 13 L32 20 L27 27" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <div><b>East means away from God</b>Exiles from God’s presence keep moving east: Adam and Eve are driven out on the east (<span class="ref">Gen 3:24</span>), Cain settles “east of Eden” (<span class="ref">Gen 4:16</span>), Babel’s builders migrate east to Shinar (<span class="ref">Gen 11:2</span>), and Lot chooses the east toward Sodom (<span class="ref">Gen 13:11</span>). The Tabernacle and Temple face east, so every worshipper walks <em>west</em>, back toward the presence.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="tabernacle">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">A portable Eden · Exodus 25–40</p>
+      <h2>Walk through the Tabernacle</h2>
+      <p>“Let them make me a sanctuary, that I may dwell in their midst” (<span class="ref">Exod 25:8</span>). Select any object, or press <b>Walk west</b> to enter from the eastern gate and move toward the presence.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="tabStage"></div>
+      <div class="panel" id="tabPanel" aria-live="polite"></div>
+    </div>
+    <div class="htl-controls">
+      <button class="btn primary small" id="tabWalk" type="button">Walk west ▸</button>
+      <button class="btn small" id="tabReset" type="button">Back to the gate</button>
+      <span class="legend"><span><i style="background:var(--babel)"></i>Blue</span><span><i style="background:#6b3a8f"></i>Purple</span><span><i style="background:var(--flame)"></i>Scarlet</span><span><i style="background:var(--accent)"></i>Gold</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="ark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The footstool of God’s throne</p>
+      <h2>The Ark of the Covenant</h2>
+      <p>A gold-covered chest about 2.5 × 1.5 × 1.5 cubits (roughly 115 × 70 × 70 cm), the Ark sat in the Most Holy Place beneath two cherubim. David called it “the footstool of our God” (<span class="ref">1 Chr 28:2</span>). Explore its parts, then follow its journey on the map.</p>
+    </div>
+    <div class="split even">
+      <div class="stage" id="arkStage"></div>
+      <div class="panel" id="arkPanel" aria-live="polite"></div>
+    </div>
+
+    <div class="sec-head mt reveal">
+      <h3>The Ark’s journey</h3>
+      <p>From Sinai to Solomon’s Temple, and then out of history. Step through it or press play.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="arkMapStage"></div>
+      <div class="panel" id="arkJourneyPanel" aria-live="polite"></div>
+    </div>
+    <div class="htl-controls">
+      <button class="btn primary small" id="arkPlay" type="button">Play journey ▸</button>
+      <button class="btn small" id="arkPrev" type="button">◂ Previous</button>
+      <button class="btn small" id="arkNext" type="button">Next ▸</button>
+      <span class="muted" id="arkStepLabel"></span>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="adam">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Man in the sanctuary</p>
+      <h2>Adam: image, priest and king</h2>
+      <p>Ancient kings set up statues of themselves to mark the lands they ruled, and temples were not finished until the god’s image was installed. Genesis says God placed his own living image, humanity, inside his garden-temple to serve, guard and rule.</p>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card word"><span class="heb">עָבַד</span><b>ʿāvad · to serve, to work</b><small>“to work it” <span class="ref">Gen 2:15</span> · the Levites’ “service of the tabernacle” <span class="ref">Num 3:7–8</span></small></div>
+      <div class="card word"><span class="heb">שָׁמַר</span><b>shāmar · to guard, to keep</b><small>“to keep it” <span class="ref">Gen 2:15</span> · priests “guard” the sanctuary <span class="ref">Num 18:5–7</span></small></div>
+      <div class="card word"><span class="heb">צֶלֶם</span><b>tselem · image</b><small>“Let us make man in our image … and let them have dominion” <span class="ref">Gen 1:26</span></small></div>
+    </div>
+    <div class="tabs mt" role="tablist" aria-label="Compare the priest-kings" id="adamTabs"></div>
+    <div id="adamPanels"></div>
+
+    <div class="sec-head mt reveal">
+      <h3>Creation as a temple dedication</h3>
+      <p>Scholars such as John Walton and G. K. Beale note that the seven days of Genesis 1 follow the pattern of building and inaugurating a temple, which ends with the deity coming to “rest” in it.</p>
+    </div>
+    <div class="ctable-wrap reveal">
+      <table class="ctable">
+        <thead><tr><th>Pattern</th><th>Creation</th><th>Tabernacle</th><th>Solomon’s Temple</th></tr></thead>
+        <tbody>
+          <tr><td>Sevens</td><td>Seven days<span class="ref">Gen 1:1–2:3</span></td><td>Seven speeches, each “The LORD said to Moses”<span class="ref">Exod 25–31</span></td><td>Seven years to build; dedicated in the seventh month<span class="ref">1 Kgs 6:38; 8:2</span></td></tr>
+          <tr><td>Completion</td><td>“God finished his work”<span class="ref">Gen 2:2</span></td><td>“Moses finished the work”<span class="ref">Exod 40:33</span></td><td>“All the work … was finished”<span class="ref">1 Kgs 7:51</span></td></tr>
+          <tr><td>Blessing</td><td>God blessed the seventh day<span class="ref">Gen 2:3</span></td><td>Moses blessed them<span class="ref">Exod 39:43</span></td><td>Solomon blessed the assembly<span class="ref">1 Kgs 8:14</span></td></tr>
+          <tr><td>Rest</td><td>God rested on the seventh day<span class="ref">Gen 2:2</span></td><td>The Sabbath sign closes the instructions<span class="ref">Exod 31:12–17</span></td><td>“Arise, O LORD, to your resting place”<span class="ref">Ps 132:8, 14</span></td></tr>
+          <tr><td>Glory</td><td>The world is “very good”<span class="ref">Gen 1:31</span></td><td>The glory fills the tent<span class="ref">Exod 40:34</span></td><td>The cloud fills the house<span class="ref">1 Kgs 8:10–11</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="tree">
+  <div class="wrap">
+    <div class="split even">
+      <div class="stack reveal">
+        <p class="eyebrow">Tree of life → lampstand</p>
+        <h2>A golden tree in the holy place</h2>
+        <div class="prose">
+          <p>The menorah was hammered from one piece of pure gold, with branches, almond blossoms, buds and flowers (<span class="ref">Exod 25:31–40</span>). It stood just outside the veil like a stylised tree of life, burning in the presence of God.</p>
+          <p>Aaron’s staff, kept beside the Ark, “sprouted and put forth buds and produced blossoms, and it bore ripe almonds” (<span class="ref">Num 17:8</span>). Life springs up again near the throne.</p>
+          <p>In <span class="ref">Revelation 1:12–20</span> the risen Christ walks among seven golden lampstands, his churches. In <span class="ref">Revelation 22:2</span> the tree of life stands in the city again.</p>
+        </div>
+      </div>
+      <div class="stage" id="menorahStage"></div>
+    </div>
+    <div class="mt" id="menorahPhoto"></div>
+  </div>
+</section>
+
+<section class="block" id="story">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">One plan from Genesis 2 to Revelation 22</p>
+      <h2>God’s dwelling through history</h2>
+      <p>The barriers change, but the goal stays the same: “I will walk among you and will be your God” (<span class="ref">Lev 26:12</span>). Select a moment or step through the story.</p>
+    </div>
+    <div class="htl" id="storyTl"></div>
+    <div class="htl-controls">
+      <button class="btn small" id="storyPrev" type="button">◂ Previous</button>
+      <button class="btn primary small" id="storyNext" type="button">Next ▸</button>
+    </div>
+    <div class="htl-detail panel" id="storyDetail" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="block alt" id="restored">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The story comes home</p>
+      <h2>Genesis 2–3 ↔ Revelation 21–22</h2>
+      <p>The Bible ends where it began, only better. Hover or tap a line to see its match. The New Jerusalem is Eden as it was always meant to become: a garden-city-temple filling the earth.</p>
+    </div>
+    <div class="mirror" id="mirror">
+      <div class="mirror-col" id="mirrorL"><h3>In the beginning</h3></div>
+      <div class="mirror-mid"><svg id="mirrorSvg" aria-hidden="true"></svg></div>
+      <div class="mirror-col" id="mirrorR"><h3>In the end</h3></div>
+    </div>
+    <div class="cubes">
+      <div class="card cube-card reveal">
+        <div class="cube-scene" aria-hidden="true"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div><h3>The Most Holy Place: a perfect cube</h3><p>20 × 20 × 20 cubits, overlaid with pure gold (<span class="ref">1 Kgs 6:20</span>). Only the high priest entered, once a year.</p></div>
+      </div>
+      <div class="card cube-card reveal">
+        <div class="cube-scene" aria-hidden="true"><div class="cube big"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div><h3>The New Jerusalem: a cube of gold</h3><p>“Its length and width and height are equal”, 12,000 stadia each (<span class="ref">Rev 21:16</span>), pure gold like glass. The whole city has become the Most Holy Place. “I saw no temple in the city, for its temple is the Lord God the Almighty and the Lamb” (<span class="ref">Rev 21:22</span>).</p></div>
+      </div>
+    </div>
+    <div class="gallery mt" id="part1Gallery"></div>
+  </div>
+</section>

@@ -16,9 +16,21 @@ Use the **Colours** button (top right) to switch between seven schemes (Follow d
 
 Text is set in **Avenir Next**. Avenir Next is a commercial typeface: it is used automatically wherever it is installed (all Apple devices), and the page falls back to the free, similar Nunito Sans from Google Fonts elsewhere.
 
+## Pages
+
+| Page | Contents |
+| --- | --- |
+| `index.html` | Home: introduction and a guide to the three parts |
+| `garden.html` | Part I: The Garden-Temple |
+| `serpent.html` | Part II: The Serpent and the Seed |
+| `babel.html` | Part III: Babel, Babylon and the City of God |
+| `connections.html` | Connections web, quiz and further reading |
+
+Each part page opens with an "on this page" list of its sections and ends with previous/next links.
+
 ## Running it
 
-Open `index.html` in any modern browser. It is a single self-contained file; the only network requests are Google Fonts and the public-domain artwork hot-linked from Wikimedia Commons (each image has a drawn fallback if it cannot load).
+Open `index.html` in any modern browser. The pages share `assets/styles.css` and `assets/app.js`; the only network requests are Google Fonts and the public-domain artwork hot-linked from Wikimedia Commons (each image has a drawn fallback if it cannot load).
 
 ## Editing
 
@@ -26,13 +38,14 @@ Source lives in `src/`:
 
 | File | Contents |
 | --- | --- |
-| `src/body.html` | Page structure and section text |
+| `src/pages/*.html` | Each page's sections and text |
+| `src/partials/*.html` | Shared header (navigation, colour picker) and footer |
 | `src/styles.css` | Colour schemes, layout and animation |
 | `src/data.js` | Content for Parts I and III: clues, timelines, map coordinates, quiz, sources |
 | `src/data-serpent.js` | Content for Part II: the serpent and the seed |
 | `src/app.js` | Interactive behaviour |
 
-After editing, rebuild the single-file page:
+After editing, rebuild the pages:
 
 ```sh
 node scripts/build.mjs

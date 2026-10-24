@@ -536,17 +536,17 @@
   }
 
   function initTabsContent() {
-    makeTabs($("#adamTabs"), $("#adamPanels"), DATA.adam, (p, it) => {
+    if ($("#adamTabs")) makeTabs($("#adamTabs"), $("#adamPanels"), DATA.adam, (p, it) => {
       p.append(el("h3", { text: it.head }));
       const g = el("div", { class: "grid-3" });
       it.rows.forEach(r => g.append(el("div", { class: "card" }, el("p", { class: "eyebrow", text: r[0] }), el("p", { html: refify(r[1]), style: { color: "var(--ink)" } }))));
       p.append(g);
     }, "adam");
-    makeTabs($("#mythTabs"), $("#mythPanels"), DATA.myth, (p, it) => {
+    if ($("#mythTabs")) makeTabs($("#mythTabs"), $("#mythPanels"), DATA.myth, (p, it) => {
       const good = it.tab.startsWith("What");
       p.append(el("ul", { style: { margin: 0, paddingLeft: "1.2em", display: "grid", gap: "8px" } }, it.rows.map(r => el("li", { html: refify(r), style: { color: good ? "var(--ink)" : "var(--muted)" } }))));
     }, "myth");
-    makeTabs($("#sinTabs"), $("#sinPanels"), DATA.sin, (p, it) => {
+    if ($("#sinTabs")) makeTabs($("#sinTabs"), $("#sinPanels"), DATA.sin, (p, it) => {
       p.append(el("div", { class: "split even" },
         el("div", { class: "stack" }, el("h3", { text: it.head }), el("span", { class: "ref", text: it.ref })),
         el("div", { class: "prose" }, it.body.map(b => el("p", { html: refify(b) })))));
@@ -654,6 +654,7 @@
       menorah: () => [sv("path", { d: "M0 40 L0 -50 M-60 -50 A60 60 0 0 0 60 -50 M-40 -50 A40 40 0 0 0 40 -50 M-20 -50 A20 20 0 0 0 20 -50", fill: "none", stroke: gold, "stroke-width": 6 })],
       tower: () => [...[0, 1, 2, 3, 4, 5].map(i => sv("ellipse", { cx: 0, cy: 30 - i * 22, rx: 120 - i * 17, ry: 12, fill: blue, opacity: .35 + i * .1 })), sv("path", { d: "M-60 -110 Q0 -150 60 -110", fill: "none", stroke: "var(--muted)", "stroke-width": 3, opacity: .5 })],
       gate: () => [sv("rect", { x: -110, y: -80, width: 220, height: 120, fill: blue }), sv("path", { d: "M-40 40 L-40 -20 A40 40 0 0 1 40 -20 L40 40 Z", fill: "var(--bg-2)" }), ...[-80, 60].map(x => sv("rect", { x, y: -60, width: 20, height: 14, fill: gold }))],
+      web: () => { const pts = [[-120, -40], [-60, -80], [20, -70], [100, -30], [120, 40], [40, 70], [-50, 60], [-110, 30]]; return [...pts.flatMap((a, i) => pts.slice(i + 2, i + 5).map(b => sv("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: "var(--muted)", "stroke-width": 2, opacity: .5 }))), ...pts.map((p, i) => sv("circle", { cx: p[0], cy: p[1], r: 10, fill: i % 3 === 0 ? green : i % 3 === 1 ? blue : gold }))]; },
       serpent: () => [sv("path", { d: "M-150 40 C-100 -20 -60 80 0 20 C60 -40 100 60 150 -10", fill: "none", stroke: green, "stroke-width": 16, "stroke-linecap": "round" }), sv("circle", { cx: 150, cy: -10, r: 14, fill: green }), sv("circle", { cx: 0, cy: -70, r: 30, fill: gold, opacity: .25 })],
       pole: () => [sv("rect", { x: -4, y: -110, width: 8, height: 160, fill: "var(--muted)" }), sv("path", { d: "M0 -90 C30 -80 -30 -60 0 -50 C30 -40 -30 -20 0 -10", fill: "none", stroke: gold, "stroke-width": 8 })],
       zig: () => [...[0, 1, 2].map(i => sv("rect", { x: -140 + i * 40, y: 10 - i * 34, width: 280 - i * 80, height: 34, fill: "#b08a5a", opacity: .6 + i * .12 })), sv("rect", { x: -8, y: -20, width: 16, height: 30, fill: "var(--bg-2)" })]
@@ -674,9 +675,10 @@
     return fig;
   }
   function initPhotos() {
-    $("#bruegelPhoto").append(photo("bruegel"));
-    ["eden", "ark", "temple"].forEach(k => $("#part1Gallery").append(photo(k)));
-    ["ishtar", "ur", "hanging"].forEach(k => $("#part2Gallery").append(photo(k)));
+    const put = (sel, keys) => { const n = $(sel); if (n) keys.forEach(k => n.append(photo(k))); };
+    put("#bruegelPhoto", ["bruegel"]);
+    put("#part1Gallery", ["eden", "ark", "temple"]);
+    put("#part2Gallery", ["ishtar", "ur", "hanging"]);
   }
 
   /* ---------------- Ziggurat ---------------- */
@@ -1061,15 +1063,15 @@
   /* ---------------- Scroll: progress, nav, reveals ---------------- */
   function initScroll() {
     const prog = $("#progress");
-    const links = $$(".nav a");
-    const targets = links.map(a => $(a.getAttribute("href"))).filter(Boolean);
+    const toc = $$(".toc a");
+    const targets = toc.map(a => $(a.getAttribute("href"))).filter(Boolean);
     const onScroll = () => {
       const h = document.documentElement;
       const max = h.scrollHeight - h.clientHeight;
       prog.style.width = (max > 0 ? h.scrollTop / max * 100 : 0) + "%";
       let cur = null;
-      targets.forEach((t, i) => { if (t.getBoundingClientRect().top < 140) cur = i; });
-      links.forEach((a, i) => a.classList.toggle("active", i === cur));
+      targets.forEach((t, i) => { if (t.getBoundingClientRect().top < 160) cur = i; });
+      toc.forEach((a, i) => a.classList.toggle("active", i === cur));
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
@@ -1359,11 +1361,36 @@
     $("#serpentGallery").style.gridTemplateColumns = "repeat(auto-fit, minmax(260px, 1fr))";
   }
 
+  /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
+  function initPages() {
+    const pageEl = $(".page");
+    const id = pageEl ? pageEl.dataset.page : "home";
+    $$(".nav a").forEach(a => {
+      const on = a.dataset.p === id;
+      a.classList.toggle("active", on);
+      if (on) { a.setAttribute("aria-current", "page"); const nav = a.parentElement; if (nav.scrollWidth > nav.clientWidth) nav.scrollLeft = a.offsetLeft - 16; }
+    });
+    $$(".toc").forEach(toc => {
+      $$("main section.block").forEach(sec => {
+        const h = $(".sec-head h2, .sec-head h3, h2", sec);
+        if (!sec.id || !h) return;
+        const label = sec.dataset.toc || h.textContent.replace(/[“”"]/g, "").split(/[:,(]/)[0].trim();
+        toc.append(el("a", { href: "#" + sec.id, text: label }));
+      });
+    });
+    $$(".pc-art").forEach(n => n.append(fallbackArt(n.dataset.art, "4/3")));
+    if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) setTimeout(() => t.scrollIntoView(), 60); }
+  }
+
   function boot() {
-    const steps = [initSchemes, initHero, initClues, initMountain, initTabernacle, initArk, initArkMap, initTabsContent, initMenorah, initStory, initPhotos, initMirror,
-      initNachash, initNotSnake, initCherub, initMorningStar, initSeraph, initCurse, initSeedWar, initBronze,
-      initMap, initZiggurat, initGen, initNations, initLadder, initPentecost, initCities, initWeb, initQuiz, initSources, initScroll];
-    steps.forEach(fn => { try { fn(); } catch (err) { console.error(fn.name, err); } });
+    // [init function, element it needs]; each runs only on pages that contain its section
+    const steps = [[initSchemes], [initPages], [initHero, "#heroSvg"], [initClues, "#clueGrid"], [initMountain, "#mtnStage"], [initTabernacle, "#tabStage"],
+      [initArk, "#arkStage"], [initArkMap, "#arkMapStage"], [initTabsContent], [initMenorah, "#menorahStage"], [initStory, "#storyTl"], [initPhotos], [initMirror, "#mirror"],
+      [initNachash, "#nachashStage"], [initNotSnake, "#notSnake"], [initCherub, "#gems"], [initMorningStar, "#starStage"], [initSeraph, "#seraphStage"],
+      [initCurse, "#curseLines"], [initSeedWar, "#seedWar"], [initBronze, "#poleStage"],
+      [initMap, "#mapStage"], [initZiggurat, "#zigStage"], [initGen, "#genLine"], [initNations, "#nationsStage"], [initLadder, "#ladderStage"],
+      [initPentecost, "#compare"], [initCities, "#lanes"], [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
+    steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();

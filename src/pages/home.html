@@ -1,0 +1,123 @@
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">An interactive journey through Scripture</p>
+      <h1>Where <em>Heaven</em> Meets Earth</h1>
+      <p class="lede">One story runs from Genesis to Revelation: God making a home with people, and people trying to build one without him.</p>
+      <div class="hero-ctas">
+        <a class="btn primary" href="garden.html"><span class="num">PART I</span> The Garden-Temple</a>
+        <a class="btn" href="serpent.html"><span class="num">PART II</span> The Serpent &amp; the Seed</a>
+        <a class="btn" href="babel.html"><span class="num">PART III</span> Babel &amp; the City of God</a>
+      </div>
+      <div class="hero-meta">
+        <div><b>Eden → New Jerusalem</b>Garden, mountain, tabernacle, temple</div>
+        <div><b>Serpent → Seed</b>Genesis 3:15 to Revelation 12</div>
+        <div><b>Babel → Pentecost</b>Ziggurat, Babylon, the nations</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 560 460" id="heroSvg">
+        <defs>
+          <linearGradient id="mtn" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="var(--eden)"/>
+            <stop offset="1" stop-color="var(--eden)" stop-opacity=".55"/>
+          </linearGradient>
+          <radialGradient id="halo"><stop offset="0" stop-color="var(--accent)" stop-opacity=".55"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></radialGradient>
+        </defs>
+        <g id="heroStars"></g>
+        <circle cx="250" cy="138" r="120" fill="url(#halo)"/>
+        <g fill="none" stroke="var(--accent)">
+          <circle cx="250" cy="138" r="56" stroke-width="1.5" opacity=".9" stroke-dasharray="2 6" class="spin-slow"/>
+          <circle cx="250" cy="138" r="96" stroke-width="1" opacity=".55"/>
+          <circle cx="250" cy="138" r="140" stroke-width="1" opacity=".3" stroke-dasharray="1 8"/>
+          <circle cx="250" cy="138" r="186" stroke-width="1" opacity=".18"/>
+        </g>
+        <path d="M14 432 L196 176 Q250 118 304 176 L486 432 Z" fill="url(#mtn)"/>
+        <path d="M196 176 Q250 118 304 176 L280 196 Q250 172 220 196 Z" fill="var(--accent)" opacity=".25"/>
+        <!-- the river out of Eden, parting into four heads -->
+        <g fill="none" stroke="var(--surface)" stroke-width="3" stroke-linecap="round">
+          <path class="flow" d="M250 170 C250 220 250 240 250 262"/>
+          <path class="flow" d="M250 262 C220 300 150 350 92 430"/>
+          <path class="flow" d="M250 262 C240 320 210 380 196 430"/>
+          <path class="flow" d="M250 262 C262 320 292 380 306 430"/>
+          <path class="flow" d="M250 262 C282 300 352 350 410 430"/>
+        </g>
+        <!-- tree of life -->
+        <g class="float">
+          <rect x="246" y="120" width="8" height="40" rx="3" fill="var(--ink)" opacity=".7"/>
+          <circle cx="250" cy="112" r="22" fill="var(--accent)"/>
+          <circle cx="232" cy="124" r="13" fill="var(--accent)" opacity=".85"/>
+          <circle cx="268" cy="124" r="13" fill="var(--accent)" opacity=".85"/>
+        </g>
+        <!-- ziggurat on the plain -->
+        <g id="heroZig" transform="translate(372 0)">
+          <rect x="0" y="406" width="170" height="26" fill="var(--babel)"/>
+          <rect x="16" y="382" width="138" height="24" fill="var(--babel)" opacity=".92"/>
+          <rect x="32" y="360" width="106" height="22" fill="var(--babel)" opacity=".84"/>
+          <rect x="47" y="340" width="76" height="20" fill="var(--babel)" opacity=".76"/>
+          <rect x="62" y="322" width="46" height="18" fill="var(--babel)" opacity=".68"/>
+          <rect x="74" y="306" width="22" height="16" fill="var(--accent)"/>
+          <path d="M80 432 L80 360 L90 360 L90 432 Z" fill="var(--surface)" opacity=".35"/>
+          <line x1="85" y1="300" x2="85" y2="230" stroke="var(--babel)" stroke-width="2" stroke-dasharray="3 6" class="flow"/>
+          <text x="85" y="220" text-anchor="middle" font-size="22" font-weight="700" fill="var(--babel)">?</text>
+        </g>
+        <line x1="0" y1="432" x2="560" y2="432" stroke="var(--line)" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="parts">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Three parts, one story</p>
+      <h2>Choose where to begin</h2>
+      <p>Each part is its own page with interactive diagrams, maps and timelines. Read them in order for the whole arc, or jump straight to the one you want.</p>
+    </div>
+    <div class="part-cards">
+      <a class="part-card reveal" href="garden.html" style="--pc: var(--eden)">
+        <span class="pc-num" aria-hidden="true">I</span>
+        <span class="pc-art" data-art="garden" aria-hidden="true"></span>
+        <span class="pc-body">
+          <span class="eyebrow">Part one · Genesis 2 → Revelation 22</span>
+          <b class="pc-title">The Garden-Temple</b>
+          <span class="pc-text">Eden as God’s sanctuary on his mountain, Adam as priest-king, and the Tabernacle, Ark and Temple as Eden rebuilt, all the way to the New Jerusalem.</span>
+          <span class="pc-list">Eight clues · Cosmic mountain · Tabernacle walk · The Ark and its journey · Genesis ↔ Revelation</span>
+          <span class="pc-go">Open Part I →</span>
+        </span>
+      </a>
+      <a class="part-card reveal" href="serpent.html" style="--pc: var(--flame)">
+        <span class="pc-num" aria-hidden="true">II</span>
+        <span class="pc-art" data-art="serpent" aria-hidden="true"></span>
+        <span class="pc-body">
+          <span class="eyebrow">Part two · Genesis 3:15 → Revelation 12</span>
+          <b class="pc-title">The Serpent and the Seed</b>
+          <span class="pc-text">Who spoke in God’s garden? The shining throne-guardian who rebelled, and the promise hidden in his curse: the woman’s offspring who will crush his head.</span>
+          <span class="pc-list">Nāḥāš word study · Ezekiel 28 · Day Star · The curse decoded · War of the two seeds · Look and live</span>
+          <span class="pc-go">Open Part II →</span>
+        </span>
+      </a>
+      <a class="part-card reveal" href="babel.html" style="--pc: var(--babel)">
+        <span class="pc-num" aria-hidden="true">III</span>
+        <span class="pc-art" data-art="tower" aria-hidden="true"></span>
+        <span class="pc-body">
+          <span class="eyebrow">Part three · Genesis 11 → Acts 2</span>
+          <b class="pc-title">Babel, Babylon and the City of God</b>
+          <span class="pc-text">The tower was a ziggurat built to bring a god down on human terms. God answers with Abraham, Bethel’s stairway, Pentecost and a city he builds himself.</span>
+          <span class="pc-list">Map of the story · Build a ziggurat · Seventy nations · Babel reversed · Two cities</span>
+          <span class="pc-go">Open Part III →</span>
+        </span>
+      </a>
+    </div>
+    <a class="explore-card reveal" href="connections.html">
+      <span class="pc-art" data-art="web" aria-hidden="true"></span>
+      <span class="pc-body">
+        <span class="eyebrow">After the three parts</span>
+        <b class="pc-title">Connections &amp; Quiz</b>
+        <span class="pc-text">See every theme tied together in one web of connections, then test yourself with fourteen questions.</span>
+      </span>
+      <span class="pc-go">Open →</span>
+    </a>
+  </div>
+</section>

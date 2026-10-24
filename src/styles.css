@@ -532,3 +532,59 @@ p.iw.fall { padding-left: 14px; }
 .seedwar .ev.on circle { stroke: var(--ink); stroke-width: 3; }
 .seedwar text { font-family: var(--font-body); font-size: 12px; font-weight: 700; fill: var(--ink); }
 .person { transition: transform .5s cubic-bezier(.3,1.5,.5,1), fill .5s; }
+
+/* ---------- Multi-page chrome ---------- */
+.nav .pn { font-size: .72rem; letter-spacing: .08em; color: var(--accent); margin-right: 2px; font-weight: 800; }
+.nav a.active .pn { color: inherit; }
+.toc { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+.toc a { text-decoration: none; font-size: .85rem; font-weight: 600; color: var(--muted); border: 1px solid var(--line); background: var(--surface); padding: 5px 12px; border-radius: 999px; transition: color .2s, border-color .2s, background .2s; }
+.toc a:hover { color: var(--ink); border-color: var(--accent); }
+.toc a.active { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
+.pager { border-top: 1px solid var(--line); padding-block: 28px; }
+.pager .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.pg { display: grid; gap: 4px; text-decoration: none; color: var(--ink); border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 16px 20px; transition: border-color .2s, transform .2s, box-shadow .2s; }
+.pg:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
+.pg small { color: var(--accent); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .75rem; }
+.pg b { font-size: 1.05rem; }
+.pg.next { text-align: right; }
+.part-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.part-card, .explore-card { position: relative; display: grid; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s, border-color .3s; }
+.part-card { grid-template-rows: auto 1fr; border-top: 4px solid var(--pc); }
+.part-card:hover, .explore-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--accent); }
+.part-card .pc-art { display: block; aspect-ratio: 4 / 3; max-width: 100%; background: color-mix(in srgb, var(--pc) 10%, var(--bg-2)); }
+.pc-art svg { width: 100%; height: 100%; display: block; }
+.pc-num { position: absolute; top: 10px; right: 16px; z-index: 1; font-size: 3.4rem; font-weight: 800; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px var(--pc); }
+.pc-body { display: grid; gap: 8px; padding: 20px; align-content: start; }
+.pc-title { font-size: 1.35rem; line-height: 1.2; letter-spacing: -.01em; }
+.pc-text { color: var(--muted); font-size: .97rem; }
+.pc-list { font-size: .82rem; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 10px; }
+.pc-go { font-weight: 800; color: var(--accent); margin-top: 4px; }
+.explore-card { margin-top: 18px; grid-template-columns: 180px minmax(0, 1fr) auto; align-items: center; gap: 8px; padding-right: 22px; }
+.explore-card .pc-art { display: block; height: 100%; min-height: 120px; background: var(--bg-2); }
+@media (max-width: 1100px) {
+  .topbar .wrap { flex-wrap: wrap; row-gap: 4px; }
+  .nav { display: flex !important; order: 3; width: 100%; overflow-x: auto; margin-left: 0; padding-bottom: 4px; scrollbar-width: none; }
+  .nav::-webkit-scrollbar { display: none; }
+}
+@media (max-width: 900px) {
+  .part-cards { grid-template-columns: minmax(0, 1fr); }
+  .part-card { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); grid-template-rows: none; }
+  .part-card .pc-art { aspect-ratio: auto; height: 100%; }
+}
+@media (max-width: 560px) {
+  .part-card { grid-template-columns: minmax(0, 1fr); }
+  .part-card .pc-art { aspect-ratio: 16 / 9; }
+  .explore-card { grid-template-columns: minmax(0, 1fr); padding-right: 0; }
+  .explore-card .pc-art { min-height: 0; aspect-ratio: 16 / 9; }
+  .explore-card .pc-go { padding: 0 20px 18px; }
+  .pager .wrap { grid-template-columns: minmax(0, 1fr); }
+  .pg.next { text-align: left; }
+}
+@media (max-width: 1100px) { html { scroll-padding-top: 118px; } }
+.part-num, .pc-num, .nav .pn { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif; font-weight: 600; }
+.part-num, .pc-num { letter-spacing: .02em; }
+@media (max-width: 560px) {
+  .toc { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; margin-right: calc(-1 * var(--gutter-r)); scrollbar-width: none; }
+  .toc::-webkit-scrollbar { display: none; }
+  .toc a { white-space: nowrap; }
+}
