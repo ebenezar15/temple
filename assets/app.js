@@ -1199,6 +1199,238 @@ DATA.sources.push(
   ["N. T. Wright", "Surprised by Hope (2008)", "Resurrection, new creation and why present work matters."]
 );
 
+/* Part VI: The keys of the kingdom */
+DATA.ky = {};
+
+/* 1 · The keyring */
+DATA.ky.ring = [
+  { id: "david", n: "Key of the house of David", ref: "Isa 22:22; Rev 3:7", c: "var(--accent)",
+    d: "Given to Eliakim, the royal steward: “I will place on his shoulder the key of the house of David. He shall open, and none shall shut; and he shall shut, and none shall open.” Jesus claims it: “The words of the holy one, the true one, who has the key of David.” Authority over access to the King’s house." },
+  { id: "kingdom", n: "Keys of the kingdom of heaven", ref: "Matt 16:19", c: "var(--babel)",
+    d: "“I will give you the keys of the kingdom of heaven, and whatever you bind on earth shall be bound in heaven, and whatever you loose on earth shall be loosed in heaven.” Plural keys, delegated by the King to his people as stewards." },
+  { id: "death", n: "Keys of Death and Hades", ref: "Rev 1:18", c: "var(--flame)",
+    d: "“I died, and behold I am alive forevermore, and I have the keys of Death and Hades.” The risen Christ holds the gates that once held humanity. The gates of Hades cannot prevail against his church (Matt 16:18)." },
+  { id: "knowledge", n: "Key of knowledge", ref: "Luke 11:52", c: "var(--eden)",
+    d: "“Woe to you lawyers! For you have taken away the key of knowledge. You did not enter yourselves, and you hindered those who were entering.” Teaching that should open God’s word can be used to lock people out." },
+  { id: "abyss", n: "Key of the abyss", ref: "Rev 9:1; 20:1–3", c: "var(--muted)",
+    d: "An angel “holding in his hand the key to the bottomless pit and a great chain … seized the dragon … and bound him.” Every key, even to the deepest prison, is in heaven’s hands." },
+  { id: "door", n: "The open door", ref: "Rev 3:8; Acts 14:27", c: "var(--babel)",
+    d: "“I have set before you an open door, which no one is able to shut.” God “had opened a door of faith to the Gentiles.” Keys exist for doors, and doors exist for people to come in." },
+  { id: "forgive", n: "Forgiving and retaining", ref: "John 20:21–23", c: "var(--eden)",
+    d: "“As the Father has sent me, even so I am sending you … Receive the Holy Spirit. If you forgive the sins of any, they are forgiven them.” Declaring God’s mercy is one vital use of the keys, but only one." }
+];
+
+/* 2 · The royal palace and the steward */
+DATA.ky.palace = [
+  { id: "gate", n: "The palace gate", ref: "Isa 22:22", d: "The steward decided who came in. The key on his shoulder meant the authority to open and to shut: no one could reverse his decision without the king.", app: "Opening and closing: opening the way into God’s presence and kingdom for others, and closing doors to what does not belong (Eph 4:27)." },
+  { id: "court", n: "Royal service", ref: "Isa 22:21; Gen 41:40–44", d: "He appointed and oversaw the king’s servants. Joseph, set “over my house”, ran Egypt so that “without your consent no one shall lift up hand or foot”.", app: "Recognising and releasing people into their callings in the King’s service (Acts 6:3–6; 13:2–3)." },
+  { id: "stores", n: "Storehouses and treasury", ref: "Gen 41:56; 1 Kgs 4:7", d: "The steward controlled provisions. Joseph opened the storehouses and fed the nations in famine.", app: "Stewarding resources and generosity: “stewards of God’s varied grace” (1 Pet 4:10; 2 Cor 9:8–11)." },
+  { id: "throne", n: "Access to the king", ref: "2 Kgs 18:18; Esth 4:11", d: "No one approached the throne without permission. The steward stood nearest the king and carried messages to and from him; Eliakim negotiated on Hezekiah’s behalf.", app: "Through Christ we have access (Eph 2:18) and bring others near in prayer and proclamation." },
+  { id: "decrees", n: "The king’s decisions", ref: "Gen 41:55; Isa 22:21", d: "“Go to Joseph. What he says to you, do.” The steward administered the king’s will and law, but never invented his own.", app: "Binding and loosing: declaring on earth what heaven has already decided (Matt 16:19; Acts 15:28)." },
+  { id: "family", n: "A father to the people", ref: "Isa 22:21", d: "God says of Eliakim: “he shall be a father to the inhabitants of Jerusalem and to the house of Judah.” The office was given with a father’s heart.", app: "The heart behind the keys: not control but care. Keys open the house so the family can come home (Luke 15:20–24)." }
+];
+
+/* 3 · Shebna and Eliakim */
+DATA.ky.stewards = {
+  shebna: { n: "Shebna", ref: "Isa 22:15–19", rows: [
+    ["Focus", "Himself: “What have you to do here … that you have cut out here a tomb for yourself?” (22:16)"],
+    ["Display", "“Your glorious chariots” (22:18), status and show"],
+    ["Use of the key", "Building a monument to his own name, like Babel"],
+    ["Outcome", "“I will thrust you from your office … and the LORD will hurl you away violently” (22:17–19)"]
+  ] },
+  eliakim: { n: "Eliakim", ref: "Isa 22:20–24", rows: [
+    ["Identity", "“My servant Eliakim” (22:20): a servant before he is a steward"],
+    ["Clothing", "“I will clothe him with your robe, and will bind your sash on him” (22:21)"],
+    ["Heart", "“He shall be a father to the inhabitants of Jerusalem” (22:21)"],
+    ["Outcome", "“A peg in a secure place … a throne of honour to his father’s house” (22:23). Yet even this peg would one day give way (22:25), pointing to a greater Steward."]
+  ] }
+};
+
+/* 4 · Connections flowchart (viewBox 900 × 700) */
+DATA.ky.flow = [
+  { id: "joseph", x: 230, y: 40, t: "Joseph over Pharaoh’s house", ref: "Gen 41:40–44", c: "eden",
+    d: "The pattern of the royal steward: “You shall be over my house, and all my people shall order themselves as you command.” He opens the storehouses and saves the nations." },
+  { id: "eliakim", x: 670, y: 40, t: "Eliakim receives the key of David", ref: "Isa 22:20–23", c: "accent",
+    d: "The steward over the house of David receives the key, the robe and the sash, and becomes a father to Jerusalem." },
+  { id: "shoulder", x: 450, y: 140, t: "“The government shall be upon his shoulder”", ref: "Isa 9:6; 22:22", c: "accent",
+    d: "The same image twice in Isaiah: the key on the steward’s shoulder (22:22) and the government on the shoulder of the promised Son (9:6). The steward foreshadows the King himself." },
+  { id: "christ", x: 450, y: 240, t: "Christ holds the key of David", ref: "Rev 3:7; Rev 1:18", c: "accent",
+    d: "The greater Eliakim: he opens and no one shuts. He also holds the keys of Death and Hades, conquered by his death and resurrection." },
+  { id: "peter", x: 230, y: 345, t: "Keys given to Peter", ref: "Matt 16:13–19", c: "babel",
+    d: "At Caesarea Philippi, beside the “gates of Hades”, Peter confesses Jesus as the Christ, and Jesus promises him the keys of the kingdom." },
+  { id: "church", x: 670, y: 345, t: "Binding and loosing given to the church", ref: "Matt 18:15–20", c: "babel",
+    d: "The same words to the gathered disciples (plural “you”), in the setting of restoring a brother, with the promise of Christ’s presence “where two or three are gathered”." },
+  { id: "acts", x: 450, y: 450, t: "Doors opened in Acts", ref: "Acts 2; 8; 10; 15", c: "eden",
+    d: "Peter opens the door to Jews at Pentecost, confirms it for Samaritans and opens it to Gentiles at Cornelius’ house. The church in council “binds and looses” for the Gentiles: “it has seemed good to the Holy Spirit and to us” (Acts 15:28)." },
+  { id: "doors", x: 450, y: 550, t: "Open doors for the gospel", ref: "Acts 14:27; Col 4:3; Rev 3:8", c: "eden",
+    d: "God “opened a door of faith to the Gentiles.” Paul asks for prayer that God would open a door for the word. To a weak church Christ says, “I have set before you an open door.”" },
+  { id: "abyss", x: 450, y: 652, t: "The enemy bound; the house filled", ref: "Rev 20:1–3; Rev 21:25", c: "flame",
+    d: "The dragon is bound with the key of the abyss. In the New Jerusalem the gates are never shut: every door the keys were for is finally open." }
+];
+DATA.ky.flowEdges = [["joseph", "shoulder"], ["eliakim", "shoulder"], ["shoulder", "christ"], ["christ", "peter"], ["christ", "church"], ["peter", "acts"], ["church", "acts"], ["acts", "doors"], ["doors", "abyss"]];
+
+/* 5 · Caesarea Philippi */
+DATA.ky.caesarea = [
+  { id: "cave", n: "The cave: “gates of Hades”", ref: "Matt 16:18", d: "At the foot of the cliff, a cave out of which the spring once gushed. The water was thought to be bottomless, and pagans saw the cave as an entrance to the underworld. Jesus speaks of the “gates of Hades” within sight of it." },
+  { id: "niches", n: "Niches for Pan", ref: "Matt 16:13", d: "The city was originally Paneas, after the goat-god Pan, whose shrine and niches were cut into the rock face. Pan was believed to cross between the living and the dead." },
+  { id: "temple", n: "Temple to Augustus", ref: "Matt 16:16", d: "Herod the Great built a temple to Caesar here, and his son Philip renamed the city Caesarea Philippi. In a place honouring Caesar as divine son, Peter confesses: “You are the Christ, the Son of the living God.”" },
+  { id: "rock", n: "The rock", ref: "Matt 16:18", d: "“You are Peter (Petros), and on this rock (petra) I will build my church.” Christians have read “the rock” as Peter, as his confession, or as Christ himself; all agree that the church stands on who Jesus is." },
+  { id: "spring", n: "The springs of the Jordan", ref: "Ps 42:6", d: "Banias is one of the sources of the Jordan, the river of Israel’s entry into the land and of Jesus’ baptism. A place of living water and of pagan gates side by side." }
+];
+
+/* 6 · Binding and loosing */
+DATA.ky.senses = [
+  { tab: "Forbid and permit", head: "A teacher’s ruling", ref: "Matt 16:19; 18:18; Acts 15", c: "var(--babel)",
+    body: ["In Jesus’ day the Hebrew verbs ʾāsar (bind) and hittîr (loose) were technical terms for rabbis declaring what the law forbade and permitted, for example what counted as work on the Sabbath.", "Jesus gives his disciples this authority under his own teaching: to declare what the King’s law requires and allows.", "The Jerusalem council is the clearest example: Gentile believers are “loosed” from circumcision and asked to abstain from a few things. “It has seemed good to the Holy Spirit and to us” (Acts 15:28)."] },
+  { tab: "Bind the strong man", head: "Authority over darkness", ref: "Matt 12:28–29; Luke 13:16", c: "var(--flame)",
+    body: ["“How can someone enter a strong man’s house and plunder his goods, unless he first binds the strong man?” Jesus binds Satan by casting out demons by the Spirit of God.", "He looses a woman “whom Satan bound for eighteen years”. Jewish writings of the time also spoke of binding evil spirits (Tobit 8:3).", "He sends his disciples with authority “over all the power of the enemy” (Luke 10:17–19). Believers resist the devil, who flees (Jas 4:7), always in Christ’s name and never in their own strength (Jude 9)."] },
+  { tab: "Forgive and retain", head: "Declaring mercy", ref: "John 20:21–23; Jas 5:16", c: "var(--eden)",
+    body: ["Sent as the Father sent the Son and breathed on with the Spirit, the disciples are told: “If you forgive the sins of any, they are forgiven them.”", "This is not the church manufacturing forgiveness. It is the gospel declared with authority: to those who repent and believe, sins are forgiven; to those who refuse, they remain.", "It is precious and central, but it is one tooth of the key, not the whole key."] }
+];
+
+/* 7 · Doors opened */
+DATA.ky.doors = [
+  { n: "Jerusalem", who: "Jews from every nation", ref: "Acts 2:14–41", d: "Peter uses the keys first at Pentecost: about three thousand believe." },
+  { n: "Samaria", who: "Samaritans", ref: "Acts 8:14–17", d: "Peter and John lay hands on believing Samaritans and they receive the Spirit: the old division is unlocked." },
+  { n: "Caesarea", who: "Gentiles", ref: "Acts 10:34–48; 11:17", d: "In a Roman officer’s house the Spirit falls on Gentiles while Peter is still preaching. “Who was I that I could stand in God’s way?”" },
+  { n: "Jerusalem council", who: "Decision for all nations", ref: "Acts 15:6–29", d: "Binding and loosing in council: Gentiles are welcomed without circumcision." },
+  { n: "Galatia", who: "“A door of faith to the Gentiles”", ref: "Acts 14:27", d: "Paul and Barnabas report what God had done and how he “had opened a door of faith to the Gentiles”." },
+  { n: "Europe", who: "Philippi", ref: "Acts 16:9–15", d: "A vision of a man from Macedonia, and a door opens across the sea. The Lord “opened Lydia’s heart”." },
+  { n: "Ephesus", who: "“A wide door … and many adversaries”", ref: "1 Cor 16:9; Acts 19:10–20", d: "All Asia hears the word; scrolls of magic are burned. Open doors come with opposition." },
+  { n: "Philadelphia", who: "A weak church", ref: "Rev 3:7–8", d: "“I know that you have but little power … I have set before you an open door, which no one is able to shut.”" }
+];
+
+/* 8 · The key losing its teeth */
+DATA.ky.teeth = [
+  { id: "access", n: "Access", d: "Opening and shutting the way into the kingdom (Matt 23:13; Acts 14:27)." },
+  { id: "rule", n: "Decisions", d: "Forbidding and permitting under Christ’s word (Matt 18:18; Acts 15)." },
+  { id: "war", n: "Authority over darkness", d: "Binding the strong man and loosing the bound (Matt 12:29; Luke 13:16)." },
+  { id: "forgive", n: "Forgiveness", d: "Declaring sins forgiven to the repentant (John 20:23)." },
+  { id: "knowledge", n: "Knowledge", d: "Opening the Scriptures so people can enter (Luke 11:52; 24:45)." },
+  { id: "stores", n: "Stewardship", d: "Opening the King’s storehouses of grace and provision (1 Pet 4:10)." }
+];
+DATA.ky.eras = [
+  { n: "Jesus and the apostles", have: ["access", "rule", "war", "forgive", "knowledge", "stores"], d: "In the Gospels and Acts the keys open doors to nations, settle questions, set captives free, declare forgiveness, open the Scriptures and release provision." },
+  { n: "Early church", have: ["access", "rule", "war", "forgive", "knowledge"], d: "The focus moves toward discipline: who may share in communion and how the penitent are restored. Still broad, but narrowing." },
+  { n: "Medieval church", have: ["forgive", "rule"], d: "“The power of the keys” comes to mean mainly priestly absolution in confession, excommunication and the authority of the papacy." },
+  { n: "Reformation", have: ["forgive", "knowledge", "rule"], d: "The keys are redefined as the preaching of the gospel and church discipline (for example the Heidelberg Catechism, Q. 83–85). Truer to Scripture, but still mostly about forgiveness and membership." },
+  { n: "Much of today", have: ["forgive"], d: "Often reduced to private assurance of forgiveness, or ignored altogether; elsewhere turned into a formula for commanding outcomes. The access, the stewardship and the father’s heart are largely forgotten." },
+  { n: "Restored", have: ["access", "rule", "war", "forgive", "knowledge", "stores"], d: "Stewards in the King’s house again: opening doors, discerning together, setting captives free, declaring mercy, opening the word and releasing the King’s provision." }
+];
+
+/* 9 · How to operate */
+DATA.ky.operate = [
+  { t: "Live in the King’s house", ref: "John 15:4–5; Isa 22:20", d: "Keys belong to servants who abide. Eliakim was “my servant” before he was steward. Authority flows from relationship." },
+  { t: "Hear what heaven has decided", ref: "Matt 16:19; John 5:19", d: "“Whatever you bind on earth shall have been bound in heaven.” The Greek is a future perfect: heaven decides first; we discern it through Scripture, prayer and the Spirit." },
+  { t: "Agree together", ref: "Matt 18:18–20; Acts 15:28", d: "Binding and loosing is given to the gathered church. Agreement, accountability and Christ’s presence go together." },
+  { t: "Open, shut, bind, loose, forgive", ref: "Col 4:3; Luke 10:19; John 20:23", d: "Pray doors open for the gospel; close doors to the enemy; set people free from guilt and bondage; declare God’s mercy." },
+  { t: "Steward and give account", ref: "Luke 12:42–48; 1 Cor 4:1–2", d: "“It is required of stewards that they be found faithful.” Keys are entrusted, and the King will ask how we used them." }
+];
+DATA.ky.practice = [
+  ["Open doors for the gospel", "Pray specifically for open doors in your workplace, family and city, and walk through them (Col 4:3–6; 1 Cor 16:9)."],
+  ["Loose people from guilt", "Confess sins to one another and declare forgiveness in Christ to the repentant (Jas 5:16; 1 John 1:9)."],
+  ["Bind the strong man", "Pray against specific spiritual strongholds before and while you serve, in Jesus’ name and his authority (Matt 12:29; Eph 6:10–18)."],
+  ["Shut doors to the enemy", "“Give no opportunity to the devil” through anger, bitterness or compromise (Eph 4:26–27)."],
+  ["Open the Scriptures", "Teach in a way that lets others enter, not one that locks them out (Luke 24:32; 11:52)."],
+  ["Open the storehouses", "Use money, skill and influence to open provision for others, like Joseph in the famine (2 Cor 9:8–11)."]
+];
+
+/* 10 · Objections */
+DATA.ky.objections = [
+  { k: "serious", q: "“The keys were given to Peter alone, and through him to his successors.”", refs: "Matt 16:19; 18:18",
+    not: "No one denies Peter’s unique role. He really did use the keys first.",
+    a: "Peter opened the door to Jews (Acts 2) and to Gentiles (Acts 10), a once-for-all foundation. But the same authority to bind and loose is given to the gathered disciples in Matthew 18:18, where “you” is plural. And the key of David belongs to Christ alone (Rev 3:7): the keys are his, delegated to his whole household as stewards (1 Pet 4:10)." },
+  { k: "serious", q: "“Binding and loosing only means church discipline or forgiveness of sins.”", refs: "Matt 18:15–18; John 20:23",
+    not: "No one is downplaying discipline or forgiveness. Both are real uses of the keys.",
+    a: "Matthew 18 does apply it to restoring a sinning brother, and John 20 to forgiveness. But in Jesus’ culture “bind” and “loose” meant forbid and permit, rulings like the one in Acts 15. Jesus also uses “bind” for overpowering Satan (Matt 12:29) and “loose” for freeing a woman Satan had bound (Luke 13:16). And the opposite of using the keys is “shutting the kingdom in people’s faces” (Matt 23:13): the keys are about access." },
+  { k: "straw", q: "“So Christians can command God and bind or loose whatever they want.”", refs: "Matt 16:19; 1 John 5:14",
+    not: "This is a misrepresentation. The keys are not a formula for getting our way.",
+    a: "The Greek of Matthew 16:19 is a future perfect: whatever you bind on earth “shall have been bound” in heaven. Heaven leads; earth follows. A steward opens the doors the king wants opened. We pray “your will be done” (Matt 6:10) and ask “according to his will” (1 John 5:14)." },
+  { k: "serious", q: "“Only God can bind Satan. Believers should not try.”", refs: "Rev 20:1–3; Matt 12:29; Jude 9",
+    not: "No one claims believers have power of their own over the devil, or should mock him.",
+    a: "Jesus bound the strong man, and then sent his disciples with authority “over all the power of the enemy” (Luke 10:17–19). Believers are commanded to resist the devil (Jas 4:7) and stand in God’s armour (Eph 6:10–18). Jude 9 warns against reviling, not against resisting: even Michael said, “The Lord rebuke you.” All authority is Christ’s, exercised in his name." },
+  { k: "straw", q: "“Teaching about keys and authority breeds spiritual elitism and control.”", refs: "Isa 22:15–21; Matt 23:13",
+    not: "This is a misrepresentation of the biblical picture, though control is a real danger.",
+    a: "Isaiah 22 is a warning against exactly that: Shebna used his office for his own monument and lost the key. Eliakim received it as “my servant” and “a father to the inhabitants of Jerusalem”. Jesus condemned teachers who used their position to shut people out. Keys are for opening the house to others." },
+  { k: "serious", q: "“The key of David belongs to Christ alone. It is not for us.”", refs: "Rev 3:7–8; Matt 16:19",
+    not: "No one claims the church owns the key or acts independently of Christ.",
+    a: "Agreed: Christ holds the key of David. But in the same breath he tells a weak church, “I have set before you an open door” (Rev 3:8), and he gives his disciples “the keys of the kingdom” (Matt 16:19). He is the master of the house; we are stewards who use his keys at his word." },
+  { k: "serious", q: "“Isaiah 22 is about a historical official. Applying it to Christ is allegory.”", refs: "Rev 3:7; Isa 22:22",
+    not: "No one denies Eliakim was a real man in Hezekiah’s court.",
+    a: "Revelation itself quotes Isaiah 22:22 about Jesus. The New Testament authorises this reading: Eliakim was a real steward and a pattern of the greater one, just as David was a real king and a pattern of the Son of David. Isaiah 22:25 even says the peg would give way, leaving room for one who never fails." },
+  { k: "straw", q: "“This is a modern invention of the charismatic movement.”", refs: "Matt 16:19",
+    not: "This is a misrepresentation. The keys have been discussed throughout church history.",
+    a: "Church fathers such as Tertullian and Augustine wrote about the keys; the medieval church built a whole doctrine of “the power of the keys”; Reformation catechisms defined them; and rabbinic writings used “binding and loosing” long before. What is being recovered is the breadth of the biblical picture, not a new idea." },
+  { k: "serious", q: "“The keys are about getting into heaven after death.”", refs: "Matt 23:13; Col 1:13",
+    not: "No one denies that the kingdom has a future consummation.",
+    a: "Jesus accused the teachers of shutting people out of the kingdom then: “you neither enter yourselves nor allow those who would enter to go in.” The apostles used the keys in history, in Acts. We have already been “transferred to the kingdom of his beloved Son.” The keys open the kingdom now, on earth." }
+];
+
+DATA.ky.study = [
+  { t: "The steward", q: ["Read Isaiah 22:15–25. Compare Shebna and Eliakim. What disqualified one and qualified the other?", "How does Genesis 41:37–57 show what a steward with keys does for others?"] },
+  { t: "The keys", q: ["Read Matthew 16:13–19 with the setting of Caesarea Philippi in mind. Why might Jesus have chosen this place?", "List every key in Scripture from the keyring. Who holds each one, and what does it open?"] },
+  { t: "Binding and loosing", q: ["What difference does the future perfect (“shall have been bound”) make to how we pray?", "Compare Matthew 12:29, Luke 13:16, Acts 15:28 and John 20:23. Which sense of binding and loosing is each?"] },
+  { t: "Operating in it", q: ["Which tooth of the key has been missing in your experience: access, decisions, authority over darkness, forgiveness, knowledge or stewardship?", "Where is God setting an open door before you right now?"] }
+];
+DATA.ky.memory = [
+  ["Isaiah 22:22", "“I will place on his shoulder the key of the house of David. He shall open, and none shall shut; and he shall shut, and none shall open.”"],
+  ["Matthew 16:19", "“I will give you the keys of the kingdom of heaven, and whatever you bind on earth shall be bound in heaven, and whatever you loose on earth shall be loosed in heaven.”"],
+  ["Revelation 3:8", "“Behold, I have set before you an open door, which no one is able to shut.”"],
+  ["Revelation 1:18", "“I died, and behold I am alive forevermore, and I have the keys of Death and Hades.”"],
+  ["Isaiah 9:6", "“For to us a child is born, to us a son is given; and the government shall be upon his shoulder.”"],
+  ["1 Corinthians 4:2", "“Moreover, it is required of stewards that they be found faithful.”"]
+];
+
+DATA.quiz.push(
+  { q: "Who received “the key of the house of David” in Isaiah 22?", a: ["Hezekiah", "Shebna", "Eliakim", "Isaiah"], c: 2, x: "Eliakim replaced the self-serving Shebna as steward over the royal house (Isa 22:20–22). Revelation 3:7 applies the key to Christ." },
+  { q: "In Jesus’ day, the rabbinic terms “bind” and “loose” commonly meant…", a: ["Arrest and release", "Forbid and permit", "Curse and bless", "Marry and divorce"], c: 1, x: "Teachers “bound” (forbade) and “loosed” (permitted) actions under the law; Acts 15 shows the church doing this." },
+  { q: "Where did Jesus promise Peter the keys of the kingdom?", a: ["Capernaum", "Caesarea Philippi", "The Mount of Olives", "Jerusalem’s Temple"], c: 1, x: "At Caesarea Philippi, beside a cave pagans called a gate to the underworld (Matt 16:13–19)." }
+);
+
+DATA.web.nodes.push({ id: "keys", n: "Keys", g: 3, d: "The steward’s authority to open and shut the King’s house: given to Eliakim, held by Christ, delegated to his church." });
+DATA.web.edges.push(
+  ["keys", "jesus", "He holds the key of David and of Death and Hades (Rev 3:7; 1:18)"],
+  ["keys", "church", "Keys of the kingdom given to the disciples (Matt 16:19; 18:18)"],
+  ["keys", "pentecost", "Peter opens the door at Pentecost (Acts 2)"],
+  ["keys", "kingpriest", "Stewards in the King’s house"],
+  ["keys", "nations", "Doors of faith opened to the Gentiles (Acts 10; 14:27)"]
+);
+
+DATA.sources.push(
+  ["Jerusalem Perspective", "“‘Binding’ and ‘Loosing’ in the Kingdom of Heaven”", "The rabbinic meaning of ʾāsar and hittîr as forbid and permit (jerusalemperspective.com)."],
+  ["Israel Bible Center", "“Binding and Loosing in the Gospels and Talmud”", "Binding and loosing as establishing norms in Jewish usage (israelbiblecenter.com)."],
+  ["That the World May Know", "“The Gates of Hell”", "Caesarea Philippi, the cave of Pan and the setting of Matthew 16 (thattheworldmayknow.com)."]
+);
+
+/* 0 · What keys mean throughout the Bible */
+DATA.ky.words = [
+  { lang: "Hebrew", w: "מַפְתֵּחַ", tr: "maptēaḥ", gloss: "“opener”", d: "From pātaḥ, “to open”. In Hebrew a key is named for what it opens." },
+  { lang: "Greek", w: "κλείς", tr: "kleis", gloss: "“shutter”", d: "Related to kleiō, “to shut”. In Greek a key is named for what it shuts. Together the two languages hold both sides: “he shall open … and he shall shut.”" }
+];
+/* every place the word “key” appears; book = canonical position 1–66 */
+DATA.ky.occ = [
+  { book: 7, name: "Judges 3:25", m: ["access"], d: "Eglon’s servants finally take the key and open the locked roof chamber: a key is the means of entry to a closed royal room." },
+  { book: 13, name: "1 Chronicles 9:26–27", m: ["trust", "worship"], d: "Levite gatekeepers “were entrusted to be over the chambers and the treasures of the house of God … they had charge of opening it every morning.” Keys as sacred trust and daily service." },
+  { book: 23, name: "Isaiah 22:22", m: ["authority", "access", "trust"], d: "The key of the house of David laid on Eliakim’s shoulder: royal office, authority to open and shut." },
+  { book: 40, name: "Matthew 16:19", m: ["authority", "access", "decision"], d: "The keys of the kingdom of heaven, with binding and loosing." },
+  { book: 42, name: "Luke 11:52", m: ["knowledge", "access"], d: "“You have taken away the key of knowledge.” Understanding of God’s word as a key, and teachers who lock it." },
+  { book: 66, name: "Revelation 1:18", m: ["life", "authority"], d: "The keys of Death and Hades: power over life and death, won by resurrection." },
+  { book: 66, name: "Revelation 3:7", m: ["authority", "access"], d: "Christ “who has the key of David”, opening a door no one can shut." },
+  { book: 66, name: "Revelation 9:1; 20:1", m: ["judgment"], d: "The key of the bottomless pit: confining and releasing evil is under heaven’s control." }
+];
+DATA.ky.meanings = [
+  { id: "authority", n: "Authority and office", icon: "M12 3 L14 9 L20 9 L15 13 L17 20 L12 16 L7 20 L9 13 L4 9 L10 9 Z", d: "A key on the shoulder was a badge of office (Isa 22:22). To hold the keys is to be trusted with the master’s authority, like a prime minister in a royal court.", also: "Isa 9:6 · Gen 41:40 · Matt 28:18" },
+  { id: "access", n: "Access and entry", icon: "M5 21 V5 a2 2 0 0 1 2 -2 H17 a2 2 0 0 1 2 2 V21 M14 12 h.01", d: "Keys decide who comes in. The whole story of Scripture is about access to God’s presence lost and restored.", also: "Gen 3:24 · Eph 2:18 · Heb 10:19–20" },
+  { id: "trust", n: "Trust and stewardship", icon: "M12 3 a4 4 0 1 1 0 8 a4 4 0 1 1 0 -8 M12 11 V21 M12 16 h4 M12 19 h3", d: "Keys are entrusted, never owned. The Levite gatekeepers and the royal steward held what belonged to someone else and would give account.", also: "1 Cor 4:1–2 · Luke 12:42 · 1 Pet 4:10" },
+  { id: "decision", n: "Judgment and decision", icon: "M12 4 V20 M6 20 H18 M5 8 H19 M5 8 L2 14 H8 Z M19 8 L16 14 H22 Z", d: "Opening and shutting, binding and loosing: keys represent rulings that stand. Heaven decides; stewards declare it on earth.", also: "Matt 18:18 · Acts 15:28" },
+  { id: "knowledge", n: "Knowledge and revelation", icon: "M4 5 H11 a2 2 0 0 1 2 2 V20 a2 2 0 0 0 -2 -2 H4 Z M20 5 H13 V20 a2 2 0 0 1 2 -2 H20 Z", d: "Understanding unlocks. Jesus “opened their minds to understand the Scriptures”; only the Lamb can open the sealed scroll.", also: "Luke 24:45 · Rev 5:5 · Matt 13:11" },
+  { id: "worship", n: "Worship and service", icon: "M3 20 H21 M5 20 V10 M19 20 V10 M9 20 V10 M15 20 V10 M3 10 L12 4 L21 10 Z", d: "Every morning the Levites unlocked God’s house so worship could begin. Keys serve the presence of God among his people.", also: "1 Chr 9:27 · Ps 24:7–10" },
+  { id: "life", n: "Life and death", icon: "M12 21 C5 15 3 11 6 7 C8 4 11 5 12 8 C13 5 16 4 18 7 C21 11 19 15 12 21 Z", d: "Christ holds the keys of Death and Hades. No grave can stay locked against him or his people.", also: "Rev 1:18 · Hos 13:14 · 1 Cor 15:55" },
+  { id: "judgment", n: "Confinement and release", icon: "M6 11 V7 a6 6 0 0 1 12 0 V11 M5 11 H19 V21 H5 Z M12 15 V17", d: "The same key that opens can lock. The abyss is locked and unlocked only by heaven’s command.", also: "Rev 20:1–3 · Isa 24:22 · Jude 6" },
+  { id: "provision", n: "Treasure and provision", icon: "M4 9 H20 V20 H4 Z M4 9 L6 5 H18 L20 9 M12 9 V20", d: "Keys open storehouses. God promises to “open to you his good treasury, the heavens” and gives Cyrus “the treasures of darkness”.", also: "Deut 28:12 · Isa 45:1–3 · Gen 41:56" },
+  { id: "christ", n: "Christ himself", icon: "M12 3 V21 M5 9 H19", d: "In the end the key is a person: “I am the door. If anyone enters by me, he will be saved” (John 10:9). He is the opener of every door that matters.", also: "John 10:7–9 · John 14:6 · Rev 3:20" }
+];
+
 /* Where Heaven Meets Earth — interactive behaviour */
 (function () {
   "use strict";
@@ -1859,6 +2091,7 @@ DATA.sources.push(
       serpent: () => [sv("path", { d: "M-150 40 C-100 -20 -60 80 0 20 C60 -40 100 60 150 -10", fill: "none", stroke: green, "stroke-width": 16, "stroke-linecap": "round" }), sv("circle", { cx: 150, cy: -10, r: 14, fill: green }), sv("circle", { cx: 0, cy: -70, r: 30, fill: gold, opacity: .25 })],
       pole: () => [sv("rect", { x: -4, y: -110, width: 8, height: 160, fill: "var(--muted)" }), sv("path", { d: "M0 -90 C30 -80 -30 -60 0 -50 C30 -40 -30 -20 0 -10", fill: "none", stroke: gold, "stroke-width": 8 })],
       star: () => { const pts = Array.from({ length: 5 }, (_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / 5; return [Math.cos(a) * 95, Math.sin(a) * 95 - 10]; }); return [...pts.map((p, i) => sv("line", { x1: p[0], y1: p[1], x2: pts[(i + 1) % 5][0], y2: pts[(i + 1) % 5][1], stroke: "var(--muted)", "stroke-width": 3, opacity: .5 })), ...pts.map(p => sv("line", { x1: 0, y1: -10, x2: p[0], y2: p[1], stroke: gold, "stroke-width": 3 })), sv("circle", { cx: 0, cy: -10, r: 30, fill: gold }), ...pts.map((p, i) => sv("circle", { cx: p[0], cy: p[1], r: 20, fill: [blue, gold, "var(--flame)", green, "var(--muted)"][i] }))]; },
+      keys: () => [sv("circle", { cx: 0, cy: -30, r: 46, fill: "none", stroke: gold, "stroke-width": 10 }), ...[-40, -10, 20, 50].map((a, i) => { const r = (90 + a) * Math.PI / 180, x = Math.cos(r) * 46, y = -30 + Math.sin(r) * 46; return sv("g", { transform: `translate(${x} ${y}) rotate(${a})` }, sv("circle", { cx: 0, cy: 12, r: 9, fill: "none", stroke: [gold, blue, "var(--flame)", green][i], "stroke-width": 5 }), sv("rect", { x: -3, y: 21, width: 6, height: 70, fill: [gold, blue, "var(--flame)", green][i] }), sv("rect", { x: 3, y: 78, width: 12, height: 6, fill: [gold, blue, "var(--flame)", green][i] })); })],
       crown: () => [sv("path", { d: "M-150 20 L-150 -40 L-120 -10 L-95 -60 L-70 -10 L-40 -40 L-40 20 Z", fill: gold }), sv("path", { d: "M40 20 L40 -30 Q90 -80 140 -30 L140 20 Z", fill: "var(--surface)", stroke: "var(--muted)", "stroke-width": 3 }), sv("rect", { x: 70, y: -22, width: 40, height: 12, rx: 3, fill: gold }), sv("circle", { cx: 0, cy: -20, r: 30, fill: gold, opacity: .25 }), sv("rect", { x: -160, y: 40, width: 320, height: 8, rx: 4, fill: "var(--muted)", opacity: .5 })],
       zig: () => [...[0, 1, 2].map(i => sv("rect", { x: -140 + i * 40, y: 10 - i * 34, width: 280 - i * 80, height: 34, fill: "#b08a5a", opacity: .6 + i * .12 })), sv("rect", { x: -8, y: -20, width: 16, height: 30, fill: "var(--bg-2)" })]
     };
@@ -2184,7 +2417,7 @@ DATA.sources.push(
   /* ---------------- Connections web ---------------- */
   function initWeb() {
     const W = 600, C = W / 2, R = 228;
-    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
+    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "keys", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
     const nodes = order.map(id => DATA.web.nodes.find(n => n.id === id));
     const pos = {};
     nodes.forEach((n, i) => { const a = -Math.PI / 2 + i / nodes.length * Math.PI * 2; pos[n.id] = [C + Math.cos(a) * R, C + Math.sin(a) * R, a]; });
@@ -3242,6 +3475,297 @@ DATA.sources.push(
   }
 
 
+  /* ================ Part VI: the keys of the kingdom ================ */
+  const BOOKS = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther", "Job", "Psalms", "Proverbs", "Ecclesiastes", "Song of Songs", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"];
+  const keyGlyph = (c, s) => sv("g", { transform: `scale(${s || 1})` }, sv("circle", { cx: 0, cy: 0, r: 7, fill: "none", stroke: c, "stroke-width": 3.5 }), sv("rect", { x: -1.8, y: 6, width: 3.6, height: 18, fill: c }), sv("rect", { x: 1.8, y: 18, width: 6, height: 3, fill: c }), sv("rect", { x: 1.8, y: 13, width: 4, height: 3, fill: c }));
+  const hit = (g, fn) => { g.addEventListener("click", fn); g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fn(); } }); return g; };
+
+  function objectionList(boxSel, filterSel, O) {
+    const box = $(boxSel);
+    const cards = O.map((o, i) => {
+      const d = el("details", { class: "obj " + o.k, open: i === 0 ? true : null },
+        el("summary", {}, el("span", { class: "obadge", text: o.k === "straw" ? "Misrepresentation" : "Objection" }), el("b", { text: o.q }), el("small", { class: "ref", text: o.refs })),
+        el("div", { class: "obody" }, el("div", { class: "row warn" }, el("b", { text: o.k === "straw" ? "The misrepresentation" : "What is not being claimed" }), el("p", { html: refify(o.not) })),
+          el("div", { class: "row eden" }, el("b", { text: "Response" }), el("p", { html: refify(o.a) }))));
+      box.append(d); return d;
+    });
+    const f = $(filterSel);
+    [["all", "All"], ["serious", "Serious objections"], ["straw", "Misrepresentations"]].forEach(([k, n]) => f.append(el("button", { class: "chip", type: "button", "data-k": k, "aria-pressed": String(k === "all"), text: n, onclick: () => {
+      $$(".chip", f).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.k === k)));
+      cards.forEach((c, i) => { c.hidden = !(k === "all" || O[i].k === k); });
+    } })));
+  }
+  function studyGuide(qSel, mSel, study, memory) {
+    $(qSel).append(...study.map((s, i) => el("details", { class: "qset", open: i === 0 ? true : null }, el("summary", { text: s.t }), el("ol", {}, s.q.map(q => el("li", { html: refify(q) }))))));
+    $(mSel).append(...memory.map(([r, v]) => {
+      const b = el("button", { class: "clue mem", type: "button", "aria-pressed": "false", "aria-label": `Memory verse ${r}. Turn over.` },
+        el("div", { class: "clue-inner" }, el("div", { class: "clue-face front" }, el("p", { class: "eyebrow", text: "Memory verse" }), el("h3", { text: r }), el("span", { class: "hint", text: "Tap to reveal" })),
+          el("div", { class: "clue-face back" }, el("span", { class: "ref", text: r }), el("p", { text: v }))));
+      b.addEventListener("click", () => { const on = b.classList.toggle("flipped"); b.setAttribute("aria-pressed", String(on)); });
+      return b;
+    }));
+  }
+
+  function initKyMeaning() {
+    $("#kyWords").append(...DATA.ky.words.map(w => el("div", { class: "card word-card" }, el("p", { class: "eyebrow", text: w.lang }), el("p", { class: w.lang === "Hebrew" ? "heb big-word" : "big-word", text: w.w }), el("h3", { text: `${w.tr} · ${w.gloss}` }), el("p", { text: w.d }))));
+    const W = 1100, H = 190, x0 = 30, bw = (W - 60) / 66, yB = 120;
+    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "The 66 books of the Bible with every occurrence of the word key marked", style: { minWidth: "820px" } });
+    BOOKS.forEach((b, i) => {
+      const nt = i >= 39;
+      svg.append(sv("rect", { x: x0 + i * bw + 1, y: yB, width: bw - 2, height: 26, rx: 2, fill: nt ? "var(--babel)" : "var(--eden)", "fill-opacity": .28 }, sv("title", {}, b)));
+    });
+    [[1, "Law"], [6, "History"], [18, "Wisdom"], [23, "Prophets"], [40, "Gospels & Acts"], [48, "Letters"], [65, "Rev."]].forEach(([b, t]) => svg.append(sv("text", { x: x0 + (b - 1) * bw, y: yB + 44, "font-size": 11, "font-weight": 700, fill: "var(--muted)" }, t)));
+    svg.append(sv("text", { x: x0, y: H - 6, "font-size": 11, fill: "var(--eden)", "font-weight": 800 }, "OLD TESTAMENT"), sv("text", { x: x0 + 39 * bw, y: H - 6, "font-size": 11, fill: "var(--babel)", "font-weight": 800 }, "NEW TESTAMENT"));
+    const stacks = {};
+    const marks = DATA.ky.occ.map((o, i) => {
+      const n = stacks[o.book] = (stacks[o.book] || 0) + 1;
+      const x = x0 + (o.book - 0.5) * bw, y = yB - 26 - (n - 1) * 34;
+      const g = hit(sv("g", { class: "fnode kmark", tabindex: "0", role: "button", "aria-label": o.name }), () => selOcc(i));
+      g.append(sv("line", { x1: x, y1: y + 22, x2: x, y2: yB, stroke: "var(--accent)", "stroke-dasharray": "2 2" }), sv("circle", { class: "kbg", cx: x, cy: y + 6, r: 15, fill: "var(--surface)", stroke: "var(--accent)", "stroke-width": 2 }));
+      const k = keyGlyph("var(--accent)", .62); k.setAttribute("transform", `translate(${x} ${y - 1}) scale(.62)`); g.append(k);
+      svg.append(g); return g;
+    });
+    svg.append(sv("text", { x: x0 + 13 * bw, y: 20, "font-size": 12, "font-weight": 700, fill: "var(--muted)" }, "Each key marks one occurrence of the word. Revelation has three."));
+    $("#kyCanon").append(svg);
+    const cards = DATA.ky.meanings.map((m, i) => {
+      const b = el("button", { class: "meaning", type: "button", onclick: () => selMeaning(i) },
+        sv("svg", { viewBox: "0 0 24 24", class: "micon", "aria-hidden": "true", fill: "none", stroke: "currentColor", "stroke-width": 1.7, "stroke-linecap": "round", "stroke-linejoin": "round" }, sv("path", { d: m.icon })),
+        el("b", { text: m.n }), el("span", { text: m.d }), el("small", { class: "ref", text: m.also }));
+      $("#kyMeanings").append(b); return b;
+    });
+    function light(pred) { marks.forEach((g, i) => { const on = pred(DATA.ky.occ[i]); g.style.opacity = on ? 1 : .25; $(".kbg", g).setAttribute("fill", on ? "var(--glow)" : "var(--surface)"); }); }
+    function selOcc(i) {
+      const o = DATA.ky.occ[i];
+      cards.forEach(c => c.classList.remove("on"));
+      light(x => x === o);
+      $("#kyCanonPanel").replaceChildren(el("p", { class: "eyebrow", text: BOOKS[o.book - 1] }), el("h3", { text: o.name }), el("p", { html: refify(o.d) }),
+        el("div", { class: "chips" }, o.m.map(id => { const mi = DATA.ky.meanings.findIndex(m => m.id === id); return el("button", { class: "chip", type: "button", text: DATA.ky.meanings[mi].n, onclick: () => selMeaning(mi) }); })));
+    }
+    function selMeaning(i) {
+      const m = DATA.ky.meanings[i];
+      cards.forEach((c, j) => c.classList.toggle("on", j === i));
+      light(o => o.m.includes(m.id));
+      const hits = DATA.ky.occ.filter(o => o.m.includes(m.id));
+      $("#kyCanonPanel").replaceChildren(el("p", { class: "eyebrow", text: "What keys represent" }), el("h3", { text: m.n }), el("p", { html: refify(m.d) }),
+        el("p", { class: "muted", text: hits.length ? `In the verses that use the word “key”: ${hits.map(h => h.name).join(" · ")}` : "This meaning is carried by related imagery rather than the word “key” itself." }),
+        el("span", { class: "ref", text: "See also: " + m.also }));
+    }
+    selMeaning(0);
+  }
+
+  function initKyRing() {
+    const R = DATA.ky.ring, svg = sv("svg", { viewBox: "0 0 520 470", role: "img", "aria-label": "Seven biblical keys hanging on one ring" });
+    const C = [260, 96];
+    svg.append(sv("circle", { cx: C[0], cy: C[1], r: 58, fill: "none", stroke: "var(--accent)", "stroke-width": 9 }), sv("circle", { cx: C[0], cy: C[1], r: 58, fill: "none", stroke: "var(--surface)", "stroke-width": 2, opacity: .5 }),
+      sv("text", { x: C[0], y: 26, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--muted)", "letter-spacing": 1.5 }, "IN CHRIST’S HAND · REV 1:18; 3:7"));
+    const keys = R.map((k, i) => {
+      const a = -48 + i * 16, rad = (90 + a) * Math.PI / 180, ax = C[0] + Math.cos(rad) * 58, ay = C[1] + Math.sin(rad) * 58;
+      const outer = sv("g", { transform: `translate(${ax} ${ay}) rotate(${a})` });
+      const g = hit(sv("g", { class: "fnode hkey", tabindex: "0", role: "button", "aria-label": k.n }), () => sel(i));
+      g.append(sv("circle", { cx: 0, cy: 24, r: 18, fill: "var(--surface)", stroke: k.c, "stroke-width": 7 }), sv("rect", { x: -4.5, y: 42, width: 9, height: 200, rx: 3, fill: k.c }),
+        sv("rect", { x: 4.5, y: 208, width: 20, height: 10, rx: 2, fill: k.c }), sv("rect", { x: 4.5, y: 226, width: 14, height: 10, rx: 2, fill: k.c }), sv("rect", { x: 4.5, y: 190, width: 10, height: 8, rx: 2, fill: k.c }));
+      outer.append(g); svg.append(outer);
+      const short = ["Key of David", "Kingdom", "Death & Hades", "Knowledge", "Abyss", "Open door", "Forgive & retain"][i];
+      const tr = a * Math.PI / 180, tx = ax - Math.sin(tr) * 262, ty = ay + Math.cos(tr) * 262 + 16;
+      svg.append(sv("text", { x: Math.max(58, Math.min(462, tx)), y: Math.min(ty, 460), "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--ink)", "paint-order": "stroke", stroke: "var(--surface)", "stroke-width": 4 }, short));
+      return g;
+    });
+    $("#kyRing").append(svg);
+    function sel(i) {
+      keys.forEach((g, j) => g.classList.toggle("on", j === i));
+      const k = R[i];
+      $("#kyRingPanel").replaceChildren(el("p", { class: "eyebrow", text: `Key ${i + 1} of ${R.length}` }), el("h3", { text: k.n }), el("span", { class: "ref", text: k.ref }), el("p", { html: refify(k.d) }),
+        el("div", { class: "chips" }, R.map((o, j) => el("button", { class: "chip", type: "button", "aria-pressed": String(j === i), text: o.n.replace("Key of the ", "").replace("Keys of the ", "").replace("Key of ", "").replace("Keys of ", ""), onclick: () => sel(j) }))));
+    }
+    sel(0);
+  }
+
+  function initKyPalace() {
+    const P = DATA.ky.palace, svg = sv("svg", { viewBox: "0 0 600 440", role: "img", "aria-label": "Plan of a royal palace with the rooms the steward's key controlled" });
+    svg.append(sv("rect", { x: 60, y: 30, width: 480, height: 300, rx: 6, fill: "var(--bg)", stroke: "var(--ink)", "stroke-width": 4 }), sv("rect", { x: 270, y: 324, width: 60, height: 12, fill: "var(--surface)" }));
+    svg.append(sv("rect", { x: 220, y: 150, width: 160, height: 160, rx: 6, fill: "none", stroke: "var(--line)", "stroke-dasharray": "5 5" }), sv("text", { x: 300, y: 236, "text-anchor": "middle", "font-size": 12, fill: "var(--muted)", "font-weight": 700, "letter-spacing": 1 }, "COURTYARD"));
+    const zones = { decrees: [75, 45, 130, 90], throne: [220, 45, 160, 90], court: [395, 45, 130, 265], stores: [75, 150, 130, 160], gate: [262, 312, 76, 34], family: [60, 360, 480, 66] };
+    const fills = { throne: "var(--accent)", decrees: "var(--babel)", court: "var(--eden)", stores: "var(--muted)", gate: "var(--flame)", family: "var(--eden)" };
+    const rects = {};
+    P.forEach((p, i) => {
+      const [x, y, w, h] = zones[p.id];
+      const g = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": p.n }), () => sel(i));
+      const r = sv("rect", { x, y, width: w, height: h, rx: 6, fill: fills[p.id], "fill-opacity": .16, stroke: fills[p.id], "stroke-width": 2 });
+      g.append(r);
+      if (p.id === "family") for (let k = 0; k < 9; k++) { const hx = 80 + k * 52; g.append(sv("path", { d: `M${hx} 418 L${hx} 396 L${hx + 14} 384 L${hx + 28} 396 L${hx + 28} 418 Z`, fill: "var(--eden)", "fill-opacity": .45 })); }
+      if (p.id === "throne") g.append(sv("rect", { x: 288, y: 70, width: 24, height: 30, rx: 3, fill: "var(--accent)" }));
+      if (p.id === "stores") for (let k = 0; k < 6; k++) g.append(sv("circle", { cx: 100 + (k % 3) * 40, cy: 200 + Math.floor(k / 3) * 50, r: 12, fill: "var(--muted)", "fill-opacity": .5 }));
+      const label = { gate: "Gate", family: "Jerusalem: the people", court: "Royal service", stores: "Storehouses", throne: "Throne room", decrees: "Scribes & decrees" }[p.id];
+      g.append(sv("text", { x: x + w / 2, y: p.id === "family" ? y + 14 : p.id === "gate" ? y + 22 : y + 22, "text-anchor": "middle", "font-size": 12.5, "font-weight": 800, fill: "var(--ink)" }, label));
+      rects[p.id] = r; svg.append(g);
+    });
+    const key = sv("g", { style: { transition: reduceMotion ? "none" : "transform .8s cubic-bezier(.4,.1,.2,1)" } }, sv("circle", { r: 20, fill: "var(--accent)", opacity: .25, class: "pulse" }));
+    const kg = keyGlyph("var(--accent)", 1); kg.setAttribute("transform", "translate(0 -10)"); key.append(kg);
+    svg.append(key);
+    $("#kyPalace").append(svg);
+    function sel(i) {
+      const p = P[i], [x, y, w, h] = zones[p.id];
+      Object.entries(rects).forEach(([k, r]) => { r.setAttribute("fill-opacity", k === p.id ? .4 : .16); r.setAttribute("stroke-width", k === p.id ? 4 : 2); });
+      key.style.transform = `translate(${x + w - 22}px, ${y + h / 2 + (p.id === "family" ? -6 : 8)}px)`;
+      $("#kyPalacePanel").replaceChildren(el("p", { class: "eyebrow", text: "The steward’s key" }), el("h3", { text: p.n }), el("span", { class: "ref", text: p.ref }), el("p", { html: refify(p.d) }),
+        el("div", { class: "row christ" }, el("b", { text: "In the kingdom today" }), el("p", { html: refify(p.app) })));
+    }
+    sel(0);
+  }
+
+  function initKyStewards() {
+    const S = DATA.ky.stewards;
+    const svg = sv("svg", { viewBox: "0 0 460 330", role: "img", "aria-label": "The key passing from Shebna to Eliakim" });
+    svg.append(sv("line", { x1: 20, y1: 300, x2: 440, y2: 300, stroke: "var(--line)", "stroke-width": 2 }));
+    const fig = (x, robe, label) => { const g = sv("g", {}, sv("circle", { cx: x, cy: 120, r: 22, fill: "#c99a6e" }), sv("path", { d: `M${x - 34} 150 L${x + 34} 150 L${x + 48} 296 L${x - 48} 296 Z`, fill: robe }), sv("text", { x, y: 322, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, label)); svg.append(g); return g; };
+    // Shebna's rock-cut tomb
+    svg.append(sv("path", { d: "M30 300 L30 190 Q30 160 60 160 L80 160 Q110 160 110 190 L110 300 Z", fill: "var(--muted)", "fill-opacity": .3 }), sv("text", { x: 70, y: 150, "text-anchor": "middle", "font-size": 10.5, fill: "var(--muted)", "font-weight": 700 }, "his own tomb"));
+    const sh = fig(180, "var(--flame)", "Shebna");
+    const el2 = fig(330, "var(--babel)", "Eliakim");
+    const sash = sv("rect", { x: 296, y: 200, width: 68, height: 10, fill: "var(--accent)" });
+    svg.append(sash);
+    const key = sv("g", { style: { transition: reduceMotion ? "none" : "transform 1.1s cubic-bezier(.4,.1,.2,1)" } });
+    const kk = sv("g", { transform: "rotate(-60) scale(1.9)" }); kk.append(...keyGlyph("var(--accent)").childNodes);
+    key.append(sv("circle", { r: 22, fill: "var(--accent)", opacity: .2, class: "pulse" }), kk);
+    svg.append(key);
+    svg.append(sv("text", { x: 235, y: 60, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, "“I will place on his shoulder the key”"), sv("text", { x: 235, y: 78, "text-anchor": "middle", "font-size": 11, fill: "var(--accent)", "font-weight": 700 }, "Isaiah 22:22"));
+    $("#kyStewardArt").append(svg);
+    const tg = $("#kyStewardToggle"), box = $("#kySteward");
+    function set(k) {
+      $$(".chip", tg).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.k === k)));
+      const s = S[k];
+      key.style.transform = k === "shebna" ? "translate(158px, 150px)" : "translate(308px, 150px)";
+      sh.style.opacity = k === "shebna" ? 1 : .35; el2.style.opacity = k === "eliakim" ? 1 : .35; sash.style.opacity = k === "eliakim" ? 1 : 0;
+      box.classList.toggle("twisted", k === "shebna");
+      box.replaceChildren(el("p", { class: "eyebrow", text: s.ref }), ...s.rows.map(r => el("div", { class: "crow" }, el("b", { text: r[0] }), el("p", { class: "cval", html: refify(r[1]) }))));
+    }
+    [["shebna", "Shebna: the key misused"], ["eliakim", "Eliakim: the key given"]].forEach(([k, n]) => tg.append(el("button", { class: "chip", type: "button", "data-k": k, text: n, onclick: () => set(k) })));
+    set("eliakim");
+  }
+
+  function initKyFlow() {
+    const nodes = DATA.ky.flow.map(n => ({ ...n, w: ["joseph", "eliakim", "peter", "church"].includes(n.id) ? 340 : 440 }));
+    flowchart($("#kyFlow"), nodes, DATA.ky.flowEdges, { id: "kyf", w: 900, h: 700, nodeW: 440, refsInline: true, label: "Flowchart of the keys from Joseph to the New Jerusalem", start: "christ", onSelect: n => panelFill("#kyFlowPanel", "Keys across Scripture", n) });
+  }
+
+  function initKyCaesarea() {
+    const C = DATA.ky.caesarea, svg = sv("svg", { viewBox: "0 0 600 400", role: "img", "aria-label": "Caesarea Philippi: cliff, cave of Pan, niches, temple and spring" });
+    svg.append(sv("rect", { width: 600, height: 400, fill: "var(--babel)", "fill-opacity": .08 }));
+    const zones = {};
+    const z = (id, ...kids) => { const i = C.findIndex(c => c.id === id); const g = hit(sv("g", { class: "hot", tabindex: "0", role: "button", "aria-label": C[i].n }, ...kids), () => sel(i)); zones[id] = g; svg.append(g); };
+    z("rock", sv("path", { class: "hl", d: "M0 380 L0 120 L60 80 L170 60 L300 40 L420 55 L520 70 L600 100 L600 380 Z", fill: "#b59b7a", "fill-opacity": .55, stroke: "transparent" }), sv("text", { x: 470, y: 110, "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, "the cliff (petra)"));
+    z("niches", ...[[380, 150], [430, 165], [480, 150], [530, 170]].map(([x, y]) => sv("path", { class: "hl", d: `M${x - 14} ${y + 30} L${x - 14} ${y + 10} Q${x} ${y - 6} ${x + 14} ${y + 10} L${x + 14} ${y + 30} Z`, fill: "var(--ink)", "fill-opacity": .45, stroke: "transparent" })), sv("text", { x: 455, y: 226, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--ink)" }, "niches of Pan"));
+    z("cave", sv("path", { class: "hl", d: "M150 330 L150 230 Q150 170 215 170 Q280 170 280 230 L280 330 Z", fill: "#1d1a17", stroke: "transparent" }), sv("text", { x: 215, y: 162, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)", "paint-order": "stroke", stroke: "var(--surface)", "stroke-width": 4 }, "the cave: “gates of Hades”"));
+    z("temple", sv("rect", { class: "hl", x: 300, y: 250, width: 120, height: 14, fill: "var(--surface)", stroke: "transparent" }), ...[0, 1, 2, 3, 4].map(k => sv("rect", { x: 306 + k * 24, y: 264, width: 10, height: 60, fill: "var(--surface)" })), sv("path", { d: "M296 250 L360 222 L424 250 Z", fill: "var(--surface)" }), sv("text", { x: 360, y: 214, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--ink)", "paint-order": "stroke", stroke: "var(--surface)", "stroke-width": 4 }, "temple of Augustus"));
+    z("spring", sv("path", { class: "hl flow", d: "M215 330 C220 350 260 360 300 372 C360 388 440 380 600 392", fill: "none", stroke: "var(--babel)", "stroke-width": 6 }), sv("text", { x: 470, y: 372, "font-size": 12, "font-weight": 800, fill: "var(--babel)" }, "springs of the Jordan"));
+    svg.append(sv("rect", { x: 0, y: 380, width: 600, height: 20, fill: "var(--eden)", "fill-opacity": .4 }));
+    $("#kyCaesarea").append(svg);
+    function sel(i) {
+      Object.entries(zones).forEach(([k, g]) => g.classList.toggle("on", k === C[i].id));
+      const c = C[i];
+      $("#kyCaesareaPanel").replaceChildren(el("p", { class: "eyebrow", text: "Caesarea Philippi" }), el("h3", { text: c.n }), el("span", { class: "ref", text: c.ref }), el("p", { html: refify(c.d) }),
+        el("div", { class: "chips" }, C.map((o, j) => el("button", { class: "chip", type: "button", "aria-pressed": String(j === i), text: o.n.split(":")[0], onclick: () => sel(j) }))));
+    }
+    sel(0);
+  }
+
+  function initKyBind() {
+    const svg = sv("svg", { viewBox: "0 0 520 360", role: "img", "aria-label": "Direction of binding and loosing: heaven first, then earth" });
+    svg.append(sv("defs", {}, sv("marker", { id: "kb-arr", viewBox: "0 0 10 10", refX: 8, refY: 5, markerWidth: 7, markerHeight: 7, orient: "auto" }, sv("path", { d: "M0 0 L10 5 L0 10 Z", fill: "context-stroke" }))));
+    svg.append(sv("rect", { x: 20, y: 20, width: 480, height: 100, rx: 14, fill: "var(--accent)", "fill-opacity": .14 }), sv("text", { x: 40, y: 48, "font-size": 13, "font-weight": 800, "letter-spacing": 2, fill: "var(--accent)" }, "HEAVEN"),
+      sv("rect", { x: 20, y: 240, width: 480, height: 100, rx: 14, fill: "var(--eden)", "fill-opacity": .14 }), sv("text", { x: 40, y: 268, "font-size": 13, "font-weight": 800, "letter-spacing": 2, fill: "var(--eden)" }, "EARTH"));
+    const right = sv("g", {}, sv("text", { x: 260, y: 82, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "1 · Already bound or loosed in heaven"),
+      sv("path", { d: "M260 124 L260 236", stroke: "var(--accent)", "stroke-width": 5, fill: "none", "marker-end": "url(#kb-arr)" }), sv("path", { d: "M260 124 L260 236", stroke: "var(--surface)", "stroke-width": 2, fill: "none", class: "flow" }),
+      sv("text", { x: 276, y: 184, "font-size": 12.5, "font-weight": 700, fill: "var(--muted)" }, "discerned by Scripture, prayer, the Spirit"),
+      sv("text", { x: 260, y: 300, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "2 · Declared and enacted on earth"), sv("text", { x: 260, y: 322, "text-anchor": "middle", "font-size": 12, fill: "var(--muted)" }, "“shall have been bound” · estai dedemenon"));
+    const wrong = sv("g", {}, sv("text", { x: 260, y: 300, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "1 · We decide what we want"),
+      sv("path", { d: "M260 236 L260 124", stroke: "var(--flame)", "stroke-width": 5, fill: "none", "marker-end": "url(#kb-arr)" }),
+      sv("text", { x: 260, y: 82, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "2 · Heaven must comply"),
+      sv("path", { d: "M236 156 L284 204 M284 156 L236 204", stroke: "var(--flame)", "stroke-width": 7, "stroke-linecap": "round" }));
+    svg.append(right, wrong);
+    $("#kyDir").append(svg);
+    const tg = $("#kyDirToggle");
+    function set(m) {
+      $$(".chip", tg).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.m === m)));
+      right.style.display = m === "right" ? "" : "none"; wrong.style.display = m === "wrong" ? "" : "none";
+      $("#kyDirPanel").replaceChildren(...(m === "right"
+        ? [el("p", { class: "eyebrow", text: "The biblical direction" }), el("h3", { text: "Stewards follow the King" }), el("p", { html: refify("Matthew 16:19 and 18:18 use a future perfect: “whatever you bind on earth shall have been bound in heaven.” The church does not dictate to heaven; it recognises and enforces on earth what heaven has already settled, as Jesus did only what he saw the Father doing (John 5:19).") }), el("p", { html: refify("That is why it is safe to give such authority to ordinary disciples: it is anchored in God’s will, prayed as “your will be done, on earth as it is in heaven” (Matt 6:10).") })]
+        : [el("p", { class: "eyebrow", style: { color: "var(--flame)" }, text: "A common misreading" }), el("h3", { text: "Keys as a formula" }), el("p", { html: refify("Treating binding and loosing as a technique to command outcomes reverses the grammar and the relationship. A steward who opens doors the king has closed is not exercising authority but usurping it, like Shebna building his own monument (Isa 22:16).") })]));
+    }
+    [["right", "Heaven first (the text)"], ["wrong", "Earth first (misreading)"]].forEach(([m, n]) => tg.append(el("button", { class: "chip", type: "button", "data-m": m, text: n, onclick: () => set(m) })));
+    set("right");
+    makeTabs($("#kySenseTabs"), $("#kySensePanels"), DATA.ky.senses, (p, it) => {
+      p.append(el("div", { class: "split even" }, el("div", { class: "stack" }, el("h3", { text: it.head, style: { color: it.c } }), el("span", { class: "ref", text: it.ref })),
+        el("div", { class: "prose" }, it.body.map(b => el("p", { html: refify(b) })))));
+    }, "kysense");
+  }
+
+  function initKyDoors() {
+    const D = DATA.ky.doors, box = $("#kyDoors");
+    const cells = D.map((d, i) => {
+      const c = el("button", { class: "door", type: "button", "aria-label": `${d.n}: ${d.who}`, onclick: () => { stop(); c.classList.add("open"); sel(i); } },
+        el("span", { class: "door-frame" }, el("span", { class: "door-light" }, el("small", { text: d.who })), el("span", { class: "door-leaf" }, el("i", { class: "knob" }))),
+        el("b", { text: d.n }), el("small", { class: "ref", text: d.ref }));
+      box.append(c); return c;
+    });
+    function sel(i) {
+      cells.forEach((c, j) => c.classList.toggle("sel", j === i));
+      const d = D[i];
+      $("#kyDoorPanel").replaceChildren(el("p", { class: "eyebrow", text: `Door ${i + 1} of ${D.length}` }), el("h3", { text: `${d.n}: ${d.who}` }), el("span", { class: "ref", text: d.ref }), el("p", { html: refify(d.d) }));
+    }
+    let t = [];
+    const stop = () => { t.forEach(clearTimeout); t = []; };
+    $("#kyDoorsPlay").addEventListener("click", () => { stop(); cells.forEach(c => c.classList.remove("open")); cells.forEach((c, i) => t.push(setTimeout(() => { c.classList.add("open"); sel(i); }, reduceMotion ? 0 : 300 + i * 700))); });
+    $("#kyDoorsReset").addEventListener("click", () => { stop(); cells.forEach(c => c.classList.remove("open")); });
+    cells.slice(0, 3).forEach(c => c.classList.add("open")); sel(2);
+  }
+
+  function initKyKey() {
+    const T = DATA.ky.teeth, E = DATA.ky.eras;
+    const svg = sv("svg", { viewBox: "0 0 640 300", role: "img", "aria-label": "A key whose teeth represent the functions of the keys" });
+    const gold = "var(--accent)";
+    svg.append(sv("circle", { cx: 90, cy: 120, r: 62, fill: "none", stroke: gold, "stroke-width": 22 }), sv("circle", { cx: 90, cy: 120, r: 22, fill: gold, opacity: .3 }),
+      sv("rect", { x: 148, y: 108, width: 450, height: 24, rx: 6, fill: gold }));
+    const labels = [];
+    const teeth = T.map((t, i) => {
+      const x = 260 + i * 56;
+      const g = sv("g", { style: { transformOrigin: `${x + 20}px 132px`, transformBox: "view-box", transition: reduceMotion ? "none" : "transform .6s cubic-bezier(.3,1.4,.5,1), opacity .5s" } },
+        sv("rect", { x, y: 132, width: 40, height: 46 + (i % 2) * 20, rx: 4, fill: gold }));
+      const lab = sv("g", { style: { transition: "opacity .5s" } },
+        sv("text", { x: x + 20, y: 210 + (i % 2) * 34, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--ink)" }, t.n.split(" ")[0]),
+        sv("text", { x: x + 20, y: 224 + (i % 2) * 34, "text-anchor": "middle", "font-size": 10.5, fill: "var(--muted)" }, t.n.split(" ").slice(1).join(" ")));
+      const strike = sv("line", { x1: x - 4, y1: 206 + (i % 2) * 34, x2: x + 44, y2: 206 + (i % 2) * 34, stroke: "var(--flame)", "stroke-width": 2, opacity: 0 });
+      svg.append(g, lab, strike); labels.push([lab, strike]); return g;
+    });
+    const count = sv("text", { x: 90, y: 236, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, "");
+    svg.append(count, sv("text", { x: 90, y: 254, "text-anchor": "middle", "font-size": 11, fill: "var(--muted)" }, "teeth on the key"));
+    $("#kyKey").append(svg);
+    const chips = $("#kyEraChips");
+    function set(i) {
+      $$(".chip", chips).forEach((c, j) => c.setAttribute("aria-pressed", String(j === i)));
+      const e = E[i];
+      T.forEach((t, j) => { const on = e.have.includes(t.id); teeth[j].style.transform = on ? "scaleY(1)" : "scaleY(0.08)"; teeth[j].style.opacity = on ? 1 : .3; labels[j][0].style.opacity = on ? 1 : .4; labels[j][1].setAttribute("opacity", on ? 0 : .8); });
+      count.textContent = `${e.have.length} of ${T.length}`;
+      $("#kyEraInfo").replaceChildren(el("h3", { text: e.n }), el("p", { html: refify(e.d) }),
+        el("ul", { class: "tight" }, T.map(t => el("li", { style: { opacity: e.have.includes(t.id) ? 1 : .4, textDecoration: e.have.includes(t.id) ? "none" : "line-through" }, html: `<b>${t.n}</b>: ${refify(t.d)}` }))));
+    }
+    E.forEach((e, i) => chips.append(el("button", { class: "chip", type: "button", text: e.n, onclick: () => set(i) })));
+    set(4);
+  }
+
+  function initKyOperate() {
+    const O = DATA.ky.operate, list = $("#kyOperate");
+    const items = O.map((o, i) => { const li = el("li", { class: "card op", tabindex: "0", role: "button" }, el("b", { text: o.t }), el("span", { class: "ref", text: o.ref })); hit(li, () => sel(i)); list.append(li); return li; });
+    function sel(i) { items.forEach((li, j) => li.classList.toggle("on", j === i)); const o = O[i]; $("#kyOperatePanel").replaceChildren(el("p", { class: "eyebrow", text: `Step ${i + 1} of ${O.length}` }), el("h3", { text: o.t }), el("span", { class: "ref", text: o.ref }), el("p", { html: refify(o.d) })); }
+    sel(1);
+    $("#kyPractice").append(...DATA.ky.practice.map(([t, d]) => el("div", { class: "card" }, keyGlyphHTML(), el("h3", { text: t }), el("p", { html: refify(d) }))));
+  }
+  function keyGlyphHTML() { const s = sv("svg", { viewBox: "-12 -10 30 40", class: "kicon", "aria-hidden": "true" }); s.append(keyGlyph("var(--accent)")); return s; }
+
+  function initKyObjections() { objectionList("#kyObjections", "#kyObjFilter", DATA.ky.objections); }
+  function initKyStudy() { studyGuide("#kyQuestions", "#kyMemory", DATA.ky.study, DATA.ky.memory); }
+
+
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -3275,6 +3799,8 @@ DATA.sources.push(
       [initKpPeople, "#kpPeople"], [initKpMelch, "#kpMelchFlow"], [initKpPromises, "#kpPromises"], [initKpCalling, "#kpBalance"], [initKpStudy, "#kpQuestions"],
       [initPrOffice, "#prLawsuit"], [initPrPairs, "#prPairs"], [initPrFive, "#prStar"], [initPrChanged, "#prVenn"], [initPrEquip, "#prMatrix"],
       [initPrDaniel, "#prDaniel"], [initPrTense, "#prTense"], [initPrFunnel, "#prFunnel"], [initPrTimeline, "#prTimeline"], [initPrObjections, "#prObjections"], [initPrStudy, "#prQuestions"],
+      [initKyMeaning, "#kyCanon"], [initKyRing, "#kyRing"], [initKyPalace, "#kyPalace"], [initKyStewards, "#kyStewardArt"], [initKyFlow, "#kyFlow"], [initKyCaesarea, "#kyCaesarea"],
+      [initKyBind, "#kyDir"], [initKyDoors, "#kyDoors"], [initKyKey, "#kyKey"], [initKyOperate, "#kyOperate"], [initKyObjections, "#kyObjections"], [initKyStudy, "#kyQuestions"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }

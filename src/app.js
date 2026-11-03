@@ -658,6 +658,7 @@
       serpent: () => [sv("path", { d: "M-150 40 C-100 -20 -60 80 0 20 C60 -40 100 60 150 -10", fill: "none", stroke: green, "stroke-width": 16, "stroke-linecap": "round" }), sv("circle", { cx: 150, cy: -10, r: 14, fill: green }), sv("circle", { cx: 0, cy: -70, r: 30, fill: gold, opacity: .25 })],
       pole: () => [sv("rect", { x: -4, y: -110, width: 8, height: 160, fill: "var(--muted)" }), sv("path", { d: "M0 -90 C30 -80 -30 -60 0 -50 C30 -40 -30 -20 0 -10", fill: "none", stroke: gold, "stroke-width": 8 })],
       star: () => { const pts = Array.from({ length: 5 }, (_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / 5; return [Math.cos(a) * 95, Math.sin(a) * 95 - 10]; }); return [...pts.map((p, i) => sv("line", { x1: p[0], y1: p[1], x2: pts[(i + 1) % 5][0], y2: pts[(i + 1) % 5][1], stroke: "var(--muted)", "stroke-width": 3, opacity: .5 })), ...pts.map(p => sv("line", { x1: 0, y1: -10, x2: p[0], y2: p[1], stroke: gold, "stroke-width": 3 })), sv("circle", { cx: 0, cy: -10, r: 30, fill: gold }), ...pts.map((p, i) => sv("circle", { cx: p[0], cy: p[1], r: 20, fill: [blue, gold, "var(--flame)", green, "var(--muted)"][i] }))]; },
+      keys: () => [sv("circle", { cx: 0, cy: -30, r: 46, fill: "none", stroke: gold, "stroke-width": 10 }), ...[-40, -10, 20, 50].map((a, i) => { const r = (90 + a) * Math.PI / 180, x = Math.cos(r) * 46, y = -30 + Math.sin(r) * 46; return sv("g", { transform: `translate(${x} ${y}) rotate(${a})` }, sv("circle", { cx: 0, cy: 12, r: 9, fill: "none", stroke: [gold, blue, "var(--flame)", green][i], "stroke-width": 5 }), sv("rect", { x: -3, y: 21, width: 6, height: 70, fill: [gold, blue, "var(--flame)", green][i] }), sv("rect", { x: 3, y: 78, width: 12, height: 6, fill: [gold, blue, "var(--flame)", green][i] })); })],
       crown: () => [sv("path", { d: "M-150 20 L-150 -40 L-120 -10 L-95 -60 L-70 -10 L-40 -40 L-40 20 Z", fill: gold }), sv("path", { d: "M40 20 L40 -30 Q90 -80 140 -30 L140 20 Z", fill: "var(--surface)", stroke: "var(--muted)", "stroke-width": 3 }), sv("rect", { x: 70, y: -22, width: 40, height: 12, rx: 3, fill: gold }), sv("circle", { cx: 0, cy: -20, r: 30, fill: gold, opacity: .25 }), sv("rect", { x: -160, y: 40, width: 320, height: 8, rx: 4, fill: "var(--muted)", opacity: .5 })],
       zig: () => [...[0, 1, 2].map(i => sv("rect", { x: -140 + i * 40, y: 10 - i * 34, width: 280 - i * 80, height: 34, fill: "#b08a5a", opacity: .6 + i * .12 })), sv("rect", { x: -8, y: -20, width: 16, height: 30, fill: "var(--bg-2)" })]
     };
@@ -983,7 +984,7 @@
   /* ---------------- Connections web ---------------- */
   function initWeb() {
     const W = 600, C = W / 2, R = 228;
-    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
+    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "keys", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
     const nodes = order.map(id => DATA.web.nodes.find(n => n.id === id));
     const pos = {};
     nodes.forEach((n, i) => { const a = -Math.PI / 2 + i / nodes.length * Math.PI * 2; pos[n.id] = [C + Math.cos(a) * R, C + Math.sin(a) * R, a]; });
@@ -1365,6 +1366,7 @@
 
 /*@@KINGS@@*/
 /*@@PROPHETS@@*/
+/*@@KEYS@@*/
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -1398,6 +1400,8 @@
       [initKpPeople, "#kpPeople"], [initKpMelch, "#kpMelchFlow"], [initKpPromises, "#kpPromises"], [initKpCalling, "#kpBalance"], [initKpStudy, "#kpQuestions"],
       [initPrOffice, "#prLawsuit"], [initPrPairs, "#prPairs"], [initPrFive, "#prStar"], [initPrChanged, "#prVenn"], [initPrEquip, "#prMatrix"],
       [initPrDaniel, "#prDaniel"], [initPrTense, "#prTense"], [initPrFunnel, "#prFunnel"], [initPrTimeline, "#prTimeline"], [initPrObjections, "#prObjections"], [initPrStudy, "#prQuestions"],
+      [initKyMeaning, "#kyCanon"], [initKyRing, "#kyRing"], [initKyPalace, "#kyPalace"], [initKyStewards, "#kyStewardArt"], [initKyFlow, "#kyFlow"], [initKyCaesarea, "#kyCaesarea"],
+      [initKyBind, "#kyDir"], [initKyDoors, "#kyDoors"], [initKyKey, "#kyKey"], [initKyOperate, "#kyOperate"], [initKyObjections, "#kyObjections"], [initKyStudy, "#kyQuestions"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }
