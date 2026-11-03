@@ -18,11 +18,12 @@ const PAGES = [
   { id: "kings", file: "kings.html", title: "Kings and Priests · Where Heaven Meets Earth", nav: "Part IV · Kings and Priests" },
   { id: "prophets", file: "prophets.html", title: "Prophets and the Fivefold · Where Heaven Meets Earth", nav: "Part V · Prophets and the Fivefold" },
   { id: "keys", file: "keys.html", title: "The Keys of the Kingdom · Where Heaven Meets Earth", nav: "Part VI · The Keys of the Kingdom" },
+  { id: "sowing", file: "sowing.html", title: "Sowing and Reaping · Where Heaven Meets Earth", nav: "Part VII · Sowing and Reaping" },
   { id: "connections", file: "connections.html", title: "Connections and Quiz · Where Heaven Meets Earth", nav: "Connections & Quiz" }
 ];
 
 const css = read("styles.css");
-const js = [read("data.js"), read("data-serpent.js"), read("data-kings.js"), read("data-prophets.js"), read("data-keys.js"), read("app.js").replace("/*@@KINGS@@*/", () => read("app-kings.js")).replace("/*@@PROPHETS@@*/", () => read("app-prophets.js")).replace("/*@@KEYS@@*/", () => read("app-keys.js"))].join("\n");
+const js = [read("data.js"), read("data-serpent.js"), read("data-kings.js"), read("data-prophets.js"), read("data-keys.js"), read("data-sowing.js"), read("app.js").replace("/*@@KINGS@@*/", () => read("app-kings.js")).replace("/*@@PROPHETS@@*/", () => read("app-prophets.js")).replace("/*@@KEYS@@*/", () => read("app-keys.js")).replace("/*@@SOWING@@*/", () => read("app-sowing.js"))].join("\n");
 const header = read("partials/header.html");
 const footer = read("partials/footer.html");
 const fonts = `<link rel="preconnect" href="https://fonts.googleapis.com">

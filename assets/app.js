@@ -1431,6 +1431,196 @@ DATA.ky.meanings = [
   { id: "christ", n: "Christ himself", icon: "M12 3 V21 M5 9 H19", d: "In the end the key is a person: “I am the door. If anyone enters by me, he will be saved” (John 10:9). He is the opener of every door that matters.", also: "John 10:7–9 · John 14:6 · Rev 3:20" }
 ];
 
+/* Part VII: Sowing and reaping */
+DATA.sw = {};
+
+/* 1 · God's design flowchart (viewBox 900 × 560) */
+DATA.sw.design = [
+  { id: "seed", x: 450, y: 40, t: "Seed with life “in itself”", ref: "Gen 1:11–12", c: "eden",
+    d: "On the third day God makes plants “yielding seed … each according to its kind, with seed in it.” Multiplication is built into creation: life that carries its own future." },
+  { id: "bless", x: 450, y: 130, t: "“Be fruitful and multiply”", ref: "Gen 1:22, 28", c: "accent",
+    d: "The first blessing is the power to bear fruit. In Scripture, to be blessed (bārak) is to be empowered by God to flourish and multiply for his purposes." },
+  { id: "covenant", x: 450, y: 220, t: "“Seedtime and harvest shall not cease”", ref: "Gen 8:22", c: "accent",
+    d: "After the flood God binds himself by covenant: while the earth remains, the cycle of sowing and reaping will continue. It is a promise from a faithful Person, not an impersonal force." },
+  { id: "law", x: 450, y: 310, t: "“Whatever one sows, that will he also reap”", ref: "Gal 6:7", c: "ink",
+    d: "“Do not be deceived: God is not mocked.” The principle runs through nature, character, relationships, generosity and eternity." },
+  { id: "flesh", x: 220, y: 410, t: "Sow to the flesh → corruption", ref: "Gal 6:8a", c: "flame",
+    d: "Seeds of self-indulgence, injustice and deceit produce a harvest of decay (Prov 22:8; Hos 8:7)." },
+  { id: "spirit", x: 680, y: 410, t: "Sow to the Spirit → eternal life", ref: "Gal 6:8b–9", c: "eden",
+    d: "“Let us not grow weary of doing good, for in due season we will reap, if we do not give up.” Seeds of righteousness, mercy and generosity produce lasting fruit." },
+  { id: "harvest", x: 450, y: 512, t: "The final harvest", ref: "Matt 13:39; Rev 14:15", c: "accent",
+    d: "“The harvest is the end of the age.” Every seed comes to its full fruit before the Lord of the harvest." }
+];
+DATA.sw.designEdges = [["seed", "bless"], ["bless", "covenant"], ["covenant", "law"], ["law", "flesh"], ["law", "spirit"], ["flesh", "harvest"], ["spirit", "harvest"]];
+
+/* 2 · Laws of the harvest */
+DATA.sw.laws = [
+  { n: "The law of kind", ref: "Gen 1:11; Gal 6:7", d: "You reap the same kind as you sow. Wheat produces wheat. Mercy produces mercy (Matt 5:7); judging produces judgment (Matt 7:2)." },
+  { n: "The law of soil", ref: "Mark 4:20; Luke 8:15", d: "The same seed yields differently in different soil. The good soil is “an honest and good heart” that hears, holds fast and bears fruit with patience." },
+  { n: "The law of dying", ref: "John 12:24; 1 Cor 15:36", d: "“Unless a grain of wheat falls into the earth and dies, it remains alone.” A seed must be released and buried before it multiplies." },
+  { n: "The law of seasons", ref: "Gal 6:9; Jas 5:7; Eccl 3:1–2", d: "There is a time to plant and a time to harvest. “The farmer waits for the precious fruit of the earth, being patient.”" },
+  { n: "The law of the Lord of the harvest", ref: "1 Cor 3:6–7; Mark 4:26–29", d: "“I planted, Apollos watered, but God gave the growth.” The sower “knows not how” the seed grows: the increase is God’s work, not ours." },
+  { n: "The law of more", ref: "Mark 4:8; Hos 8:7", d: "A harvest is larger than the seed: thirty, sixty, a hundredfold. The same law works in judgment: “they sow the wind, and they shall reap the whirlwind.”" },
+  { n: "The law of proportion", ref: "2 Cor 9:6; Luke 6:38", d: "“Whoever sows sparingly will also reap sparingly, and whoever sows bountifully will also reap bountifully.” “With the measure you use it will be measured back to you.”" },
+  { n: "The law of seed for the sower", ref: "2 Cor 9:10; Isa 55:10", d: "God “supplies seed to the sower and bread for food”. Part of every harvest is seed for the next sowing; we never sow what we did not first receive." }
+];
+
+/* 3 · Four soils */
+DATA.sw.soils = [
+  { id: "path", n: "The path", ref: "Mark 4:4, 15", d: "Seed on hard, trodden ground; birds take it at once. “Satan immediately comes and takes away the word that is sown in them.”", heart: "Hardened by busyness, cynicism or pain. Break up your fallow ground (Hos 10:12)." },
+  { id: "rock", n: "Rocky ground", ref: "Mark 4:5–6, 16–17", d: "Quick growth, shallow roots; the sun scorches it. They receive the word with joy, but “when tribulation or persecution arises … they fall away.”", heart: "Enthusiasm without depth. Let roots go down through trials (Col 2:7; Jas 1:2–4)." },
+  { id: "thorns", n: "Among thorns", ref: "Mark 4:7, 18–19", d: "It grows, but thorns choke it: “the cares of the world and the deceitfulness of riches and the desires for other things … choke the word, and it proves unfruitful.”", heart: "Divided affections. Seek first the kingdom (Matt 6:33)." },
+  { id: "good", n: "Good soil", ref: "Mark 4:8, 20; Luke 8:15", d: "Those who “hear the word and accept it and bear fruit, thirtyfold and sixtyfold and a hundredfold.” Luke adds: “holding it fast in an honest and good heart … with patience.”", heart: "Hear, hold fast, persevere. Fruit is the evidence (John 15:8)." }
+];
+
+/* 4 · Through Scripture. cat: creation, character, generosity, word, christ, judgment */
+DATA.sw.cats = { creation: ["Creation & covenant", "var(--eden)"], character: ["Character & righteousness", "var(--babel)"], generosity: ["Generosity", "var(--accent)"], word: ["Word & kingdom", "#6b3a8f"], christ: ["Christ & resurrection", "var(--flame)"], judgment: ["Judgment & final harvest", "var(--muted)"] };
+DATA.sw.thread = [
+  { b: 1, cat: "creation", ref: "Gen 1:11–12", t: "Seed in itself", d: "Plants yielding seed according to their kind: the principle is woven into creation." },
+  { b: 1, cat: "creation", ref: "Gen 8:22", t: "Seedtime and harvest", d: "A covenant promise that the cycle will never cease while the earth remains." },
+  { b: 1, cat: "generosity", ref: "Gen 26:1–12", t: "Isaac sows in famine", d: "In a famine, obeying God’s word to stay, “Isaac sowed in that land and reaped in the same year a hundredfold. The LORD blessed him.”" },
+  { b: 19, cat: "character", ref: "Ps 126:5–6", t: "Sow in tears, reap with joy", d: "“He who goes out weeping, bearing the seed for sowing, shall come home with shouts of joy, bringing his sheaves with him.”" },
+  { b: 20, cat: "generosity", ref: "Prov 11:24–25", t: "One gives freely, yet grows richer", d: "“Whoever brings blessing will be enriched, and one who waters will himself be watered.”" },
+  { b: 20, cat: "character", ref: "Prov 22:8", t: "Injustice reaps calamity", d: "“Whoever sows injustice will reap calamity, and the rod of his fury will fail.”" },
+  { b: 21, cat: "generosity", ref: "Eccl 11:1–6", t: "Cast your bread", d: "“Cast your bread upon the waters, for you will find it after many days … In the morning sow your seed, and at evening withhold not your hand.”" },
+  { b: 23, cat: "word", ref: "Isa 55:10–11", t: "The word as seed", d: "As rain makes the earth bring forth, “giving seed to the sower and bread to the eater, so shall my word be … it shall not return to me empty.”" },
+  { b: 28, cat: "character", ref: "Hos 8:7; 10:12", t: "Wind and whirlwind; righteousness and love", d: "“They sow the wind, and they shall reap the whirlwind.” “Sow for yourselves righteousness; reap steadfast love; break up your fallow ground.”" },
+  { b: 37, cat: "generosity", ref: "Hag 1:5–6", t: "Sown much, harvested little", d: "“Consider your ways. You have sown much, and harvested little.” Neglecting God’s house while building their own drained their harvest." },
+  { b: 39, cat: "generosity", ref: "Mal 3:10–11", t: "Windows of heaven", d: "“Bring the full tithe … and thereby put me to the test … I will rebuke the devourer for you, so that it will not destroy the fruits of your soil.”" },
+  { b: 40, cat: "word", ref: "Matt 13:1–43", t: "Kingdom parables", d: "The sower, the weeds among the wheat, the mustard seed: the kingdom works like seed." },
+  { b: 41, cat: "word", ref: "Mark 4:26–29", t: "It grows, he knows not how", d: "The seed sprouts and grows while the farmer sleeps: “first the blade, then the ear, then the full grain.”" },
+  { b: 42, cat: "generosity", ref: "Luke 6:38", t: "Good measure, pressed down", d: "“Give, and it will be given to you. Good measure, pressed down, shaken together, running over, will be put into your lap.”" },
+  { b: 43, cat: "word", ref: "John 4:35–38", t: "Fields white for harvest", d: "“One sows and another reaps … I sent you to reap that for which you did not labour.”" },
+  { b: 43, cat: "christ", ref: "John 12:24", t: "The grain of wheat dies", d: "Jesus speaks of his own death: one grain falls into the earth and bears much fruit." },
+  { b: 46, cat: "word", ref: "1 Cor 3:6–9", t: "God gives the growth", d: "“Neither he who plants nor he who waters is anything, but only God who gives the growth … You are God’s field.”" },
+  { b: 46, cat: "generosity", ref: "1 Cor 9:11", t: "Spiritual and material", d: "“If we have sown spiritual things among you, is it too much if we reap material things from you?”" },
+  { b: 46, cat: "christ", ref: "1 Cor 15:20, 36–44", t: "Sown perishable, raised imperishable", d: "Christ the firstfruits; our bodies are sown like seed and raised in glory." },
+  { b: 47, cat: "generosity", ref: "2 Cor 9:6–11", t: "Sow bountifully, cheerfully", d: "“God loves a cheerful giver … He who supplies seed to the sower … will supply and multiply your seed for sowing and increase the harvest of your righteousness.”" },
+  { b: 48, cat: "character", ref: "Gal 6:7–10", t: "Flesh or Spirit", d: "“Whatever one sows, that will he also reap … let us do good to everyone.”" },
+  { b: 59, cat: "character", ref: "Jas 3:18", t: "A harvest of righteousness", d: "“A harvest of righteousness is sown in peace by those who make peace.”" },
+  { b: 66, cat: "judgment", ref: "Rev 14:14–16", t: "The harvest of the earth", d: "One like a son of man with a sharp sickle reaps, “for the harvest of the earth is fully ripe.”" }
+];
+
+/* 5 · Seed → harvest chooser */
+DATA.sw.pairs = [
+  { good: true, seed: "Righteousness", harvest: "Steadfast love", ref: "Hos 10:12", d: "Sowing right living in relationship with God reaps his covenant love." },
+  { good: true, seed: "Generosity", harvest: "Sufficiency to abound in every good work", ref: "2 Cor 9:6–11", d: "The harvest of giving is not hoarded wealth but being “enriched in every way to be generous in every way”, overflowing in thanksgiving to God." },
+  { good: true, seed: "Tears in faithfulness", harvest: "Joy and sheaves", ref: "Ps 126:5–6", d: "Faithful sowing in seasons of grief still comes home with songs." },
+  { good: true, seed: "Peacemaking", harvest: "Righteousness", ref: "Jas 3:18", d: "Peace is the seed bed for a harvest of right relationships." },
+  { good: true, seed: "To the Spirit", harvest: "Eternal life", ref: "Gal 6:8", d: "Investing in what the Spirit loves yields life that does not end." },
+  { good: true, seed: "Mercy and forgiveness", harvest: "Mercy received", ref: "Matt 5:7; Luke 6:37", d: "“Forgive, and you will be forgiven.”" },
+  { good: true, seed: "The word", harvest: "Thirty, sixty, a hundredfold", ref: "Mark 4:20; Isa 55:11", d: "God’s word in a good heart never returns empty." },
+  { good: false, seed: "The wind", harvest: "The whirlwind", ref: "Hos 8:7", d: "Empty, faithless choices return multiplied and destructive." },
+  { good: false, seed: "Injustice", harvest: "Calamity", ref: "Prov 22:8; Job 4:8", d: "“Those who plow iniquity and sow trouble reap the same.”" },
+  { good: false, seed: "To the flesh", harvest: "Corruption", ref: "Gal 6:8", d: "Self-indulgence decays from within." },
+  { good: false, seed: "Discord", harvest: "Broken relationships", ref: "Prov 6:14–19; 16:28", d: "The Lord hates “one who sows discord among brothers”." },
+  { good: false, seed: "Stinginess", harvest: "Want", ref: "Prov 11:24; Hag 1:6", d: "“Another withholds what he should give, and only suffers want.”" }
+];
+
+/* 6 · Blessing cycle */
+DATA.sw.cycle = [
+  { t: "Grace gives the seed", ref: "2 Cor 9:10; 1 Cor 4:7", d: "Everything begins with God: “What do you have that you did not receive?” We only ever sow what he supplied." },
+  { t: "Sow freely and cheerfully", ref: "2 Cor 9:7", d: "“Not reluctantly or under compulsion, for God loves a cheerful giver.” Love, not pressure, is the motive." },
+  { t: "God gives the growth", ref: "1 Cor 3:7; Mark 4:27", d: "We plant and water; God makes it grow, in his time and way." },
+  { t: "A harvest of righteousness", ref: "2 Cor 9:8–10", d: "“God is able to make all grace abound to you, so that having all sufficiency in all things at all times, you may abound in every good work.”" },
+  { t: "Blessed to bless others", ref: "Gen 12:2; 2 Cor 9:11", d: "“You will be enriched in every way to be generous in every way.” The harvest flows outward." },
+  { t: "Thanksgiving to God", ref: "2 Cor 9:11–12", d: "The final fruit is “many thanksgivings to God”. The cycle ends in worship, and begins again with more seed." }
+];
+
+/* 7 · Principle or manipulation */
+DATA.sw.compare = [
+  ["Where it comes from", "The character of a faithful Father who made the world (Gen 8:22; Jas 1:17)", "A technique detached from God, used like a lever"],
+  ["Motive", "Love, worship and obedience (2 Cor 8:8–9)", "Fear, greed or guilt (1 Tim 6:5)"],
+  ["Direction", "God gives first: we sow what we received (2 Cor 9:10)", "We pay first so that God owes us"],
+  ["Pressure", "“Not reluctantly or under compulsion” (2 Cor 9:7)", "Urgency, deadlines, emotional pressure"],
+  ["Who controls the growth", "God, in his time (1 Cor 3:7; Eccl 11:5)", "The preacher promises amounts and dates"],
+  ["What the harvest is for", "Good works, generosity and thanksgiving to God (2 Cor 9:8–12)", "Personal gain and display"],
+  ["What it does to people", "Freedom and joy", "Shame, debt and disappointment"]
+];
+DATA.sw.why = [
+  { t: "The principle is cut off from the Person", d: "When sowing and reaping is taught without the Father, it becomes a machine. Laws without the Lawgiver always feel cold and transactional." },
+  { t: "It is used to extract money", d: "“Sow a seed of this amount for your breakthrough.” Peter rebuked Simon for thinking “you could obtain the gift of God with money” (Acts 8:20); Paul warns of those “imagining that godliness is a means of gain” (1 Tim 6:5)." },
+  { t: "The motive becomes getting", d: "“You ask and do not receive, because you ask wrongly, to spend it on your passions” (Jas 4:3). Giving in order to get turns a gift into a bribe." },
+  { t: "God is treated as a vending machine", d: "Put in a coin, receive a product. But the Father gives good gifts because he is good (Matt 7:11), not because we have programmed him." },
+  { t: "Timing and amounts are promised by people", d: "The Bible promises “due season” (Gal 6:9), never a date or a multiplier chosen by a speaker." },
+  { t: "Suffering and grace are left out", d: "A formula cannot explain Job, the martyrs who “did not receive what was promised” in this life (Heb 11:39), or grace that does not give us what our sins deserve (Ps 103:10)." }
+];
+DATA.sw.detector = [
+  "Am I being pressured to give right now, with an artificial deadline?",
+  "Is a specific return promised for a specific amount?",
+  "Does the person asking benefit most from my giving?",
+  "Are verses quoted without their context?",
+  "Is God’s grace and Christ’s finished work missing from the message?",
+  "Would I feel guilty or cursed if I said no?",
+  "Is the harvest only about my comfort, not about others and God’s glory?"
+];
+
+/* 8 · Grace and the harvest */
+DATA.sw.exchange = {
+  ours: ["Our sin", "Our rebellion", "Our wind"],
+  his: ["His righteousness", "His obedience", "His life"],
+  refs: "Isa 53:4–6; Gal 3:13; 2 Cor 5:21; Ps 103:10; John 4:38"
+};
+
+/* 9 · Objections */
+DATA.sw.objections = [
+  { k: "serious", q: "“Sowing and reaping is just karma.”", refs: "Ps 103:10; Gal 3:13",
+    not: "No one is saying God is an impersonal force of cause and effect.",
+    a: "Karma is an impersonal, endless cycle with no forgiveness. The biblical principle comes from a personal God who made a covenant (Gen 8:22), and it is interrupted by grace: “He does not deal with us according to our sins” (Ps 103:10). Christ reaped what we sowed on the cross (Gal 3:13), and we reap what he sowed (John 4:38)." },
+  { k: "straw", q: "“If I give money, God is obligated to make me rich.”", refs: "2 Cor 9:8–11; 1 Tim 6:6–10",
+    not: "This is a misrepresentation that has caused real harm.",
+    a: "The harvest of generosity is described as sufficiency “so that you may abound in every good work”, being “enriched in every way to be generous in every way”, and thanksgiving to God. Paul learned contentment in plenty and in hunger (Phil 4:11–13). God is never in our debt (Rom 11:35)." },
+  { k: "serious", q: "“Talking about reaping blessings is the prosperity gospel.”", refs: "Gal 6:9; Luke 6:38; Prov 11:25",
+    not: "No one is defending greed or formulas for wealth.",
+    a: "Scripture itself makes these promises: “in due season we will reap”; “give, and it will be given to you.” The error of the prosperity message is greed, formula and manipulation, not the promise. Reject the manipulation; keep the Bible’s promise and its purpose." },
+  { k: "serious", q: "“We are under grace now, so sowing and reaping no longer applies.”", refs: "Gal 6:7–9; 2 Sam 12:13–14",
+    not: "No one is saying we earn salvation by sowing good deeds.",
+    a: "Paul wrote “whatever one sows, that will he also reap” to Christians saved by grace, in a letter defending grace. Grace forgives the guilt of our bad seed and changes the soil of our hearts, but consequences can remain: David was forgiven, yet the sword did not depart from his house. Grace makes good sowing possible and joyful." },
+  { k: "serious", q: "“Then suffering means you must have sown badly.”", refs: "Job 42:7; John 9:2–3; Heb 11:39",
+    not: "No one claims every hardship is the harvest of personal sin.",
+    a: "That was the error of Job’s friends, and God rebuked them. Jesus said the man born blind suffered “that the works of God might be displayed in him”. Many faithful people died “not having received the things promised” in this life. Some harvests come in eternity (2 Cor 4:17)." },
+  { k: "serious", q: "“Giving to get is selfish. We should give expecting nothing.”", refs: "Luke 6:35; Matt 6:3–4; Heb 11:6",
+    not: "No one is endorsing giving to receive from people or to be seen.",
+    a: "Jesus says, “lend, expecting nothing in return, and your reward will be great.” We expect nothing from people, yet we may trust our Father who “sees in secret and will reward you”. Faith believes God “rewards those who seek him”. The motive is love; the hope is in God." },
+  { k: "straw", q: "“Name your seed amount and claim your breakthrough.”", refs: "Acts 8:18–24; 2 Pet 2:3",
+    not: "This is a misuse of the principle, not the principle itself.",
+    a: "There is no New Testament pattern of paying a preacher for a guaranteed miracle. Simon the magician tried to buy the Spirit’s power and was told, “May your silver perish with you.” Peter warns that “in their greed they will exploit you with false words.” God’s gifts are free." }
+];
+
+DATA.sw.study = [
+  { t: "God’s design", q: ["Read Genesis 1:11–12, 1:28 and 8:22. What do they teach about seed, blessing and God’s faithfulness?", "What is the difference between a principle that comes from a Person and an impersonal law?"] },
+  { t: "The soils", q: ["Which soil in Mark 4 describes your heart in this season? What would “breaking up fallow ground” look like?", "Why does Luke 8:15 mention patience?"] },
+  { t: "Blessing", q: ["Read 2 Corinthians 9:6–15 and trace the cycle from seed to thanksgiving. Who is at the start and the end?", "What is the harvest of generosity for, according to 2 Corinthians 9:8 and 9:11?"] },
+  { t: "Manipulation", q: ["Use the manipulation checklist on a recent appeal you heard. What did you notice?", "How does grace (Ps 103:10; Gal 3:13) change the way we think about sowing and reaping?"] }
+];
+DATA.sw.memory = [
+  ["Genesis 8:22", "“While the earth remains, seedtime and harvest, cold and heat, summer and winter, day and night, shall not cease.”"],
+  ["Galatians 6:7, 9", "“Whatever one sows, that will he also reap … And let us not grow weary of doing good, for in due season we will reap, if we do not give up.”"],
+  ["2 Corinthians 9:7", "“Each one must give as he has decided in his heart, not reluctantly or under compulsion, for God loves a cheerful giver.”"],
+  ["John 12:24", "“Unless a grain of wheat falls into the earth and dies, it remains alone; but if it dies, it bears much fruit.”"],
+  ["Hosea 10:12", "“Sow for yourselves righteousness; reap steadfast love; break up your fallow ground, for it is the time to seek the LORD.”"],
+  ["1 Corinthians 3:7", "“So neither he who plants nor he who waters is anything, but only God who gives the growth.”"]
+];
+
+DATA.quiz.push(
+  { q: "According to 2 Corinthians 9:8–11, what is the harvest of generosity mainly for?", a: ["Personal luxury", "Abounding in every good work, generosity and thanksgiving to God", "Proving spiritual status", "Paying off the preacher"], c: 1, x: "“Enriched in every way to be generous in every way, which through us will produce thanksgiving to God.”" },
+  { q: "In the parable of the sower, what chokes the seed among thorns?", a: ["Birds", "The scorching sun", "Cares, riches and other desires", "Too much rain"], c: 2, x: "Mark 4:18–19: “the cares of the world and the deceitfulness of riches and the desires for other things.”" },
+  { q: "What does 2 Corinthians 9:7 say giving must NOT be?", a: ["Generous", "Reluctant or under compulsion", "Planned", "Secret"], c: 1, x: "Compulsion is the mark of manipulation; God loves a cheerful giver." }
+);
+
+DATA.web.nodes.push({ id: "sowing", n: "Sowing & reaping", g: 4, d: "God’s covenant principle of seed and harvest, from Genesis 8:22 to the final harvest, carried by grace and not by formula." });
+DATA.web.edges.push(
+  ["sowing", "seed", "The promised seed (Gen 3:15) and the grain that dies (John 12:24)"],
+  ["sowing", "eden", "“Be fruitful and multiply” (Gen 1:28)"],
+  ["sowing", "babel", "Babel tried to take what God gives; sowing receives"],
+  ["sowing", "church", "“You are God’s field” (1 Cor 3:9)"]
+);
+
+Object.assign(DATA.images, {
+  millet: { file: "Jean-François_Millet_-_The_Sower_-_Google_Art_Project.jpg", cap: "Jean-François Millet, <i>The Sower</i> (1850), Museum of Fine Arts, Boston", ar: "4/5", art: "sower" },
+  gogh: { file: "Van_Gogh_-_Sämann_bei_untergehender_Sonne.jpeg", cap: "Vincent van Gogh, <i>The Sower at Sunset</i> (1888), Kröller-Müller Museum", ar: "5/4", art: "sower" }
+});
+
 /* Where Heaven Meets Earth — interactive behaviour */
 (function () {
   "use strict";
@@ -2092,6 +2282,7 @@ DATA.ky.meanings = [
       pole: () => [sv("rect", { x: -4, y: -110, width: 8, height: 160, fill: "var(--muted)" }), sv("path", { d: "M0 -90 C30 -80 -30 -60 0 -50 C30 -40 -30 -20 0 -10", fill: "none", stroke: gold, "stroke-width": 8 })],
       star: () => { const pts = Array.from({ length: 5 }, (_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / 5; return [Math.cos(a) * 95, Math.sin(a) * 95 - 10]; }); return [...pts.map((p, i) => sv("line", { x1: p[0], y1: p[1], x2: pts[(i + 1) % 5][0], y2: pts[(i + 1) % 5][1], stroke: "var(--muted)", "stroke-width": 3, opacity: .5 })), ...pts.map(p => sv("line", { x1: 0, y1: -10, x2: p[0], y2: p[1], stroke: gold, "stroke-width": 3 })), sv("circle", { cx: 0, cy: -10, r: 30, fill: gold }), ...pts.map((p, i) => sv("circle", { cx: p[0], cy: p[1], r: 20, fill: [blue, gold, "var(--flame)", green, "var(--muted)"][i] }))]; },
       keys: () => [sv("circle", { cx: 0, cy: -30, r: 46, fill: "none", stroke: gold, "stroke-width": 10 }), ...[-40, -10, 20, 50].map((a, i) => { const r = (90 + a) * Math.PI / 180, x = Math.cos(r) * 46, y = -30 + Math.sin(r) * 46; return sv("g", { transform: `translate(${x} ${y}) rotate(${a})` }, sv("circle", { cx: 0, cy: 12, r: 9, fill: "none", stroke: [gold, blue, "var(--flame)", green][i], "stroke-width": 5 }), sv("rect", { x: -3, y: 21, width: 6, height: 70, fill: [gold, blue, "var(--flame)", green][i] }), sv("rect", { x: 3, y: 78, width: 12, height: 6, fill: [gold, blue, "var(--flame)", green][i] })); })],
+      sower: () => [sv("circle", { cx: 120, cy: -70, r: 34, fill: gold, opacity: .6 }), sv("path", { d: "M-200 40 Q0 -10 200 40 L200 80 L-200 80 Z", fill: "#8a6238", opacity: .5 }), sv("circle", { cx: -40, cy: -70, r: 14, fill: "var(--ink)", opacity: .7 }), sv("path", { d: "M-56 -54 L-24 -54 L-14 30 L-66 30 Z", fill: "var(--ink)", opacity: .6 }), sv("path", { d: "M-24 -40 L20 -60", stroke: "var(--ink)", "stroke-width": 6, opacity: .6 }), ...[0, 1, 2, 3, 4].map(i => sv("circle", { cx: 30 + i * 14, cy: -50 + i * 16, r: 3, fill: gold }))],
       crown: () => [sv("path", { d: "M-150 20 L-150 -40 L-120 -10 L-95 -60 L-70 -10 L-40 -40 L-40 20 Z", fill: gold }), sv("path", { d: "M40 20 L40 -30 Q90 -80 140 -30 L140 20 Z", fill: "var(--surface)", stroke: "var(--muted)", "stroke-width": 3 }), sv("rect", { x: 70, y: -22, width: 40, height: 12, rx: 3, fill: gold }), sv("circle", { cx: 0, cy: -20, r: 30, fill: gold, opacity: .25 }), sv("rect", { x: -160, y: 40, width: 320, height: 8, rx: 4, fill: "var(--muted)", opacity: .5 })],
       zig: () => [...[0, 1, 2].map(i => sv("rect", { x: -140 + i * 40, y: 10 - i * 34, width: 280 - i * 80, height: 34, fill: "#b08a5a", opacity: .6 + i * .12 })), sv("rect", { x: -8, y: -20, width: 16, height: 30, fill: "var(--bg-2)" })]
     };
@@ -2417,7 +2608,7 @@ DATA.ky.meanings = [
   /* ---------------- Connections web ---------------- */
   function initWeb() {
     const W = 600, C = W / 2, R = 228;
-    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "keys", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
+    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "keys", "sowing", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
     const nodes = order.map(id => DATA.web.nodes.find(n => n.id === id));
     const pos = {};
     nodes.forEach((n, i) => { const a = -Math.PI / 2 + i / nodes.length * Math.PI * 2; pos[n.id] = [C + Math.cos(a) * R, C + Math.sin(a) * R, a]; });
@@ -3766,6 +3957,273 @@ DATA.ky.meanings = [
   function initKyStudy() { studyGuide("#kyQuestions", "#kyMemory", DATA.ky.study, DATA.ky.memory); }
 
 
+  /* ================ Part VII: sowing and reaping ================ */
+  function initSwDesign() {
+    const nodes = DATA.sw.design.map(n => ({ ...n, w: ["flesh", "spirit"].includes(n.id) ? 340 : 440 }));
+    flowchart($("#swDesign"), nodes, DATA.sw.designEdges, { id: "swd", w: 900, h: 560, nodeW: 440, refsInline: true, label: "Flowchart of God's design for sowing and reaping", start: "covenant", onSelect: n => panelFill("#swDesignPanel", "God’s design", n) });
+    $("#swMillet").append(photo("millet"));
+  }
+
+  function initSwGrow() {
+    const L = DATA.sw.laws, svg = sv("svg", { viewBox: "0 0 520 440", role: "img", "aria-label": "A seed growing through the eight laws of the harvest" });
+    svg.append(sv("rect", { width: 520, height: 260, fill: "var(--babel)", "fill-opacity": .08 }), sv("rect", { y: 260, width: 520, height: 180, fill: "#8a6238", "fill-opacity": .35 }));
+    const soilGlow = sv("rect", { y: 260, width: 520, height: 180, fill: "#5b3a1e", "fill-opacity": 0, style: { transition: "fill-opacity .6s" } });
+    svg.append(soilGlow, sv("line", { x1: 0, y1: 260, x2: 520, y2: 260, stroke: "#6b4a2b", "stroke-width": 3 }));
+    const fade = (...kids) => { const g = sv("g", { opacity: 0, style: { transition: "opacity .6s" } }, ...kids); svg.append(g); return g; };
+    // overlays per law
+    const ov = [];
+    ov[0] = fade(sv("rect", { x: 330, y: 288, width: 150, height: 34, rx: 8, fill: "var(--surface)", stroke: "var(--accent)" }), sv("text", { x: 405, y: 310, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, "wheat → wheat"));
+    ov[1] = fade(sv("text", { x: 260, y: 420, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--surface)" }, "good soil: “an honest and good heart”"));
+    ov[2] = fade(sv("text", { x: 340, y: 330, "font-size": 12.5, "font-weight": 800, fill: "var(--surface)" }, "the seed must die"));
+    ov[3] = fade(...[0, 1, 2, 3].map(i => sv("circle", { cx: 360 + i * 36, cy: 40, r: 12, fill: i === 3 ? "var(--accent)" : "var(--muted)", "fill-opacity": .3 + i * .2 })), sv("text", { x: 414, y: 74, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--ink)" }, "in due season"));
+    const sun = fade(sv("circle", { cx: 70, cy: 60, r: 30, fill: "var(--accent)" }), ...Array.from({ length: 8 }, (_, i) => sv("line", { x1: 70 + Math.cos(i * .785) * 38, y1: 60 + Math.sin(i * .785) * 38, x2: 70 + Math.cos(i * .785) * 50, y2: 60 + Math.sin(i * .785) * 50, stroke: "var(--accent)", "stroke-width": 3 })),
+      ...Array.from({ length: 10 }, (_, i) => sv("line", { x1: 150 + i * 30, y1: 30 + (i % 3) * 18, x2: 146 + i * 30, y2: 44 + (i % 3) * 18, stroke: "var(--babel)", "stroke-width": 2.5, "stroke-linecap": "round" })),
+      sv("text", { x: 70, y: 112, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--ink)" }, "God gives the growth"));
+    ov[4] = sun;
+    // plant
+    const roots = sv("g", { stroke: "#f2e6c9", "stroke-width": 2, fill: "none", opacity: 0, style: { transition: "opacity .6s" } }, sv("path", { d: "M260 304 C250 330 236 350 228 380" }), sv("path", { d: "M260 304 C270 334 284 352 296 384" }), sv("path", { d: "M260 304 L262 392" }));
+    svg.append(roots);
+    const seedL = sv("ellipse", { cx: 256, cy: 300, rx: 8, ry: 12, fill: "#d9b44a", style: { transition: "transform .6s", transformBox: "fill-box", transformOrigin: "center" } });
+    const seedR = sv("ellipse", { cx: 264, cy: 300, rx: 8, ry: 12, fill: "#c9a43a", style: { transition: "transform .6s", transformBox: "fill-box", transformOrigin: "center" } });
+    svg.append(seedL, seedR);
+    const stalks = [-70, 0, 70].map((dx, k) => {
+      const g = sv("g", { opacity: k === 1 ? 1 : 0, style: { transition: "opacity .6s" } });
+      const stem = sv("line", { x1: 260 + dx, y1: 262, x2: 260 + dx, y2: 262, stroke: "var(--eden)", "stroke-width": 5, "stroke-linecap": "round", style: { transition: "all .8s" } });
+      const leaf1 = sv("path", { d: `M${260 + dx} 230 Q${236 + dx} 214 ${226 + dx} 226 Q${244 + dx} 236 ${260 + dx} 230 Z`, fill: "var(--eden)", opacity: 0, style: { transition: "opacity .6s" } });
+      const leaf2 = sv("path", { d: `M${260 + dx} 200 Q${284 + dx} 184 ${294 + dx} 196 Q${276 + dx} 206 ${260 + dx} 200 Z`, fill: "var(--eden)", opacity: 0, style: { transition: "opacity .6s" } });
+      const head = sv("g", { opacity: 0, style: { transition: "opacity .6s" } }, ...Array.from({ length: 6 }, (_, i) => sv("ellipse", { cx: 260 + dx + (i % 2 ? 6 : -6), cy: 112 + i * 9, rx: 6, ry: 9, fill: "#d9b44a" })),
+        sv("text", { x: 260 + dx, y: 96, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, ["30×", "60×", "100×"][k]));
+      g.append(stem, leaf1, leaf2, head); svg.append(g);
+      return { g, stem, leaf1, leaf2, head };
+    });
+    ov[6] = fade(sv("rect", { x: 20, y: 150, width: 120, height: 70, rx: 8, fill: "var(--surface)", stroke: "var(--line)" }), sv("text", { x: 80, y: 168, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: "var(--ink)" }, "sparingly"), ...[0, 1].map(i => sv("line", { x1: 60 + i * 40, y1: 214, x2: 60 + i * 40, y2: 188, stroke: "var(--eden)", "stroke-width": 3 })),
+      sv("rect", { x: 380, y: 150, width: 120, height: 70, rx: 8, fill: "var(--surface)", stroke: "var(--line)" }), sv("text", { x: 440, y: 168, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: "var(--ink)" }, "bountifully"), ...Array.from({ length: 9 }, (_, i) => sv("line", { x1: 392 + i * 12, y1: 214, x2: 392 + i * 12, y2: 180, stroke: "var(--eden)", "stroke-width": 3 })));
+    ov[7] = fade(sv("path", { d: "M30 230 Q30 200 56 196 L84 196 Q110 200 110 230 L104 256 L36 256 Z", fill: "#b08a5a" }), sv("text", { x: 70, y: 232, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: "var(--surface)" }, "seed"),
+      sv("path", { d: "M190 120 C130 110 100 150 90 188", fill: "none", stroke: "var(--accent)", "stroke-width": 3, "stroke-dasharray": "6 6", class: "flow" }), sv("text", { x: 120, y: 112, "font-size": 12, "font-weight": 800, fill: "var(--ink)" }, "seed for the sower"));
+    $("#swGrow").append(svg);
+    const chips = $("#swLawChips");
+    L.forEach((l, i) => chips.append(el("button", { class: "chip", type: "button", text: `${i + 1}`, "aria-label": l.n, onclick: () => { clearInterval(timer); set(i); } })));
+    function set(s) {
+      $$(".chip", chips).forEach((c, j) => c.setAttribute("aria-pressed", String(j === s)));
+      ov.forEach((o, j) => o && o.setAttribute("opacity", j === s || (j === 4 && s >= 4 && s <= 5) ? 1 : 0));
+      soilGlow.setAttribute("fill-opacity", s === 1 ? .45 : 0);
+      seedL.style.transform = s >= 2 ? "translate(-6px, 2px) rotate(-30deg)" : ""; seedR.style.transform = s >= 2 ? "translate(6px, 2px) rotate(30deg)" : "";
+      seedL.style.opacity = seedR.style.opacity = s >= 5 ? .3 : 1;
+      roots.setAttribute("opacity", s >= 2 ? 1 : 0);
+      const h = [0, 0, 8, 70, 120, 160, 160, 160][s];
+      stalks.forEach((st, k) => {
+        st.g.setAttribute("opacity", k === 1 || s >= 5 ? 1 : 0);
+        st.stem.setAttribute("y2", 262 - h);
+        st.leaf1.setAttribute("opacity", s >= 3 ? 1 : 0); st.leaf2.setAttribute("opacity", s >= 4 ? 1 : 0);
+        st.head.setAttribute("opacity", s >= 5 ? 1 : 0);
+      });
+      const l = L[s];
+      $("#swLawInfo").replaceChildren(el("p", { class: "eyebrow", text: `Law ${s + 1} of ${L.length}` }), el("h3", { text: l.n }), el("span", { class: "ref", text: l.ref }), el("p", { html: refify(l.d) }));
+    }
+    let timer = null;
+    $("#swGrowPlay").addEventListener("click", () => { clearInterval(timer); let s = 0; set(0); timer = setInterval(() => { s++; if (s >= L.length) return clearInterval(timer); set(s); }, reduceMotion ? 900 : 1500); });
+    set(5);
+  }
+
+  function initSwSoils() {
+    const S = DATA.sw.soils, svg = sv("svg", { viewBox: "0 0 1000 330", role: "img", "aria-label": "Four soils from the parable of the sower", style: { minWidth: "760px" } });
+    const panels = {};
+    S.forEach((s, i) => {
+      const x = i * 250, g = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": s.n }), () => sel(i));
+      const bg = sv("rect", { x: x + 6, y: 6, width: 238, height: 318, rx: 12, fill: "var(--surface)", stroke: "var(--line)", "stroke-width": 2 });
+      g.append(bg, sv("rect", { x: x + 6, y: 200, width: 238, height: 124, rx: 0, fill: ["#9a9a92", "#a08868", "#7a6a4a", "#5b3a1e"][i], "fill-opacity": .55 }));
+      if (i === 1) [30, 80, 140, 190].forEach(dx => g.append(sv("ellipse", { cx: x + dx, cy: 214, rx: 22, ry: 10, fill: "#8a8f98" })));
+      g.append(sv("text", { x: x + 125, y: 34, "text-anchor": "middle", "font-size": 15, "font-weight": 800, fill: "var(--ink)" }, s.n));
+      const seeds = sv("g", { class: "sseeds" }, ...[70, 110, 150, 190].map(dx => sv("ellipse", { cx: x + dx, cy: 196, rx: 4, ry: 6, fill: "#d9b44a" })));
+      const out = sv("g", { class: "sout", style: { transition: "opacity .8s" } });
+      if (i === 0) out.append(...[[90, 150], [150, 120], [190, 160]].map(([dx, y]) => sv("path", { d: `M${x + dx - 14} ${y} Q${x + dx - 6} ${y - 10} ${x + dx} ${y} Q${x + dx + 6} ${y - 10} ${x + dx + 14} ${y}`, fill: "none", stroke: "var(--ink)", "stroke-width": 3 })), sv("text", { x: x + 125, y: 296, "text-anchor": "middle", "font-size": 12, "font-weight": 700, fill: "var(--surface)" }, "taken at once"));
+      if (i === 1) out.append(sv("circle", { cx: x + 210, cy: 70, r: 20, fill: "var(--accent)" }), ...[80, 125, 170].map(dx => sv("path", { d: `M${x + dx} 196 Q${x + dx + 6} 160 ${x + dx + 22} 168`, fill: "none", stroke: "#b8a24a", "stroke-width": 4 })), sv("text", { x: x + 125, y: 296, "text-anchor": "middle", "font-size": 12, "font-weight": 700, fill: "var(--surface)" }, "scorched, no root"));
+      if (i === 2) out.append(...[80, 125, 170].map(dx => sv("line", { x1: x + dx, y1: 196, x2: x + dx, y2: 140, stroke: "var(--eden)", "stroke-width": 4 })), ...[60, 105, 150, 195].map(dx => sv("path", { d: `M${x + dx} 196 L${x + dx + 8} 110 L${x + dx + 14} 150 L${x + dx + 22} 96 L${x + dx + 26} 196`, fill: "#4a3a2a" })), sv("text", { x: x + 125, y: 296, "text-anchor": "middle", "font-size": 12, "font-weight": 700, fill: "var(--surface)" }, "choked, no fruit"));
+      if (i === 3) out.append(...[["30×", 75], ["60×", 125], ["100×", 175]].flatMap(([t, dx]) => [sv("line", { x1: x + dx, y1: 196, x2: x + dx, y2: 90, stroke: "var(--eden)", "stroke-width": 4 }), ...Array.from({ length: 5 }, (_, k) => sv("ellipse", { cx: x + dx + (k % 2 ? 5 : -5), cy: 74 + k * 7, rx: 5, ry: 7, fill: "#d9b44a" })), sv("text", { x: x + dx, y: 62, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--ink)" }, t)]), sv("text", { x: x + 125, y: 296, "text-anchor": "middle", "font-size": 12, "font-weight": 700, fill: "var(--surface)" }, "fruit with patience"));
+      g.append(seeds, out); svg.append(g); panels[s.id] = bg;
+    });
+    $("#swSoils").append(svg);
+    $("#swSow").addEventListener("click", () => {
+      $$(".sout", svg).forEach(o => o.style.opacity = 0);
+      $$(".sseeds", svg).forEach(s => { s.style.transition = "none"; s.style.transform = "translateY(-170px)"; s.style.opacity = 1; });
+      requestAnimationFrame(() => requestAnimationFrame(() => $$(".sseeds", svg).forEach(s => { s.style.transition = reduceMotion ? "none" : "transform .9s cubic-bezier(.5,0,.8,.4)"; s.style.transform = ""; })));
+      setTimeout(() => $$(".sout", svg).forEach((o, i) => setTimeout(() => o.style.opacity = 1, reduceMotion ? 0 : i * 400)), reduceMotion ? 0 : 1000);
+    });
+    function sel(i) {
+      Object.values(panels).forEach((b, j) => { b.setAttribute("stroke", j === i ? "var(--accent)" : "var(--line)"); b.setAttribute("stroke-width", j === i ? 4 : 2); });
+      const s = S[i];
+      $("#swSoilPanel").replaceChildren(el("p", { class: "eyebrow", text: `Soil ${i + 1} of 4` }), el("h3", { text: s.n }), el("span", { class: "ref", text: s.ref }), el("p", { html: refify(s.d) }),
+        el("div", { class: "row eden" }, el("b", { text: "For our hearts" }), el("p", { html: refify(s.heart) })));
+    }
+    sel(3);
+  }
+
+  function initSwThread() {
+    const T = DATA.sw.thread, C = DATA.sw.cats, W = 1100, H = 250, X = b => 50 + (b - 1) * (1000 / 65);
+    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Passages about sowing and reaping placed along the books of the Bible", style: { minWidth: "860px" } });
+    let d = "M30 130"; for (let x = 30; x < W - 30; x += 40) d += ` Q${x + 20} ${x % 80 ? 122 : 138} ${x + 40} 130`;
+    svg.append(sv("rect", { x: 0, y: 130, width: W, height: 120, fill: "#8a6238", "fill-opacity": .25 }), sv("path", { d, fill: "none", stroke: "#6b4a2b", "stroke-width": 3 }));
+    [[1, "Genesis"], [19, "Psalms"], [23, "Isaiah"], [28, "Hosea"], [40, "Matthew"], [43, "John"], [46, "1 Cor"], [48, "Gal"], [66, "Revelation"]].forEach(([b, t]) => svg.append(sv("line", { x1: X(b), y1: 226, x2: X(b), y2: 234, stroke: "var(--muted)" }), sv("text", { x: X(b), y: 246, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: "var(--muted)" }, t)));
+    svg.append(sv("line", { x1: X(39.5), y1: 20, x2: X(39.5), y2: 230, stroke: "var(--line)", "stroke-dasharray": "4 4" }), sv("text", { x: X(39.5) - 8, y: 30, "text-anchor": "end", "font-size": 11, "font-weight": 800, fill: "var(--eden)" }, "OLD TESTAMENT"), sv("text", { x: X(39.5) + 8, y: 30, "font-size": 11, "font-weight": 800, fill: "var(--babel)" }, "NEW TESTAMENT"));
+    const count = {};
+    const seeds = T.map((t, i) => {
+      const n = count[t.b] = (count[t.b] || 0) + 1, x = X(t.b), y = 130 + (n % 2 ? -1 : 1) * (14 + Math.floor((n - 1) / 2) * 26) + (n % 2 ? 0 : 18);
+      const g = hit(sv("g", { class: "fnode tseed", tabindex: "0", role: "button", "aria-label": t.ref }), () => sel(i));
+      g.append(sv("line", { x1: x, y1: 130, x2: x, y2: y, stroke: C[t.cat][1], "stroke-width": 1.5, opacity: .6 }), sv("ellipse", { cx: x, cy: y, rx: 8, ry: 11, fill: C[t.cat][1], stroke: "var(--surface)", "stroke-width": 2 }));
+      if (y < 130) g.append(sv("path", { d: `M${x} ${y - 11} Q${x + 8} ${y - 22} ${x + 14} ${y - 18}`, fill: "none", stroke: "var(--eden)", "stroke-width": 2 }));
+      svg.append(g); return g;
+    });
+    const lbl = sv("text", { "font-size": 12.5, "font-weight": 800, fill: "var(--ink)", "text-anchor": "middle", "paint-order": "stroke", stroke: "var(--surface)", "stroke-width": 4 });
+    svg.append(lbl);
+    $("#swThread").append(svg);
+    const f = $("#swThreadFilter");
+    [["all", "All themes", null], ...Object.entries(C).map(([k, v]) => [k, v[0], v[1]])].forEach(([k, n, c]) => f.append(el("button", { class: "chip", type: "button", "data-k": k, "aria-pressed": String(k === "all"), onclick: () => {
+      $$(".chip", f).forEach(b => b.setAttribute("aria-pressed", String(b.dataset.k === k)));
+      seeds.forEach((g, i) => g.style.opacity = k === "all" || T[i].cat === k ? 1 : .15);
+    } }, c ? el("i", { class: "dotc", style: { background: c } }) : null, n)));
+    function sel(i) {
+      const t = T[i], e = $("ellipse", seeds[i]);
+      seeds.forEach((g, j) => $("ellipse", g).setAttribute("stroke", j === i ? "var(--ink)" : "var(--surface)"));
+      lbl.setAttribute("x", Math.max(70, Math.min(W - 70, +e.getAttribute("cx")))); lbl.setAttribute("y", +e.getAttribute("cy") < 130 ? +e.getAttribute("cy") - 26 : +e.getAttribute("cy") + 30); lbl.textContent = t.ref;
+      $("#swThreadPanel").replaceChildren(el("p", { class: "eyebrow", style: { color: C[t.cat][1] }, text: C[t.cat][0] }), el("h3", { text: t.t }), el("span", { class: "ref", text: t.ref }), el("p", { html: refify(t.d) }));
+    }
+    sel(1);
+  }
+
+  function initSwChrist() {
+    const svg = sv("svg", { viewBox: "0 0 400 420", role: "img", "aria-label": "A grain of wheat falls into the ground, dies, and becomes a great harvest" });
+    svg.append(sv("rect", { y: 250, width: 400, height: 170, fill: "#8a6238", "fill-opacity": .35 }), sv("line", { x1: 0, y1: 250, x2: 400, y2: 250, stroke: "#6b4a2b", "stroke-width": 3 }));
+    const cross = sv("g", { opacity: .18 }, sv("rect", { x: 194, y: 270, width: 12, height: 110, fill: "var(--ink)" }), sv("rect", { x: 168, y: 292, width: 64, height: 12, fill: "var(--ink)" }));
+    svg.append(cross);
+    const seed = sv("ellipse", { cx: 200, cy: 0, rx: 9, ry: 13, fill: "#d9b44a", style: { transition: reduceMotion ? "none" : "transform 1.2s cubic-bezier(.5,0,.8,.4), opacity .6s" } });
+    const stem = sv("line", { x1: 200, y1: 262, x2: 200, y2: 262, stroke: "var(--eden)", "stroke-width": 5, "stroke-linecap": "round", style: { transition: reduceMotion ? "none" : "all 1.2s" } });
+    svg.append(stem, seed);
+    const grains = [];
+    for (let ring = 0; ring < 4; ring++) {
+      const n = [1, 6, 12, 20][ring], r = ring * 28;
+      for (let k = 0; k < n; k++) { const a = k / n * Math.PI * 2 + ring; const g = sv("ellipse", { cx: 200 + Math.cos(a) * r, cy: 120 + Math.sin(a) * r * .8, rx: 5, ry: 8, fill: "#d9b44a", opacity: 0, style: { transition: "opacity .4s" } }); grains.push(g); svg.append(g); }
+    }
+    const cap = sv("text", { x: 200, y: 404, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--surface)" }, "");
+    svg.append(cap);
+    $("#swChrist").append(svg);
+    let t = [];
+    function stage(s) {
+      const texts = ["One grain of wheat", "It falls into the earth and dies", "It rises: the firstfruits", "It bears much fruit"];
+      cap.textContent = texts[s];
+      seed.style.transform = s === 0 ? "translateY(40px)" : "translateY(268px)"; seed.style.opacity = s >= 2 ? 0 : 1;
+      stem.setAttribute("y2", s >= 2 ? 160 : 262);
+      grains.forEach((g, i) => { t.push(setTimeout(() => g.setAttribute("opacity", s >= 3 ? 1 : (s === 2 && i === 0 ? 1 : 0)), s >= 3 && !reduceMotion ? i * 40 : 0)); });
+    }
+    $("#swChristPlay").addEventListener("click", () => { t.forEach(clearTimeout); t = []; stage(0); [1, 2, 3].forEach((s, i) => t.push(setTimeout(() => stage(s), reduceMotion ? 0 : 900 + i * 1400))); });
+    stage(3);
+  }
+
+  function initSwHarvest() {
+    const P = DATA.sw.pairs, svg = sv("svg", { viewBox: "0 0 900 170", role: "img", "aria-label": "A seed packet becoming its harvest" });
+    const packet = sv("g", {}, sv("rect", { x: 40, y: 30, width: 220, height: 110, rx: 12, class: "pk", fill: "var(--eden)", "fill-opacity": .2, stroke: "var(--eden)", "stroke-width": 2 }));
+    const pText = sv("text", { x: 150, y: 92, "text-anchor": "middle", "font-size": 17, "font-weight": 800, fill: "var(--ink)" }, "");
+    packet.append(sv("text", { x: 150, y: 56, "text-anchor": "middle", "font-size": 11, "font-weight": 800, "letter-spacing": 2, fill: "var(--muted)" }, "SOW"), pText);
+    const arrow = sv("path", { d: "M280 85 L600 85", stroke: "var(--eden)", "stroke-width": 5, fill: "none", "stroke-dasharray": "10 8", class: "flow" });
+    const harvest = sv("g", {}, sv("rect", { x: 620, y: 20, width: 250, height: 130, rx: 12, class: "hv", fill: "var(--accent)", "fill-opacity": .2, stroke: "var(--accent)", "stroke-width": 2 }));
+    const hText = sv("text", { x: 745, y: 92, "text-anchor": "middle", "font-size": 16, "font-weight": 800, fill: "var(--ink)" }, "");
+    harvest.append(sv("text", { x: 745, y: 48, "text-anchor": "middle", "font-size": 11, "font-weight": 800, "letter-spacing": 2, fill: "var(--muted)" }, "REAP"), hText);
+    svg.append(packet, arrow, harvest, sv("text", { x: 440, y: 70, "text-anchor": "middle", "font-size": 12, "font-weight": 700, fill: "var(--muted)" }, "in due season, more than was sown"));
+    $("#swPairArt").append(svg);
+    const btns = P.map((p, i) => { const b = el("button", { class: "chip", type: "button", text: p.seed, onclick: () => sel(i) }); $(p.good ? "#swGood" : "#swBad").append(b); return b; });
+    function sel(i) {
+      const p = P[i], c = p.good ? "var(--eden)" : "var(--flame)";
+      btns.forEach((b, j) => b.setAttribute("aria-pressed", String(j === i)));
+      $(".pk", svg).setAttribute("fill", c); $(".pk", svg).setAttribute("stroke", c); arrow.setAttribute("stroke", c);
+      $(".hv", svg).setAttribute("fill", p.good ? "var(--accent)" : "var(--muted)"); $(".hv", svg).setAttribute("stroke", p.good ? "var(--accent)" : "var(--muted)");
+      pText.textContent = p.seed; hText.textContent = p.harvest.length > 26 ? p.harvest.slice(0, 25) + "…" : p.harvest;
+      $("#swPairPanel").replaceChildren(el("p", { class: "eyebrow", style: { color: c }, text: p.good ? "A seed of life" : "A seed of decay" }), el("h3", { text: `${p.seed} → ${p.harvest}` }), el("span", { class: "ref", text: p.ref }), el("p", { html: refify(p.d) }));
+    }
+    sel(1);
+  }
+
+  function initSwCycle() {
+    const Cy = DATA.sw.cycle, svg = sv("svg", { viewBox: "0 0 440 440", role: "img", "aria-label": "Six-stage blessing cycle from grace to thanksgiving" });
+    const R = 150, cx = 220, cy = 220, n = Cy.length;
+    svg.append(sv("defs", {}, sv("marker", { id: "sw-arr", viewBox: "0 0 10 10", refX: 8, refY: 5, markerWidth: 7, markerHeight: 7, orient: "auto" }, sv("path", { d: "M0 0 L10 5 L0 10 Z", fill: "var(--accent)" }))));
+    const pt = a => [cx + Math.cos(a) * R, cy + Math.sin(a) * R];
+    for (let i = 0; i < n; i++) { const a0 = -Math.PI / 2 + i * 2 * Math.PI / n + .26, a1 = -Math.PI / 2 + (i + 1) * 2 * Math.PI / n - .26, [x1, y1] = pt(a0), [x2, y2] = pt(a1); svg.append(sv("path", { d: `M${x1} ${y1} A${R} ${R} 0 0 1 ${x2} ${y2}`, fill: "none", stroke: "var(--accent)", "stroke-width": 3, "marker-end": "url(#sw-arr)" })); }
+    if (!reduceMotion) { const d = sv("ellipse", { rx: 5, ry: 7, fill: "#d9b44a" }); d.append(sv("animateMotion", { dur: "10s", repeatCount: "indefinite", path: `M${cx} ${cy - R} A${R} ${R} 0 1 1 ${cx - .01} ${cy - R}` })); svg.append(d); }
+    svg.append(sv("text", { x: cx, y: cy - 6, "text-anchor": "middle", "font-size": 15, "font-weight": 800, fill: "var(--ink)" }, "Blessed"), sv("text", { x: cx, y: cy + 14, "text-anchor": "middle", "font-size": 15, "font-weight": 800, fill: "var(--ink)" }, "to bless"));
+    const cols = ["var(--accent)", "var(--eden)", "var(--eden)", "var(--babel)", "var(--babel)", "var(--accent)"];
+    const nodes = Cy.map((c, i) => {
+      const [x, y] = pt(-Math.PI / 2 + i * 2 * Math.PI / n);
+      const words = c.t.split(" ");
+      const mid = Math.ceil(words.length / 2);
+      const g = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": c.t }, sv("circle", { cx: x, cy: y, r: 44, fill: "var(--surface)" }), sv("circle", { cx: x, cy: y, r: 44, fill: cols[i], "fill-opacity": .2, stroke: cols[i], "stroke-width": 2 }),
+        sv("text", { x, y: y - 2, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: "var(--ink)" }, words.slice(0, mid).join(" ")), sv("text", { x, y: y + 12, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: "var(--ink)" }, words.slice(mid).join(" "))), () => sel(i));
+      svg.append(g); return g.childNodes[1];
+    });
+    $("#swCycle").append(svg);
+    function sel(i) { nodes.forEach((c, j) => { c.setAttribute("fill-opacity", j === i ? .5 : .2); c.setAttribute("stroke-width", j === i ? 4 : 2); }); const c = Cy[i]; $("#swCyclePanel").replaceChildren(el("p", { class: "eyebrow", text: `Stage ${i + 1} of ${n}` }), el("h3", { text: c.t }), el("span", { class: "ref", text: c.ref }), el("p", { html: refify(c.d) })); }
+    sel(0);
+    $("#swGogh").append(photo("gogh"));
+  }
+
+  function initSwExchange() {
+    const E = DATA.sw.exchange, svg = sv("svg", { viewBox: "0 0 520 340", role: "img", "aria-label": "The great exchange: our harvest laid on Christ, his given to us" });
+    svg.append(sv("text", { x: 100, y: 30, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "US"), sv("text", { x: 420, y: 30, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "CHRIST"),
+      sv("rect", { x: 252, y: 60, width: 16, height: 250, fill: "var(--muted)", opacity: .5 }), sv("rect", { x: 210, y: 110, width: 100, height: 16, fill: "var(--muted)", opacity: .5 }));
+    const boxes = [];
+    E.ours.forEach((t, i) => { const g = sv("g", { style: { transition: reduceMotion ? "none" : `transform 1.2s cubic-bezier(.4,.1,.2,1) ${i * .15}s` } }, sv("rect", { x: 30, y: 70 + i * 80, width: 140, height: 50, rx: 10, fill: "var(--flame)", "fill-opacity": .25, stroke: "var(--flame)", "stroke-width": 2 }), sv("text", { x: 100, y: 100 + i * 80, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, t)); boxes.push([g, 320]); svg.append(g); });
+    E.his.forEach((t, i) => { const g = sv("g", { style: { transition: reduceMotion ? "none" : `transform 1.2s cubic-bezier(.4,.1,.2,1) ${i * .15}s` } }, sv("rect", { x: 350, y: 70 + i * 80, width: 140, height: 50, rx: 10, fill: "var(--accent)", "fill-opacity": .25, stroke: "var(--accent)", "stroke-width": 2 }), sv("text", { x: 420, y: 100 + i * 80, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, t)); boxes.push([g, -320]); svg.append(g); });
+    svg.append(sv("text", { x: 260, y: 334, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: "var(--accent)" }, E.refs));
+    $("#swExchange").append(svg);
+    let swapped = false;
+    $("#swExchangeBtn").addEventListener("click", () => { swapped = !swapped; boxes.forEach(([g, dx]) => g.style.transform = swapped ? `translateX(${dx}px)` : ""); $("#swExchangeBtn").textContent = swapped ? "Reset ◂" : "Exchange ▸"; });
+  }
+
+  function initSwManip() {
+    const svg = sv("svg", { viewBox: "0 0 460 360", role: "img", "aria-label": "A vending machine compared with a garden tended by a gardener" });
+    const machine = sv("g", {}, sv("rect", { x: 130, y: 30, width: 200, height: 300, rx: 14, fill: "var(--muted)", "fill-opacity": .3, stroke: "var(--ink)", "stroke-width": 3 }),
+      ...Array.from({ length: 9 }, (_, i) => sv("rect", { x: 148 + (i % 3) * 46, y: 50 + Math.floor(i / 3) * 56, width: 38, height: 44, rx: 6, fill: "var(--surface)", stroke: "var(--line)" })),
+      sv("rect", { x: 300, y: 220, width: 14, height: 40, rx: 4, fill: "var(--ink)" }), sv("rect", { x: 150, y: 270, width: 160, height: 40, rx: 6, fill: "var(--ink)", opacity: .7 }),
+      sv("text", { x: 230, y: 350, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--flame)" }, "coin in → product out"));
+    const coin = sv("circle", { cx: 307, cy: 190, r: 10, fill: "var(--accent)", class: reduceMotion ? "" : "coin" });
+    machine.append(coin);
+    const garden = sv("g", {}, sv("rect", { x: 0, y: 260, width: 460, height: 100, fill: "#8a6238", "fill-opacity": .3 }), sv("circle", { cx: 400, cy: 60, r: 30, fill: "var(--accent)" }),
+      ...[200, 260, 320, 380].map((x, i) => sv("g", {}, sv("line", { x1: x, y1: 262, x2: x, y2: 170 - i * 8, stroke: "var(--eden)", "stroke-width": 4 }), sv("ellipse", { cx: x, cy: 160 - i * 8, rx: 7, ry: 12, fill: "#d9b44a" }))),
+      sv("circle", { cx: 90, cy: 150, r: 18, fill: "#c99a6e" }), sv("path", { d: "M70 175 L110 175 L118 262 L62 262 Z", fill: "var(--babel)" }), sv("path", { d: "M112 200 L150 210 L160 200", fill: "none", stroke: "var(--muted)", "stroke-width": 6, "stroke-linecap": "round" }),
+      ...[0, 1, 2].map(i => sv("line", { x1: 166 + i * 6, y1: 206, x2: 172 + i * 6, y2: 222, stroke: "var(--babel)", "stroke-width": 2 })),
+      sv("text", { x: 230, y: 350, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--eden)" }, "a Gardener, seasons and life"));
+    svg.append(machine, garden);
+    $("#swMachine").append(svg);
+    const box = $("#swCompare"), tg = $("#swMachineToggle");
+    function set(m) {
+      $$(".chip", tg).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.m === m)));
+      machine.style.display = m === "machine" ? "" : "none"; garden.style.display = m === "garden" ? "" : "none";
+      box.classList.toggle("twisted", m === "machine");
+      box.replaceChildren(...DATA.sw.compare.map(r => el("div", { class: "crow" }, el("b", { text: r[0] }), el("p", { class: "cval", html: refify(m === "garden" ? r[1] : r[2]) }))));
+    }
+    [["garden", "God’s design: a garden"], ["machine", "Manipulation: a vending machine"]].forEach(([m, n]) => tg.append(el("button", { class: "chip", type: "button", "data-m": m, text: n, onclick: () => set(m) })));
+    set("garden");
+    $("#swWhy").append(...DATA.sw.why.map((w, i) => el("li", { class: "vstep" }, el("div", { class: "vcard" }, el("small", { text: `Reason ${i + 1}` }), el("b", { text: w.t }), el("p", { html: refify(w.d) })))));
+    // detector + gauge
+    const gs = sv("svg", { viewBox: "0 0 360 230", role: "img", "aria-label": "Manipulation gauge" });
+    const arc = (a0, a1, c) => { const p = a => [180 + Math.cos(a) * 140, 190 + Math.sin(a) * 140]; const [x1, y1] = p(a0), [x2, y2] = p(a1); return sv("path", { d: `M${x1} ${y1} A140 140 0 0 1 ${x2} ${y2}`, fill: "none", stroke: c, "stroke-width": 26 }); };
+    gs.append(arc(Math.PI, Math.PI * 1.33, "var(--eden)"), arc(Math.PI * 1.33, Math.PI * 1.66, "var(--accent)"), arc(Math.PI * 1.66, Math.PI * 2, "var(--flame)"));
+    const needle = sv("line", { x1: 180, y1: 190, x2: 60, y2: 190, stroke: "var(--ink)", "stroke-width": 5, "stroke-linecap": "round", style: { transformOrigin: "180px 190px", transformBox: "view-box", transition: "transform .5s cubic-bezier(.3,1.4,.5,1)" } });
+    const verdict = sv("text", { x: 180, y: 222, "text-anchor": "middle", "font-size": 15, "font-weight": 800, fill: "var(--ink)" }, "");
+    gs.append(needle, sv("circle", { cx: 180, cy: 190, r: 10, fill: "var(--ink)" }), verdict);
+    $("#swGauge").append(gs);
+    const inputs = DATA.sw.detector.map((q, i) => { const id = "swdet" + i; const inp = el("input", { type: "checkbox", id }); $("#swDetector").append(el("label", { for: id, class: "check" }, inp, el("span", { text: q }))); inp.addEventListener("change", upd); return inp; });
+    function upd() {
+      const n = inputs.filter(i => i.checked).length, max = inputs.length;
+      needle.style.transform = `rotate(${n / max * 180}deg)`;
+      verdict.textContent = n === 0 ? "Freely given: looks like God’s design" : n <= 2 ? "Some warning signs: ask questions" : n <= 4 ? "Serious warning signs" : "This is manipulation";
+      verdict.setAttribute("fill", n === 0 ? "var(--eden)" : n <= 2 ? "var(--accent)" : "var(--flame)");
+    }
+    upd();
+  }
+
+  function initSwObjections() { objectionList("#swObjections", "#swObjFilter", DATA.sw.objections); }
+  function initSwStudy() { studyGuide("#swQuestions", "#swMemory", DATA.sw.study, DATA.sw.memory); }
+
+
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -3801,6 +4259,8 @@ DATA.ky.meanings = [
       [initPrDaniel, "#prDaniel"], [initPrTense, "#prTense"], [initPrFunnel, "#prFunnel"], [initPrTimeline, "#prTimeline"], [initPrObjections, "#prObjections"], [initPrStudy, "#prQuestions"],
       [initKyMeaning, "#kyCanon"], [initKyRing, "#kyRing"], [initKyPalace, "#kyPalace"], [initKyStewards, "#kyStewardArt"], [initKyFlow, "#kyFlow"], [initKyCaesarea, "#kyCaesarea"],
       [initKyBind, "#kyDir"], [initKyDoors, "#kyDoors"], [initKyKey, "#kyKey"], [initKyOperate, "#kyOperate"], [initKyObjections, "#kyObjections"], [initKyStudy, "#kyQuestions"],
+      [initSwDesign, "#swDesign"], [initSwGrow, "#swGrow"], [initSwSoils, "#swSoils"], [initSwThread, "#swThread"], [initSwChrist, "#swChrist"], [initSwHarvest, "#swPairArt"],
+      [initSwCycle, "#swCycle"], [initSwExchange, "#swExchange"], [initSwManip, "#swMachine"], [initSwObjections, "#swObjections"], [initSwStudy, "#swQuestions"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }

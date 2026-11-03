@@ -743,3 +743,23 @@ p.iw.fall { padding-left: 14px; }
 #kyQuestions { align-content: start; }
 @media (max-width: 1100px) { .meanings { grid-template-columns: repeat(3, minmax(0, 1fr)); } .doors { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .meanings { grid-template-columns: repeat(2, minmax(0, 1fr)); } .doors { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- Part VII: sowing and reaping ---------- */
+.seedbags { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.bag { border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 18px; display: grid; gap: 12px; border-top: 4px solid var(--eden); }
+.bag.bad { border-top-color: var(--flame); }
+.bag h3 { font-size: 1rem; }
+.bag.bad .chip[aria-pressed="true"] { background: var(--flame); border-color: var(--flame); color: #fff; }
+.bag.good .chip[aria-pressed="true"] { background: var(--eden); border-color: var(--eden); color: var(--surface); }
+.sseeds, .sout { transition: opacity .8s; }
+.tseed { transition: opacity .3s; }
+.vflow.plain .vcard b { font-size: 1rem; }
+.checklist { display: grid; gap: 8px; align-content: start; }
+.check { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 10px; align-items: start; padding: 10px 14px; border: 1px solid var(--line); background: var(--surface); border-radius: 10px; cursor: pointer; font-size: .95rem; }
+.check input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--flame); }
+.check:has(input:checked) { border-color: var(--flame); background: color-mix(in srgb, var(--flame) 8%, var(--surface)); }
+.coin { animation: coin 2.4s ease-in infinite; }
+@keyframes coin { 0% { transform: translate(40px, -60px); opacity: 0; } 30% { opacity: 1; } 70% { transform: translate(0, 0); opacity: 1; } 100% { transform: translate(0, 30px); opacity: 0; } }
+#swQuestions { align-content: start; }
+@media (max-width: 560px) { .seedbags { grid-template-columns: minmax(0, 1fr); } }
+.bag { align-content: start; } .bag .chips { align-items: flex-start; }

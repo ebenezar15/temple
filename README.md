@@ -1,6 +1,6 @@
 # Where Heaven Meets Earth
 
-An interactive, animated Bible study in six parts:
+An interactive, animated Bible study in seven parts:
 
 - **Part I: The Garden-Temple.** Eden as God's sanctuary on his mountain, Adam as priest-king, the Tabernacle as a portable Eden, the Ark of the Covenant and its journey, Solomon's Temple, and the New Jerusalem as Eden fulfilled.
 - **Part II: The Serpent and the Seed.** The Hebrew *nāḥāš* (serpent, diviner, shining one), why the serpent of Genesis 3 reads as a divine being inside God's sanctuary, Ezekiel 28's fallen guardian cherub and the high priest's breastpiece, Isaiah 14's "Day Star", seraphim as burning serpents, the curse decoded, the war of the two seeds from Genesis 3:15 to Revelation 12, the bronze serpent and John 3:14, and "that ancient serpent".
@@ -8,6 +8,7 @@ An interactive, animated Bible study in six parts:
 - **Part IV: Kings and Priests** (a detailed study). God's design for humanity as priest-kings, how kingship and priesthood were twisted, why Israel's offices were separated, roles, access and authority, kings who crossed the line, a map of kings, priests and those who were both from Adam to the church, the order of Melchizedek, converging promises, and how believers are called to function as a royal priesthood, with a study guide and memory verses.
 - **Part V: Prophets, the Fivefold and the Kingdom Now** (a detailed study). The Old Testament prophetic office and its relationships with kings and priests, the five ministries of Ephesians 4 and how each equips believers as kings and priests, what changed between the covenants, why the royal priesthood is a present calling, how the church narrowed that calling, the AD 70 setting of Jesus' end-time warnings, and objections answered.
 - **Part VI: The Keys of the Kingdom** (a detailed study). What keys mean throughout the Bible, the key of the house of David and the royal steward, Caesarea Philippi, binding and loosing, doors opened in Acts, how the keys were narrowed to forgiveness alone, how to operate in them, and objections answered.
+- **Part VII: Sowing and Reaping** (a detailed study). God's seed principle from Genesis 1 and 8 to the final harvest, eight laws of the harvest, the four soils, the principle traced through Scripture, Christ the seed that died, the connection to blessing, grace and the great exchange, why kingdom principles can feel like manipulation, and objections answered.
 
 ## Interactive pieces
 
@@ -30,6 +31,7 @@ Text is set in **Avenir Next**. Avenir Next is a commercial typeface: it is used
 | `kings.html` | Part IV: Kings and Priests |
 | `prophets.html` | Part V: Prophets, the Fivefold and the Kingdom Now |
 | `keys.html` | Part VI: The Keys of the Kingdom |
+| `sowing.html` | Part VII: Sowing and Reaping |
 | `connections.html` | Connections web, quiz and further reading |
 
 Each part page opens with an "on this page" list of its sections and ends with previous/next links.
@@ -52,6 +54,7 @@ Source lives in `src/`:
 | `src/data-kings.js`, `src/app-kings.js` | Content and interactive code for Part IV: kings and priests |
 | `src/data-prophets.js`, `src/app-prophets.js` | Content and interactive code for Part V: prophets and the fivefold |
 | `src/data-keys.js`, `src/app-keys.js` | Content and interactive code for Part VI: the keys of the kingdom |
+| `src/data-sowing.js`, `src/app-sowing.js` | Content and interactive code for Part VII: sowing and reaping |
 | `src/app.js` | Interactive behaviour |
 
 After editing, rebuild the pages:
