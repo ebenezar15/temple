@@ -633,6 +633,294 @@ DATA.sources.push(
   ["James M. Hamilton Jr.", "“The Skull Crushing Seed of the Woman” (2006)", "How Genesis 3:15 echoes through the rest of Scripture."]
 );
 
+/* Part IV: Kings and Priests */
+DATA.kp = {};
+
+/* 1 · God's design: flowchart nodes (viewBox 900 × 470) */
+DATA.kp.design = [
+  { id: "god", x: 450, y: 44, w: 300, t: "God: the true King and the holy Presence", c: "accent",
+    d: "Before there are any kings or priests, God is both: “The LORD is king forever and ever” (Ps 10:16) and the Holy One whose presence fills the temple (Isa 6:1–3). Every human king and priest is meant to reflect him, never replace him." },
+  { id: "image", x: 450, y: 134, w: 300, t: "Humanity made in his image", c: "ink", ref: "Gen 1:26–27",
+    d: "In the ancient world only kings and priests were called the “image” of a god. Genesis gives that title to every human being, male and female. Royalty and priesthood are humanity’s original job description, not a privilege for a few." },
+  { id: "king", x: 205, y: 240, w: 290, t: "KING · rule and subdue", sub: "rādâ · kābaš", c: "babel", ref: "Gen 1:28",
+    d: "“Have dominion (rādâ) … and subdue (kābaš) the earth.” Kingship faces outward to the world on God’s behalf: ordering, protecting, developing and stewarding creation as his representative. Psalm 8:5–6 sings it: “crowned with glory and honour … given dominion over the works of your hands.”" },
+  { id: "priest", x: 695, y: 240, w: 290, t: "PRIEST · serve and guard", sub: "ʿābad · šāmar", c: "eden", ref: "Gen 2:15",
+    d: "“To work (ʿābad) it and keep (šāmar) it”: the verbs used later for Levites serving and guarding the Tabernacle (Num 3:7–8). Priesthood faces Godward: living in his presence, worshipping, guarding what is holy, and bringing creation back to him." },
+  { id: "adam", x: 450, y: 338, w: 320, t: "Adam: a priest-king in the garden-temple", c: "accent",
+    d: "One person, two directions. Authority over creation flows out of access to God. The king rules well because the priest walks with God in the cool of the day (Gen 3:8)." },
+  { id: "mission", x: 450, y: 428, w: 440, t: "Mission: fill the earth with God’s presence", c: "ink", ref: "Gen 1:28; Hab 2:14",
+    d: "“Be fruitful and multiply and fill the earth.” Eden was meant to spread until “the earth will be filled with the knowledge of the glory of the LORD as the waters cover the sea” (Hab 2:14). Priest-kings multiplying priest-kings." }
+];
+DATA.kp.designEdges = [["god", "image"], ["image", "king"], ["image", "priest"], ["king", "adam"], ["priest", "adam"], ["adam", "mission"]];
+
+/* 2 · How it got twisted */
+DATA.kp.twist = [
+  { strand: "both", t: "The grasp", ref: "Gen 3:5–6", d: "“You will be like God.” Instead of receiving rule from God, humanity seizes it. The priest stops guarding the sanctuary; the king takes what was not given. Both offices break at once." },
+  { strand: "king", t: "Rule becomes domination", ref: "Gen 3:16", d: "“He shall rule over you.” The same idea of rule, now turned against another image-bearer. Kingship shifts from serving creation to controlling people." },
+  { strand: "king", t: "Cain builds a city", ref: "Gen 4:17–24", d: "The first city is founded by a murderer, named after his son, and ends with Lamech’s boast of seventy-sevenfold revenge. Power without presence." },
+  { strand: "king", t: "Nimrod, the first “mighty one”", ref: "Gen 10:8–12", d: "“The beginning of his kingdom was Babel.” The first named king builds empire: kingship as conquest and self-made greatness." },
+  { strand: "priest", t: "Babel’s temple-tower", ref: "Gen 11:1–9", d: "Priesthood turned into technology: build the right structure, perform the right rites, and bring a god down on the city’s terms (Part III)." },
+  { strand: "both", t: "Pharaoh: king as god", ref: "Exod 1:8–14; 5:2", d: "Egypt’s king was hailed as son of the sun god and served as chief priest of the land. One man claims both offices for himself, and enslaves God’s firstborn son (Exod 4:22)." },
+  { strand: "king", t: "“A king like all the nations”", ref: "1 Sam 8:5–20", d: "Israel rejects God as king. Samuel warns what such a king will do: “he will take” your sons, daughters, fields, vineyards, servants and flocks, six times over (1 Sam 8:11–17)." },
+  { strand: "priest", t: "Priests for profit", ref: "1 Sam 2:12–17; Mal 2:7–9", d: "Eli’s sons take the best of the sacrifices by force. Later priests “turned aside from the way” and “caused many to stumble by your instruction.” Access to God becomes a business." },
+  { strand: "both", t: "King and high priest against the Anointed", ref: "Ps 2:1–2; John 11:47–53; Luke 23:6–12", d: "Herod and the chief priests join hands against Jesus: “The kings of the earth set themselves … against the LORD and against his Anointed” (Acts 4:25–27)." },
+  { strand: "both", t: "Babylon the great", ref: "Rev 17–18", d: "The final picture: the kings of the earth and a seductive false religion locked together, until both fall in a single hour." }
+];
+DATA.kp.contrast = [
+  ["Source of authority", "Received from God and exercised under his word (Deut 17:18–20)", "Self-made, inherited by force or claimed as divine right"],
+  ["Use of power", "Shepherding: protecting the weak, doing justice (Ps 72:1–4, 12–14)", "Taking: “he will take … he will take” (1 Sam 8:11–17)"],
+  ["Access to God", "A gift of grace, entered with holiness and fear (Lev 10:3)", "Controlled by ritual, purchase or position (Mic 3:11)"],
+  ["Toward people", "Bless them and carry their names before God (Num 6:22–27; Exod 28:29)", "Use them: priests who “feed on the sheep” (Ezek 34:2–3)"],
+  ["Toward God", "Represent him; “Holy to the LORD” (Exod 28:36)", "Replace him; “I will make myself like the Most High” (Isa 14:14)"],
+  ["Where it ends", "A city where God’s servants “will reign forever” (Rev 22:5)", "Babylon “fallen, fallen” in one hour (Rev 18:2, 10)"]
+];
+
+/* 3 · Israel: one calling, split into offices */
+DATA.kp.split = [
+  { id: "offer", x: 450, y: 42, t: "“You shall be to me a kingdom of priests”", ref: "Exod 19:5–6", c: "accent",
+    d: "At Sinai God offers the whole nation the Eden vocation: a royal priesthood standing between God and the nations. Every Israelite was invited." },
+  { id: "fear", x: 450, y: 134, t: "The people stand far off", ref: "Exod 20:18–21", c: "flame",
+    d: "“You speak to us, and we will listen; but do not let God speak to us, lest we die.” The people ask for a go-between rather than direct access." },
+  { id: "calf", x: 450, y: 226, t: "The golden calf", ref: "Exod 32", c: "flame",
+    d: "At the foot of the mountain, with Aaron leading, Israel makes an idol. Priesthood fails at its very first moment." },
+  { id: "levi", x: 200, y: 336, t: "Levi and Aaron: the priests", ref: "Exod 32:26–29; Num 3:5–13", c: "eden",
+    d: "The Levites rally to Moses and are set apart in place of the firstborn of every family. Aaron’s sons become priests; the rest of Levi serves the Tabernacle. Access is now carried by one tribe on behalf of all." },
+  { id: "judah", x: 700, y: 336, t: "Judah and David: the kings", ref: "Gen 49:10; 2 Sam 7:12–16", c: "babel",
+    d: "The scepter is promised to Judah and the throne to David’s line. A king must write his own copy of God’s law, read it daily and not exalt himself above his brothers (Deut 17:14–20)." },
+  { id: "prophet", x: 450, y: 336, t: "Prophets: the word", ref: "Deut 18:15–22", c: "muted",
+    d: "A third office holds both accountable, speaking God’s word to kings (Nathan, Elijah) and priests (Malachi)." },
+  { id: "messiah", x: 450, y: 446, t: "Promised: one who unites them again", ref: "Ps 110:4; Zech 6:12–13", c: "accent",
+    d: "“You are a priest forever after the order of Melchizedek.” “He shall sit and rule on his throne. And there shall be a priest on his throne, and the counsel of peace shall be between them both.”" }
+];
+DATA.kp.splitEdges = [["offer", "fear"], ["fear", "calf"], ["calf", "levi"], ["calf", "judah"], ["calf", "prophet"], ["levi", "messiah"], ["judah", "messiah"], ["prophet", "messiah"]];
+
+DATA.kp.offices = {
+  prophet: { t: "Prophet", c: "var(--muted)", anoint: "Elisha anointed by Elijah (1 Kgs 19:16)",
+    role: "Brings God’s word to people: calls, warns, corrects and comforts.", christ: "The prophet like Moses (Deut 18:15; Acts 3:22); the Word made flesh (John 1:14).",
+    us: "“That you may proclaim the excellencies of him who called you” (1 Pet 2:9); speak the truth in love (Eph 4:15)." },
+  priest: { t: "Priest", c: "var(--eden)", anoint: "Aaron anointed by Moses (Exod 29:7; Lev 8:12)",
+    role: "Brings people to God: sacrifice, intercession, blessing, teaching the law, guarding holiness.", christ: "The great high priest who offered himself once for all and always intercedes (Heb 7:25–27).",
+    us: "Offer spiritual sacrifices (1 Pet 2:5), intercede for all people (1 Tim 2:1), draw near with confidence (Heb 4:16)." },
+  king: { t: "King", c: "var(--babel)", anoint: "David anointed by Samuel (1 Sam 16:13); Solomon by Zadok the priest (1 Kgs 1:39)",
+    role: "Rules on God’s behalf: justice, protection, leadership, stewardship of land and people.", christ: "The Son of David enthroned at God’s right hand, King of kings (Acts 2:30–36; Rev 19:16).",
+    us: "Reign in life through Christ (Rom 5:17), steward our work and world (Col 3:23), lead by serving (Mark 10:42–45)." }
+};
+
+/* 4 · Roles: priest vs king */
+DATA.kp.roles = {
+  priest: {
+    resp: ["Offer sacrifices and burn incense (Lev 1–7; Exod 30:7–8)", "Intercede and make atonement (Lev 16)", "Bless the people in God’s name (Num 6:22–27)", "Teach the law and distinguish holy from common (Lev 10:10–11; Mal 2:7)", "Guard the sanctuary (Num 18:1–7)", "Help judge hard cases (Deut 17:8–12)"],
+    access: "Priests entered the Holy Place daily. Only the high priest entered the Most Holy Place, once a year, with blood (Lev 16:2, 34; Heb 9:7).",
+    authority: "Spiritual authority over worship, purity and teaching. Priests had no army and no land inheritance: “I am your portion and your inheritance” (Num 18:20).",
+    limits: "Must be of Aaron’s line (Num 3:10), physically unblemished (Lev 21:16–23) and ritually holy. Strange fire brought death (Lev 10:1–2)."
+  },
+  king: {
+    resp: ["Write and read a copy of the law daily (Deut 17:18–19)", "Do justice and defend the poor (Ps 72:1–4; Jer 22:15–16)", "Lead and protect the people (1 Sam 8:20)", "Shepherd, not fleece, the flock (2 Sam 5:2; Ezek 34)", "Support true worship and the Temple (1 Chr 22; 2 Chr 29–31)"],
+    access: "Kings worshipped in the courts like other Israelites. They could not enter the Holy Place or burn incense (2 Chr 26:18).",
+    authority: "Civil and military authority, always under God’s law and answerable to prophets (2 Sam 12:7).",
+    limits: "Must be an Israelite chosen by God; must not multiply horses, wives or gold, nor return to Egypt, nor lift his heart above his brothers (Deut 17:15–20)."
+  }
+};
+DATA.kp.garments = [
+  { id: "turban", who: "priest", t: "Turban and gold plate", ref: "Exod 28:36–38", d: "A plate of pure gold engraved “Holy to the LORD” on the front of the turban, “so that Aaron shall bear any guilt from the holy things.” The priest’s head is marked for God." },
+  { id: "ephod", who: "priest", t: "Ephod and onyx stones", ref: "Exod 28:6–12", d: "A vest of gold, blue, purple and scarlet. On its shoulders two onyx stones engraved with the names of the twelve tribes: the priest carries the people on his shoulders before God." },
+  { id: "breast", who: "priest", t: "Breastpiece of judgment", ref: "Exod 28:15–30", d: "Twelve stones in four rows, each engraved with a tribe, worn “on his heart … before the LORD regularly”. Inside it, the Urim and Thummim for seeking God’s decision." },
+  { id: "robe", who: "priest", t: "Robe of blue: bells and pomegranates", ref: "Exod 28:31–35", d: "A robe all of blue with golden bells and pomegranates around the hem, “so that its sound shall be heard when he goes into the Holy Place.” Fruitfulness and the sound of life in God’s presence." },
+  { id: "tunic", who: "priest", t: "Linen tunic and sash", ref: "Exod 28:39–43", d: "Fine linen “for glory and for beauty”. Linen, not wool, “so that they do not sweat” (Ezek 44:18): priestly service is not done in the strength of the flesh." },
+  { id: "crown", who: "king", t: "Crown", ref: "Ps 21:3; 2 Sam 12:30", d: "“You set a crown of fine gold upon his head.” A sign of glory received, not seized. Jesus wore a crown of thorns before many diadems (John 19:2; Rev 19:12)." },
+  { id: "scepter", who: "king", t: "Scepter", ref: "Gen 49:10; Ps 45:6", d: "“The scepter shall not depart from Judah.” “The scepter of your kingdom is a scepter of uprightness.” Authority measured by righteousness." },
+  { id: "scroll", who: "king", t: "His own copy of the law", ref: "Deut 17:18–20", d: "The king must write a copy of the law “in the presence of the Levitical priests” and read it all his life, “that his heart may not be lifted up above his brothers.” The king sits under a book." },
+  { id: "throne", who: "king", t: "Throne", ref: "1 Kgs 10:18–20; 1 Chr 29:23", d: "Solomon “sat on the throne of the LORD as king.” The throne belongs to God; the king only occupies it for him." },
+  { id: "ring", who: "king", t: "Signet ring", ref: "Hag 2:23", d: "God calls Zerubbabel, David’s heir after the exile, “like a signet ring, for I have chosen you”: the seal that carries the king’s authority." }
+];
+
+/* 5 · Access: rings of holiness */
+DATA.kp.rings = [
+  { n: "Most Holy Place", who: "The high priest, once a year, with blood", ref: "Lev 16; Heb 9:7" },
+  { n: "Holy Place", who: "Priests, daily, for incense, lamps and bread", ref: "Exod 30:7–8; Heb 9:6" },
+  { n: "Court", who: "Israelites bringing sacrifices", ref: "Lev 1:2–5" },
+  { n: "Outer court", who: "The nations; in Herod’s temple a stone barrier warned Gentiles to go no further on pain of death", ref: "Eph 2:14" }
+];
+
+/* 6 · Crossing the line */
+DATA.kp.cross = [
+  { n: "Korah", role: "Levite seizes priesthood", ref: "Num 16", did: "With 250 leaders, demands the priesthood: “All in the congregation are holy … Why then do you exalt yourselves?”", res: "The earth opens and fire consumes the 250 offering incense. Aaron’s staff buds to confirm God’s choice (Num 17).", k: "bad" },
+  { n: "Saul", role: "King acts as priest", ref: "1 Sam 13:8–14", did: "Impatient for Samuel, offers the burnt offering himself before battle.", res: "“You have done foolishly … now your kingdom shall not continue.” His dynasty is rejected.", k: "bad" },
+  { n: "Uzzah", role: "Handling holy things wrongly", ref: "2 Sam 6:1–11; 1 Chr 15:13–15", did: "The Ark is carried on a new cart, Philistine-style. When the oxen stumble, Uzzah grabs it.", res: "He dies. David learns: “Because you did not carry it the first time … we did not seek him according to the rule.”", k: "bad" },
+  { n: "Jeroboam I", role: "King invents a priesthood", ref: "1 Kgs 12:25–33; 13:1–5", did: "Sets up golden calves at Bethel and Dan, appoints priests from any tribe and a festival of his own devising.", res: "His hand withers as he stretches it out at the altar. “This thing became sin” and doomed his house (1 Kgs 13:34).", k: "bad" },
+  { n: "Ahaz", role: "King redesigns worship", ref: "2 Kgs 16:10–18", did: "Copies a pagan altar from Damascus, has Urijah the priest build it and moves God’s altar aside.", res: "Worship is reshaped by politics; Judah slides toward judgment. The compliant priest is complicit.", k: "bad" },
+  { n: "Uzziah", role: "King burns incense", ref: "2 Chr 26:16–21", did: "“When he was strong, he grew proud” and entered the Temple to burn incense.", res: "Azariah and eighty priests withstand him; leprosy breaks out on his forehead and he lives in isolation until death.", k: "bad" },
+  { n: "Jehoshaphat", role: "Getting it right", ref: "2 Chr 19:8–11", did: "Sets up courts with a clear division: “Amariah the chief priest is over you in all matters of the LORD; and Zebadiah … in all the king’s matters.”", res: "Order and justice: “Deal courageously, and may the LORD be with the upright!”", k: "good" },
+  { n: "Josiah and Hilkiah", role: "Partnership", ref: "2 Kgs 22–23", did: "The high priest finds the Book of the Law; the king hears it, tears his robes and leads national repentance.", res: "The greatest reform in Judah’s history: “Before him there was no king like him.”", k: "good" }
+];
+
+/* 7 · People map: lane k = king | both | priest; era index; f = faithful, mixed, twisted; pair id links partners */
+DATA.kp.eras = ["Beginning", "Patriarchs", "Exodus", "Judges", "United kingdom", "Divided kingdom", "Exile & return", "Between the Testaments", "New Testament & beyond"];
+DATA.kp.people = [
+  { n: "Adam", lane: "both", era: 0, f: "mixed", ref: "Gen 1:26–28; 2:15", d: "The first priest-king: to rule the earth and serve and guard the garden-temple. He failed to guard it." },
+  { n: "Abel", lane: "priest", era: 0, f: "faithful", ref: "Gen 4:4; Heb 11:4", d: "Brings the firstborn of his flock: the first acceptable offering, made by faith." },
+  { n: "Cain", lane: "king", era: 0, f: "twisted", ref: "Gen 4:8–17", d: "Kills his brother and builds the first city: power cut off from God’s presence." },
+  { n: "Noah", lane: "both", era: 0, f: "faithful", ref: "Gen 8:20–9:7", d: "Builds an altar and offers sacrifice; receives a renewed commission to fill and rule the earth." },
+  { n: "Nimrod", lane: "king", era: 1, f: "twisted", ref: "Gen 10:8–12", d: "The first “mighty one” on earth, whose kingdom began at Babel." },
+  { n: "Melchizedek", lane: "both", era: 1, f: "faithful", ref: "Gen 14:18–20; Heb 7", d: "King of Salem and priest of God Most High. Brings bread and wine and blesses Abraham, who gives him a tenth." },
+  { n: "Abraham", lane: "both", era: 1, f: "faithful", ref: "Gen 12:7–8; 14:14–16; 23:6", d: "Builds altars wherever God appears, defeats four kings, and is called “a prince of God” by the Hittites. Kings will come from him (Gen 17:6)." },
+  { n: "Job", lane: "priest", era: 1, f: "faithful", ref: "Job 1:5; 42:8", d: "Offers burnt offerings for his children and later prays for his friends: a father as household priest." },
+  { n: "Pharaoh", lane: "king", era: 2, f: "twisted", ref: "Exod 1:8–22; 5:2", d: "God-king and chief priest of Egypt: “Who is the LORD, that I should obey his voice?”", pair: "exodus" },
+  { n: "Jethro", lane: "priest", era: 2, f: "faithful", ref: "Exod 18", d: "Priest of Midian who blesses God for the exodus and teaches Moses to share the burden of judging." },
+  { n: "Moses", lane: "both", era: 2, f: "faithful", ref: "Ps 99:6; Lev 8; Deut 33:4–5", d: "Leader and lawgiver who consecrated the priests and stood in the gap for Israel. Psalm 99 counts him “among his priests”.", pair: "moses" },
+  { n: "Aaron", lane: "priest", era: 2, f: "mixed", ref: "Exod 28–29; 32", d: "The first high priest, anointed and robed for glory and beauty. He also made the golden calf.", pair: "moses" },
+  { n: "Phinehas", lane: "priest", era: 2, f: "faithful", ref: "Num 25:10–13", d: "Zealous for God’s holiness; given “a covenant of a perpetual priesthood”." },
+  { n: "Korah", lane: "priest", era: 2, f: "twisted", ref: "Num 16", d: "A Levite who tried to seize the priesthood. The ground swallowed him." },
+  { n: "Gideon", lane: "king", era: 3, f: "mixed", ref: "Judg 8:22–27", d: "Refuses the crown, “The LORD will rule over you”, then makes an ephod that becomes a snare to Israel." },
+  { n: "Abimelech", lane: "king", era: 3, f: "twisted", ref: "Judg 9", d: "Murders seventy brothers to make himself king. Jotham’s fable of the bramble-king mocks him." },
+  { n: "Micah’s priest", lane: "priest", era: 3, f: "twisted", ref: "Judg 17–18", d: "A Levite hired for ten pieces of silver a year, then lured away by a better offer. “Everyone did what was right in his own eyes.”" },
+  { n: "Eli", lane: "priest", era: 3, f: "mixed", ref: "1 Sam 2:12–36", d: "High priest at Shiloh who honoured his sons above God. God promises “a faithful priest” instead." },
+  { n: "Samuel", lane: "both", era: 3, f: "faithful", ref: "1 Sam 3; 7:9–17", d: "Levite, prophet and the last judge. He offered sacrifices, led the nation and anointed its first two kings." },
+  { n: "Saul", lane: "king", era: 4, f: "twisted", ref: "1 Sam 13:8–14; 15", d: "The king “like all the nations”. Offered sacrifice in impatience and lost the kingdom." },
+  { n: "David", lane: "both", era: 4, f: "faithful", ref: "2 Sam 6:14–18; Ps 110", d: "The king after God’s heart. Wore a linen ephod, offered sacrifices and blessed the people as the Ark came home, all under God’s order. He wrote of a priest-king to come.", pair: "david" },
+  { n: "Zadok", lane: "priest", era: 4, f: "faithful", ref: "1 Kgs 1:32–40; Ezek 44:15", d: "Faithful priest who anointed Solomon; Ezekiel’s future temple is served by “the sons of Zadok”.", pair: "david" },
+  { n: "Abiathar", lane: "priest", era: 4, f: "mixed", ref: "1 Kgs 2:26–27", d: "David’s loyal priest who later backed Adonijah and was removed, fulfilling the word against Eli’s house." },
+  { n: "Solomon", lane: "king", era: 4, f: "mixed", ref: "1 Kgs 8; 11:1–8", d: "Builds the Temple, offers its dedication prayer and blesses the people. Later multiplies wives, gold and horses, exactly what Deuteronomy 17 forbade.", pair: "david" },
+  { n: "Jeroboam I", lane: "king", era: 5, f: "twisted", ref: "1 Kgs 12:25–33", d: "Invents his own priesthood, altars and festival for the northern kingdom." },
+  { n: "Jehoshaphat", lane: "king", era: 5, f: "faithful", ref: "2 Chr 19:8–11", d: "Separates “matters of the LORD” (the chief priest) from “the king’s matters”.", pair: "jehosh" },
+  { n: "Amariah", lane: "priest", era: 5, f: "faithful", ref: "2 Chr 19:11", d: "Chief priest set over “all matters of the LORD” in Jehoshaphat’s courts.", pair: "jehosh" },
+  { n: "Joash", lane: "king", era: 5, f: "mixed", ref: "2 Kgs 11–12; 2 Chr 24", d: "Rescued as a baby and crowned at seven by the priest Jehoiada. Did well while Jehoiada lived, then turned and killed his son Zechariah.", pair: "joash" },
+  { n: "Jehoiada", lane: "priest", era: 5, f: "faithful", ref: "2 Kgs 11:4–21; 2 Chr 24:16", d: "High priest who hid the last heir of David and restored the throne. Buried “among the kings, because he had done good in Israel”.", pair: "joash" },
+  { n: "Uzziah", lane: "king", era: 5, f: "mixed", ref: "2 Chr 26", d: "Strong and successful, then proud: he burned incense and was struck with leprosy.", pair: "uzziah" },
+  { n: "Azariah the priest", lane: "priest", era: 5, f: "faithful", ref: "2 Chr 26:17–18", d: "With eighty priests he withstood the king: “It is not for you, Uzziah, to burn incense to the LORD.”", pair: "uzziah" },
+  { n: "Ahaz", lane: "king", era: 5, f: "twisted", ref: "2 Kgs 16:10–18", d: "Copies a pagan altar for the Temple.", pair: "ahaz" },
+  { n: "Urijah", lane: "priest", era: 5, f: "twisted", ref: "2 Kgs 16:11, 16", d: "Builds the king’s altar exactly as ordered: a priest who would not say no.", pair: "ahaz" },
+  { n: "Hezekiah", lane: "king", era: 5, f: "faithful", ref: "2 Chr 29–31", d: "Cleanses the Temple, restores the priests and Levites, and celebrates the greatest Passover since Solomon." },
+  { n: "Josiah", lane: "king", era: 5, f: "faithful", ref: "2 Kgs 22–23", d: "Hears the rediscovered law and leads Judah’s deepest reform.", pair: "josiah" },
+  { n: "Hilkiah", lane: "priest", era: 5, f: "faithful", ref: "2 Kgs 22:8", d: "High priest who found the Book of the Law in the Temple.", pair: "josiah" },
+  { n: "Zerubbabel", lane: "king", era: 6, f: "faithful", ref: "Hag 2:20–23; Zech 4:6–10", d: "David’s heir and governor after the exile: “Not by might, nor by power, but by my Spirit.” God’s chosen signet ring.", pair: "return" },
+  { n: "Joshua the high priest", lane: "both", era: 6, f: "faithful", ref: "Zech 3; 6:9–15", d: "Cleansed in a vision, then crowned as a sign: “Behold, the man whose name is the Branch … he shall be a priest on his throne.” With Zerubbabel, one of “the two anointed ones” (Zech 4:14).", pair: "return" },
+  { n: "Ezra", lane: "priest", era: 6, f: "faithful", ref: "Ezra 7:10", d: "Priest and scribe who “set his heart to study the Law of the LORD, and to do it and to teach”.", pair: "ezra" },
+  { n: "Nehemiah", lane: "king", era: 6, f: "faithful", ref: "Neh 2; 8:9", d: "Persian-appointed governor who rebuilds Jerusalem’s walls and works alongside Ezra.", pair: "ezra" },
+  { n: "The Hasmoneans", lane: "both", era: 7, f: "twisted", ref: "1 Maccabees 14:41", d: "After the Maccabean revolt, priestly rulers took the high priesthood and later the title of king, though neither of David’s line nor of Zadok’s. Many Jews objected, and the Qumran community looked for two messiahs, one of Aaron and one of Israel." },
+  { n: "Herod", lane: "king", era: 8, f: "twisted", ref: "Matt 2:16; Luke 23:6–12", d: "Herod the Great rebuilt the Temple and slaughtered Bethlehem’s infants; his son Antipas mocked Jesus at his trial.", pair: "trial" },
+  { n: "Caiaphas", lane: "priest", era: 8, f: "twisted", ref: "John 11:49–53; 18:13–14", d: "High priest who reasoned that one man should die for the nation, unknowingly prophesying the cross.", pair: "trial" },
+  { n: "Zechariah", lane: "priest", era: 8, f: "faithful", ref: "Luke 1:5–23, 67–79", d: "A priest burning incense when Gabriel announces John’s birth. His song celebrates “a horn of salvation … in the house of his servant David”." },
+  { n: "Jesus", lane: "both", era: 8, f: "faithful", ref: "Heb 7; Rev 19:16", d: "Son of David and high priest after the order of Melchizedek: the one person in whom kingship and priesthood fully meet." },
+  { n: "The church", lane: "both", era: 8, f: "faithful", ref: "1 Pet 2:5, 9; Rev 1:6; 5:10", d: "“A chosen race, a royal priesthood, a holy nation.” Made “a kingdom and priests to our God, and they shall reign on the earth.”" }
+];
+
+/* 8 · Melchizedek vs Aaron */
+DATA.kp.order = [
+  ["Tribe", "Levi, through Aaron (Num 3:10)", "No genealogy recorded; Jesus is from Judah (Heb 7:3, 13–14)"],
+  ["Basis", "“A legal requirement concerning bodily descent”", "“The power of an indestructible life” (Heb 7:16)"],
+  ["Appointment", "Without an oath", "With an oath: “The Lord has sworn and will not change his mind” (Heb 7:20–21; Ps 110:4)"],
+  ["Duration", "Many priests, “prevented by death from continuing”", "“A priest forever”; “he always lives to make intercession” (Heb 7:23–25)"],
+  ["Sacrifice", "Daily, repeated, for his own sins too", "“Once for all when he offered up himself” (Heb 7:27)"],
+  ["Sanctuary", "An earthly copy and shadow", "“Into heaven itself, now to appear in the presence of God on our behalf” (Heb 9:24)"],
+  ["King as well?", "Never: priests could not rule", "Yes: “king of righteousness … king of peace” (Heb 7:2)"]
+];
+DATA.kp.melchFlow = [
+  { ref: "Genesis 14:18–20", t: "The meeting", d: "After the battle of the kings, Melchizedek, king of Salem and priest of God Most High, brings out bread and wine and blesses Abram. Abram gives him a tenth of everything." },
+  { ref: "Psalm 110:1, 4", t: "The oath", d: "David hears God speak to “my Lord”: “Sit at my right hand … You are a priest forever after the order of Melchizedek.” A king at God’s right hand who is also a priest." },
+  { ref: "Hebrews 5–7", t: "The fulfilment", d: "Jesus, of Judah and not Levi, is that priest. Because Levi was “still in the loins of his ancestor” when Abraham tithed, the greater blessed the lesser (Heb 7:7–10)." },
+  { ref: "Hebrews 8–10", t: "The new covenant", d: "A better priest brings a better covenant, a better sanctuary and a better sacrifice, and opens the way for all his people to draw near." }
+];
+
+/* 9 · Promises converging (viewBox 1060 × 470) */
+DATA.kp.promises = [
+  { s: "king", x: 70, ref: "Gen 1:28", t: "Dominion", d: "Humanity is given rule over the earth." },
+  { s: "king", x: 170, ref: "Gen 17:6", t: "Kings from Abraham", d: "“Kings shall come from you.”" },
+  { s: "king", x: 270, ref: "Gen 49:10", t: "The scepter to Judah", d: "“Until tribute comes to him; and to him shall be the obedience of the peoples.”" },
+  { s: "king", x: 370, ref: "Num 24:17", t: "Star and scepter", d: "“A star shall come out of Jacob, and a scepter shall rise out of Israel.”" },
+  { s: "king", x: 470, ref: "2 Sam 7:12–16", t: "David’s house forever", d: "“I will establish the throne of his kingdom forever.”" },
+  { s: "king", x: 570, ref: "Isa 9:6–7", t: "Prince of Peace", d: "“Of the increase of his government and of peace there will be no end, on the throne of David.”" },
+  { s: "priest", x: 70, ref: "Gen 14:18", t: "Melchizedek", d: "A king who is also priest of God Most High." },
+  { s: "priest", x: 170, ref: "Exod 19:6", t: "Kingdom of priests", d: "The whole nation called to royal priesthood." },
+  { s: "priest", x: 270, ref: "Num 25:13", t: "Perpetual priesthood", d: "A covenant of priesthood with Phinehas." },
+  { s: "priest", x: 370, ref: "1 Sam 2:35", t: "A faithful priest", d: "“I will raise up for myself a faithful priest, who shall do according to what is in my heart.”" },
+  { s: "priest", x: 470, ref: "Ps 110:4", t: "Priest forever", d: "“After the order of Melchizedek.”" },
+  { s: "priest", x: 570, ref: "Isa 61:6; Jer 33:17–22", t: "Priests of the LORD", d: "“You shall be called the priests of the LORD.” God promises never to lack a king on David’s throne or Levitical priests before him." },
+  { s: "join", x: 690, ref: "Zech 6:12–13", t: "A priest on his throne", d: "The Branch “shall build the temple of the LORD … and shall sit and rule on his throne. And there shall be a priest on his throne.”" },
+  { s: "christ", x: 820, ref: "Luke 1:32–33; Heb 7:26–28", t: "Jesus Christ", d: "Given “the throne of his father David” and made “a high priest, holy, innocent … exalted above the heavens.”" },
+  { s: "church", x: 950, ref: "1 Pet 2:9; Rev 1:6; 5:10; 22:5", t: "A royal priesthood", d: "His people share both offices: “they shall reign on the earth … and they will reign forever and ever.”" }
+];
+
+/* 10 · Our calling */
+DATA.kp.calling = {
+  priest: [
+    ["Draw near", "With confidence to the throne of grace (Heb 4:16; 10:19–22)."],
+    ["Offer spiritual sacrifices", "Your body as a living sacrifice; praise; doing good and sharing (Rom 12:1; Heb 13:15–16)."],
+    ["Intercede", "Supplications, prayers and thanksgivings for all people, including those in authority (1 Tim 2:1–2)."],
+    ["Bless", "Bless and do not curse (Rom 12:14; Luke 6:28)."],
+    ["Minister reconciliation", "“We are ambassadors for Christ, God making his appeal through us” (2 Cor 5:18–20)."],
+    ["Guard what is holy", "Your heart, your body as God’s temple, and the truth entrusted to you (Prov 4:23; 1 Cor 6:19; 2 Tim 1:14)."]
+  ],
+  king: [
+    ["Reign in life", "Through the abundance of grace and the gift of righteousness (Rom 5:17)."],
+    ["Rule yourself", "“Whoever rules his spirit” is better than one who takes a city; self-control is fruit of the Spirit (Prov 16:32; Gal 5:23)."],
+    ["Steward your domain", "Work heartily as for the Lord; be faithful in little (Col 3:23; Luke 16:10; 19:17)."],
+    ["Do justice", "Do justice, love kindness, walk humbly (Mic 6:8); open your mouth for the voiceless (Prov 31:8–9)."],
+    ["Stand in Christ’s authority", "Seated with Christ in the heavenly places; resist the enemy in his armour (Eph 2:6; 6:10–18; Luke 10:19)."],
+    ["Lead by serving", "“Whoever would be great among you must be your servant … the Son of Man came not to be served but to serve” (Mark 10:42–45)."]
+  ]
+};
+DATA.kp.balance = [
+  { max: 15, t: "All priest, no king", d: "Worship without responsibility. Faith becomes private and withdrawn, prayer never turns into action, and the world is left to others. Compare the priest and Levite who passed by on the other side (Luke 10:31–32)." },
+  { max: 40, t: "Leaning priestly", d: "Rich devotion that needs to step out: let what you receive in God’s presence go into your work, family and city (Jas 2:14–17)." },
+  { max: 60, t: "A royal priesthood", d: "Authority flowing from access. We stand before God for the world, and stand in the world for God. Rule is safe only in hands that first worship. “They will be priests of God and of Christ, and they will reign with him” (Rev 20:6)." },
+  { max: 85, t: "Leaning kingly", d: "Strong action that needs to slow down and return to the presence, or it will run on its own strength (Ps 127:1–2; John 15:5)." },
+  { max: 101, t: "All king, no priest", d: "Power without presence. Activism, control and pride: Saul offering his own sacrifice, Uzziah reaching for the censer when he was strong (1 Sam 13; 2 Chr 26:16)." }
+];
+DATA.kp.cycle = [
+  { t: "Enter", ref: "Heb 10:19–22", d: "Come into God’s presence through the blood of Jesus and the torn curtain." },
+  { t: "Receive & intercede", ref: "1 Tim 2:1; John 15:5", d: "Receive grace, word and direction; carry other people’s names before God." },
+  { t: "Go & rule", ref: "Matt 28:18–20; Gen 1:28", d: "Go out under his authority to serve, build, heal and make disciples." },
+  { t: "Offer back", ref: "Rom 12:1; Rev 21:24–26", d: "Bring the fruit of your work back to God as worship, and return to his presence." }
+];
+
+/* 11 · Study guide */
+DATA.kp.study = [
+  { t: "God’s design", q: ["Genesis 1:26–28 and 2:15 give two sets of verbs. Which describe kingship and which priesthood? Why might God want both in one person?", "How does Psalm 8 restate humanity’s royal calling?", "Where do you see authority and worship working together, or pulling apart, in your own life?"] },
+  { t: "The twisting", q: ["Compare 1 Samuel 8:11–17 with Mark 10:42–45. What is the difference between a king who takes and a king who gives?", "What made Eli’s sons’ priesthood corrupt (1 Sam 2:12–17)? Where can religion become a means of gain today (1 Tim 6:5)?"] },
+  { t: "Separate offices", q: ["Why did God separate priesthood and kingship in Israel? What does Uzziah’s story (2 Chr 26) teach about strength and pride?", "Read 2 Chronicles 19:8–11. What healthy boundaries do you see between “matters of the LORD” and “the king’s matters”?"] },
+  { t: "Both together", q: ["Read Genesis 14:18–20, Psalm 110 and Hebrews 7. Why does Hebrews need Melchizedek to explain Jesus’ priesthood?", "Zechariah 6:9–15 crowns a high priest. What is the sign pointing to?"] },
+  { t: "Our calling", q: ["1 Peter 2:9 calls the church “a royal priesthood”. Which half comes more naturally to you? Which needs to grow?", "Plan a daily rhythm of entering, receiving, going and offering back. What would change this week?"] }
+];
+DATA.kp.memory = [
+  ["Exodus 19:6", "“You shall be to me a kingdom of priests and a holy nation.”"],
+  ["Psalm 110:4", "“The LORD has sworn and will not change his mind, ‘You are a priest forever after the order of Melchizedek.’”"],
+  ["Zechariah 6:13", "“He shall sit and rule on his throne. And there shall be a priest on his throne.”"],
+  ["Hebrews 4:16", "“Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need.”"],
+  ["1 Peter 2:9", "“You are a chosen race, a royal priesthood, a holy nation, a people for his own possession, that you may proclaim the excellencies of him who called you out of darkness into his marvelous light.”"],
+  ["Revelation 5:10", "“You have made them a kingdom and priests to our God, and they shall reign on the earth.”"],
+  ["Mark 10:45", "“For even the Son of Man came not to be served but to serve, and to give his life as a ransom for many.”"],
+  ["Romans 5:17", "“Much more will those who receive the abundance of grace and the free gift of righteousness reign in life through the one man Jesus Christ.”"]
+];
+
+DATA.quiz.push(
+  { q: "Who was both “king of Salem” and “priest of God Most High”?", a: ["Jethro", "Melchizedek", "Aaron", "Samuel"], c: 1, x: "Melchizedek met Abraham with bread and wine (Gen 14:18–20); Psalm 110:4 and Hebrews 7 call Jesus a priest after his order." },
+  { q: "What happened to King Uzziah when he burned incense in the Temple?", a: ["He lost a battle", "Leprosy broke out on his forehead", "His hand withered", "The ground opened"], c: 1, x: "2 Chronicles 26:16–21. Azariah and eighty priests withstood him: burning incense belonged to the priests." },
+  { q: "In Zechariah 6, who is crowned as a sign of the coming Branch, “a priest on his throne”?", a: ["Zerubbabel", "Ezra", "Joshua the high priest", "Nehemiah"], c: 2, x: "The crown is set on Joshua the high priest (Zech 6:11–13), uniting the two offices in one sign." },
+  { q: "Which verse calls the church “a royal priesthood”?", a: ["Romans 12:1", "1 Peter 2:9", "Hebrews 4:16", "Ephesians 2:6"], c: 1, x: "1 Peter 2:9, echoing Exodus 19:6." }
+);
+
+DATA.web.nodes.push(
+  { id: "kingpriest", n: "Kings & priests", g: 3, d: "Humanity’s two-fold calling: to rule the world for God and to serve in his presence, split in Israel and reunited in Christ and his people." },
+  { id: "melchizedek", n: "Melchizedek", g: 3, d: "King of Salem and priest of God Most High, the pattern for Christ’s eternal priesthood." }
+);
+DATA.web.edges.push(
+  ["kingpriest", "adam", "The first priest-king (Gen 1:28; 2:15)"],
+  ["kingpriest", "babel", "Nimrod, the first king, began at Babel (Gen 10:10)"],
+  ["kingpriest", "temple", "Solomon builds it; priests serve in it"],
+  ["kingpriest", "church", "“A royal priesthood” (1 Pet 2:9)"],
+  ["kingpriest", "newjer", "“They will reign forever and ever” (Rev 22:5)"],
+  ["melchizedek", "abraham", "Bread, wine, blessing and a tithe (Gen 14:18–20)"],
+  ["melchizedek", "jesus", "“A priest forever after the order of Melchizedek” (Heb 7)"],
+  ["melchizedek", "kingpriest", "King and priest in one person"]
+);
+
+DATA.sources.push(
+  ["Peter J. Gentry & Stephen J. Wellum", "Kingdom through Covenant (2012)", "Adam as priest-king and the covenants that restore that calling."],
+  ["Andrew S. Malone", "God’s Mediators: A Biblical Theology of Priesthood (2017)", "Priesthood from Eden to the church."],
+  ["Daniel I. Block", "“The Burden of Leadership: The Mosaic Paradigm of Kingship” (2005)", "Deuteronomy 17 and the servant-king."]
+);
+
 /* Where Heaven Meets Earth — interactive behaviour */
 (function () {
   "use strict";
@@ -1292,6 +1580,7 @@ DATA.sources.push(
       web: () => { const pts = [[-120, -40], [-60, -80], [20, -70], [100, -30], [120, 40], [40, 70], [-50, 60], [-110, 30]]; return [...pts.flatMap((a, i) => pts.slice(i + 2, i + 5).map(b => sv("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: "var(--muted)", "stroke-width": 2, opacity: .5 }))), ...pts.map((p, i) => sv("circle", { cx: p[0], cy: p[1], r: 10, fill: i % 3 === 0 ? green : i % 3 === 1 ? blue : gold }))]; },
       serpent: () => [sv("path", { d: "M-150 40 C-100 -20 -60 80 0 20 C60 -40 100 60 150 -10", fill: "none", stroke: green, "stroke-width": 16, "stroke-linecap": "round" }), sv("circle", { cx: 150, cy: -10, r: 14, fill: green }), sv("circle", { cx: 0, cy: -70, r: 30, fill: gold, opacity: .25 })],
       pole: () => [sv("rect", { x: -4, y: -110, width: 8, height: 160, fill: "var(--muted)" }), sv("path", { d: "M0 -90 C30 -80 -30 -60 0 -50 C30 -40 -30 -20 0 -10", fill: "none", stroke: gold, "stroke-width": 8 })],
+      crown: () => [sv("path", { d: "M-150 20 L-150 -40 L-120 -10 L-95 -60 L-70 -10 L-40 -40 L-40 20 Z", fill: gold }), sv("path", { d: "M40 20 L40 -30 Q90 -80 140 -30 L140 20 Z", fill: "var(--surface)", stroke: "var(--muted)", "stroke-width": 3 }), sv("rect", { x: 70, y: -22, width: 40, height: 12, rx: 3, fill: gold }), sv("circle", { cx: 0, cy: -20, r: 30, fill: gold, opacity: .25 }), sv("rect", { x: -160, y: 40, width: 320, height: 8, rx: 4, fill: "var(--muted)", opacity: .5 })],
       zig: () => [...[0, 1, 2].map(i => sv("rect", { x: -140 + i * 40, y: 10 - i * 34, width: 280 - i * 80, height: 34, fill: "#b08a5a", opacity: .6 + i * .12 })), sv("rect", { x: -8, y: -20, width: 16, height: 30, fill: "var(--bg-2)" })]
     };
     g.append(...(art[kind] || art.garden)());
@@ -1616,7 +1905,7 @@ DATA.sources.push(
   /* ---------------- Connections web ---------------- */
   function initWeb() {
     const W = 600, C = W / 2, R = 228;
-    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
+    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
     const nodes = order.map(id => DATA.web.nodes.find(n => n.id === id));
     const pos = {};
     nodes.forEach((n, i) => { const a = -Math.PI / 2 + i / nodes.length * Math.PI * 2; pos[n.id] = [C + Math.cos(a) * R, C + Math.sin(a) * R, a]; });
@@ -1996,6 +2285,374 @@ DATA.sources.push(
     $("#serpentGallery").style.gridTemplateColumns = "repeat(auto-fit, minmax(260px, 1fr))";
   }
 
+  /* ================ Part IV: kings and priests ================ */
+  const KC = { accent: "var(--accent)", babel: "var(--babel)", eden: "var(--eden)", flame: "var(--flame)", muted: "var(--muted)", ink: "var(--ink)" };
+
+  /* Generic SVG flowchart: boxes centred on (x, y), arrows from bottom to top */
+  function flowchart(host, nodes, edges, opt) {
+    const W = opt.w, H = opt.h, uid = opt.id;
+    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": opt.label });
+    svg.append(sv("defs", {}, sv("marker", { id: uid + "-arr", viewBox: "0 0 10 10", refX: 9, refY: 5, markerWidth: 7, markerHeight: 7, orient: "auto-start-reverse" }, sv("path", { d: "M0 0 L10 5 L0 10 Z", fill: "var(--muted)" }))));
+    const subOf = n => n.sub ? n.sub + (n.ref ? "  ·  " + n.ref : "") : (opt.refsInline && n.ref ? n.ref : null);
+    const box = n => { const h = subOf(n) ? 62 : 50; return { x: n.x - (n.w || opt.nodeW) / 2, y: n.y - h / 2, w: n.w || opt.nodeW, h }; };
+    const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+    edges.forEach(([a, b]) => {
+      const A = box(byId[a]), B = box(byId[b]);
+      const x1 = byId[a].x, y1 = A.y + A.h, x2 = byId[b].x, y2 = B.y - 4, my = (y1 + y2) / 2;
+      const d = `M${x1} ${y1} C${x1} ${my} ${x2} ${my} ${x2} ${y2}`;
+      svg.append(sv("path", { d, fill: "none", stroke: "var(--line)", "stroke-width": 2.5, "marker-end": `url(#${uid}-arr)` }),
+        sv("path", { d, fill: "none", stroke: "var(--accent)", "stroke-width": 2, class: "flow", opacity: .7 }));
+    });
+    (opt.annotate || []).forEach(a => svg.append(sv("text", { x: a.x, y: a.y, "text-anchor": a.anchor || "middle", "font-size": 12, "font-style": "italic", "font-weight": 600, fill: "var(--muted)" }, a.t)));
+    const els = {};
+    nodes.forEach(n => {
+      const b = box(n), c = KC[n.c] || KC.ink;
+      const g = sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": n.t });
+      const r = sv("rect", { x: b.x, y: b.y, width: b.w, height: b.h, rx: 12, fill: c, "fill-opacity": .12, stroke: c, "stroke-width": 1.8 });
+      const sub = subOf(n);
+      g.append(r, sv("text", { x: n.x, y: n.y + (sub ? -4 : 5), "text-anchor": "middle", "font-size": opt.fs || 15, "font-weight": 800, fill: "var(--ink)" }, n.t));
+      if (sub) g.append(sv("text", { x: n.x, y: n.y + 17, "text-anchor": "middle", "font-size": 12.5, "font-style": "italic", "font-weight": 600, fill: c === KC.ink ? "var(--muted)" : c }, sub));
+      g.addEventListener("click", () => sel(n.id));
+      g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sel(n.id); } });
+      els[n.id] = r; svg.append(g);
+    });
+    host.append(svg);
+    function sel(id) {
+      Object.entries(els).forEach(([k, r]) => { const on = k === id; r.setAttribute("fill-opacity", on ? .32 : .12); r.setAttribute("stroke-width", on ? 3.5 : 1.8); });
+      opt.onSelect(byId[id]);
+    }
+    sel(opt.start || nodes[0].id);
+    return sel;
+  }
+  const panelFill = (sel, eyebrow, n) => $(sel).replaceChildren(...[el("p", { class: "eyebrow", text: eyebrow }), el("h3", { text: n.t }), n.ref ? el("span", { class: "ref", text: n.ref }) : null, el("p", { html: refify(n.d) })].filter(Boolean));
+
+  function initKpDesign() {
+    flowchart($("#kpDesign"), DATA.kp.design, DATA.kp.designEdges, {
+      id: "kpd", w: 900, h: 470, nodeW: 300, label: "Flowchart of God’s design for humanity as priest-kings", start: "adam",
+      annotate: [{ x: 250, y: 168, t: "faces the world for God", anchor: "end" }, { x: 650, y: 168, t: "faces God for the world", anchor: "start" }],
+      onSelect: n => panelFill("#kpDesignPanel", "God’s design", n)
+    });
+    // axis diagram
+    const svg = sv("svg", { viewBox: "0 0 420 300", role: "img", "aria-label": "Two axes: the priest faces God for people; the king faces the world for God" });
+    svg.append(sv("defs", {}, sv("marker", { id: "ax-arr", viewBox: "0 0 10 10", refX: 8, refY: 5, markerWidth: 8, markerHeight: 8, orient: "auto-start-reverse" }, sv("path", { d: "M0 0 L10 5 L0 10 Z", fill: "var(--ink)" }))));
+    svg.append(sv("line", { x1: 210, y1: 262, x2: 210, y2: 34, stroke: "var(--eden)", "stroke-width": 5, "marker-end": "url(#ax-arr)", "marker-start": "url(#ax-arr)" }),
+      sv("line", { x1: 40, y1: 150, x2: 380, y2: 150, stroke: "var(--babel)", "stroke-width": 5, "marker-end": "url(#ax-arr)", "marker-start": "url(#ax-arr)" }));
+    svg.append(sv("circle", { cx: 210, cy: 150, r: 34, fill: "var(--accent)", opacity: .2, class: "pulse" }), sv("circle", { cx: 210, cy: 150, r: 22, fill: "var(--accent)" }),
+      sv("text", { x: 210, y: 154, "text-anchor": "middle", "font-size": 10, "font-weight": 800, fill: "var(--accent-ink)" }, "IMAGE"));
+    const t = (x, y, s, c, a, fs) => svg.append(sv("text", { x, y, "text-anchor": a || "middle", "font-size": fs || 12, "font-weight": 800, fill: c }, s));
+    t(210, 22, "GOD", "var(--ink)"); t(210, 288, "PEOPLE & CREATION", "var(--ink)");
+    t(222, 72, "PRIEST", "var(--eden)", "start", 13); t(222, 88, "access · worship · intercession", "var(--muted)", "start", 11);
+    t(380, 136, "KING", "var(--babel)", "end", 13); t(380, 178, "authority · stewardship · justice", "var(--muted)", "end", 11);
+    if (!reduceMotion) {
+      [["M210 262 L210 40", "var(--eden)", 0], ["M210 40 L210 262", "var(--eden)", 1.5], ["M210 150 L374 150", "var(--babel)", .7], ["M210 150 L46 150", "var(--babel)", 2.2]].forEach(([p, c, b]) => {
+        const dot = sv("circle", { r: 5, fill: c }); dot.append(sv("animateMotion", { dur: "3s", repeatCount: "indefinite", path: p, begin: b + "s" })); svg.append(dot);
+      });
+    }
+    $("#kpAxis").append(svg);
+  }
+
+  function initKpTwist() {
+    const list = $("#kpTwist");
+    const tag = { king: ["Kingship", "var(--babel)"], priest: ["Priesthood", "var(--eden)"], both: ["Both", "var(--flame)"] };
+    const items = DATA.kp.twist.map((s, i) => {
+      const li = el("li", { class: "vstep", "data-s": s.strand }, el("button", { type: "button", onclick: () => sel(i) },
+        el("span", { class: "vtag", style: { background: tag[s.strand][1] }, text: tag[s.strand][0] }), el("b", { text: s.t }), el("small", { text: s.ref })));
+      list.append(li); return li;
+    });
+    function sel(i) {
+      items.forEach((li, j) => li.classList.toggle("on", j === i));
+      const s = DATA.kp.twist[i];
+      $("#kpTwistPanel").replaceChildren(el("p", { class: "eyebrow", style: { color: tag[s.strand][1] }, text: `Step ${i + 1} of ${DATA.kp.twist.length} · ${tag[s.strand][0]}` }), el("h3", { text: s.t }), el("span", { class: "ref", text: s.ref }), el("p", { html: refify(s.d) }));
+    }
+    const f = $("#kpTwistFilter");
+    [["all", "All steps"], ["king", "Kingship twisted"], ["priest", "Priesthood twisted"]].forEach(([k, n]) => f.append(el("button", { class: "chip", type: "button", "data-k": k, "aria-pressed": String(k === "all"), text: n, onclick: () => {
+      $$(".chip", f).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.k === k)));
+      items.forEach(li => li.classList.toggle("dim", k !== "all" && li.dataset.s !== k && li.dataset.s !== "both"));
+    } })));
+    sel(0);
+    // design vs distortion
+    const box = $("#kpContrast");
+    const rows = DATA.kp.contrast.map(r => { const v = el("p", { class: "cval", html: refify(r[1]) }); box.append(el("div", { class: "crow" }, el("b", { text: r[0] }), v)); return v; });
+    const tg = $("#kpContrastToggle");
+    const set = mode => {
+      $$(".chip", tg).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.m === mode)));
+      box.classList.toggle("twisted", mode === "twisted");
+      rows.forEach((v, i) => { v.classList.add("out"); setTimeout(() => { v.innerHTML = refify(DATA.kp.contrast[i][mode === "twisted" ? 2 : 1]); v.classList.remove("out"); }, reduceMotion ? 0 : 200 + i * 60); });
+    };
+    [["design", "God’s design"], ["twisted", "The distortion"]].forEach(([m, n]) => tg.append(el("button", { class: "chip", type: "button", "data-m": m, "aria-pressed": String(m === "design"), text: n, onclick: () => set(m) })));
+  }
+
+  function initKpSplit() {
+    const nodes = DATA.kp.split.map(n => ({ ...n, w: ["levi", "judah", "prophet"].includes(n.id) ? 236 : 400 }));
+    flowchart($("#kpSplit"), nodes, DATA.kp.splitEdges, { id: "kps", w: 900, h: 482, nodeW: 340, refsInline: true, label: "Flowchart: from a kingdom of priests to separate offices and their reunion in the Messiah", onSelect: n => panelFill("#kpSplitPanel", "Sinai to the Messiah", n) });
+    // triangle
+    const P = { prophet: [210, 56], priest: [70, 296], king: [350, 296] };
+    const svg = sv("svg", { viewBox: "0 0 420 360", role: "img", "aria-label": "Triangle of the three anointed offices with the Messiah at the centre" });
+    const edge = (a, b, label, lx, ly) => { svg.append(sv("line", { x1: P[a][0], y1: P[a][1], x2: P[b][0], y2: P[b][1], stroke: "var(--line)", "stroke-width": 3 })); svg.append(sv("text", { x: lx, y: ly, "text-anchor": "middle", "font-size": 11, "font-style": "italic", "font-weight": 600, fill: "var(--muted)" }, label)); };
+    edge("prophet", "priest", "corrects (Malachi)", 96, 170); edge("prophet", "king", "confronts (Nathan, Elijah)", 330, 170); edge("priest", "king", "anoints & partners (Zadok, Jehoiada)", 210, 330);
+    svg.append(sv("path", { d: "M210 150 C190 180 190 200 210 210 C230 200 230 180 210 150 Z", fill: "var(--accent)", class: "pulse" }),
+      sv("text", { x: 210, y: 236, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--ink)" }, "Messiah · Christ"), sv("text", { x: 210, y: 251, "text-anchor": "middle", "font-size": 11, fill: "var(--muted)" }, "“the Anointed One”"));
+    const vs = {};
+    Object.entries(DATA.kp.offices).forEach(([k, o]) => {
+      const [x, y] = P[k];
+      const g = sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": o.t }, sv("circle", { cx: x, cy: y, r: 34, fill: o.c, "fill-opacity": .2, stroke: o.c, "stroke-width": 2 }), sv("text", { x, y: y + 5, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, o.t));
+      g.addEventListener("click", () => sel(k)); g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sel(k); } });
+      vs[k] = g.firstChild; svg.append(g);
+    });
+    $("#kpTriangle").append(svg);
+    function sel(k) {
+      Object.entries(vs).forEach(([j, c]) => { c.setAttribute("fill-opacity", j === k ? .45 : .2); c.setAttribute("stroke-width", j === k ? 4 : 2); });
+      const o = DATA.kp.offices[k];
+      $("#kpTrianglePanel").replaceChildren(el("p", { class: "eyebrow", text: "Anointed office" }), el("h3", { text: o.t }), el("p", { html: refify(o.role) }),
+        el("div", { class: "row" }, el("b", { text: "Anointing" }), el("p", { html: refify(o.anoint) })),
+        el("div", { class: "row christ" }, el("b", { text: "Fulfilled in Christ" }), el("p", { html: refify(o.christ) })),
+        el("div", { class: "row eden" }, el("b", { text: "Our share" }), el("p", { html: refify(o.us) })));
+    }
+    sel("priest");
+  }
+
+  function initKpRoles() {
+    const R = DATA.kp.roles;
+    makeTabs($("#kpRoleTabs"), $("#kpRolePanels"), [{ tab: "The priest", k: "priest" }, { tab: "The king", k: "king" }], (p, it) => {
+      const r = R[it.k], c = it.k === "priest" ? "var(--eden)" : "var(--babel)";
+      const card = (t, body) => el("div", { class: "card role-card", style: { borderTop: `3px solid ${c}` } }, el("p", { class: "eyebrow", style: { color: c }, text: t }), body);
+      p.append(el("div", { class: "role-grid" },
+        card("Responsibilities", el("ul", { class: "tight" }, r.resp.map(x => el("li", { html: refify(x) })))),
+        card("Access", el("p", { html: refify(r.access) })), card("Authority", el("p", { html: refify(r.authority) })), card("Limits", el("p", { html: refify(r.limits) }))));
+    }, "kprole");
+    // garments
+    const svg = sv("svg", { viewBox: "0 0 600 430", role: "img", "aria-label": "The high priest's garments and the king's signs of office" });
+    const G = {};
+    const hot = (id, ...kids) => { const g = sv("g", { class: "hot", tabindex: "0", role: "button", "aria-label": DATA.kp.garments.find(x => x.id === id).t }, ...kids); g.addEventListener("click", () => sel(id)); g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sel(id); } }); G[id] = g; return g; };
+    // priest
+    svg.append(sv("circle", { cx: 170, cy: 76, r: 22, fill: "#c99a6e" }));
+    svg.append(hot("tunic", sv("rect", { class: "hl", x: 108, y: 112, width: 22, height: 120, rx: 10, fill: "var(--surface)", stroke: "var(--muted)" }), sv("rect", { class: "hl", x: 210, y: 112, width: 22, height: 120, rx: 10, fill: "var(--surface)", stroke: "var(--muted)" })));
+    svg.append(hot("robe", sv("path", { class: "hl", d: "M132 104 L208 104 L236 372 L104 372 Z", fill: "var(--babel)", stroke: "transparent" }), ...Array.from({ length: 11 }, (_, i) => sv("circle", { cx: 110 + i * 12, cy: 370, r: 4, fill: i % 2 ? "var(--flame)" : "var(--accent)" }))));
+    svg.append(hot("ephod", sv("rect", { class: "hl", x: 138, y: 106, width: 64, height: 128, rx: 4, fill: "var(--accent)", stroke: "transparent" }), sv("rect", { x: 138, y: 220, width: 64, height: 10, fill: "var(--flame)", opacity: .8 }), sv("circle", { cx: 142, cy: 108, r: 7, fill: "#2b2b2b" }), sv("circle", { cx: 198, cy: 108, r: 7, fill: "#2b2b2b" })));
+    const gems = sv("g", {}, sv("rect", { class: "hl", x: 151, y: 126, width: 38, height: 50, rx: 3, fill: "var(--surface)", stroke: "transparent" }));
+    DATA.breastpiece.forEach(([, c], i) => gems.append(sv("rect", { x: 154 + (i % 3) * 11.5, y: 129 + Math.floor(i / 3) * 11.5, width: 9, height: 9, rx: 1.5, fill: c })));
+    svg.append(hot("breast", gems));
+    svg.append(hot("turban", sv("path", { class: "hl", d: "M148 66 Q148 38 170 38 Q192 38 192 66 Z", fill: "var(--surface)", stroke: "var(--muted)" }), sv("rect", { x: 160, y: 54, width: 20, height: 8, rx: 2, fill: "var(--accent)" })));
+    svg.append(sv("text", { x: 170, y: 408, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "The high priest"));
+    // king
+    svg.append(hot("throne", sv("path", { class: "hl", d: "M360 120 L500 120 L500 380 L360 380 Z M372 132 L488 132 L488 250 L372 250 Z", fill: "var(--muted)", "fill-opacity": .35, "fill-rule": "evenodd", stroke: "transparent" })));
+    svg.append(sv("circle", { cx: 430, cy: 76, r: 22, fill: "#c99a6e" }), sv("path", { d: "M398 104 L462 104 L486 372 L374 372 Z", fill: "var(--flame)", opacity: .85 }), sv("path", { d: "M416 104 L444 104 L440 372 L420 372 Z", fill: "var(--surface)", opacity: .7 }));
+    svg.append(hot("crown", sv("path", { class: "hl", d: "M408 58 L408 36 L419 48 L430 30 L441 48 L452 36 L452 58 Z", fill: "var(--accent)", stroke: "transparent" })));
+    svg.append(hot("scepter", sv("line", { class: "hl", x1: 476, y1: 220, x2: 520, y2: 120, stroke: "var(--accent)", "stroke-width": 6, "stroke-linecap": "round" }), sv("circle", { cx: 522, cy: 114, r: 10, fill: "var(--accent)" })));
+    svg.append(hot("ring", sv("circle", { class: "hl", cx: 474, cy: 226, r: 7, fill: "none", stroke: "var(--accent)", "stroke-width": 4 })));
+    svg.append(hot("scroll", sv("rect", { class: "hl", x: 360, y: 200, width: 40, height: 28, rx: 6, fill: "var(--surface)", stroke: "var(--muted)" }), sv("line", { x1: 368, y1: 210, x2: 392, y2: 210, stroke: "var(--muted)" }), sv("line", { x1: 368, y1: 218, x2: 388, y2: 218, stroke: "var(--muted)" })));
+    svg.append(sv("text", { x: 430, y: 408, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "The king"));
+    $("#kpGarments").append(svg);
+    function sel(id) {
+      const g = DATA.kp.garments.find(x => x.id === id);
+      Object.entries(G).forEach(([k, n]) => n.classList.toggle("on", k === id));
+      $("#kpGarmentPanel").replaceChildren(el("p", { class: "eyebrow", style: { color: g.who === "priest" ? "var(--eden)" : "var(--babel)" }, text: g.who === "priest" ? "High priest" : "King" }), el("h3", { text: g.t }), el("span", { class: "ref", text: g.ref }), el("p", { html: refify(g.d) }),
+        el("div", { class: "chips" }, DATA.kp.garments.map(o => el("button", { class: "chip", type: "button", "aria-pressed": String(o.id === id), text: o.t.split(" and ")[0].split(":")[0], onclick: () => sel(o.id) }))),
+        el("p", { class: "muted", html: "In Christ both meet: John sees him “clothed with a long robe and with a golden sash” like a priest (<span class=\"ref\">Rev 1:13</span>), and crowned with “many diadems” as King of kings (<span class=\"ref\">Rev 19:12, 16</span>)." }));
+    }
+    sel("breast");
+  }
+
+  function initKpRings() {
+    const C = [260, 205], S = [[480, 370], [370, 285], [250, 195], [120, 104]];
+    const svg = sv("svg", { viewBox: "0 0 520 420", role: "img", "aria-label": "Concentric rings of access in the Temple" });
+    const fills = ["var(--muted)", "var(--babel)", "var(--eden)", "var(--accent)"];
+    const walls = S.map(([w, h], i) => { const r = sv("rect", { x: C[0] - w / 2, y: C[1] - h / 2, width: w, height: h, rx: 6, fill: fills[i], "fill-opacity": .08 + i * .05, stroke: fills[i], "stroke-width": 3, style: { transition: "stroke-opacity 1s, stroke-dasharray 1s" } }); svg.append(r); return r; });
+    DATA.kp.rings.forEach((r, i) => svg.append(sv("text", { x: C[0], y: C[1] - S[3 - i][1] / 2 + 16, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: "var(--ink)", "letter-spacing": 1 }, r.n.toUpperCase())));
+    const veilL = sv("rect", { x: C[0] - 60, y: C[1] + 44, width: 60, height: 8, fill: "var(--flame)", style: { transition: "transform 1.2s" } }), veilR = sv("rect", { x: C[0], y: C[1] + 44, width: 60, height: 8, fill: "var(--babel)", style: { transition: "transform 1.2s" } });
+    svg.append(veilL, veilR);
+    // zone 0 = Most Holy (innermost) … zone 3 = outer court
+    const counts = [1, 6, 14, 20], zoneFill = ["var(--accent)", "var(--eden)", "var(--babel)", "var(--muted)"];
+    let seed = 5; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+    const homes = [], dots = [];
+    counts.forEach((n, z) => {
+      for (let k = 0; k < n; k++) {
+        let x, y;
+        if (z === 0) { x = C[0]; y = C[1] + 8; }
+        else {
+          const [ow, oh] = S[3 - z], [iw, ih] = S[4 - z];
+          do { x = C[0] + (rnd() - .5) * (ow - 26); y = C[1] + (rnd() - .5) * (oh - 44) + 10; } while (Math.abs(x - C[0]) < iw / 2 + 10 && Math.abs(y - C[1]) < ih / 2 + 12);
+        }
+        homes.push([x, y]);
+        const d = sv("circle", { r: 6, fill: zoneFill[z], style: { transition: reduceMotion ? "none" : `transform 1.4s cubic-bezier(.3,.8,.3,1) ${dots.length * 0.02}s, fill .8s` } });
+        d.dataset.ring = z;
+        dots.push(d); svg.append(d);
+      }
+    });
+    $("#kpRings").append(svg);
+    function set(mode) {
+      $$("#kpRingToggle .chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.m === mode)));
+      const after = mode === "after";
+      walls.forEach((w, i) => { w.style.strokeOpacity = after ? .18 : 1; w.style.strokeDasharray = after ? "4 10" : "none"; });
+      veilL.style.transform = after ? "translate(-46px, 0) scaleY(1)" : ""; veilR.style.transform = after ? "translate(46px, 0)" : "";
+      dots.forEach((d, i) => {
+        let x, y;
+        if (after) { const a = i * 2.39996, r = 10 + Math.sqrt(i) * 9.5; x = C[0] + Math.cos(a) * r; y = C[1] + 8 + Math.sin(a) * r * .8; d.setAttribute("fill", "var(--accent)"); }
+        else { [x, y] = homes[i]; d.setAttribute("fill", zoneFill[d.dataset.ring]); }
+        d.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      $("#kpRingInfo").replaceChildren(...(after
+        ? [el("h3", { text: "After the cross: one open way" }), el("p", { html: refify("“We have confidence to enter the holy places by the blood of Jesus, by the new and living way that he opened for us through the curtain, that is, through his flesh” (Heb 10:19–20).") }),
+            el("p", { html: refify("“He himself is our peace, who has made us both one and has broken down in his flesh the dividing wall of hostility … through him we both have access in one Spirit to the Father” (Eph 2:14–18).") }),
+            el("p", { html: refify("Every believer, Jew and Gentile, is now a priest with access (1 Pet 2:5, 9). In the end there is no temple at all: “they will see his face” (Rev 21:22; 22:4).") })]
+        : [el("h3", { text: "Before the cross: graded access" }), ...DATA.kp.rings.map((r, i) => el("div", { class: "zone on" }, el("i", { style: { background: fills[3 - i] } }), el("div", {}, el("b", { text: r.n }), el("span", { html: refify(r.who + " (" + r.ref + ")") }))))]));
+    }
+    [["before", "Before the cross"], ["after", "After the cross"]].forEach(([m, n]) => $("#kpRingToggle").append(el("button", { class: "chip", type: "button", "data-m": m, text: n, onclick: () => set(m) })));
+    set("before");
+  }
+
+  function initKpCross() {
+    $("#kpCross").append(...DATA.kp.cross.map(c => el("div", { class: "card xcard reveal " + c.k },
+      el("div", { class: "xhead" }, el("span", { class: "xmark", "aria-hidden": "true", text: c.k === "good" ? "✓" : "✕" }), el("div", {}, el("h3", { text: c.n }), el("small", { text: c.role }))),
+      el("span", { class: "ref", text: c.ref }),
+      el("div", { class: "row" }, el("b", { text: c.k === "good" ? "What they did" : "The line crossed" }), el("p", { html: refify(c.did) })),
+      el("div", { class: "row" }, el("b", { text: "What happened" }), el("p", { html: refify(c.res) })))));
+  }
+
+  function initKpPeople() {
+    const box = $("#kpPeople"), P = DATA.kp.people, E = DATA.kp.eras;
+    const grid = el("div", { class: "pgrid", style: { gridTemplateColumns: `120px repeat(${E.length}, minmax(112px, 1fr))` } });
+    grid.append(el("span", {}), ...E.map(e => el("span", { class: "pera", text: e })));
+    const btns = [];
+    [["king", "Kings", "var(--babel)"], ["both", "Both", "var(--accent)"], ["priest", "Priests", "var(--eden)"]].forEach(([lane, label, c]) => {
+      grid.append(el("span", { class: "plane", style: { color: c, borderColor: c }, text: label }));
+      E.forEach((_, era) => {
+        const cell = el("div", { class: "pcell " + lane });
+        P.forEach((p, i) => {
+          if (p.lane !== lane || p.era !== era) return;
+          const b = el("button", { class: "pchip f-" + p.f, type: "button", "data-i": i, text: p.n, onclick: () => sel(i) });
+          btns[i] = b; cell.append(b);
+        });
+        grid.append(cell);
+      });
+    });
+    box.append(grid);
+    const f = $("#kpPeopleFilter");
+    const filters = { all: () => true, king: p => p.lane === "king", priest: p => p.lane === "priest", both: p => p.lane === "both", faithful: p => p.f === "faithful", twisted: p => p.f === "twisted", pairs: p => !!p.pair };
+    [["all", "Everyone"], ["king", "Kings"], ["priest", "Priests"], ["both", "Both offices"], ["pairs", "King–priest partners"], ["faithful", "Faithful"], ["twisted", "Twisted the office"]].forEach(([k, n]) => f.append(el("button", { class: "chip", type: "button", "data-k": k, "aria-pressed": String(k === "all"), text: n, onclick: () => {
+      $$(".chip", f).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.k === k)));
+      P.forEach((p, i) => btns[i].classList.toggle("dim", !filters[k](p)));
+    } })));
+    const laneName = { king: "King", priest: "Priest", both: "King and priest" }, fName = { faithful: "Faithful", mixed: "Mixed record", twisted: "Twisted the office" };
+    function sel(i) {
+      const p = P[i];
+      const partners = p.pair ? P.filter((q, j) => q.pair === p.pair && j !== i) : [];
+      btns.forEach((b, j) => { b.classList.toggle("on", j === i); b.classList.toggle("partner", partners.includes(P[j])); });
+      $("#kpPersonPanel").replaceChildren(el("p", { class: "eyebrow", text: `${laneName[p.lane]} · ${E[p.era]} · ${fName[p.f]}` }), el("h3", { text: p.n }), el("span", { class: "ref", text: p.ref }), el("p", { html: refify(p.d) }),
+        partners.length ? el("div", { class: "row" }, el("b", { text: "Worked alongside" }), el("div", { class: "chips" }, partners.map(q => el("button", { class: "chip", type: "button", text: q.n, onclick: () => sel(P.indexOf(q)) })))) : null);
+      const b = btns[i];
+      if (box.scrollWidth > box.clientWidth) box.scrollTo({ left: Math.max(0, b.offsetLeft - box.clientWidth / 2), behavior: reduceMotion ? "auto" : "smooth" });
+    }
+    sel(P.findIndex(p => p.n === "Melchizedek"));
+  }
+
+  function initKpMelch() {
+    const fl = $("#kpMelchFlow");
+    DATA.kp.melchFlow.forEach((s, i) => { if (i) fl.append(el("span", { class: "harrow", "aria-hidden": "true", text: "→" })); fl.append(el("div", { class: "card hstep reveal" }, el("span", { class: "ref", text: s.ref }), el("h3", { text: s.t }), el("p", { html: refify(s.d) }))); });
+    const t = $("#kpOrder");
+    $("tbody", t).append(...DATA.kp.order.map(r => el("tr", {}, el("td", { text: r[0] }), el("td", { html: refify(r[1]) }), el("td", { html: refify(r[2]) }))));
+    $$("th.colsel", t).forEach(th => { th.tabIndex = 0; th.setAttribute("role", "button"); const go = () => { const c = th.dataset.col; t.dataset.hl = t.dataset.hl === c ? "" : c; }; th.addEventListener("click", go); th.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } }); });
+    t.dataset.hl = "2";
+  }
+
+  function initKpPromises() {
+    const N = DATA.kp.promises, W = 1060, H = 520, yK = 150, yP = 380, yM = 265;
+    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Royal and priestly promises converging on Christ and flowing to his people" });
+    const kx = N.filter(n => n.s === "king").map(n => n.x), px = N.filter(n => n.s === "priest").map(n => n.x);
+    const join = N.find(n => n.s === "join"), christ = N.find(n => n.s === "christ"), church = N.find(n => n.s === "church");
+    const kd = `M30 ${yK} L${kx[kx.length - 1]} ${yK} C${kx[kx.length - 1] + 70} ${yK} ${join.x - 60} ${yM} ${join.x} ${yM}`;
+    const pd = `M30 ${yP} L${px[px.length - 1]} ${yP} C${px[px.length - 1] + 70} ${yP} ${join.x - 60} ${yM} ${join.x} ${yM}`;
+    const md = `M${join.x} ${yM} L${W - 30} ${yM}`;
+    svg.append(sv("text", { x: 30, y: yK - 112, "font-size": 12, "font-weight": 800, "letter-spacing": 2, fill: "var(--babel)" }, "ROYAL PROMISES"), sv("text", { x: 30, y: yP + 128, "font-size": 12, "font-weight": 800, "letter-spacing": 2, fill: "var(--eden)" }, "PRIESTLY PROMISES"));
+    [[kd, "var(--babel)"], [pd, "var(--eden)"], [md, "var(--accent)"]].forEach(([d, c], i) => svg.append(sv("path", { d, fill: "none", stroke: c, "stroke-width": i === 2 ? 10 : 6, "stroke-linecap": "round", opacity: .35 }), sv("path", { d, fill: "none", stroke: c, "stroke-width": 2.5, class: "flow" })));
+    const nodes = N.map((n, i) => {
+      const y = n.s === "king" ? yK : n.s === "priest" ? yP : yM, c = n.s === "king" ? "var(--babel)" : n.s === "priest" ? "var(--eden)" : "var(--accent)";
+      const big = n.s === "christ" || n.s === "church" || n.s === "join";
+      const g = sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": n.t });
+      g.append(sv("circle", { cx: n.x, cy: y, r: big ? 16 : 11, fill: c, stroke: "var(--surface)", "stroke-width": 3 }));
+      const above = n.s === "king" || (big && n.s !== "christ");
+      const tier = big ? 0 : (N.filter(m => m.s === n.s).indexOf(n) % 2) * 34;
+      const ty = above ? y - (big ? 50 : 36) - tier : y + (big ? 42 : 32) + tier;
+      if (tier) g.append(sv("line", { x1: n.x, y1: above ? y - 12 : y + 12, x2: n.x, y2: above ? ty + 20 : ty - 14, stroke: c, "stroke-width": 1, "stroke-dasharray": "2 3" }));
+      g.append(sv("text", { x: n.x, y: ty, "text-anchor": "middle", "font-size": big ? 14 : 12.5, "font-weight": 800, fill: "var(--ink)" }, n.t), sv("text", { x: n.x, y: ty + 16, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: c }, n.ref.split(";")[0]));
+      g.addEventListener("click", () => { clearInterval(timer); sel(i); });
+      g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); clearInterval(timer); sel(i); } });
+      svg.append(g); return g.firstChild;
+    });
+    $("#kpPromises").append(svg);
+    function sel(i) {
+      nodes.forEach((c, j) => { c.setAttribute("stroke", j === i ? "var(--ink)" : "var(--surface)"); c.setAttribute("stroke-width", j === i ? 4 : 3); });
+      const n = N[i], lab = { king: "Royal promise", priest: "Priestly promise", join: "The two streams meet", christ: "Fulfilled", church: "Shared with his people" }[n.s];
+      $("#kpPromisePanel").replaceChildren(el("p", { class: "eyebrow", text: lab }), el("h3", { text: n.t }), el("span", { class: "ref", text: n.ref }), el("p", { html: refify(n.d) }));
+    }
+    const order = [];
+    const ks = N.map((n, i) => [n, i]).filter(([n]) => n.s === "king"), ps = N.map((n, i) => [n, i]).filter(([n]) => n.s === "priest");
+    ks.forEach((k, j) => { order.push(k[1]); if (ps[j]) order.push(ps[j][1]); });
+    N.forEach((n, i) => { if (["join", "christ", "church"].includes(n.s)) order.push(i); });
+    let timer = null;
+    $("#kpPromisePlay").addEventListener("click", () => { clearInterval(timer); let k = 0; sel(order[k]); timer = setInterval(() => { k++; if (k >= order.length) return clearInterval(timer); sel(order[k]); }, 1500); });
+    sel(N.indexOf(christ));
+  }
+
+  function initKpCalling() {
+    // balance
+    const svg = sv("svg", { viewBox: "0 0 420 300", role: "img", "aria-label": "A balance between priestly and kingly calling" });
+    svg.append(sv("polygon", { points: "210,214 180,272 240,272", fill: "var(--muted)" }), sv("rect", { x: 140, y: 272, width: 140, height: 10, rx: 4, fill: "var(--muted)" }));
+    const beam = sv("g", { style: { transformOrigin: "210px 210px", transformBox: "view-box", transition: reduceMotion ? "none" : "transform .5s cubic-bezier(.3,1.3,.5,1)" } });
+    const bar = sv("rect", { x: 40, y: 204, width: 340, height: 12, rx: 6, fill: "var(--accent)" });
+    beam.append(bar);
+    const pan = (x, c, label, iconFn) => { const g = sv("g", {}, sv("line", { x1: x, y1: 210, x2: x - 34, y2: 150, stroke: "var(--muted)" }), sv("line", { x1: x, y1: 210, x2: x + 34, y2: 150, stroke: "var(--muted)" }), sv("path", { d: `M${x - 44} 150 Q${x} 176 ${x + 44} 150 Z`, fill: c }), ...iconFn(x), sv("text", { x, y: 238, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: c }, label)); beam.append(g); };
+    pan(70, "var(--eden)", "PRIEST", x => [sv("path", { d: `M${x - 10} 140 Q${x} 116 ${x + 10} 140 Z`, fill: "var(--eden)" }), sv("path", { d: `M${x} 116 C${x - 6} 104 ${x + 6} 98 ${x} 88`, fill: "none", stroke: "var(--muted)", "stroke-width": 2 })]);
+    pan(350, "var(--babel)", "KING", x => [sv("path", { d: `M${x - 16} 142 L${x - 16} 124 L${x - 8} 132 L${x} 118 L${x + 8} 132 L${x + 16} 124 L${x + 16} 142 Z`, fill: "var(--accent)" })]);
+    svg.append(beam);
+    $("#kpBalance").append(svg);
+    const range = $("#kpBalanceRange");
+    const upd = () => {
+      const v = +range.value, z = DATA.kp.balance.find(b => v < b.max);
+      beam.style.transform = `rotate(${(v - 50) * 0.32}deg)`;
+      bar.setAttribute("fill", Math.abs(v - 50) <= 10 ? "var(--accent)" : "var(--muted)");
+      $("#kpBalanceTitle").textContent = z.t; $("#kpBalanceText").innerHTML = refify(z.d);
+    };
+    range.addEventListener("input", upd); upd();
+    // cycle
+    const cs = sv("svg", { viewBox: "0 0 400 400", role: "img", "aria-label": "A four-stage cycle: enter, receive and intercede, go and rule, offer back" });
+    const R = 140, Cx = 200, Cy = 200;
+    cs.append(sv("defs", {}, sv("marker", { id: "cy-arr", viewBox: "0 0 10 10", refX: 8, refY: 5, markerWidth: 7, markerHeight: 7, orient: "auto" }, sv("path", { d: "M0 0 L10 5 L0 10 Z", fill: "var(--accent)" }))));
+    const ang = [-90, 0, 90, 180], pt = a => [Cx + Math.cos(a * Math.PI / 180) * R, Cy + Math.sin(a * Math.PI / 180) * R];
+    ang.forEach((a, i) => { const [x1, y1] = pt(a + 16), [x2, y2] = pt(a + 74); cs.append(sv("path", { d: `M${x1} ${y1} A${R} ${R} 0 0 1 ${x2} ${y2}`, fill: "none", stroke: "var(--accent)", "stroke-width": 3, "marker-end": "url(#cy-arr)" })); });
+    if (!reduceMotion) { const d = sv("circle", { r: 6, fill: "var(--flame)" }); d.append(sv("animateMotion", { dur: "8s", repeatCount: "indefinite", path: `M${Cx} ${Cy - R} A${R} ${R} 0 1 1 ${Cx - 0.01} ${Cy - R}` })); cs.append(d); }
+    cs.append(sv("text", { x: Cx, y: Cy - 6, "text-anchor": "middle", "font-size": 15, "font-weight": 800, fill: "var(--ink)" }, "A royal"), sv("text", { x: Cx, y: Cy + 14, "text-anchor": "middle", "font-size": 15, "font-weight": 800, fill: "var(--ink)" }, "priesthood"));
+    const colors = ["var(--eden)", "var(--eden)", "var(--babel)", "var(--accent)"];
+    const cn = DATA.kp.cycle.map((c, i) => {
+      const [x, y] = pt(ang[i]);
+      const g = sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": c.t }, sv("circle", { cx: x, cy: y, r: 40, fill: colors[i], "fill-opacity": .2, stroke: colors[i], "stroke-width": 2 }), sv("text", { x, y: y - 2, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--ink)" }, String(i + 1)), sv("text", { x, y: y + 13, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: "var(--ink)" }, c.t.split(" & ")[0]));
+      g.addEventListener("click", () => sel(i)); g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sel(i); } });
+      cs.append(g); return g.firstChild;
+    });
+    $("#kpCycle").append(cs);
+    function sel(i) {
+      cn.forEach((c, j) => { c.setAttribute("fill-opacity", j === i ? .45 : .2); c.setAttribute("stroke-width", j === i ? 4 : 2); });
+      const c = DATA.kp.cycle[i];
+      $("#kpCyclePanel").replaceChildren(el("p", { class: "eyebrow", text: `Stage ${i + 1} of 4 · ${i < 2 ? "priestly" : i === 2 ? "kingly" : "both"}` }), el("h3", { text: c.t }), el("span", { class: "ref", text: c.ref }), el("p", { html: refify(c.d) }));
+    }
+    sel(0);
+    const card = ([t, d]) => el("div", { class: "card call-card" }, el("h3", { text: t }), el("p", { html: refify(d) }));
+    $("#kpCallPriest").append(...DATA.kp.calling.priest.map(card));
+    $("#kpCallKing").append(...DATA.kp.calling.king.map(card));
+  }
+
+  function initKpStudy() {
+    $("#kpQuestions").append(...DATA.kp.study.map((s, i) => el("details", { class: "qset", open: i === 0 ? true : null }, el("summary", { text: s.t }), el("ol", {}, s.q.map(q => el("li", { html: refify(q) }))))));
+    $("#kpMemory").append(...DATA.kp.memory.map(([r, v]) => {
+      const b = el("button", { class: "clue mem", type: "button", "aria-pressed": "false", "aria-label": `Memory verse ${r}. Turn over.` },
+        el("div", { class: "clue-inner" }, el("div", { class: "clue-face front" }, el("p", { class: "eyebrow", text: "Memory verse" }), el("h3", { text: r }), el("span", { class: "hint", text: "Tap to reveal" })),
+          el("div", { class: "clue-face back" }, el("span", { class: "ref", text: r }), el("p", { text: v }))));
+      b.addEventListener("click", () => { const on = b.classList.toggle("flipped"); b.setAttribute("aria-pressed", String(on)); });
+      return b;
+    }));
+  }
+
+
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -2024,7 +2681,10 @@ DATA.sources.push(
       [initNachash, "#nachashStage"], [initNotSnake, "#notSnake"], [initCherub, "#gems"], [initMorningStar, "#starStage"], [initSeraph, "#seraphStage"],
       [initCurse, "#curseLines"], [initSeedWar, "#seedWar"], [initBronze, "#poleStage"],
       [initMap, "#mapStage"], [initZiggurat, "#zigStage"], [initGen, "#genLine"], [initNations, "#nationsStage"], [initLadder, "#ladderStage"],
-      [initPentecost, "#compare"], [initCities, "#lanes"], [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
+      [initPentecost, "#compare"], [initCities, "#lanes"],
+      [initKpDesign, "#kpDesign"], [initKpTwist, "#kpTwist"], [initKpSplit, "#kpSplit"], [initKpRoles, "#kpRoleTabs"], [initKpRings, "#kpRings"], [initKpCross, "#kpCross"],
+      [initKpPeople, "#kpPeople"], [initKpMelch, "#kpMelchFlow"], [initKpPromises, "#kpPromises"], [initKpCalling, "#kpBalance"], [initKpStudy, "#kpQuestions"],
+      [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
