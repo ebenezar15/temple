@@ -1369,6 +1369,7 @@
 /*@@PROPHETS@@*/
 /*@@KEYS@@*/
 /*@@SOWING@@*/
+/*@@SUPPLY@@*/
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -1379,7 +1380,9 @@
       if (on) { a.setAttribute("aria-current", "page"); const nav = a.parentElement; if (nav.scrollWidth > nav.clientWidth) nav.scrollLeft = a.offsetLeft - 16; }
     });
     $$(".toc").forEach(toc => {
+      const grp = toc.dataset.group || "";
       $$("main section.block").forEach(sec => {
+        if ((sec.dataset.group || "") !== grp && !(grp === "" && sec.id === "kp-study")) return;
         const h = $(".sec-head h2, .sec-head h3, h2", sec);
         if (!sec.id || !h) return;
         const label = sec.dataset.toc || h.textContent.replace(/[“”"]/g, "").split(/[:,(]/)[0].trim();
@@ -1406,6 +1409,8 @@
       [initKyBind, "#kyDir"], [initKyDoors, "#kyDoors"], [initKyKey, "#kyKey"], [initKyOperate, "#kyOperate"], [initKyObjections, "#kyObjections"], [initKyStudy, "#kyQuestions"],
       [initSwDesign, "#swDesign"], [initSwGrow, "#swGrow"], [initSwSoils, "#swSoils"], [initSwThread, "#swThread"], [initSwChrist, "#swChrist"], [initSwHarvest, "#swPairArt"],
       [initSwCycle, "#swCycle"], [initSwExchange, "#swExchange"], [initSwManip, "#swMachine"], [initSwObjections, "#swObjections"], [initSwStudy, "#swQuestions"],
+      [initSsMap, "#ssMap"], [initSsNet, "#ssNet"], [initSsPillars, "#ssPillars"], [initSsBuild, "#ssWalls"], [initSsArena, "#ssArena"], [initSsWorship, "#ssSound"],
+      [initSsGate, "#ssGate"], [initSsStairs, "#ssStairs"], [initSsBabylons, "#ssBabylons"], [initSsDaniels, "#ssDaniels"], [initSsFire, "#ssFire"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }

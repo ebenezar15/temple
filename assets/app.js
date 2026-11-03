@@ -1621,6 +1621,118 @@ Object.assign(DATA.images, {
   gogh: { file: "Van_Gogh_-_Sämann_bei_untergehender_Sonne.jpeg", cap: "Vincent van Gogh, <i>The Sower at Sunset</i> (1888), Kröller-Müller Museum", ar: "5/4", art: "sower" }
 });
 
+/* Part IV add-on: “Supply and Support” sermon notes (Isaiah 3) */
+DATA.ss = {};
+
+DATA.ss.map = [
+  { n: "Supply and support", role: "king", t: "Kings build the structures that can hold what God releases." },
+  { n: "Signs of judgment", role: "king", t: "When order is violated, government, prophets and elders are removed." },
+  { n: "Babel or Bethel", role: "both", t: "Every builder is building a rival kingdom or a house of God." },
+  { n: "Bricks or living stones", role: "priest", t: "God builds his temple with living stones, not manufactured bricks." },
+  { n: "Heaven came down", role: "both", t: "God responds to unity, and fights in the arena of those made in his image." },
+  { n: "Worship is not a song", role: "priest", t: "Priests, not performers: heaven hears the spirit and the lifestyle." },
+  { n: "Gatekeepers and gossip", role: "priest", t: "Gatekeepers guard what enters; gossip blocks the gate." },
+  { n: "The orphan generation", role: "both", t: "Sons inherit; orphans try to seize the inheritance by killing the heir." },
+  { n: "Three Babylons", role: "king", t: "Speech, literature and technology: three ways the city of man unites people against God." },
+  { n: "A generation of Daniels", role: "both", t: "Those who refuse the king’s table rise to shape kings and wise men." },
+  { n: "One accord", role: "both", t: "Unity is the structure for Pentecost; when the fire is lit, shake off the snake." }
+];
+
+DATA.ss.net = {
+  verse: "Luke 5:6–7",
+  states: [
+    { max: -25, t: "Support without supply: empty nets", d: "Strong systems and skilled hands, but little to hold. Isaiah 3:1 warns that the Lord of hosts can take away “both supply and support”; every other provider is only his servant (Gen 22:14)." },
+    { max: 25, t: "Supply matched by support: the catch is held", d: "Peter signals his partners in the other boat and the catch is brought in. “My God will supply every need of yours according to his riches in glory” (Phil 4:19): God supplies; we build the support systems that can carry it." },
+    { max: 101, t: "Supply without support: the net breaks and the boat sinks", d: "“Their nets were breaking … they filled both the boats, so that they began to sink.” God’s goodness can become destructive without the infrastructure to hold it. The notes apply this to nations rich in gold, oil and minerals but poor in the structures to steward them: abundant in supply, limited in support." }
+  ]
+};
+DATA.ss.want = { q: "“Who decides the day is determined by who wants it bad enough to be good enough to get it.”", d: "Every nation believes God will come through its gate, and every nation could be a gate for God’s kingdom. The question the notes press is hunger: do you want it badly enough to become the kind of people who can hold it?" };
+
+DATA.ss.pillars = [
+  { n: "Bread and water", ref: "Isa 3:1", d: "“The whole supply of bread and the whole supply of water.” God removes provision to remind a people that he is the Provider (Jehovah Jireh); every other provider is his servant." },
+  { n: "Mighty man & soldier", ref: "Isa 3:2", d: "Protection and strength removed: a nation left without defenders." },
+  { n: "Judge", ref: "Isa 3:2", d: "“I will take away the judge” means: I will take away your government. Even if there is supply, it will leak, because the support systems are not adequate." },
+  { n: "Prophet", ref: "Isa 3:2; 1 Sam 28", d: "When prophets are gone, people become like Saul, seeking the medium at Endor. A poor nation stops seeking the true voice." },
+  { n: "Elder & counsellor", ref: "Isa 3:2–3", d: "Wisdom and experience removed: no one left to give counsel." },
+  { n: "Skilled artisan", ref: "Isa 3:3", d: "“The skilful magician and the expert in charms”, the craftsmen and builders, are taken away too." }
+];
+DATA.ss.collapse = [
+  { ref: "Isa 3:4", t: "“I will make boys their princes, and infants shall rule over them.” Capricious children become the replacement structure." },
+  { ref: "Isa 3:5", t: "“The people will oppress one another … the youth will be insolent to the elder.” Order is violated, so disorder follows." },
+  { ref: "Isa 3:6–7", t: "“You have a cloak; you shall be our leader.” He replies, “I will not be a healer.” No one can carry the ruins." },
+  { ref: "Isa 3:10–11", t: "“Tell the righteous that it shall be well with them, for they shall eat the fruit of their deeds.” Even in judgment, God keeps a distinction." }
+];
+
+DATA.ss.build = {
+  babel: [["Founder", "Nimrod, “a mighty hunter … the beginning of his kingdom was Babel” (Gen 10:8–10): the first kingdom structure outside God’s house."], ["Language", "One lip, one purpose: the language of rebellion we are all born into (Ps 51:5)."], ["Pattern", "“Come, let us …”: imitating God’s “Let us make man” (Gen 1:26), an unholy trinity."], ["Material", "Bricks: manufactured, uniform, made by human hands (Gen 11:3)."], ["Goal", "“Let us make a name for ourselves” (Gen 11:4)."]],
+  bethel: [["Founder", "God himself, who sets up the stairway (Gen 28:12–17)."], ["Language", "Revelation, not marketing: “flesh and blood has not revealed this to you” (Matt 16:17)."], ["Pattern", "The pattern shown on the mountain of prayer (Exod 25:40)."], ["Material", "Uncut stones and living stones (Exod 20:25; 1 Pet 2:5)."], ["Goal", "His name first; then he gives the name (Phil 2:5–9)."]]
+};
+
+DATA.ss.arenas = [
+  { n: "The throne", ref: "Rev 12:7–9", d: "When Lucifer rebelled, God remained on his throne. A third of the angels rose, and God stayed seated. He does not descend to fight in a lesser arena." },
+  { n: "The angelic arena", ref: "Jude 9; Rev 12:10", d: "Michael fought the dragon, yet even he “did not presume to pronounce a blasphemous judgment, but said, ‘The Lord rebuke you.’” No mockery. Heaven has only one “accuser of the brothers”, and that position is taken: online rebuke has no power." },
+  { n: "The human arena", ref: "Gen 11:5–7; Gen 1:27", d: "At Babel, “the LORD came down”. Humanity is made in God’s image, so this is his arena. United rebels with no instruments and no priests brought heaven down. God respects unity, even unity against him." }
+];
+
+DATA.ss.worship = [
+  { t: "A position, not a performance", ref: "John 4:23–24", d: "True worship is a position in spirit and truth. Songs only tell people, in the best way we can, where we live in the spirit." },
+  { t: "Heaven hears the spirit", ref: "Luke 23:46", d: "On the cross Jesus did not sing; he said, “Father, into your hands I commit my spirit.” Heaven hears your spirit, which means it also hears your gossip." },
+  { t: "Without love, only noise", ref: "1 Cor 13:1", d: "“If I speak in the tongues of men and of angels, but have not love, I am a noisy gong or a clanging cymbal.” You can sing on key without the key that unlocks the kingdom." },
+  { t: "Priests, not performers", ref: "Rev 14:3–4", d: "Don’t sing or play as a transaction. Revelation’s new song could be learned only by those who lived for their one Husband. Heaven hears Monday to Wednesday, not just the rehearsal." }
+];
+
+DATA.ss.gate = [
+  { n: "False prophet", ok: false, ref: "Matt 7:15", d: "Gatekeepers check before giving someone a platform. A million followers on earth is no reference in heaven." },
+  { n: "Jezebel tolerated", ok: false, ref: "Rev 2:20", d: "“I have this against you, that you tolerate that woman Jezebel.” God’s issue was with the tolerator as well as the perpetrator." },
+  { n: "Gossip", ok: false, ref: "Ps 1:1; Prov 16:28", d: "Being present in a gossip group is participating. The notes put it simply: if you want to be blessed, stop listening." },
+  { n: "Slander of leaders", ok: false, ref: "Jude 8–9", d: "Even Michael did not rail against dignitaries. Videos mocking pastors are not accountability." },
+  { n: "Unity", ok: true, ref: "John 17:21", d: "“That they may all be one … so that the world may believe.” God cannot come in while church fights church and leader fights leader." },
+  { n: "Love that covers", ok: true, ref: "Gen 9:23; 1 Pet 4:8", d: "Shem and Japheth walked backward and covered their father. “Love covers a multitude of sins.”" }
+];
+DATA.ss.psalm1 = [
+  { v: "Walks", t: "in the counsel of the wicked", d: "First you pass by and listen: “Did you hear?”" },
+  { v: "Stands", t: "in the way of sinners", d: "Then you linger and become part of the group." },
+  { v: "Sits", t: "in the seat of scoffers", d: "Finally you settle in and become the scoffer. Involuntary presence becomes active participation." }
+];
+
+DATA.ss.stages = [
+  { g: "orphanos", n: "Orphan", d: "Fatherless and unformed: the rawest stage, yet often the one handed a microphone." },
+  { g: "brephos", n: "Infant", d: "A newborn who can only receive (1 Pet 2:2)." },
+  { g: "nēpios", n: "Babe", d: "A child who cannot yet discern; easily tossed about (Eph 4:14; 1 Cor 3:1)." },
+  { g: "paidion", n: "Young child", d: "Learning and being trained (Matt 18:3)." },
+  { g: "huios", n: "Mature son", d: "A son who can carry the Father’s name and inheritance (Rom 8:14; Gal 4:6–7)." }
+];
+DATA.ss.tenants = { ref: "Matt 21:33–39", d: "“This is the heir. Come, let us kill him and have his inheritance.” An orphan spirit tries to promote itself by tearing down others, building a following on the bones of great men and women of God. Sons inherit; orphans try to seize." };
+
+DATA.ss.babylons = [
+  { v: "1.0", n: "Language and speech", who: "Nimrod", ref: "Gen 11:1–9", weapon: "The unity of rebellion", how: "Satan recruits: everyone already shares one language. To lead it you need no intellect, only united rebels.", icon: "tower" },
+  { v: "2.0", n: "Language and literature", who: "Nebuchadnezzar", ref: "Dan 1:3–8; 2 Cor 11:14", weapon: "The unity of beauty", how: "People must be taught the same language and books: indoctrination through education, teaching ugly things in beautiful ways. “World” is kosmos, the root of “cosmetics”; Satan disguises himself as an angel of light. Evil is given beautiful names; the covenant rainbow is redefined.", icon: "scroll" },
+  { v: "3.0", n: "Technology and sorcery", who: "Revelation’s Babylon", ref: "Rev 18:21–23; 2 Tim 4:3", weapon: "Addiction", how: "Language and literature are put into machines. “By your sorcery (pharmakeia, the root of “pharmacy”) all nations were deceived.” Satan no longer needs to make people one; he keeps them high on endless scrolling and dopamine, until a generation cannot endure sound teaching.", icon: "phone" }
+];
+DATA.ss.daniel = [
+  { ref: "Dan 1:3–4", t: "Taken to Babylon’s schools", d: "Chosen youths taught “the literature and language of the Chaldeans”." },
+  { ref: "Dan 1:8", t: "Purposed in his heart", d: "“Daniel resolved that he would not defile himself with the king’s food.” Deprivation in the natural turns common youth into uncommon youth." },
+  { ref: "Dan 1:17–20", t: "Ten times better", d: "God gives learning and skill; they rise to the top in every area." },
+  { ref: "Dan 2:48; 5:11", t: "Chief of the wise men", d: "Daniel is set over all the wise men of Babylon, and reshapes what they study." },
+  { ref: "Matt 2:1–2", t: "The Magi follow the star", d: "Centuries later, wise men from the East are the ones who recognise the newborn King. The notes suggest Daniel’s influence on Babylon’s schools of the wise prepared them." }
+];
+DATA.ss.daniels = [
+  { t: "Refuse the king’s table", ref: "Dan 1:8", d: "Cut off what is shaping your mind more than God is. The notes describe deleting every app after realising they had become more connected to Wi-Fi than to the kingdom of God." },
+  { t: "Become sensitive again", ref: "1 Kgs 19:12", d: "What seemed boring becomes interesting. Books and prayer return; God begins to speak because you can hear him again." },
+  { t: "Receive divine ideas", ref: "Dan 1:17; 2:19", d: "One with him again, he gives ideas in the midst of Babylon that can transform a generation." },
+  { t: "Fear God, not the tree", ref: "Gen 2:9, 16–17", d: "God may cut you off from something for a season, but if you must stay away from it forever, it has become your idol. Why did God put the tree in the garden? So it would become like every other tree and no longer rule Adam’s senses." }
+];
+
+DATA.ss.accord = [
+  { t: "One accord", ref: "Acts 2:1–2", d: "“They were all together in one place. And suddenly there came from heaven a sound like a mighty rushing wind.” As sudden as “suddenly” sounds, suddenlies are predictable: oneness brought heaven down at Babel, and oneness brings the Spirit down at Pentecost." },
+  { t: "No gossip, no audience", ref: "Prov 26:20", d: "“For lack of wood the fire goes out, and where there is no whisperer, quarrelling ceases.” Refuse to be the audience: give the gossip twenty seconds, then go and tell the person yourself." },
+  { t: "The fire is lit", ref: "Acts 28:2–3", d: "On Malta the islanders lit a fire; as Paul gathered sticks, a viper came out of the heat and fastened on his hand. When unity happens, fire comes; when fire comes, snakes come out." },
+  { t: "Shake it off", ref: "Acts 28:5; 2 Cor 5:17", d: "“He shook off the creature into the fire and suffered no harm.” What they said about you may once have been true, but “if anyone is in Christ, he is a new creation.” Stop looking for me at my old address. Don’t let the snake put out your fire; let your fire put out the snake." }
+];
+
+DATA.kp.study.push({ t: "Supply and support", q: ["Read Isaiah 3:1–12. Which supports does God remove, and what happens when they are gone?", "Where in your life, family or nation is there supply without support? What structure needs to be built?", "Which Babylon (speech, literature or technology) has the strongest pull on you? What would a Daniel response look like?"] });
+DATA.kp.memory.push(["Isaiah 3:1", "“For behold, the Lord GOD of hosts is taking away from Jerusalem and from Judah support and supply, all support of bread, and all support of water.”"]);
+
 /* Where Heaven Meets Earth — interactive behaviour */
 (function () {
   "use strict";
@@ -4224,6 +4336,250 @@ Object.assign(DATA.images, {
   function initSwStudy() { studyGuide("#swQuestions", "#swMemory", DATA.sw.study, DATA.sw.memory); }
 
 
+  /* ================ Part IV add-on: Supply and Support (Isaiah 3) ================ */
+  const ROLE = { king: ["Kingly", "var(--babel)"], priest: ["Priestly", "var(--eden)"], both: ["King & priest", "var(--accent)"] };
+
+  function initSsMap() {
+    const targets = ["ss-net", "ss-judgment", "ss-build", "ss-build", "ss-came", "ss-worship", "ss-gate", "ss-orphan", "ss-babylons", "ss-daniels", "ss-accord"];
+    $("#ssMap").append(...DATA.ss.map.map((m, i) => el("a", { class: "sscard reveal", href: "#" + targets[i], style: { borderLeftColor: ROLE[m.role][1] } },
+      el("span", { class: "ssnum", text: String(i + 1) }), el("b", { text: m.n }), el("span", { class: "sstag", style: { background: ROLE[m.role][1] }, text: ROLE[m.role][0] }), el("small", { text: m.t }))));
+  }
+
+  function initSsNet() {
+    const svg = sv("svg", { viewBox: "0 0 540 360", role: "img", "aria-label": "Fishing boats and a net that holds or breaks depending on supply and support" });
+    svg.append(sv("rect", { width: 540, height: 150, fill: "var(--babel)", "fill-opacity": .06 }), sv("rect", { y: 150, width: 540, height: 210, fill: "var(--babel)", "fill-opacity": .25 }));
+    const boat = (x) => sv("g", { style: { transition: "transform 1s cubic-bezier(.4,.1,.2,1)", transformBox: "fill-box", transformOrigin: "center" } },
+      sv("path", { d: `M${x} 140 L${x + 150} 140 L${x + 128} 172 L${x + 22} 172 Z`, fill: "#7a5530" }), sv("line", { x1: x + 75, y1: 140, x2: x + 75, y2: 60, stroke: "#7a5530", "stroke-width": 4 }), sv("path", { d: `M${x + 79} 66 L${x + 128} 120 L${x + 79} 120 Z`, fill: "var(--surface)", stroke: "var(--line)" }));
+    const b1 = boat(40), b2 = boat(330);
+    svg.append(b1, b2);
+    const rope = sv("path", { d: "M190 160 Q270 190 350 160", fill: "none", stroke: "#b08a5a", "stroke-width": 3, "stroke-dasharray": "6 5" });
+    svg.append(rope);
+    const mesh = sv("g", { stroke: "var(--ink)", "stroke-opacity": .55, fill: "none" });
+    for (let i = 0; i <= 8; i++) mesh.append(sv("line", { x1: 80 + i * 22, y1: 172, x2: 100 + i * 17, y2: 320 }));
+    for (let j = 0; j <= 6; j++) { const y = 180 + j * 23; mesh.append(sv("line", { x1: 80 + j * 3, y1: y, x2: 256 - j * 3, y2: y })); }
+    svg.append(mesh);
+    const tear = sv("g", { opacity: 0, style: { transition: "opacity .6s" } }, sv("path", { d: "M150 270 L162 290 L150 306 L168 322 L176 300 L190 318", fill: "none", stroke: "var(--flame)", "stroke-width": 4 }), sv("text", { x: 168, y: 346, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--flame)" }, "the net is breaking"));
+    let seed = 9; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+    const fish = Array.from({ length: 48 }, () => { const x = 92 + rnd() * 150, y = 190 + rnd() * 120; const f = sv("g", { style: { transition: "transform 1.2s ease-in, opacity .8s" } }, sv("ellipse", { cx: x, cy: y, rx: 8, ry: 4, fill: "var(--accent)" }), sv("path", { d: `M${x + 7} ${y} L${x + 13} ${y - 4} L${x + 13} ${y + 4} Z`, fill: "var(--accent)" })); svg.append(f); return f; });
+    svg.append(tear);
+    const label = sv("text", { x: 270, y: 30, "text-anchor": "middle", "font-size": 15, "font-weight": 800, fill: "var(--ink)" }, "");
+    svg.append(label);
+    $("#ssNet").append(svg);
+    const sup = $("#ssSupply"), spt = $("#ssSupport");
+    function upd() {
+      const s = +sup.value, p = +spt.value, diff = s - p, st = DATA.ss.net.states.find(x => diff < x.max);
+      const n = Math.round(s / 100 * fish.length), broken = diff >= 25;
+      fish.forEach((f, i) => { const on = i < n; f.style.opacity = on ? 1 : 0; f.style.transform = broken && on && i % 3 === 0 ? "translateY(60px)" : ""; });
+      mesh.setAttribute("stroke-width", .6 + p / 22);
+      tear.setAttribute("opacity", broken ? 1 : 0);
+      b1.style.transform = broken ? "translateY(26px) rotate(7deg)" : "";
+      const partner = p >= 50;
+      b2.style.opacity = partner ? 1 : .25; rope.style.opacity = partner ? 1 : 0;
+      b2.style.transform = broken && partner ? "translateY(14px) rotate(-4deg)" : "";
+      label.textContent = st.t;
+      $("#ssNetInfo").replaceChildren(...[el("h3", { text: st.t }), el("span", { class: "ref", text: DATA.ss.net.verse }), el("p", { html: refify(st.d) }), partner ? el("p", { class: "muted", text: "Strong support means partners: “they signalled to their partners in the other boat to come and help them.”" }) : null].filter(Boolean));
+    }
+    sup.addEventListener("input", upd); spt.addEventListener("input", upd); upd();
+    $("#ssWant").append(document.createTextNode(DATA.ss.want.q), el("cite", { text: DATA.ss.want.d }));
+  }
+
+  function initSsPillars() {
+    const P = DATA.ss.pillars, svg = sv("svg", { viewBox: "0 0 580 380", role: "img", "aria-label": "A building held up by six pillars of a nation's supply and support" });
+    const roof = sv("g", { style: { transition: "transform 1s cubic-bezier(.5,0,.6,1)", transformBox: "view-box", transformOrigin: "290px 90px" } },
+      sv("path", { d: "M40 90 L290 20 L540 90 Z", fill: "var(--accent)", "fill-opacity": .5, stroke: "var(--accent)", "stroke-width": 2 }), sv("rect", { x: 40, y: 90, width: 500, height: 22, fill: "var(--accent)", "fill-opacity": .7 }),
+      sv("text", { x: 290, y: 70, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "a nation’s order"));
+    svg.append(sv("rect", { x: 30, y: 320, width: 520, height: 20, fill: "var(--muted)", "fill-opacity": .5 }), sv("rect", { x: 20, y: 340, width: 540, height: 16, fill: "var(--muted)", "fill-opacity": .35 }));
+    const pillars = P.map((p, i) => {
+      const x = 62 + i * 82;
+      const g = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": p.n, style: { transition: `transform .9s cubic-bezier(.5,0,.7,1) ${i * .15}s, opacity .9s ${i * .15}s`, transformBox: "fill-box", transformOrigin: "bottom center" } },
+        sv("rect", { class: "pil", x, y: 112, width: 44, height: 208, fill: i === 0 ? "var(--eden)" : "var(--surface)", "fill-opacity": i === 0 ? .5 : 1, stroke: "var(--ink)", "stroke-opacity": .4, "stroke-width": 2 }),
+        ...[0, 1, 2].map(k => sv("line", { x1: x + 11 + k * 11, y1: 118, x2: x + 11 + k * 11, y2: 314, stroke: "var(--line)" })),
+        sv("text", { x: x + 22, y: 216, "text-anchor": "middle", "font-size": 11.5, "font-weight": 800, fill: "var(--ink)", transform: `rotate(-90 ${x + 22} 216)` }, p.n)), () => sel(i));
+      svg.append(g); return g;
+    });
+    svg.append(roof);
+    const kids = sv("text", { x: 290, y: 300, "text-anchor": "middle", "font-size": 15, "font-weight": 800, fill: "var(--flame)", opacity: 0, style: { transition: "opacity .6s 1.2s" } }, "“boys their princes … infants shall rule”");
+    svg.append(kids);
+    $("#ssPillars").append(svg);
+    function sel(i) { pillars.forEach((g, j) => $(".pil", g).setAttribute("stroke-width", j === i ? 5 : 2)); const p = P[i]; $("#ssPillarPanel").replaceChildren(el("p", { class: "eyebrow", text: i === 0 ? "Supply" : "Support" }), el("h3", { text: p.n }), el("span", { class: "ref", text: p.ref }), el("p", { html: refify(p.d) })); }
+    $("#ssRemove").addEventListener("click", () => { pillars.forEach((g, i) => { g.style.transform = `rotate(${i % 2 ? 78 : -78}deg) translateY(10px)`; g.style.opacity = .25; }); roof.style.transform = "translateY(150px) rotate(-5deg)"; kids.setAttribute("opacity", 1); });
+    $("#ssRestore").addEventListener("click", () => { pillars.forEach(g => { g.style.transform = ""; g.style.opacity = 1; }); roof.style.transform = ""; kids.setAttribute("opacity", 0); });
+    sel(2);
+    $("#ssCollapse").append(...DATA.ss.collapse.map(c => el("li", { class: "vstep" }, el("div", { class: "vcard" }, el("small", { text: c.ref }), el("p", { html: refify(c.t) })))));
+  }
+
+  function initSsBuild() {
+    const svg = sv("svg", { viewBox: "0 0 540 320", role: "img", "aria-label": "A wall of identical bricks beside a wall of uncut living stones" });
+    svg.append(sv("line", { x1: 10, y1: 280, x2: 530, y2: 280, stroke: "var(--line)", "stroke-width": 3 }));
+    const blocks = [], left = sv("g"), right = sv("g");
+    for (let r = 0; r < 7; r++) for (let c = 0; c < 5; c++) {
+      const b = sv("rect", { x: 22 + c * 44 + (r % 2 ? 22 : 0) - (r % 2 && c === 4 ? 0 : 0), y: 248 - r * 32, width: 40, height: 28, rx: 2, fill: "#b4553a", stroke: "#7a3020", style: { transition: "opacity .3s, transform .4s" } });
+      if (r % 2 && c === 4) continue;
+      left.append(b); blocks.push([b, r]);
+    }
+    let seed = 4; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+    for (let r = 0; r < 6; r++) for (let c = 0; c < 4; c++) {
+      const cx = 318 + c * 56 + (r % 2 ? 26 : 0), cy = 254 - r * 38, pts = Array.from({ length: 7 }, (_, k) => { const a = k / 7 * Math.PI * 2, rr = 22 + rnd() * 8; return `${(cx + Math.cos(a) * rr * 1.2).toFixed(1)},${(cy + Math.sin(a) * rr * .8).toFixed(1)}`; }).join(" ");
+      if (cx > 520) continue;
+      const s = sv("polygon", { points: pts, fill: "#a7a29a", stroke: "#6b6660", "stroke-width": 1.5, style: { transition: "opacity .3s, transform .4s" } });
+      right.append(s); blocks.push([s, r]);
+    }
+    svg.append(left, right, sv("text", { x: 130, y: 306, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--flame)" }, "Babel · bricks"), sv("text", { x: 410, y: 306, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--eden)" }, "Bethel · living stones"),
+      sv("text", { x: 130, y: 22, "text-anchor": "middle", "font-size": 11, fill: "var(--muted)", "font-weight": 700 }, "made by hands · uniform · “check their CV”"), sv("text", { x: 410, y: 22, "text-anchor": "middle", "font-size": 11, fill: "var(--muted)", "font-weight": 700 }, "shaped by life · each one different"));
+    $("#ssWalls").append(svg);
+    const tg = $("#ssBuildToggle"), box = $("#ssBuild");
+    function set(k) {
+      $$(".chip", tg).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.k === k)));
+      left.style.opacity = k === "babel" ? 1 : .35; right.style.opacity = k === "bethel" ? 1 : .35;
+      box.classList.toggle("twisted", k === "babel");
+      box.replaceChildren(...DATA.ss.build[k].map(r => el("div", { class: "crow" }, el("b", { text: r[0] }), el("p", { class: "cval", html: refify(r[1]) }))));
+    }
+    [["babel", "Babel"], ["bethel", "Bethel"]].forEach(([k, n]) => tg.append(el("button", { class: "chip", type: "button", "data-k": k, text: n, onclick: () => set(k) })));
+    set("bethel");
+    $("#ssBuildBtn").addEventListener("click", () => { blocks.forEach(([b]) => { b.style.transition = "none"; b.style.opacity = 0; b.style.transform = "translateY(-30px)"; }); requestAnimationFrame(() => requestAnimationFrame(() => blocks.forEach(([b, r], i) => { b.style.transition = reduceMotion ? "none" : `opacity .3s ${r * .25 + (i % 5) * .04}s, transform .4s ${r * .25 + (i % 5) * .04}s`; b.style.opacity = 1; b.style.transform = ""; }))); });
+  }
+
+  function initSsArena() {
+    const A = DATA.ss.arenas, svg = sv("svg", { viewBox: "0 0 460 420", role: "img", "aria-label": "Three arenas: the throne, the angelic conflict, and the human arena at Babel" });
+    const fills = ["var(--accent)", "var(--babel)", "var(--eden)"];
+    const bands = A.map((a, i) => { const y = 20 + i * 132; const g = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": a.n }, sv("rect", { class: "ab", x: 20, y, width: 420, height: 120, rx: 14, fill: fills[i], "fill-opacity": .14, stroke: fills[i], "stroke-width": 2 }), sv("text", { x: 40, y: y + 26, "font-size": 13, "font-weight": 800, "letter-spacing": 1.5, fill: fills[i] }, a.n.toUpperCase())), () => sel(i)); svg.append(g); return g; });
+    // throne
+    bands[0].append(sv("rect", { x: 210, y: 50, width: 40, height: 50, rx: 4, fill: "var(--accent)" }), sv("rect", { x: 200, y: 96, width: 60, height: 10, fill: "var(--accent)" }), sv("circle", { cx: 230, cy: 66, r: 30, fill: "var(--accent)", opacity: .15, class: "pulse" }), sv("text", { x: 300, y: 84, "font-size": 12, "font-weight": 700, fill: "var(--ink)" }, "seated, unmoved"));
+    // angels
+    bands[1].append(sv("circle", { cx: 180, cy: 200, r: 14, fill: "var(--babel)" }), sv("path", { d: "M170 212 L190 212 L196 250 L164 250 Z", fill: "var(--babel)" }), sv("line", { x1: 196, y1: 214, x2: 236, y2: 186, stroke: "var(--accent)", "stroke-width": 4 }),
+      sv("circle", { cx: 290, cy: 204, r: 14, fill: "var(--flame)" }), sv("path", { d: "M280 216 L300 216 L306 250 L274 250 Z", fill: "var(--flame)" }), sv("text", { x: 230, y: 168, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--ink)" }, "“The Lord rebuke you”"));
+    // human
+    bands[2].append(...[0, 1, 2, 3].map(i => sv("rect", { x: 200 + i * 8, y: 360 - i * 20, width: 80 - i * 16, height: 20, fill: "var(--babel)", opacity: .6 + i * .1 })), sv("path", { d: "M330 40 C 360 160 340 260 300 300", fill: "none", stroke: "var(--accent)", "stroke-width": 3, "stroke-dasharray": "6 6", class: "flow" }), sv("text", { x: 350, y: 330, "font-size": 12, "font-weight": 800, fill: "var(--ink)" }, "“the LORD came down”"));
+    $("#ssArena").append(svg);
+    function sel(i) { bands.forEach((g, j) => $(".ab", g).setAttribute("fill-opacity", j === i ? .32 : .14)); const a = A[i]; $("#ssArenaPanel").replaceChildren(el("p", { class: "eyebrow", text: `Arena ${i + 1} of 3` }), el("h3", { text: a.n }), el("span", { class: "ref", text: a.ref }), el("p", { html: refify(a.d) })); }
+    sel(2);
+  }
+
+  function initSsWorship() {
+    const svg = sv("svg", { viewBox: "0 0 900 220", role: "img", "aria-label": "Sound waves: confused when everyone plays their own song, aligned in one accord" });
+    const cols = ["var(--babel)", "var(--flame)", "var(--eden)", "var(--accent)", "#6b3a8f", "var(--muted)"];
+    const waves = cols.map((c, i) => { const p = sv("path", { fill: "none", stroke: c, "stroke-width": 3, opacity: .8 }); svg.append(p); return p; });
+    const cap = sv("text", { x: 450, y: 210, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, "");
+    svg.append(cap);
+    $("#ssSound").append(svg);
+    let mode = "chaos", t = 0, raf = null;
+    const draw = () => {
+      waves.forEach((p, i) => {
+        let d = "";
+        for (let x = 0; x <= 900; x += 10) {
+          const y = mode === "chaos" ? 100 + Math.sin(x * (0.01 + i * 0.013) + t * (1 + i * .7) + i * 2) * (24 + i * 7) + Math.sin(x * 0.05 * (i + 1) + t * 3) * 10 : 100 + Math.sin(x * 0.02 + t * 1.4) * 40 + (i - 2.5) * 2;
+          d += (x ? "L" : "M") + x + " " + y.toFixed(1);
+        }
+        p.setAttribute("d", d); p.setAttribute("stroke", mode === "chaos" ? cols[i] : "var(--accent)");
+      });
+      t += .04;
+      if (!reduceMotion) raf = requestAnimationFrame(draw);
+    };
+    const tg = $("#ssSoundToggle");
+    function set(m) { mode = m; $$(".chip", tg).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.m === m))); cap.textContent = m === "chaos" ? "Everyone their own song: confusion (Babel)" : "One accord: many voices, one sound (Acts 2:1)"; cancelAnimationFrame(raf); draw(); }
+    [["chaos", "Everyone their own song"], ["one", "One accord"]].forEach(([m, n]) => tg.append(el("button", { class: "chip", type: "button", "data-m": m, text: n, onclick: () => set(m) })));
+    set("chaos");
+    $("#ssWorship").append(...DATA.ss.worship.map(w => el("div", { class: "card" }, el("p", { class: "eyebrow", text: w.ref }), el("h3", { text: w.t }), el("p", { html: refify(w.d) }))));
+  }
+
+  function initSsGate() {
+    const G = DATA.ss.gate, svg = sv("svg", { viewBox: "0 0 520 360", role: "img", "aria-label": "A city gate where a gatekeeper decides what enters" });
+    svg.append(sv("rect", { x: 300, y: 40, width: 200, height: 280, fill: "var(--accent)", "fill-opacity": .08 }), sv("text", { x: 420, y: 66, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: "var(--accent)" }, "THE CHURCH · THE CITY"));
+    svg.append(sv("path", { d: "M270 320 L270 120 L330 120 L330 320 Z M282 320 L282 180 Q300 150 318 180 L318 320 Z", fill: "var(--muted)", "fill-rule": "evenodd" }), sv("rect", { x: 270, y: 20, width: 60, height: 300, fill: "none" }));
+    svg.append(sv("rect", { x: 270, y: 40, width: 12, height: 280, fill: "var(--muted)" }), sv("rect", { x: 318, y: 40, width: 12, height: 280, fill: "var(--muted)" }));
+    svg.append(sv("circle", { cx: 350, cy: 262, r: 11, fill: "#c99a6e" }), sv("path", { d: "M340 274 L360 274 L364 318 L336 318 Z", fill: "var(--babel)" }), sv("text", { x: 350, y: 340, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: "var(--ink)" }, "gatekeeper"));
+    const tokens = G.map((g, i) => {
+      const y = 40 + i * 48;
+      const t = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": g.n, style: { transition: reduceMotion ? "none" : "transform .9s cubic-bezier(.4,.1,.2,1)" } },
+        sv("rect", { class: "tk", x: 20, y, width: 150, height: 36, rx: 18, fill: "var(--surface)", stroke: g.ok ? "var(--eden)" : "var(--flame)", "stroke-width": 2 }),
+        sv("text", { x: 95, y: y + 23, "text-anchor": "middle", "font-size": 12.5, "font-weight": 800, fill: "var(--ink)" }, g.n)), () => sel(i));
+      svg.append(t); return t;
+    });
+    const cross = sv("path", { d: "M286 196 L314 224 M314 196 L286 224", stroke: "var(--flame)", "stroke-width": 7, "stroke-linecap": "round", opacity: 0, style: { transition: "opacity .4s .8s" } });
+    svg.append(cross);
+    $("#ssGate").append(svg);
+    function sel(i) {
+      const g = G[i];
+      tokens.forEach((t, j) => { t.style.transform = j === i ? (g.ok ? `translate(${310 - 0}px, ${170 - (40 + j * 48)}px)` : `translate(${100}px, ${190 - (40 + j * 48)}px)`) : ""; });
+      cross.setAttribute("opacity", g.ok ? 0 : 1);
+      $("#ssGatePanel").replaceChildren(el("p", { class: "eyebrow", style: { color: g.ok ? "var(--eden)" : "var(--flame)" }, text: g.ok ? "Welcomed through the gate" : "Stopped at the gate" }), el("h3", { text: g.n }), el("span", { class: "ref", text: g.ref }), el("p", { html: refify(g.d) }));
+    }
+    sel(4);
+    // Psalm 1 steps
+    const st = sv("svg", { viewBox: "0 0 420 260", role: "img", "aria-label": "Three descending steps: walk, stand, sit" });
+    [0, 1, 2].forEach(i => st.append(sv("rect", { x: 30 + i * 120, y: 60 + i * 60, width: 360 - i * 120, height: 200 - i * 60, fill: "var(--flame)", "fill-opacity": .08 + i * .1 }), sv("text", { x: 50 + i * 120, y: 84 + i * 60, "font-size": 13, "font-weight": 800, fill: "var(--ink)" }, DATA.ss.psalm1[i].v.toUpperCase())));
+    const fig = sv("g", { style: { transition: reduceMotion ? "none" : "transform .8s cubic-bezier(.4,.1,.2,1)" } });
+    const body = sv("path", { d: "M-8 0 L8 0 L10 40 L-10 40 Z", fill: "var(--babel)" });
+    const head = sv("circle", { cx: 0, cy: -12, r: 10, fill: "#c99a6e" });
+    fig.append(head, body);
+    st.append(fig);
+    $("#ssSteps").append(st);
+    const r = $("#ssStepRange");
+    const upd = () => { const i = +r.value, p = DATA.ss.psalm1[i]; fig.style.transform = `translate(${90 + i * 120}px, ${18 + i * 60 + (i === 2 ? 14 : 0)}px)`; body.setAttribute("d", i === 2 ? "M-8 0 L8 0 L22 22 L22 26 L-8 26 Z" : "M-8 0 L8 0 L10 40 L-10 40 Z"); $("#ssStepInfo").replaceChildren(el("h3", { text: `${p.v} ${p.t}` }), el("p", { html: refify(p.d) }), el("p", { class: "muted", html: refify("The opposite of gossip is covering: Shem and Japheth “walked backward and covered the nakedness of their father” (Gen 9:23).") })); };
+    r.addEventListener("input", upd); upd();
+  }
+
+  function initSsStairs() {
+    const S = DATA.ss.stages, svg = sv("svg", { viewBox: "0 0 540 340", role: "img", "aria-label": "A staircase from orphan to mature son" });
+    const steps = S.map((s, i) => {
+      const x = 20 + i * 100, y = 280 - i * 52;
+      const g = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": s.n }, sv("rect", { class: "stp", x, y, width: 100, height: 340 - y, fill: i === 4 ? "var(--accent)" : "var(--eden)", "fill-opacity": .15 + i * .12, stroke: "var(--surface)", "stroke-width": 2 }),
+        sv("text", { x: x + 50, y: y + 22, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--ink)", "font-style": "italic" }, s.g), sv("text", { x: x + 50, y: y + 40, "text-anchor": "middle", "font-size": 12, fill: "var(--ink)", "font-weight": 700 }, s.n)), () => sel(i));
+      svg.append(g); return g;
+    });
+    const fig = sv("g", { style: { transition: reduceMotion ? "none" : "transform .7s cubic-bezier(.4,.1,.2,1)" } }, sv("circle", { cx: 0, cy: -36, r: 9, fill: "#c99a6e" }), sv("path", { d: "M-8 -26 L8 -26 L10 0 L-10 0 Z", fill: "var(--babel)" }));
+    const crown = sv("path", { d: "M-9 -46 L-9 -54 L-4 -50 L0 -57 L4 -50 L9 -54 L9 -46 Z", fill: "var(--accent)", opacity: 0, style: { transition: "opacity .4s" } });
+    fig.append(crown); svg.append(fig);
+    $("#ssStairs").append(svg);
+    function sel(i) {
+      steps.forEach((g, j) => $(".stp", g).setAttribute("stroke", j === i ? "var(--ink)" : "var(--surface)"));
+      fig.style.transform = `translate(${70 + i * 100}px, ${280 - i * 52}px)`; crown.setAttribute("opacity", i === 4 ? 1 : 0);
+      const s = S[i];
+      $("#ssStairPanel").replaceChildren(el("p", { class: "eyebrow", text: `Stage ${i + 1} of ${S.length}` }), el("h3", { text: `${s.g} · ${s.n}` }), el("p", { html: refify(s.d) }),
+        el("div", { class: "row warn" }, el("b", { text: "The orphan spirit" }), el("p", { html: refify(DATA.ss.tenants.d + " (" + DATA.ss.tenants.ref + ")") })));
+    }
+    sel(0);
+  }
+
+  function initSsBabylons() {
+    const B = DATA.ss.babylons;
+    const icons = {
+      tower: () => [...[0, 1, 2, 3].map(i => sv("rect", { x: 20 + i * 10, y: 80 - i * 18, width: 80 - i * 20, height: 18, fill: "var(--babel)", opacity: .6 + i * .1 }))],
+      scroll: () => [sv("rect", { x: 30, y: 30, width: 60, height: 70, rx: 4, fill: "var(--surface)", stroke: "var(--accent)", "stroke-width": 3 }), ...[0, 1, 2, 3].map(i => sv("line", { x1: 40, y1: 46 + i * 13, x2: 80, y2: 46 + i * 13, stroke: "var(--muted)", "stroke-width": 3 })), sv("circle", { cx: 30, cy: 30, r: 8, fill: "var(--accent)" }), sv("circle", { cx: 90, cy: 100, r: 8, fill: "var(--accent)" })],
+      phone: () => [sv("rect", { x: 38, y: 18, width: 44, height: 84, rx: 8, fill: "var(--ink)" }), sv("rect", { x: 42, y: 26, width: 36, height: 64, rx: 3, fill: "var(--flame)", opacity: .7 }), ...[0, 1, 2].map(i => sv("path", { d: `M${92 + i * 6} ${40 + i * 4} Q${100 + i * 8} 60 ${92 + i * 6} ${80 - i * 4}`, fill: "none", stroke: "var(--flame)", "stroke-width": 2 }))]
+    };
+    const cards = B.map((b, i) => { const c = el("button", { class: "bcard", type: "button", onclick: () => sel(i) }, el("span", { class: "bver", text: "Babylon " + b.v }), sv("svg", { viewBox: "0 0 120 120", class: "bicon", "aria-hidden": "true" }, ...icons[b.icon]()), el("b", { text: b.n }), el("small", { text: b.who + " · " + b.weapon })); if (i < 2) c.append(el("span", { class: "barrow", "aria-hidden": "true", text: "→" })); $("#ssBabylons").append(c); return c; });
+    function sel(i) { cards.forEach((c, j) => c.classList.toggle("on", j === i)); const b = B[i]; $("#ssBabylonPanel").replaceChildren(el("p", { class: "eyebrow", text: `Babylon ${b.v} · led by ${b.who}` }), el("h3", { text: b.n }), el("span", { class: "ref", text: b.ref }), el("div", { class: "row warn" }, el("b", { text: "What Satan weaponises" }), el("p", { text: b.weapon })), el("p", { html: refify(b.how) })); }
+    sel(2);
+    $("#ssDaniel").append(...DATA.ss.daniel.map(d => el("li", { class: "card reveal" }, el("b", { text: d.t }), el("span", { class: "ref", text: d.ref }), el("small", { class: "muted", text: d.d }))));
+  }
+
+  function initSsDaniels() {
+    $("#ssDaniels").append(...DATA.ss.daniels.map((d, i) => el("div", { class: "card dstep" }, el("span", { class: "ssnum", text: String(i + 1) }), el("h3", { text: d.t }), el("span", { class: "ref", text: d.ref }), el("p", { html: refify(d.d) }))));
+  }
+
+  function initSsFire() {
+    const svg = sv("svg", { viewBox: "0 0 420 340", role: "img", "aria-label": "A fire on Malta, a viper fastening on a hand, and the viper shaken into the fire" });
+    svg.append(sv("rect", { y: 280, width: 420, height: 60, fill: "#8a6238", "fill-opacity": .3 }));
+    [[-30, 10], [30, -10], [0, 0]].forEach(([dx, r]) => svg.append(sv("rect", { x: 140 + dx, y: 262, width: 140, height: 12, rx: 6, fill: "#6b4a2b", transform: `rotate(${r} 210 268)` })));
+    const flames = sv("g", { style: { transition: "transform .8s cubic-bezier(.3,1.4,.5,1)", transformBox: "fill-box", transformOrigin: "bottom center" } },
+      sv("path", { d: "M210 262 C150 230 170 170 200 130 C206 170 236 160 230 110 C270 160 280 230 210 262 Z", fill: "var(--flame)" }), sv("path", { d: "M210 260 C180 240 188 200 206 176 C210 200 228 196 226 170 C248 204 246 240 210 260 Z", fill: "var(--accent)" }));
+    flames.style.transform = "scale(0.25)";
+    svg.append(flames);
+    const hand = sv("g", {}, sv("path", { d: "M420 200 L330 196 Q310 196 306 206 Q304 216 318 218 L420 222 Z", fill: "#c99a6e" }));
+    svg.append(hand);
+    const viper = sv("g", { opacity: 0, style: { transition: reduceMotion ? "none" : "transform 1s cubic-bezier(.4,.1,.2,1), opacity .5s" } }, sv("path", { d: "M318 208 C300 190 280 214 262 196 C246 180 236 200 222 190", fill: "none", stroke: "#3a4a2a", "stroke-width": 7, "stroke-linecap": "round" }), sv("circle", { cx: 220, cy: 189, r: 6, fill: "#3a4a2a" }));
+    svg.append(viper);
+    const cap = sv("text", { x: 210, y: 36, "text-anchor": "middle", "font-size": 15, "font-weight": 800, fill: "var(--ink)" }, "Gathering sticks on Malta");
+    svg.append(cap);
+    $("#ssFire").append(svg);
+    $("#ssLight").addEventListener("click", () => { flames.style.transform = "scale(1)"; viper.style.transform = ""; setTimeout(() => { viper.setAttribute("opacity", 1); cap.textContent = "Out of the heat, a viper fastens on his hand"; }, reduceMotion ? 0 : 900); });
+    $("#ssShake").addEventListener("click", () => { viper.style.transform = "translate(-40px, 40px) rotate(-30deg)"; setTimeout(() => { viper.setAttribute("opacity", 0); cap.textContent = "“He shook off the creature into the fire and suffered no harm”"; }, reduceMotion ? 0 : 700); flames.style.transform = "scale(1.1)"; });
+    $("#ssAccord").append(...DATA.ss.accord.map(a => el("li", { class: "vstep" }, el("div", { class: "vcard" }, el("small", { text: a.ref }), el("b", { text: a.t }), el("p", { html: refify(a.d) })))));
+    flames.style.transform = "scale(1)"; cap.textContent = "When unity happens, fire comes";
+  }
+
+
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -4234,7 +4590,9 @@ Object.assign(DATA.images, {
       if (on) { a.setAttribute("aria-current", "page"); const nav = a.parentElement; if (nav.scrollWidth > nav.clientWidth) nav.scrollLeft = a.offsetLeft - 16; }
     });
     $$(".toc").forEach(toc => {
+      const grp = toc.dataset.group || "";
       $$("main section.block").forEach(sec => {
+        if ((sec.dataset.group || "") !== grp && !(grp === "" && sec.id === "kp-study")) return;
         const h = $(".sec-head h2, .sec-head h3, h2", sec);
         if (!sec.id || !h) return;
         const label = sec.dataset.toc || h.textContent.replace(/[“”"]/g, "").split(/[:,(]/)[0].trim();
@@ -4261,6 +4619,8 @@ Object.assign(DATA.images, {
       [initKyBind, "#kyDir"], [initKyDoors, "#kyDoors"], [initKyKey, "#kyKey"], [initKyOperate, "#kyOperate"], [initKyObjections, "#kyObjections"], [initKyStudy, "#kyQuestions"],
       [initSwDesign, "#swDesign"], [initSwGrow, "#swGrow"], [initSwSoils, "#swSoils"], [initSwThread, "#swThread"], [initSwChrist, "#swChrist"], [initSwHarvest, "#swPairArt"],
       [initSwCycle, "#swCycle"], [initSwExchange, "#swExchange"], [initSwManip, "#swMachine"], [initSwObjections, "#swObjections"], [initSwStudy, "#swQuestions"],
+      [initSsMap, "#ssMap"], [initSsNet, "#ssNet"], [initSsPillars, "#ssPillars"], [initSsBuild, "#ssWalls"], [initSsArena, "#ssArena"], [initSsWorship, "#ssSound"],
+      [initSsGate, "#ssGate"], [initSsStairs, "#ssStairs"], [initSsBabylons, "#ssBabylons"], [initSsDaniels, "#ssDaniels"], [initSsFire, "#ssFire"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }

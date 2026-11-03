@@ -23,7 +23,7 @@ const PAGES = [
 ];
 
 const css = read("styles.css");
-const js = [read("data.js"), read("data-serpent.js"), read("data-kings.js"), read("data-prophets.js"), read("data-keys.js"), read("data-sowing.js"), read("app.js").replace("/*@@KINGS@@*/", () => read("app-kings.js")).replace("/*@@PROPHETS@@*/", () => read("app-prophets.js")).replace("/*@@KEYS@@*/", () => read("app-keys.js")).replace("/*@@SOWING@@*/", () => read("app-sowing.js"))].join("\n");
+const js = [read("data.js"), read("data-serpent.js"), read("data-kings.js"), read("data-prophets.js"), read("data-keys.js"), read("data-sowing.js"), read("data-supply.js"), read("app.js").replace("/*@@KINGS@@*/", () => read("app-kings.js")).replace("/*@@PROPHETS@@*/", () => read("app-prophets.js")).replace("/*@@KEYS@@*/", () => read("app-keys.js")).replace("/*@@SOWING@@*/", () => read("app-sowing.js")).replace("/*@@SUPPLY@@*/", () => read("app-supply.js"))].join("\n");
 const header = read("partials/header.html");
 const footer = read("partials/footer.html");
 const fonts = `<link rel="preconnect" href="https://fonts.googleapis.com">
