@@ -921,6 +921,284 @@ DATA.sources.push(
   ["Daniel I. Block", "“The Burden of Leadership: The Mosaic Paradigm of Kingship” (2005)", "Deuteronomy 17 and the servant-king."]
 );
 
+/* Part V: Prophets, the fivefold ministry and the kingdom now */
+DATA.pr = {};
+
+/* 1 · The prophetic office: covenant lawsuit flowchart (viewBox 900 × 560) */
+DATA.pr.lawsuit = [
+  { id: "council", x: 450, y: 40, t: "Stands in the council of the LORD", ref: "Jer 23:18, 22; Amos 3:7", c: "accent",
+    d: "A true prophet’s defining privilege was access to hear: “Who among them has stood in the council of the LORD to see and to hear his word?” “The Lord GOD does nothing without revealing his secret to his servants the prophets.” Micaiah and Isaiah both describe seeing God’s throne-room council (1 Kgs 22:19–22; Isa 6)." },
+  { id: "covenant", x: 450, y: 130, t: "God’s covenant with his people", ref: "Exod 19–24; Deut 28", c: "ink",
+    d: "The prophets are not inventing new religion. They hold Israel to the covenant already made at Sinai, with its blessings for faithfulness and curses for rebellion." },
+  { id: "breach", x: 450, y: 220, t: "Kings, priests and people break it", ref: "2 Kgs 17:13–14", c: "flame",
+    d: "Idolatry, injustice, oppression of the poor, corrupt worship. “The LORD warned Israel and Judah by every prophet … but they would not listen.”" },
+  { id: "sent", x: 450, y: 310, t: "The prophet is sent as God’s messenger", ref: "Mal 3:1; Jer 7:25", c: "muted",
+    d: "Like an envoy carrying a king’s message, the prophet speaks with the formula of royal decrees: “Thus says the LORD.” His authority is entirely borrowed; tested by whether his words come true and lead to the true God (Deut 13:1–5; 18:20–22)." },
+  { id: "indict", x: 220, y: 410, t: "Indictment and warning", ref: "Mic 6:1–8; Isa 1", c: "flame",
+    d: "A covenant lawsuit (rîb): heaven and earth are called as witnesses, the charges are read, and the people are called to return: “He has told you, O man, what is good.”" },
+  { id: "intercede", x: 680, y: 410, t: "Intercession", ref: "Gen 20:7; 1 Sam 12:23; Ezek 22:30", c: "eden",
+    d: "Prophets also stood in the gap, a priestly-like role. Abraham is the first person called a prophet, precisely as one who prays for others. Samuel: “Far be it from me that I should sin against the LORD by ceasing to pray for you.”" },
+  { id: "outcome", x: 450, y: 512, t: "Judgment or restoration, and a new covenant promised", ref: "Jer 31:31–34; Ezek 36:26–27", c: "accent",
+    d: "Exile comes, but the prophets also see beyond it: a new covenant written on hearts, the Spirit poured out, a Davidic king and a renewed priesthood. The prophetic office points forward to its own fulfilment." }
+];
+DATA.pr.lawsuitEdges = [["council", "covenant"], ["covenant", "breach"], ["breach", "sent"], ["sent", "indict"], ["sent", "intercede"], ["indict", "outcome"], ["intercede", "outcome"]];
+
+DATA.pr.office = [
+  ["Purpose", "To guard the covenant relationship between God and his people: calling everyone, including kings and priests, back to faithfulness, and announcing God’s plans."],
+  ["Authority", "Wholly derived. “Thus says the LORD.” The prophet had no army, no altar and often no status, yet kings trembled. Authority rose or fell on faithfulness to God’s word (Deut 18:18–22)."],
+  ["Responsibilities", "Speak God’s word; warn and call to repentance; intercede; anoint and confront kings; correct priests; comfort the faithful; foretell; and, for some, write Scripture."],
+  ["Access", "Not to the altar but to the council: the prophet heard God’s counsel and carried it out (Jer 23:18–22). Priests drew near to offer; prophets drew near to hear."],
+  ["Limits", "False prophets were to be rejected, even if their signs worked (Deut 13:1–5). A prophet could not offer sacrifice or rule; he served the word."]
+];
+
+/* 2 · Prophets with kings and priests. rk / rp = relationship to king / priest */
+DATA.pr.relTypes = { anoint: ["Anointed or appointed", "var(--accent)"], confront: ["Confronted", "var(--flame)"], counsel: ["Counselled", "var(--eden)"], strengthen: ["Strengthened", "var(--babel)"] };
+DATA.pr.pairs = [
+  { p: "Samuel", k: "Saul, David", rk: "anoint", pr: "Eli", rp: "confront", ref: "1 Sam 3:11–18; 10:1; 15; 16:13", d: "As a boy he delivers God’s judgment to Eli the high priest. As a man he anoints Saul, rebukes him for usurping the priest’s role, and anoints David." },
+  { p: "Nathan", k: "David", rk: "confront", pr: "Zadok", rp: "anoint", ref: "2 Sam 7; 12; 1 Kgs 1:32–40", d: "Brings God’s covenant to David, then confronts him over Bathsheba: “You are the man!” With Zadok the priest he anoints Solomon." },
+  { p: "Gad", k: "David", rk: "counsel", ref: "1 Sam 22:5; 2 Sam 24:11–19", d: "“David’s seer”. He directs David to build an altar on Araunah’s threshing floor, the site of the future Temple." },
+  { p: "Ahijah", k: "Jeroboam I", rk: "anoint", ref: "1 Kgs 11:29–39; 14:1–16", d: "Tears his cloak into twelve pieces to designate Jeroboam king, then pronounces judgment when Jeroboam invents his own priesthood." },
+  { p: "Elijah", k: "Ahab", rk: "confront", pr: "Baal’s prophets", rp: "confront", ref: "1 Kgs 17–18; 21", d: "Stands against Ahab’s idolatry and his theft of Naboth’s vineyard, and defeats 450 prophets of Baal on Mount Carmel." },
+  { p: "Micaiah", k: "Ahab, Jehoshaphat", rk: "confront", ref: "1 Kgs 22", d: "The lone true voice among 400 flattering prophets. He describes the heavenly council and is imprisoned for it." },
+  { p: "Elisha", k: "Jehu", rk: "anoint", ref: "2 Kgs 9:1–13", d: "Sends a young prophet to anoint Jehu to end the house of Ahab." },
+  { p: "Amos", k: "Jeroboam II", rk: "confront", pr: "Amaziah of Bethel", rp: "confront", ref: "Amos 7:10–17", d: "A farmer from Judah. The royal priest at Bethel tells him to go home: “it is the king’s sanctuary.” Amos answers with God’s word." },
+  { p: "Isaiah", k: "Ahaz, Hezekiah", rk: "strengthen", ref: "Isa 7; 37–39", d: "Urges Ahaz to trust God rather than Assyria, and strengthens Hezekiah when Jerusalem is besieged." },
+  { p: "Huldah", k: "Josiah", rk: "counsel", pr: "Hilkiah", rp: "counsel", ref: "2 Kgs 22:12–20", d: "When the Book of the Law is found, the king sends the high priest to consult her. A woman prophet interprets Scripture for king and priest alike." },
+  { p: "Jeremiah", k: "Zedekiah", rk: "confront", pr: "Pashhur", rp: "confront", ref: "Jer 20:1–6; 38:14–23", d: "Beaten and put in the stocks by Pashhur the priest, consulted in secret by the frightened king." },
+  { p: "Haggai & Zechariah", k: "Zerubbabel", rk: "strengthen", pr: "Joshua", rp: "strengthen", ref: "Ezra 5:1–2; Hag 2; Zech 3–6", d: "Stir up the governor and the high priest to rebuild the Temple, and crown Joshua as a sign of the coming priest-king." },
+  { p: "Malachi", pr: "The priests", rp: "confront", ref: "Mal 1:6–2:9", d: "Rebukes priests who offer blind and lame animals: “The lips of a priest should guard knowledge … but you have turned aside from the way.”" },
+  { p: "John the Baptist", k: "Herod Antipas", rk: "confront", pr: "Priests and Levites", rp: "confront", ref: "Matt 3:7–12; 14:3–4; John 1:19–28", d: "Son of a priest, he preaches in the wilderness instead of the Temple, tells Herod “It is not lawful”, and points to the Lamb of God." },
+  { p: "Jesus", k: "Herod", rk: "confront", pr: "Chief priests", rp: "confront", ref: "Luke 13:32; Matt 21:23–46", d: "The prophet like Moses (Acts 3:22) who confronts both king and Temple, and is himself the true King and High Priest." }
+];
+
+/* 3 · The fivefold */
+DATA.pr.five = [
+  { id: "apostle", n: "Apostles", gk: "apostolos · “one who is sent”", c: "var(--babel)",
+    role: "Sent ones who pioneer, lay foundations and establish communities in Christ’s order (1 Cor 3:10; Rom 15:20).",
+    ot: "Echoes Moses and Joshua leading a people into a new land; and the royal envoy (šālîaḥ) who carries a king’s authority.",
+    king: "Strongly kingly: carrying the King’s commission into new territory and ordering communities under his rule (Matt 28:18–20).",
+    priest: "Paul calls his mission “the priestly service of the gospel of God, so that the offering of the Gentiles may be acceptable” (Rom 15:16).",
+    equip: "Equips believers to see their lives as sent: carrying Christ’s rule and presence into every place they go.",
+    alone: "Isolated, it becomes empire-building, control and celebrity leadership." },
+  { id: "prophet", n: "Prophets", gk: "prophētēs · “one who speaks forth”", c: "var(--accent)",
+    role: "Hear and speak what God is saying now, for building up, encouragement and comfort (1 Cor 14:3), always weighed by Scripture and the church (1 Cor 14:29; 1 Thess 5:20–21).",
+    ot: "The Old Testament prophets, but now in a people where the Spirit rests on all (Num 11:29; Joel 2:28; Acts 2:17–18).",
+    king: "Calls those who lead in every sphere to justice and righteousness, as Nathan did to David.",
+    priest: "Draws people into God’s presence and holiness, and leads in intercession (Acts 13:1–3).",
+    equip: "Trains believers to hear God for themselves, discern and speak life: “you can all prophesy one by one, so that all may learn” (1 Cor 14:31).",
+    alone: "Isolated, it becomes unaccountable, sensational or harsh." },
+  { id: "evangelist", n: "Evangelists", gk: "euangelistēs · “herald of good news”", c: "var(--flame)",
+    role: "Announce the good news of Jesus with clarity and power, and gather people into the kingdom (Acts 8:5–12; 21:8).",
+    ot: "The herald on the mountains: “How beautiful … are the feet of him who brings good news … who says to Zion, ‘Your God reigns’” (Isa 52:7). In the Roman world “gospel” announced a king’s victory or accession.",
+    king: "It is a royal announcement: a new King is enthroned, and the borders of his kingdom are extended.",
+    priest: "Bringing people near to God, reconciled (2 Cor 5:18–20), and presenting them as an offering.",
+    equip: "Makes every believer a confident witness to the King’s reign in ordinary life.",
+    alone: "Isolated, it shrinks the gospel to a decision, leaving converts without formation or calling." },
+  { id: "shepherd", n: "Shepherds", gk: "poimēn · “pastor, shepherd”", c: "var(--eden)",
+    role: "Care for, protect, feed and lead the flock (John 21:15–17; Acts 20:28; 1 Pet 5:1–4).",
+    ot: "David the shepherd-king and God’s promise of true shepherds after the false ones (Ezek 34; Jer 3:15).",
+    king: "Shepherding was the ancient picture of good kingship: “you shall shepherd my people Israel” (2 Sam 5:2).",
+    priest: "Priestly care: bearing people’s names before God, binding up the broken, guarding the flock.",
+    equip: "Models servant leadership so believers can shepherd families, teams and cities well.",
+    alone: "Isolated, it becomes maintenance and dependence: a flock that never grows up." },
+  { id: "teacher", n: "Teachers", gk: "didaskalos · “teacher”", c: "var(--muted)",
+    role: "Explain and apply the Scriptures so that people understand and obey (2 Tim 2:2; Jas 3:1).",
+    ot: "Priests and Levites taught the law (Lev 10:11; Mal 2:7); Ezra and the Levites “gave the sense, so that the people understood” (Neh 8:7–8). Kings were to read the law daily (Deut 17:19).",
+    king: "Wisdom for governing life and society, like Solomon’s wisdom for justice (1 Kgs 3:9–12).",
+    priest: "Distinguishing holy from common and guarding sound doctrine (Ezek 44:23; Titus 1:9).",
+    equip: "Grounds believers in truth so their worship and their rule are shaped by God’s word, not culture.",
+    alone: "Isolated, it becomes information without transformation." }
+];
+
+/* 4 · What changed and what did not */
+DATA.pr.changed = [
+  ["Who carries the Spirit", "Selected individuals: prophets, kings, some craftsmen", "“All flesh”: sons and daughters, young and old (Acts 2:17–18)"],
+  ["Where God dwells", "A building in Jerusalem", "His people, together and individually (1 Cor 3:16; 6:19)"],
+  ["Who is a priest", "One family of one tribe", "Every believer (1 Pet 2:5, 9)"],
+  ["Who reigns", "One dynasty", "All who are in Christ reign with him (Eph 2:6; Rev 5:10)"],
+  ["How prophecy works", "Canonical, “Thus says the LORD”", "Weighed and tested by the church under Scripture (1 Cor 14:29; Eph 2:20)"],
+  ["Stance of leaders", "Offices stood between God and the people", "Gifts stand among the people to equip them (Eph 4:12)"]
+];
+DATA.pr.unchanged = [
+  "God still speaks and is to be obeyed (Heb 12:25)",
+  "Christ is the one King, Priest and Prophet (Heb 1:1–3)",
+  "Holiness, justice and mercy (Mic 6:8; 1 Pet 1:15–16)",
+  "Leaders serve and are accountable (1 Pet 5:1–4)",
+  "Every word is tested (1 John 4:1)",
+  "The goal: God dwelling with his people and filling the earth (Rev 21:3)"
+];
+
+/* 5 · Equip matrix */
+DATA.pr.matrixCols = [
+  { k: "king", t: "Govern & build" }, { k: "king", t: "Justice in society" }, { k: "king", t: "Authority over darkness" },
+  { k: "priest", t: "Worship & access" }, { k: "priest", t: "Intercession" }, { k: "priest", t: "Holiness & reconciliation" }
+];
+DATA.pr.matrix = {
+  apostle: [[3, "Plants communities and structures that carry Christ’s order"], [2, "Sends people into new spheres and nations"], [3, "Pioneers where the enemy has held ground (Acts 19:8–20)"], [2, "Sets worship at the heart of new communities"], [2, "Prays for churches constantly (Col 1:9)"], [2, "Builds Jew and Gentile into one temple (Eph 2:19–22)"]],
+  prophet: [[2, "Gives direction and timing for leaders"], [3, "Calls rulers and systems to righteousness"], [3, "Exposes deception and discerns spirits"], [3, "Draws people into God’s presence"], [3, "Hears what to pray and leads intercession"], [2, "Calls the church to holiness and return"]],
+  evangelist: [[1, "Grows the citizenry of the kingdom"], [2, "Brings good news to the poor (Luke 4:18)"], [3, "Sets captives free (Acts 8:6–8)"], [2, "Brings new worshippers near"], [1, "Mobilises prayer for the lost"], [3, "Ministers reconciliation (2 Cor 5:18–20)"]],
+  shepherd: [[2, "Models servant leadership in families and teams"], [2, "Protects the vulnerable (Ezek 34:4)"], [2, "Guards the flock from wolves (Acts 20:29)"], [2, "Leads people beside still waters"], [3, "Carries people’s names before God"], [3, "Restores the broken (Gal 6:1)"]],
+  teacher: [[3, "Gives biblical wisdom for every sphere of life"], [2, "Grounds justice in God’s law and character"], [2, "Equips with truth, the belt of the armour (Eph 6:14)"], [2, "Shapes worship by sound doctrine"], [1, "Teaches people to pray (Luke 11:1)"], [3, "Distinguishes holy and common (Ezek 44:23)"]]
+};
+
+/* 5b · Spheres of life */
+DATA.pr.spheres = [
+  { n: "Family", priest: "Parents bless, pray for and teach their children (Deut 6:6–7; Job 1:5).", king: "Ordering a home in love and justice; raising heirs who rule well (Eph 5–6).", ref: "Deut 6:6–9" },
+  { n: "Church", priest: "Gathered worship, communion, mutual care (Heb 10:24–25).", king: "Equipping, sending and governing in humility (Eph 4:11–16).", ref: "Eph 4:11–16" },
+  { n: "Work & business", priest: "Work offered as worship, “as for the Lord” (Col 3:23).", king: "Stewarding resources, creating value and serving neighbours (Gen 2:15; Prov 31).", ref: "Col 3:23–24" },
+  { n: "Government & justice", priest: "Prayer for all in authority (1 Tim 2:1–2).", king: "Ruling justly, defending the weak, “seek the welfare of the city” (Jer 29:7; Ps 82:3–4).", ref: "Jer 29:7" },
+  { n: "Education", priest: "Passing on the knowledge of God to the next generation (Ps 78:4–7).", king: "Wisdom and skill for every field (Dan 1:17–20).", ref: "Ps 78:4–7" },
+  { n: "Arts & media", priest: "Beauty that glorifies God; Bezalel “filled with the Spirit” as an artist (Exod 31:1–5).", king: "Shaping the stories and imagination of a culture (Phil 4:8).", ref: "Exod 31:1–5" },
+  { n: "Health & science", priest: "Compassion for the sick, as Jesus healed (Matt 9:35–36).", king: "Exploring and stewarding creation: “It is the glory of kings to search things out” (Prov 25:2).", ref: "Prov 25:2" }
+];
+
+/* 6 · Now, not only later: tense map */
+DATA.pr.tense = [
+  { col: 0, ref: "Rev 1:5–6", v: "made us", t: "To him who loves us and has freed us from our sins by his blood and <mark>made us</mark> a kingdom, priests to his God and Father." },
+  { col: 0, ref: "Col 1:13", v: "transferred", t: "He has delivered us from the domain of darkness and <mark>transferred</mark> us to the kingdom of his beloved Son." },
+  { col: 0, ref: "Eph 2:6", v: "seated", t: "And raised us up with him and <mark>seated</mark> us with him in the heavenly places in Christ Jesus." },
+  { col: 0, ref: "Matt 28:18", v: "has been given", t: "All authority in heaven and on earth <mark>has been given</mark> to me." },
+  { col: 1, ref: "1 Pet 2:9", v: "are", t: "But you <mark>are</mark> a chosen race, a royal priesthood, a holy nation." },
+  { col: 1, ref: "Rom 5:17", v: "reign in life", t: "Those who receive the abundance of grace … <mark>reign in life</mark> through the one man Jesus Christ." },
+  { col: 1, ref: "Heb 12:28", v: "receiving", t: "Let us be grateful for <mark>receiving</mark> a kingdom that cannot be shaken." },
+  { col: 1, ref: "Luke 17:20–21", v: "in your midst", t: "The kingdom of God is <mark>in the midst of you</mark>." },
+  { col: 2, ref: "1 Cor 15:25", v: "must reign until", t: "For he <mark>must reign until</mark> he has put all his enemies under his feet." },
+  { col: 2, ref: "Isa 9:7", v: "no end", t: "Of the <mark>increase</mark> of his government and of peace there will be no end." },
+  { col: 2, ref: "Matt 13:31–33", v: "grows", t: "The kingdom is like a mustard seed … it <mark>grows</mark> … like leaven … till it was all leavened." },
+  { col: 2, ref: "Ps 110:1–2", v: "rule in the midst", t: "Sit at my right hand, <mark>until</mark> I make your enemies your footstool … <mark>Rule in the midst</mark> of your enemies!" },
+  { col: 3, ref: "1 Cor 15:24–26", v: "the end", t: "Then comes the end, when he delivers the kingdom to God the Father … The last enemy to be destroyed is death." },
+  { col: 3, ref: "Acts 1:11", v: "will come", t: "This Jesus … <mark>will come</mark> in the same way as you saw him go into heaven." },
+  { col: 3, ref: "Rev 22:5", v: "will reign forever", t: "They <mark>will reign</mark> forever and ever." }
+];
+DATA.pr.tenseCols = ["Already done", "True now", "Growing until", "Completed at his return"];
+
+/* Daniel 2 stages */
+DATA.pr.daniel = [
+  { at: 0, t: "The statue of empires", ref: "Dan 2:31–33, 36–40", d: "Gold, silver, bronze and iron: Babylon, Medo-Persia, Greece and Rome, a succession of human kingdoms." },
+  { at: 22, t: "A stone cut out by no human hand", ref: "Dan 2:34, 44", d: "“In the days of those kings the God of heaven will set up a kingdom that shall never be destroyed.” The stone arrives during the fourth kingdom: Rome, the empire into which Jesus was born." },
+  { at: 42, t: "The statue is broken", ref: "Dan 2:35", d: "Iron, clay, bronze, silver and gold become “like the chaff of the summer threshing floors; and the wind carried them away.”" },
+  { at: 60, t: "The stone becomes a mountain", ref: "Dan 2:35", d: "“The stone that struck the image became a great mountain and filled the whole earth.” Not a sudden replacement but growth, like the mustard seed and the leaven." },
+  { at: 90, t: "The whole earth filled", ref: "Hab 2:14; Isa 11:9", d: "The mountain of the LORD’s house fills the earth: the Eden mandate fulfilled by the kingdom of Christ (Isa 2:2–4)." }
+];
+
+/* 7 · How the purpose shrank */
+DATA.pr.funnel = [
+  { shrunk: "The kingdom of God over all creation", restored: "“Your kingdom come, on earth as it is in heaven” (Matt 6:10)", cause: "Where it began" },
+  { shrunk: "God’s people serving in every sphere", restored: "Royal priests in every sphere of life (1 Pet 2:9; Col 3:17)", cause: "A split between “sacred” and “secular” work" },
+  { shrunk: "Church services and programmes", restored: "Leaders equipping the saints for works of service (Eph 4:12)", cause: "A divide between professional clergy and passive laity" },
+  { shrunk: "Evangelism and discipleship classes only", restored: "Disciples who disciple nations in all Christ commanded (Matt 28:19–20)", cause: "Individualism and a decision-centred gospel" },
+  { shrunk: "A private ticket to heaven", restored: "Eternal life as knowing the Father now (John 17:3)", cause: "Expecting only decline, and heaven as escape from earth" }
+];
+DATA.pr.transaction = [
+  ["Problem", "I am guilty and headed for punishment."],
+  ["Solution", "Pray a prayer; the debt is paid."],
+  ["Result", "A ticket to heaven after death."],
+  ["Meanwhile", "Attend church, avoid sin, invite others, wait."],
+  ["Earth", "A sinking ship; get people off it."]
+];
+DATA.pr.relationship = [
+  ["Origin", "A Father who made sons and daughters in his image to share his life and rule (Gen 1:26; Luke 3:38)."],
+  ["Problem", "Broken relationship: we hid from his presence and lost our place (Gen 3:8–10)."],
+  ["Solution", "The Son reconciles us by his blood and the Spirit makes us sons who cry “Abba” (Rom 5:10; 8:15)."],
+  ["Result", "Heirs with Christ, joined to him now: “this is eternal life, that they know you” (Rom 8:17; John 17:3)."],
+  ["Mission", "The family business: sons bring their Father’s order, beauty and justice to earth as royal priests (Matt 6:10; Rom 8:19–21)."]
+];
+
+/* 8 · Timeline AD 30–70 and beyond (x from year) */
+DATA.pr.timeline = [
+  { y: 30, t: "“This generation will not pass away”", ref: "Matt 24:1–2, 34", d: "On the Mount of Olives, Jesus predicts the Temple’s destruction: “not one stone will be left here upon another … this generation will not pass away until all these things take place.”" },
+  { y: 30.6, t: "Enthroned with all authority", ref: "Dan 7:13–14; Matt 28:18; Acts 2:33–36", d: "The Son of Man comes on the clouds to the Ancient of Days and receives dominion: fulfilled at the ascension. Peter proclaims David’s throne now occupied." },
+  { y: 31.4, t: "Pentecost", ref: "Acts 2", d: "The Spirit poured out. The royal priesthood begins its work, in every language." },
+  { y: 60, t: "The gospel in all the world", ref: "Col 1:6, 23; Rom 10:18", d: "Paul says the gospel “has been proclaimed in all creation under heaven”, the sign Jesus gave before the end of that age (Matt 24:14)." },
+  { y: 64, t: "Nero’s persecution", ref: "Rev 1:9; 13", d: "Great tribulation for the church in Rome. Many read Revelation’s beast against this background, with Revelation written before AD 70 while the Temple still stood (Rev 11:1–2)." },
+  { y: 65, t: "“Ready to vanish away”", ref: "Heb 8:13", d: "Hebrews says the old covenant system “is becoming obsolete and growing old … ready to vanish away”." },
+  { y: 66, t: "The Jewish war begins", ref: "Luke 21:20–22", d: "“When you see Jerusalem surrounded by armies, then know that its desolation has come near … these are days of vengeance.” Christians flee as Jesus warned." },
+  { y: 70, t: "The Temple destroyed", ref: "Matt 24:2; Luke 21:24", d: "Rome burns the Temple. The old covenant age ends exactly as Jesus said, within a generation. The way is clear for the new covenant age of the kingdom." },
+  { y: 76, t: "The kingdom age: growing", ref: "Matt 13:31–33; Isa 9:7", d: "From here the mountain grows. History is not a slide into darkness but the slow, contested advance of Christ’s reign through his people." },
+  { y: 99, t: "Christ returns in glory", ref: "Acts 1:11; 1 Cor 15:22–26; 1 Thess 4:16–17", d: "Still future: the bodily return of Jesus, the resurrection of the dead, the final judgment and death destroyed. He returns to a kingdom that has filled the earth, and hands it to the Father.", future: true }
+];
+
+/* 9 · Objections */
+DATA.pr.objections = [
+  { k: "serious", q: "“We only reign after Christ returns. The kingdom is future.”", refs: "2 Tim 2:12; Rev 20:4–6",
+    not: "No one is saying the kingdom is already complete, or that the future reign is unimportant.",
+    a: "Scripture uses the past and present tense for our royal priesthood: Christ “made us a kingdom, priests” (Rev 1:6), “you are a royal priesthood” (1 Pet 2:9), we are seated with him now (Eph 2:6) and “reign in life” (Rom 5:17). Second Timothy 2:12 promises reigning to those who endure; it does not say reigning begins only later. The kingdom is inaugurated now and consummated later: the same reign, growing." },
+  { k: "serious", q: "“Jesus said, ‘My kingdom is not of this world’.”", refs: "John 18:36",
+    not: "This does not claim Jesus’ kingdom is earthly politics or advances by armies.",
+    a: "The Greek is ek tou kosmou: “not from this world.” Jesus speaks of the kingdom’s source and character, not its location: “my kingdom is not from here,” so his servants do not fight. A kingdom from heaven still rules on earth: “All authority in heaven and on earth has been given to me” (Matt 28:18); “the kingdom of the world has become the kingdom of our Lord” (Rev 11:15)." },
+  { k: "serious", q: "“The Bible says the world will get worse and worse until the end.”", refs: "2 Tim 3:1–13; Matt 24",
+    not: "No one claims every year will be better than the last, or that evil disappears before the return.",
+    a: "Second Timothy 3 describes troubles Timothy faced in his own day, then adds: “they will not get very far, for their folly will be plain to all” (3:9). Matthew 24’s tribulation was tied to “this generation” and the fall of the Temple in AD 70 (24:2, 34). Jesus’ kingdom parables describe growth: a seed becoming a tree, leaven filling the dough (Matt 13:31–33). The trajectory is increase without end (Isa 9:7), with wheat and weeds growing together until harvest (Matt 13:30)." },
+  { k: "straw", q: "“This is a social gospel that replaces the cross with activism.”", refs: "Rev 1:5–6; 5:9–10; John 3:3",
+    not: "This is a misrepresentation. The view does not replace forgiveness, new birth or the cross.",
+    a: "We are made kings and priests “by his blood” (Rev 1:5–6; 5:9–10). No one sees the kingdom without being born again (John 3:3). Transformation of society flows from transformed people, by the Spirit, not from programmes or politics. The cross is the foundation; the kingdom is what is built on it." },
+  { k: "straw", q: "“So Christians should seize political power and force their beliefs on others.”", refs: "Zech 4:6; 2 Cor 10:4; Mark 10:42–45",
+    not: "This is a misrepresentation. Reigning with Christ is not coercion.",
+    a: "The kingdom advances “not by might, nor by power, but by my Spirit” (Zech 4:6). Our weapons are not carnal (2 Cor 10:4). Jesus’ model of rule is service: “whoever would be first among you must be slave of all” (Mark 10:44). Like leaven, the kingdom works from inside out, through love, truth, excellence and sacrifice. Christians serve in public life as one sphere among many, not to dominate." },
+  { k: "serious", q: "“The Great Commission is evangelism and discipleship. Why add more?”", refs: "Matt 28:18–20; Eph 4:12",
+    not: "No one is downplaying evangelism or discipleship. They are essential.",
+    a: "The commission is to “make disciples of all nations … teaching them to observe all that I have commanded.” That is nations, not only individuals, and all of Christ’s commands, which touch family, work, money, justice and culture. Evangelism is the door into the house, not the whole house. The five ministries exist to equip the saints “for the work of ministry” in all of life (Eph 4:12), not only to produce more evangelists and small-group leaders." },
+  { k: "serious", q: "“Apostles and prophets ended with the first century.”", refs: "Eph 2:20; 4:11–13; 1 Cor 13:8–12",
+    not: "No one is claiming new Scripture, or that modern leaders equal the Twelve.",
+    a: "The foundational apostles and prophets who gave us Scripture were unique and are not repeated (Eph 2:20; Jude 3). But Ephesians 4 says the five gifts are given “until we all attain to the unity of the faith … to mature manhood, to the measure of the stature of the fullness of Christ” (4:13). The church has not yet reached that, so the functions of pioneering, hearing God and building up continue, always tested by Scripture." },
+  { k: "straw", q: "“Reading prophecy as fulfilled in AD 70 denies the second coming.”", refs: "Acts 1:11; 1 Cor 15:22–26; 1 Thess 4:16",
+    not: "This is a misrepresentation. This reading holds firmly to a future return of Christ.",
+    a: "Many texts that speak of judgment “coming” on the clouds use Old Testament judgment imagery (Isa 19:1) and were fulfilled when Jerusalem fell, as Jesus said, within that generation. But the bodily return of Jesus (Acts 1:11), the resurrection of the dead and the destruction of death (1 Cor 15:22–26) and the final judgment are still future. Christ returns at the end of a growing kingdom, not to rescue a failed one." },
+  { k: "serious", q: "“If the kingdom is advancing, why is there still so much evil?”", refs: "Matt 13:24–33; 1 Cor 15:25",
+    not: "No one is saying the world is already fixed or that progress is steady.",
+    a: "Jesus said the kingdom grows like a seed: slowly, hidden, then large. Weeds grow alongside wheat until the harvest. Christ “must reign until” all enemies are under his feet, a process, not an instant. Look over centuries rather than news cycles: the gospel has spread from a hundred and twenty people to every nation, and where it has gone it has brought hospitals, schools, literacy and campaigns against slavery. Progress is real, contested and uneven." },
+  { k: "serious", q: "“Talk of reigning breeds pride and triumphalism.”", refs: "John 13:3–5; Rom 8:17; Rev 1:9",
+    not: "No one is calling for arrogance or a prosperity message.",
+    a: "Jesus, knowing “that the Father had given all things into his hands”, picked up a towel and washed feet (John 13:3–5). Royal priests reign the way he reigns: by serving and suffering. John calls himself our “partner in the tribulation and the kingdom and the patient endurance that are in Jesus” (Rev 1:9). We are heirs “provided we suffer with him” (Rom 8:17)." },
+  { k: "straw", q: "“The fivefold is about titles and hierarchy.”", refs: "Matt 23:8–12; Eph 4:7, 11–12",
+    not: "This is a misrepresentation of the biblical gifts, though it is a real abuse.",
+    a: "Ephesians 4 describes gifts Christ gives, defined by what they do: equip the saints. Jesus forbade status-seeking titles (Matt 23:8–12). The test of an apostle, prophet, evangelist, shepherd or teacher is not a title on a door but believers who mature and function as royal priests." },
+  { k: "serious", q: "“Relationship language makes the gospel sentimental. The gospel is legal justification.”", refs: "Rom 5:1–11; 8:15–17; Gal 4:4–7",
+    not: "No one is denying justification by faith or the reality of sin and judgment.",
+    a: "Justification is real and precious: “we have peace with God” (Rom 5:1). But Paul moves straight on to reconciliation (5:10–11) and adoption: “you have received the Spirit of adoption … heirs of God and fellow heirs with Christ” (Rom 8:15–17; Gal 4:4–7). The courtroom opens into the family. Sons are heirs, and heirs are trained to rule." }
+];
+
+DATA.pr.study = [
+  { t: "The prophetic office", q: ["Read Jeremiah 23:18–22. What made a true prophet different from a false one?", "How did prophets relate to kings and priests? Choose one pair from the map and study it."] },
+  { t: "The fivefold", q: ["Ephesians 4:11–16: what is the purpose of the five gifts, and when do they stop being needed?", "Which of the five have you received from most? Which has been missing in your church experience?"] },
+  { t: "Now, not only later", q: ["List the verbs in Revelation 1:5–6, Ephesians 2:6 and 1 Peter 2:9. What tense are they?", "Read Daniel 2:34–35, 44. When is the stone set up, and how does it fill the earth?"] },
+  { t: "A bigger purpose", q: ["Which layer of the shrinking funnel describes your church or your own thinking?", "What would it mean for your work this week to be priestly service and kingly stewardship?"] }
+];
+DATA.pr.memory = [
+  ["Ephesians 4:11–12", "“He gave the apostles, the prophets, the evangelists, the shepherds and teachers, to equip the saints for the work of ministry, for building up the body of Christ.”"],
+  ["Numbers 11:29", "“Would that all the LORD’s people were prophets, that the LORD would put his Spirit on them!”"],
+  ["Daniel 2:44", "“In the days of those kings the God of heaven will set up a kingdom that shall never be destroyed.”"],
+  ["1 Corinthians 15:25", "“For he must reign until he has put all his enemies under his feet.”"],
+  ["Isaiah 9:7", "“Of the increase of his government and of peace there will be no end.”"],
+  ["Matthew 6:10", "“Your kingdom come, your will be done, on earth as it is in heaven.”"]
+];
+
+DATA.quiz.push(
+  { q: "According to Jeremiah 23:18–22, what marked a true prophet?", a: ["Performing miracles", "Standing in the council of the LORD to hear his word", "Being born into a priestly family", "Being appointed by the king"], c: 1, x: "True prophets had “stood in the council of the LORD”; false prophets spoke from their own minds." },
+  { q: "What does Ephesians 4:12 say the five ministries are given for?", a: ["To rule the church", "To equip the saints for the work of ministry", "To replace the priesthood", "To write new Scripture"], c: 1, x: "The gifts equip every believer to minister and build up the body." },
+  { q: "In Daniel 2, what happens to the stone cut without hands?", a: ["It is ground to dust", "It becomes a great mountain and fills the whole earth", "It is placed in the Temple", "It returns to heaven"], c: 1, x: "Daniel 2:35, 44: God’s kingdom, set up in the days of those kings, grows to fill the earth." }
+);
+
+DATA.web.nodes.push(
+  { id: "prophets", n: "Prophets", g: 3, d: "Messengers from God’s council who held kings, priests and people to the covenant." },
+  { id: "fivefold", n: "Fivefold gifts", g: 3, d: "Apostles, prophets, evangelists, shepherds and teachers, given to equip the saints to function as kings and priests." }
+);
+DATA.web.edges.push(
+  ["prophets", "kingpriest", "Anointed, counselled and confronted kings and priests"],
+  ["prophets", "temple", "Malachi and Haggai: the house and its priests"],
+  ["prophets", "jesus", "The prophet like Moses (Acts 3:22)"],
+  ["fivefold", "church", "Equip the saints for ministry (Eph 4:12)"],
+  ["fivefold", "pentecost", "The Spirit poured on all flesh (Acts 2:17)"],
+  ["fivefold", "prophets", "Prophecy continues among a Spirit-filled people"],
+  ["fivefold", "kingpriest", "Equip believers to rule and serve now"]
+);
+
+DATA.sources.push(
+  ["Iain H. Murray", "The Puritan Hope (1971)", "How confident expectation of the gospel’s spread shaped missions and revival."],
+  ["Kenneth L. Gentry Jr.", "He Shall Have Dominion (1992)", "The case for a growing, victorious kingdom in history."],
+  ["N. T. Wright", "Surprised by Hope (2008)", "Resurrection, new creation and why present work matters."]
+);
+
 /* Where Heaven Meets Earth — interactive behaviour */
 (function () {
   "use strict";
@@ -1580,6 +1858,7 @@ DATA.sources.push(
       web: () => { const pts = [[-120, -40], [-60, -80], [20, -70], [100, -30], [120, 40], [40, 70], [-50, 60], [-110, 30]]; return [...pts.flatMap((a, i) => pts.slice(i + 2, i + 5).map(b => sv("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: "var(--muted)", "stroke-width": 2, opacity: .5 }))), ...pts.map((p, i) => sv("circle", { cx: p[0], cy: p[1], r: 10, fill: i % 3 === 0 ? green : i % 3 === 1 ? blue : gold }))]; },
       serpent: () => [sv("path", { d: "M-150 40 C-100 -20 -60 80 0 20 C60 -40 100 60 150 -10", fill: "none", stroke: green, "stroke-width": 16, "stroke-linecap": "round" }), sv("circle", { cx: 150, cy: -10, r: 14, fill: green }), sv("circle", { cx: 0, cy: -70, r: 30, fill: gold, opacity: .25 })],
       pole: () => [sv("rect", { x: -4, y: -110, width: 8, height: 160, fill: "var(--muted)" }), sv("path", { d: "M0 -90 C30 -80 -30 -60 0 -50 C30 -40 -30 -20 0 -10", fill: "none", stroke: gold, "stroke-width": 8 })],
+      star: () => { const pts = Array.from({ length: 5 }, (_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / 5; return [Math.cos(a) * 95, Math.sin(a) * 95 - 10]; }); return [...pts.map((p, i) => sv("line", { x1: p[0], y1: p[1], x2: pts[(i + 1) % 5][0], y2: pts[(i + 1) % 5][1], stroke: "var(--muted)", "stroke-width": 3, opacity: .5 })), ...pts.map(p => sv("line", { x1: 0, y1: -10, x2: p[0], y2: p[1], stroke: gold, "stroke-width": 3 })), sv("circle", { cx: 0, cy: -10, r: 30, fill: gold }), ...pts.map((p, i) => sv("circle", { cx: p[0], cy: p[1], r: 20, fill: [blue, gold, "var(--flame)", green, "var(--muted)"][i] }))]; },
       crown: () => [sv("path", { d: "M-150 20 L-150 -40 L-120 -10 L-95 -60 L-70 -10 L-40 -40 L-40 20 Z", fill: gold }), sv("path", { d: "M40 20 L40 -30 Q90 -80 140 -30 L140 20 Z", fill: "var(--surface)", stroke: "var(--muted)", "stroke-width": 3 }), sv("rect", { x: 70, y: -22, width: 40, height: 12, rx: 3, fill: gold }), sv("circle", { cx: 0, cy: -20, r: 30, fill: gold, opacity: .25 }), sv("rect", { x: -160, y: 40, width: 320, height: 8, rx: 4, fill: "var(--muted)", opacity: .5 })],
       zig: () => [...[0, 1, 2].map(i => sv("rect", { x: -140 + i * 40, y: 10 - i * 34, width: 280 - i * 80, height: 34, fill: "#b08a5a", opacity: .6 + i * .12 })), sv("rect", { x: -8, y: -20, width: 16, height: 30, fill: "var(--bg-2)" })]
     };
@@ -1905,7 +2184,7 @@ DATA.sources.push(
   /* ---------------- Connections web ---------------- */
   function initWeb() {
     const W = 600, C = W / 2, R = 228;
-    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
+    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
     const nodes = order.map(id => DATA.web.nodes.find(n => n.id === id));
     const pos = {};
     nodes.forEach((n, i) => { const a = -Math.PI / 2 + i / nodes.length * Math.PI * 2; pos[n.id] = [C + Math.cos(a) * R, C + Math.sin(a) * R, a]; });
@@ -2653,6 +2932,316 @@ DATA.sources.push(
   }
 
 
+  /* ================ Part V: prophets, the fivefold and the kingdom now ================ */
+  function initPrOffice() {
+    const nodes = DATA.pr.lawsuit.map(n => ({ ...n, w: ["indict", "intercede"].includes(n.id) ? 330 : 420 }));
+    flowchart($("#prLawsuit"), nodes, DATA.pr.lawsuitEdges, { id: "prl", w: 900, h: 560, nodeW: 420, refsInline: true, label: "Flowchart of a prophet's covenant lawsuit", start: "council", onSelect: n => panelFill("#prLawsuitPanel", "The prophetic pattern", n) });
+    $("#prOffice").append(...DATA.pr.office.map(([t, d]) => el("div", { class: "card" }, el("p", { class: "eyebrow", text: t }), el("p", { html: refify(d), style: { color: "var(--ink)" } }))));
+  }
+
+  function initPrPairs() {
+    const P = DATA.pr.pairs, T = DATA.pr.relTypes, cw = 122, x0 = 110, W = x0 + P.length * cw + 10, H = 380, yK = 70, yP = 190, yR = 310;
+    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Map of prophets and the kings and priests they related to", style: { minWidth: W * 0.82 + "px" } });
+    [["KING", yK, "var(--babel)"], ["PROPHET", yP, "var(--accent)"], ["PRIEST", yR, "var(--eden)"]].forEach(([t, y, c]) => svg.append(sv("line", { x1: x0 - 10, y1: y, x2: W - 10, y2: y, stroke: c, "stroke-opacity": .15, "stroke-width": 26 }), sv("text", { x: 14, y: y + 5, "font-size": 12, "font-weight": 800, "letter-spacing": 1.5, fill: c }, t)));
+    const node = (x, y, label, c) => [sv("rect", { x: x - 56, y: y - 19, width: 112, height: 38, rx: 10, fill: "var(--surface)", stroke: c, "stroke-width": 2 }), sv("text", { x, y: y + 4, "text-anchor": "middle", "font-size": label.length > 15 ? 10 : 11.5, "font-weight": 800, fill: "var(--ink)" }, label)];
+    const cols = P.map((p, i) => {
+      const x = x0 + i * cw + cw / 2;
+      const g = sv("g", { class: "fnode pcol", tabindex: "0", role: "button", "aria-label": p.p });
+      g.append(sv("rect", { class: "colbg", x: x - cw / 2 + 3, y: 30, width: cw - 6, height: H - 50, rx: 12, fill: "var(--accent)", "fill-opacity": 0 }));
+      if (p.k) g.append(sv("line", { x1: x, y1: yK + 19, x2: x, y2: yP - 19, stroke: T[p.rk][1], "stroke-width": 5, "stroke-linecap": "round" }));
+      if (p.pr) g.append(sv("line", { x1: x, y1: yP + 19, x2: x, y2: yR - 19, stroke: T[p.rp][1], "stroke-width": 5, "stroke-linecap": "round" }));
+      if (p.k) g.append(...node(x, yK, p.k, "var(--babel)"));
+      g.append(...node(x, yP, p.p, "var(--accent)"));
+      if (p.pr) g.append(...node(x, yR, p.pr, "var(--eden)"));
+      g.addEventListener("click", () => sel(i)); g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sel(i); } });
+      svg.append(g); return g;
+    });
+    $("#prPairs").append(svg);
+    const f = $("#prPairFilter");
+    [["all", "All relationships", null], ...Object.entries(T).map(([k, v]) => [k, v[0], v[1]])].forEach(([k, n, c]) => f.append(el("button", { class: "chip", type: "button", "data-k": k, "aria-pressed": String(k === "all"), onclick: () => {
+      $$(".chip", f).forEach(b => b.setAttribute("aria-pressed", String(b.dataset.k === k)));
+      cols.forEach((g, i) => g.style.opacity = k === "all" || P[i].rk === k || P[i].rp === k ? 1 : .18);
+    } }, c ? el("i", { class: "dotc", style: { background: c } }) : null, n)));
+    function sel(i) {
+      cols.forEach((g, j) => $(".colbg", g).setAttribute("fill-opacity", j === i ? .14 : 0));
+      const p = P[i];
+      const rel = (who, r) => el("span", { class: "relchip", style: { borderColor: T[r][1] } }, el("i", { class: "dotc", style: { background: T[r][1] } }), `${T[r][0]} ${who}`);
+      $("#prPairPanel").replaceChildren(el("p", { class: "eyebrow", text: "Prophet" }), el("h3", { text: p.p }),
+        el("div", { class: "chips" }, p.k ? rel(p.k, p.rk) : null, p.pr ? rel(p.pr, p.rp) : null), el("span", { class: "ref", text: p.ref }), el("p", { html: refify(p.d) }));
+    }
+    sel(1);
+  }
+
+  function initPrFive() {
+    const F = DATA.pr.five, C = [260, 250], R = 172;
+    const svg = sv("svg", { viewBox: "0 0 520 500", role: "img", "aria-label": "Five ministries around the ascended Christ" });
+    const pos = F.map((_, i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / 5; return [C[0] + Math.cos(a) * R, C[1] + Math.sin(a) * R]; });
+    pos.forEach((p, i) => { const q = pos[(i + 1) % 5]; svg.append(sv("line", { x1: p[0], y1: p[1], x2: q[0], y2: q[1], stroke: "var(--line)", "stroke-width": 2 })); });
+    pos.forEach(p => svg.append(sv("line", { x1: C[0], y1: C[1], x2: p[0], y2: p[1], stroke: "var(--accent)", "stroke-width": 2, class: "flow", opacity: .7 })));
+    svg.append(sv("circle", { cx: C[0], cy: C[1], r: 70, fill: "var(--accent)", opacity: .15, class: "pulse" }), sv("circle", { cx: C[0], cy: C[1], r: 56, fill: "var(--accent)" }),
+      sv("text", { x: C[0], y: C[1] - 6, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--accent-ink)" }, "The ascended"), sv("text", { x: C[0], y: C[1] + 10, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: "var(--accent-ink)" }, "Christ"),
+      sv("text", { x: C[0], y: C[1] + 26, "text-anchor": "middle", "font-size": 10, fill: "var(--accent-ink)" }, "Eph 4:8–10"));
+    const nodes = F.map((f, i) => {
+      const [x, y] = pos[i];
+      svg.append(sv("circle", { cx: x, cy: y, r: 50, fill: "var(--surface)" }));
+      const g = sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": f.n }, sv("circle", { cx: x, cy: y, r: 50, fill: f.c, "fill-opacity": .22, stroke: f.c, "stroke-width": 2.5 }), sv("text", { x, y: y + 5, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" }, f.n));
+      g.addEventListener("click", () => sel(i)); g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sel(i); } });
+      svg.append(g); return g.firstChild;
+    });
+    $("#prStar").append(svg);
+    function sel(i) {
+      nodes.forEach((c, j) => { c.setAttribute("fill-opacity", j === i ? .5 : .22); c.setAttribute("stroke-width", j === i ? 5 : 2.5); });
+      const f = F[i];
+      const row = (cls, t, d) => el("div", { class: "row " + cls }, el("b", { text: t }), el("p", { html: refify(d) }));
+      $("#prStarPanel").replaceChildren(el("p", { class: "eyebrow", text: f.gk }), el("h3", { text: f.n }), el("p", { html: refify(f.role) }),
+        row("", "Old Testament echo", f.ot), row("babel", "Kingly connection", f.king), row("eden", "Priestly connection", f.priest), row("christ", "How it equips kings and priests", f.equip), row("warn", "If it works alone", f.alone));
+    }
+    sel(1);
+    const steps = [["Christ ascends and gives gifts", "Eph 4:8–10"], ["Five ministries", "Eph 4:11"], ["Saints equipped for ministry", "Eph 4:12"], ["Every part working", "Eph 4:16"], ["Unity and maturity", "Eph 4:13–15"], ["Royal priests filling all things", "Eph 1:22–23; 1 Pet 2:9"]];
+    $("#prEquipFlow").append(...steps.map(([t, r]) => el("li", { class: "card reveal" }, el("b", { text: t }), el("span", { class: "ref", text: r }))));
+  }
+
+  function initPrChanged() {
+    const svg = sv("svg", { viewBox: "0 0 460 320", role: "img", "aria-label": "Old and new covenant overlapping in what is unchanged" });
+    const zones = {
+      old: sv("circle", { cx: 160, cy: 160, r: 130, fill: "var(--muted)", "fill-opacity": .18, stroke: "var(--muted)", "stroke-width": 2 }),
+      new: sv("circle", { cx: 300, cy: 160, r: 130, fill: "var(--accent)", "fill-opacity": .18, stroke: "var(--accent)", "stroke-width": 2 })
+    };
+    svg.append(zones.old, zones.new);
+    const mid = sv("path", { d: "M230 47 A130 130 0 0 1 230 273 A130 130 0 0 1 230 47 Z", fill: "var(--eden)", "fill-opacity": .3 });
+    svg.append(mid);
+    const t = (x, y, s, fs, c) => svg.append(sv("text", { x, y, "text-anchor": "middle", "font-size": fs, "font-weight": 800, fill: c || "var(--ink)", "pointer-events": "none" }, s));
+    t(110, 150, "OLD", 15); t(110, 170, "COVENANT", 12, "var(--muted)"); t(350, 150, "NEW", 15); t(350, 170, "COVENANT", 12, "var(--muted)"); t(230, 155, "What", 12); t(230, 171, "stays", 12);
+    const map = { old: zones.old, new: zones.new, same: mid };
+    Object.entries(map).forEach(([k, n]) => { n.style.cursor = "pointer"; n.addEventListener("click", () => set(k)); });
+    $("#prVenn").append(svg);
+    const tg = $("#prCovToggle"), box = $("#prChanged");
+    function set(m) {
+      $$(".chip", tg).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.m === m)));
+      zones.old.setAttribute("fill-opacity", m === "old" ? .4 : .14); zones.new.setAttribute("fill-opacity", m === "new" ? .4 : .14); mid.setAttribute("fill-opacity", m === "same" ? .6 : .25);
+      box.classList.toggle("twisted", false);
+      box.replaceChildren(...(m === "same"
+        ? DATA.pr.unchanged.map(u => el("div", { class: "crow same" }, el("b", { text: "Unchanged" }), el("p", { class: "cval", html: refify(u) })))
+        : DATA.pr.changed.map(r => el("div", { class: "crow " + (m === "old" ? "old" : "new") }, el("b", { text: r[0] }), el("p", { class: "cval", html: refify(m === "old" ? r[1] : r[2]) })))));
+    }
+    [["old", "Old covenant"], ["new", "New covenant"], ["same", "What stays the same"]].forEach(([m, n]) => tg.append(el("button", { class: "chip", type: "button", "data-m": m, text: n, onclick: () => set(m) })));
+    set("new");
+  }
+
+  function initPrEquip() {
+    const M = DATA.pr.matrix, cols = DATA.pr.matrixCols, F = DATA.pr.five;
+    const grid = $("#prMatrix");
+    grid.append(el("span", { class: "mh" }), ...cols.map(c => el("span", { class: "mh " + c.k, text: c.t })));
+    const cells = [];
+    F.forEach(f => {
+      grid.append(el("span", { class: "mrow", style: { color: f.c }, text: f.n }));
+      M[f.id].forEach(([lvl, d], j) => {
+        const b = el("button", { class: `mcell l${lvl} ${cols[j].k}`, type: "button", "aria-label": `${f.n}, ${cols[j].t}: ${d}`, onclick: () => {
+          cells.forEach(c => c.classList.toggle("on", c === b));
+          $("#prMatrixNote").innerHTML = `<b>${f.n} · ${cols[j].t}</b> (${cols[j].k === "king" ? "kingly" : "priestly"}): ${refify(d)}`;
+        } }, el("span", { class: "bars", "aria-hidden": "true" }, ...[1, 2, 3].map(n => el("i", { class: n <= lvl ? "f" : "" }))));
+        cells.push(b); grid.append(b);
+      });
+    });
+    cells[2].click();
+    // spheres wheel
+    const S = DATA.pr.spheres, n = S.length, Cx = 220, Cy = 220, R1 = 90, R2 = 200;
+    const svg = sv("svg", { viewBox: "0 0 440 440", role: "img", "aria-label": "Seven spheres of life around the royal priesthood" });
+    const arc = (a0, a1) => { const p = (r, a) => [Cx + Math.cos(a) * r, Cy + Math.sin(a) * r]; const [x1, y1] = p(R2, a0), [x2, y2] = p(R2, a1), [x3, y3] = p(R1, a1), [x4, y4] = p(R1, a0); return `M${x1} ${y1} A${R2} ${R2} 0 0 1 ${x2} ${y2} L${x3} ${y3} A${R1} ${R1} 0 0 0 ${x4} ${y4} Z`; };
+    const segs = S.map((s, i) => {
+      const a0 = -Math.PI / 2 + i * 2 * Math.PI / n + .02, a1 = -Math.PI / 2 + (i + 1) * 2 * Math.PI / n - .02, am = (a0 + a1) / 2;
+      const g = sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": s.n });
+      const pth = sv("path", { d: arc(a0, a1), fill: i % 2 ? "var(--babel)" : "var(--eden)", "fill-opacity": .25, stroke: "var(--surface)", "stroke-width": 2 });
+      const words = s.n.split(" & ");
+      g.append(pth, ...words.map((w, k) => sv("text", { x: Cx + Math.cos(am) * 145, y: Cy + Math.sin(am) * 145 + 4 + (k - (words.length - 1) / 2) * 15, "text-anchor": "middle", "font-size": 12.5, "font-weight": 800, fill: "var(--ink)" }, (k ? "& " : "") + w)));
+      g.addEventListener("click", () => sel(i)); g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sel(i); } });
+      svg.append(g); return pth;
+    });
+    svg.append(sv("circle", { cx: Cx, cy: Cy, r: R1 - 8, fill: "var(--accent)" }), sv("text", { x: Cx, y: Cy - 4, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--accent-ink)" }, "Royal"), sv("text", { x: Cx, y: Cy + 14, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--accent-ink)" }, "priests"));
+    $("#prWheel").append(svg);
+    function sel(i) {
+      segs.forEach((p, j) => p.setAttribute("fill-opacity", j === i ? .6 : .25));
+      const s = S[i];
+      $("#prWheelPanel").replaceChildren(el("p", { class: "eyebrow", text: "Sphere of life" }), el("h3", { text: s.n }), el("span", { class: "ref", text: s.ref }),
+        el("div", { class: "row eden" }, el("b", { text: "As priests" }), el("p", { html: refify(s.priest) })), el("div", { class: "row babel" }, el("b", { text: "As kings" }), el("p", { html: refify(s.king) })));
+    }
+    sel(2);
+  }
+
+  function initPrDaniel() {
+    const svg = sv("svg", { viewBox: "0 0 600 420", role: "img", "aria-label": "Daniel's statue struck by a stone that becomes a mountain filling the earth" });
+    svg.append(sv("rect", { width: 600, height: 420, fill: "var(--bg-2)", opacity: .5 }));
+    const mountain = sv("path", { fill: "var(--eden)", "fill-opacity": .75 });
+    const peak = sv("circle", { r: 0, fill: "var(--accent)", opacity: .3, class: "pulse" });
+    svg.append(peak, mountain, sv("line", { x1: 0, y1: 360, x2: 600, y2: 360, stroke: "var(--line)", "stroke-width": 2 }));
+    const metal = { gold: "var(--accent)", silver: "#b8c0c8", bronze: "#a8743a", iron: "#6b7280", clay: "#b08a5a" };
+    const pieces = [
+      [sv("circle", { cx: 200, cy: 86, r: 24, fill: metal.gold }), -60, 260, -80, "Babylon (gold)", 92],
+      [sv("rect", { x: 170, y: 112, width: 60, height: 54, rx: 6, fill: metal.silver }), 70, 240, 50, "Medo-Persia (silver)", 142],
+      [sv("rect", { x: 174, y: 166, width: 52, height: 46, rx: 6, fill: metal.bronze }), -90, 190, -40, "Greece (bronze)", 192],
+      [sv("rect", { x: 178, y: 212, width: 18, height: 106, rx: 4, fill: metal.iron }), -40, 60, -70, "Rome (iron)", 266],
+      [sv("rect", { x: 204, y: 212, width: 18, height: 106, rx: 4, fill: metal.iron }), 60, 60, 80, "", 0],
+      [sv("rect", { x: 174, y: 318, width: 26, height: 20, rx: 3, fill: metal.clay }), -30, 20, -40, "iron & clay", 330],
+      [sv("rect", { x: 200, y: 318, width: 26, height: 20, rx: 3, fill: metal.clay }), 40, 20, 40, "", 0]
+    ];
+    const labels = [];
+    pieces.forEach(([n, , , , lab, ly]) => { n.style.transformBox = "fill-box"; n.style.transformOrigin = "center"; svg.append(n); if (lab) { const t = sv("text", { x: 244, y: ly, "font-size": 12, "font-weight": 700, fill: "var(--muted)" }, lab); labels.push(t); svg.append(t); } });
+    const stone = sv("polygon", { points: "-14,-6 -4,-15 12,-10 15,5 4,14 -12,9", fill: "#8a8f98", stroke: "var(--ink)", "stroke-width": 1.5 });
+    svg.append(stone);
+    const cap = sv("text", { x: 300, y: 36, "text-anchor": "middle", "font-size": 15, "font-weight": 800, fill: "var(--ink)" }, "");
+    svg.append(cap);
+    $("#prDaniel").append(svg);
+    const clamp = v => Math.max(0, Math.min(1, v));
+    function render(t) {
+      const s = clamp(t / 22), b = clamp((t - 22) / 20), g = clamp((t - 42) / 58);
+      stone.setAttribute("transform", `translate(${560 + (212 - 560) * s} ${20 + (322 - 20) * s}) rotate(${s * 540})`);
+      stone.style.opacity = g > 0.02 ? 0 : 1;
+      pieces.forEach(([n, dx, dy, r]) => { n.style.transform = b ? `translate(${dx * b}px, ${dy * b * .35}px) rotate(${r * b}deg)` : ""; n.style.opacity = 1 - b; });
+      labels.forEach(l => l.style.opacity = 1 - b);
+      const w = 30 + g * 1150, h = 20 + g * 300;
+      mountain.setAttribute("d", g > 0 ? `M${212 - w / 2} 360 Q${212 - w / 6} ${360 - h * .8} 212 ${360 - h} Q${212 + w / 6} ${360 - h * .8} ${212 + w / 2} 360 Z` : "");
+      peak.setAttribute("cx", 212); peak.setAttribute("cy", 360 - h); peak.setAttribute("r", g > 0 ? 18 + g * 30 : 0);
+      const st = [...DATA.pr.daniel].reverse().find(d => t >= d.at);
+      cap.textContent = st.t;
+      $("#prDanielInfo").replaceChildren(el("h3", { text: st.t }), el("span", { class: "ref", text: st.ref }), el("p", { html: refify(st.d) }));
+    }
+    const range = $("#prDanielRange");
+    range.addEventListener("input", () => { cancelAnimationFrame(anim); render(+range.value); });
+    let anim = null;
+    $("#prDanielPlay").addEventListener("click", () => {
+      cancelAnimationFrame(anim);
+      if (reduceMotion) { range.value = 100; render(100); return; }
+      const t0 = performance.now();
+      const step = now => { const t = Math.min(100, (now - t0) / 80); range.value = t; render(t); if (t < 100) anim = requestAnimationFrame(step); };
+      anim = requestAnimationFrame(step);
+    });
+    range.value = 0; render(0);
+  }
+
+  function initPrTense() {
+    const box = $("#prTense"), cols = DATA.pr.tenseCols, colours = ["var(--eden)", "var(--accent)", "var(--babel)", "var(--muted)"];
+    const btns = [];
+    cols.forEach((c, i) => {
+      const col = el("div", { class: "tcol", style: { borderTopColor: colours[i] } }, el("p", { class: "eyebrow", style: { color: colours[i] }, text: c }));
+      DATA.pr.tense.forEach((v, j) => { if (v.col !== i) return; const b = el("button", { class: "tchip", type: "button", onclick: () => sel(j) }, el("b", { text: v.ref }), el("span", { text: "“" + v.v + "”" })); btns[j] = b; col.append(b); });
+      if (i < 3) col.append(el("span", { class: "tarrow", "aria-hidden": "true", text: "→" }));
+      box.append(col);
+    });
+    function sel(j) {
+      btns.forEach((b, k) => b && b.classList.toggle("on", k === j));
+      const v = DATA.pr.tense[j];
+      $("#prTensePanel").replaceChildren(el("p", { class: "eyebrow", style: { color: colours[v.col] }, text: cols[v.col] }), el("h3", { text: v.ref }), el("p", { class: "tquote", html: v.t }));
+    }
+    sel(0);
+  }
+
+  function initPrFunnel() {
+    const L = DATA.pr.funnel, shortS = ["All creation", "Every sphere", "Services & programmes", "Evangelism & classes", "Ticket to heaven"], shortR = ["Kingdom on earth", "Royal priests everywhere", "Equipping the saints", "Discipling nations", "Knowing the Father now"];
+    const svg = sv("svg", { viewBox: "0 0 520 400", role: "img", "aria-label": "A funnel showing the calling narrowing, or restored" });
+    const layers = L.map((l, i) => {
+      const g = sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": l.shrunk });
+      const poly = sv("polygon", { fill: "var(--accent)", "fill-opacity": .14 + i * .1, stroke: "var(--accent)", "stroke-width": 1.5 });
+      const txt = sv("text", { x: 260, y: 30 + i * 74 + 38, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: "var(--ink)" });
+      g.append(poly, txt);
+      g.addEventListener("click", () => sel(i)); g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sel(i); } });
+      svg.append(g); return { poly, txt };
+    });
+    $("#prFunnel").append(svg);
+    let mode = "shrunk", k = 1, anim = null, cur = 0;
+    const draw = kk => layers.forEach(({ poly }, i) => {
+      const y0 = 30 + i * 74, y1 = y0 + 64, a = i * 44 * kk, b = (i + 1) * 44 * kk;
+      poly.setAttribute("points", `${20 + a},${y0} ${500 - a},${y0} ${500 - b},${y1} ${20 + b},${y1}`);
+    });
+    function set(m) {
+      mode = m;
+      $$("#prFunnelToggle .chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.m === m)));
+      layers.forEach(({ txt, poly }, i) => { txt.textContent = (m === "shrunk" ? shortS : shortR)[i]; poly.setAttribute("fill", m === "shrunk" ? "var(--accent)" : "var(--eden)"); poly.setAttribute("stroke", m === "shrunk" ? "var(--accent)" : "var(--eden)"); });
+      const from = k, to = m === "shrunk" ? 1 : 0;
+      cancelAnimationFrame(anim);
+      if (reduceMotion) { k = to; draw(k); } else {
+        const t0 = performance.now();
+        const step = now => { const t = Math.min(1, (now - t0) / 700); k = from + (to - from) * (1 - Math.pow(1 - t, 3)); draw(k); if (t < 1) anim = requestAnimationFrame(step); };
+        anim = requestAnimationFrame(step);
+      }
+      sel(cur);
+    }
+    function sel(i) {
+      cur = i;
+      layers.forEach(({ poly }, j) => poly.setAttribute("stroke-width", j === i ? 4 : 1.5));
+      const l = L[i];
+      $("#prFunnelPanel").replaceChildren(el("p", { class: "eyebrow", text: `Layer ${i + 1} of ${L.length}` }),
+        el("div", { class: "row warn" }, el("b", { text: "Shrunk to" }), el("p", { html: refify(l.shrunk) })),
+        i ? el("div", { class: "row" }, el("b", { text: "What narrowed it" }), el("p", { html: refify(l.cause) })) : null,
+        el("div", { class: "row eden" }, el("b", { text: "Original intent" }), el("p", { html: refify(l.restored) })));
+    }
+    [["shrunk", "How it shrank"], ["restored", "Restore the original intent"]].forEach(([m, n]) => $("#prFunnelToggle").append(el("button", { class: "chip", type: "button", "data-m": m, text: n, onclick: () => set(m) })));
+    draw(1); set("shrunk"); sel(4);
+    const fill = (sel2, rows) => $(sel2).append(...rows.map(([t, d]) => el("li", { class: "vstep" }, el("div", { class: "vcard" }, el("small", { text: t }), el("p", { html: refify(d) })))));
+    fill("#prTrans", DATA.pr.transaction); fill("#prRel", DATA.pr.relationship);
+  }
+
+  function initPrTimeline() {
+    const E = DATA.pr.timeline, W = 1100, H = 330, yA = 175;
+    const X = y => y <= 72 ? 60 + (y - 28) * (700 / 44) : 860 + (y - 76) * (180 / 23);
+    const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Timeline from AD 30 to AD 70 and the growing kingdom age until Christ's return", style: { minWidth: "900px" } });
+    const grad = sv("linearGradient", { id: "kgrow", x1: 0, y1: 0, x2: 1, y2: 0 }, sv("stop", { offset: 0, "stop-color": "var(--eden)", "stop-opacity": .15 }), sv("stop", { offset: 1, "stop-color": "var(--eden)", "stop-opacity": .6 }));
+    svg.append(sv("defs", {}, grad));
+    svg.append(sv("rect", { x: X(28), y: yA - 14, width: X(70) - X(28), height: 28, rx: 6, fill: "var(--muted)", "fill-opacity": .18 }),
+      sv("text", { x: (X(28) + X(70)) / 2, y: yA + 34, "text-anchor": "middle", "font-size": 12, "font-weight": 800, "letter-spacing": 1.5, fill: "var(--muted)" }, "THE OLD COVENANT AGE ENDING · “THIS GENERATION”"));
+    svg.append(sv("path", { d: `M${X(70)} ${yA + 14} L${X(99) + 20} ${yA + 14} L${X(99) + 20} ${yA - 70} Q${X(85)} ${yA - 30} ${X(70)} ${yA - 6} Z`, fill: "url(#kgrow)" }),
+      sv("text", { x: X(84), y: yA + 34, "text-anchor": "middle", "font-size": 12, "font-weight": 800, "letter-spacing": 1.5, fill: "var(--eden)" }, "THE KINGDOM AGE · GROWING"));
+    svg.append(sv("line", { x1: 40, y1: yA, x2: W - 30, y2: yA, stroke: "var(--ink)", "stroke-width": 2 }));
+    svg.append(sv("text", { x: (X(72) + X(76)) / 2, y: yA + 5, "text-anchor": "middle", "font-size": 16, "font-weight": 800, fill: "var(--surface)", stroke: "var(--surface)", "stroke-width": 8 }, "≈"), sv("text", { x: (X(72) + X(76)) / 2, y: yA + 5, "text-anchor": "middle", "font-size": 16, "font-weight": 800, fill: "var(--ink)" }, "≈"));
+    [30, 40, 50, 60, 70].forEach(y => svg.append(sv("line", { x1: X(y), y1: yA - 5, x2: X(y), y2: yA + 5, stroke: "var(--ink)" }), sv("text", { x: X(y), y: yA + 52, "text-anchor": "middle", "font-size": 11, fill: "var(--muted)", "font-weight": 700 }, "AD " + y)));
+    let lastX = -999, tier = 0;
+    const dots = E.map((e, i) => {
+      const x = X(e.y); tier = x - lastX < 120 ? tier + 1 : 0; lastX = x;
+      const up = i % 2 === 0, ly = up ? yA - 40 - tier * 26 : yA + 78 + tier * 26;
+      const g = sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": e.t });
+      g.append(sv("line", { x1: x, y1: yA, x2: x, y2: up ? ly + 6 : ly - 14, stroke: "var(--line)", "stroke-dasharray": "2 3" }),
+        sv("circle", { cx: x, cy: yA, r: e.future ? 10 : 8, fill: e.future ? "var(--surface)" : e.y >= 76 ? "var(--eden)" : e.y >= 64 ? "var(--flame)" : "var(--accent)", stroke: e.future ? "var(--accent)" : "var(--surface)", "stroke-width": e.future ? 3 : 2, "stroke-dasharray": e.future ? "3 3" : "" }),
+        sv("text", { x, y: ly, "text-anchor": x > W - 120 ? "end" : x < 120 ? "start" : "middle", "font-size": 12, "font-weight": 800, fill: "var(--ink)", "paint-order": "stroke", stroke: "var(--surface)", "stroke-width": 4 }, e.t.length > 30 ? e.t.slice(0, 28) + "…" : e.t));
+      g.addEventListener("click", () => sel(i)); g.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); sel(i); } });
+      svg.append(g); return g.querySelector("circle");
+    });
+    $("#prTimeline").append(svg);
+    function sel(i) {
+      dots.forEach((d, j) => d.setAttribute("r", j === i ? 13 : E[j].future ? 10 : 8));
+      const e = E[i];
+      $("#prTimelinePanel").replaceChildren(el("p", { class: "eyebrow", text: e.future ? "Still future" : e.y >= 76 ? "Now" : "AD " + Math.floor(e.y) }), el("h3", { text: e.t }), el("span", { class: "ref", text: e.ref }), el("p", { html: refify(e.d) }));
+    }
+    sel(7);
+  }
+
+  function initPrObjections() {
+    const box = $("#prObjections"), O = DATA.pr.objections;
+    const cards = O.map((o, i) => {
+      const d = el("details", { class: "obj " + o.k, open: i === 0 ? true : null },
+        el("summary", {}, el("span", { class: "obadge", text: o.k === "straw" ? "Misrepresentation" : "Objection" }), el("b", { text: o.q }), el("small", { class: "ref", text: o.refs })),
+        el("div", { class: "obody" },
+          el("div", { class: "row warn" }, el("b", { text: o.k === "straw" ? "The misrepresentation" : "What is not being claimed" }), el("p", { html: refify(o.not) })),
+          el("div", { class: "row eden" }, el("b", { text: "Response" }), el("p", { html: refify(o.a) }))));
+      box.append(d); return d;
+    });
+    const f = $("#prObjFilter");
+    [["all", "All"], ["serious", "Serious objections"], ["straw", "Misrepresentations"]].forEach(([k, n]) => f.append(el("button", { class: "chip", type: "button", "data-k": k, "aria-pressed": String(k === "all"), text: n, onclick: () => {
+      $$(".chip", f).forEach(c => c.setAttribute("aria-pressed", String(c.dataset.k === k)));
+      cards.forEach((c, i) => { c.hidden = !(k === "all" || O[i].k === k); });
+    } })));
+  }
+
+  function initPrStudy() {
+    $("#prQuestions").append(...DATA.pr.study.map((s, i) => el("details", { class: "qset", open: i === 0 ? true : null }, el("summary", { text: s.t }), el("ol", {}, s.q.map(q => el("li", { html: refify(q) }))))));
+    $("#prMemory").append(...DATA.pr.memory.map(([r, v]) => {
+      const b = el("button", { class: "clue mem", type: "button", "aria-pressed": "false", "aria-label": `Memory verse ${r}. Turn over.` },
+        el("div", { class: "clue-inner" }, el("div", { class: "clue-face front" }, el("p", { class: "eyebrow", text: "Memory verse" }), el("h3", { text: r }), el("span", { class: "hint", text: "Tap to reveal" })),
+          el("div", { class: "clue-face back" }, el("span", { class: "ref", text: r }), el("p", { text: v }))));
+      b.addEventListener("click", () => { const on = b.classList.toggle("flipped"); b.setAttribute("aria-pressed", String(on)); });
+      return b;
+    }));
+  }
+
+
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -2684,6 +3273,8 @@ DATA.sources.push(
       [initPentecost, "#compare"], [initCities, "#lanes"],
       [initKpDesign, "#kpDesign"], [initKpTwist, "#kpTwist"], [initKpSplit, "#kpSplit"], [initKpRoles, "#kpRoleTabs"], [initKpRings, "#kpRings"], [initKpCross, "#kpCross"],
       [initKpPeople, "#kpPeople"], [initKpMelch, "#kpMelchFlow"], [initKpPromises, "#kpPromises"], [initKpCalling, "#kpBalance"], [initKpStudy, "#kpQuestions"],
+      [initPrOffice, "#prLawsuit"], [initPrPairs, "#prPairs"], [initPrFive, "#prStar"], [initPrChanged, "#prVenn"], [initPrEquip, "#prMatrix"],
+      [initPrDaniel, "#prDaniel"], [initPrTense, "#prTense"], [initPrFunnel, "#prFunnel"], [initPrTimeline, "#prTimeline"], [initPrObjections, "#prObjections"], [initPrStudy, "#prQuestions"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }

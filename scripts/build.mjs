@@ -16,11 +16,12 @@ const PAGES = [
   { id: "serpent", file: "serpent.html", title: "The Serpent and the Seed · Where Heaven Meets Earth", nav: "Part II · The Serpent and the Seed" },
   { id: "babel", file: "babel.html", title: "Babel and the City of God · Where Heaven Meets Earth", nav: "Part III · Babel and the City of God" },
   { id: "kings", file: "kings.html", title: "Kings and Priests · Where Heaven Meets Earth", nav: "Part IV · Kings and Priests" },
+  { id: "prophets", file: "prophets.html", title: "Prophets and the Fivefold · Where Heaven Meets Earth", nav: "Part V · Prophets and the Fivefold" },
   { id: "connections", file: "connections.html", title: "Connections and Quiz · Where Heaven Meets Earth", nav: "Connections & Quiz" }
 ];
 
 const css = read("styles.css");
-const js = [read("data.js"), read("data-serpent.js"), read("data-kings.js"), read("app.js").replace("/*@@KINGS@@*/", () => read("app-kings.js"))].join("\n");
+const js = [read("data.js"), read("data-serpent.js"), read("data-kings.js"), read("data-prophets.js"), read("app.js").replace("/*@@KINGS@@*/", () => read("app-kings.js")).replace("/*@@PROPHETS@@*/", () => read("app-prophets.js"))].join("\n");
 const header = read("partials/header.html");
 const footer = read("partials/footer.html");
 const fonts = `<link rel="preconnect" href="https://fonts.googleapis.com">

@@ -657,3 +657,57 @@ p.iw.fall { padding-left: 14px; }
 .plane { position: sticky; left: 0; z-index: 1; background: var(--surface); }
 .pgrid > span:first-child { position: sticky; left: 0; z-index: 1; background: var(--surface); }
 #kpQuestions { align-content: start; }
+
+/* ---------- Part V: prophets and the fivefold ---------- */
+.office-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.office-strip .card p:last-child { font-size: .92rem; }
+.dotc { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.relchip { border: 2px solid; border-radius: 999px; padding: 5px 12px; font-size: .88rem; font-weight: 700; background: var(--surface); }
+.panel .row.warn b { color: var(--flame); }
+.pcol { transition: opacity .3s; }
+.hchain { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px; counter-reset: hc; }
+.hchain li { position: relative; counter-increment: hc; padding-top: 34px; }
+.hchain li::before { content: counter(hc); position: absolute; top: 12px; left: 20px; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: .75rem; font-weight: 800; display: grid; place-items: center; }
+.hchain li:not(:last-child)::after { content: "→"; position: absolute; right: -19px; top: 50%; transform: translateY(-50%); color: var(--accent); font-weight: 800; font-size: 1.2rem; }
+.crow.old { border-left-color: var(--muted); } .crow.new { border-left-color: var(--accent); } .crow.same { border-left-color: var(--eden); }
+.matrix-wrap { overflow-x: auto; }
+.matrix { display: grid; grid-template-columns: 130px repeat(6, minmax(96px, 1fr)); gap: 6px; min-width: 760px; }
+.mh { font-size: .74rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 8px 6px; border-bottom: 3px solid var(--line); color: var(--muted); align-self: end; }
+.mh.king { border-color: var(--babel); color: var(--babel); } .mh.priest { border-color: var(--eden); color: var(--eden); }
+.mrow { font-weight: 800; display: flex; align-items: center; font-size: .95rem; }
+.mcell { border: 1px solid var(--line); border-radius: 10px; min-height: 52px; cursor: pointer; display: grid; place-items: center; transition: transform .2s, box-shadow .2s; }
+.mcell.king.l1 { background: color-mix(in srgb, var(--babel) 12%, var(--surface)); } .mcell.king.l2 { background: color-mix(in srgb, var(--babel) 30%, var(--surface)); } .mcell.king.l3 { background: color-mix(in srgb, var(--babel) 55%, var(--surface)); }
+.mcell.priest.l1 { background: color-mix(in srgb, var(--eden) 12%, var(--surface)); } .mcell.priest.l2 { background: color-mix(in srgb, var(--eden) 30%, var(--surface)); } .mcell.priest.l3 { background: color-mix(in srgb, var(--eden) 55%, var(--surface)); }
+.mcell:hover { transform: scale(1.04); }
+.mcell.on { box-shadow: 0 0 0 3px var(--accent); }
+.bars { display: flex; gap: 3px; } .bars i { width: 8px; height: 18px; border-radius: 3px; background: var(--ink); opacity: .15; } .bars i.f { opacity: .75; }
+#prMatrixNote b { color: var(--ink); }
+.tense { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.tcol { position: relative; display: grid; gap: 8px; align-content: start; border-top: 4px solid; padding-top: 12px; }
+.tarrow { position: absolute; right: -18px; top: -16px; color: var(--muted); font-weight: 800; }
+.tchip { text-align: left; border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 8px 12px; cursor: pointer; display: grid; gap: 2px; transition: border-color .2s, box-shadow .2s; }
+.tchip b { font-size: .85rem; color: var(--accent); } .tchip span { font-size: .9rem; }
+.tchip.on { border-color: var(--accent); box-shadow: 0 0 0 3px var(--glow); }
+.tquote { font-size: 1.15rem; line-height: 1.5; }
+.tquote mark { background: var(--glow); color: var(--ink); padding: 0 3px; border-radius: 4px; font-weight: 700; box-shadow: inset 0 -2px 0 var(--accent); }
+.vflow.plain .vcard { border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 10px 14px; margin-block: 5px; display: grid; gap: 2px; }
+.vflow.plain .vcard small { font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.vflow.plain .vcard p { font-size: .95rem; }
+.calling-h.trans { border-color: var(--muted); } .calling-h.rel { border-color: var(--eden); }
+#prTrans .vstep::after { border-color: var(--muted); } #prRel .vstep::after { border-color: var(--eden); background: var(--eden); }
+.objs { display: grid; gap: 10px; }
+.obj { border: 1px solid var(--line); background: var(--surface); border-radius: 12px; border-left: 4px solid var(--babel); }
+.obj.straw { border-left-color: var(--flame); }
+.obj summary { cursor: pointer; padding: 14px 18px; display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 12px; row-gap: 2px; align-items: center; list-style: none; }
+.obj summary::-webkit-details-marker { display: none; }
+.obj summary small { grid-column: 2; font-size: .8rem; }
+.obadge { grid-row: span 2; font-size: .66rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; color: #fff; background: var(--babel); }
+.obj.straw .obadge { background: var(--flame); }
+.obj[open] summary { border-bottom: 1px dashed var(--line); }
+.obody { padding: 14px 18px 18px; display: grid; gap: 12px; }
+.obody .row { display: grid; gap: 4px; } .obody .row b { font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.obody .row.warn b { color: var(--flame); } .obody .row.eden b { color: var(--eden); }
+#prQuestions { align-content: start; }
+@media (max-width: 1100px) { .office-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hchain { grid-template-columns: repeat(3, minmax(0, 1fr)); } .hchain li:nth-child(3n)::after { display: none; } .tense { grid-template-columns: repeat(2, minmax(0, 1fr)); } .tarrow { display: none; } }
+@media (max-width: 560px) { .office-strip, .hchain, .tense { grid-template-columns: minmax(0, 1fr); } .hchain li::after { display: none; } }
+.obj summary .ref, .tchip b { white-space: normal; }
