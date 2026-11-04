@@ -14,6 +14,13 @@ An interactive, animated Bible study in seven parts:
 
 Flip-card clues · switchable "cosmic mountain" diagram (Eden, Sinai, Tabernacle, Temple, New Jerusalem) · walk-through Tabernacle plan · explorable Ark with an animated journey map · creation-as-temple table · animated menorah · God's-dwelling timeline · Genesis ↔ Revelation mirror · layered map of the ancient Near East (rivers of Eden, Shinar, Abraham's route, the exile, Pentecost nations) · build-a-ziggurat with a Genesis 11:5 zoom-out · to-scale height chart · Shem genealogy · seventy-nations animation · Jacob's stairway · Babel/Pentecost comparison slider · "mighty works of God" in 17 languages · two-cities timeline · Babylon vs New Jerusalem table · connections web · Venn diagram of *nāḥāš* · Ezekiel 28 verse walker with breastpiece gems · morning-star animation and Philippians 2 "two paths" chart · seraph/cherub illustration · the serpent's descent from God's mountain to the lake of fire · animated two-seeds timeline · "look and live" bronze serpent · 14-question quiz.
 
+## Motion and navigation
+
+- **Search** (`Ctrl/⌘ + K` or `/`): jump to any section of any page.
+- **Shift + ← / →**: previous or next part.
+- Animated page transitions, drifting light motes on banners, kinetic headings, staggered reveals, a section rail on wide screens, card spotlights and 3D tilt, magnetic buttons, click ripples, and celebration bursts on quiz answers and key moments.
+- Everything respects the system "reduce motion" setting.
+
 ## Colour schemes and font
 
 Use the **Colours** button (top right) to switch between seven schemes (Follow device, Eden Dawn, Tabernacle, Ishtar Lapis, Sinai Stone, New Jerusalem, Night Sky) or pick a custom highlight colour. Your choice is remembered in the browser.
@@ -53,6 +60,7 @@ Source lives in `src/`:
 | `src/data-serpent.js` | Content for Part II: the serpent and the seed |
 | `src/data-kings.js`, `src/app-kings.js` | Content and interactive code for Part IV: kings and priests |
 | `src/data-supply.js`, `src/app-supply.js` | Part IV add-on: Supply and Support sermon notes |
+| `src/fx.js` | Site-wide motion, search palette and interaction layer |
 | `src/data-prophets.js`, `src/app-prophets.js` | Content and interactive code for Part V: prophets and the fivefold |
 | `src/data-keys.js`, `src/app-keys.js` | Content and interactive code for Part VI: the keys of the kingdom |
 | `src/data-sowing.js`, `src/app-sowing.js` | Content and interactive code for Part VII: sowing and reaping |

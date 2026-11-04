@@ -24,6 +24,21 @@ const PAGES = [
 
 const css = read("styles.css");
 const js = [read("data.js"), read("data-serpent.js"), read("data-kings.js"), read("data-prophets.js"), read("data-keys.js"), read("data-sowing.js"), read("data-supply.js"), read("app.js").replace("/*@@KINGS@@*/", () => read("app-kings.js")).replace("/*@@PROPHETS@@*/", () => read("app-prophets.js")).replace("/*@@KEYS@@*/", () => read("app-keys.js")).replace("/*@@SOWING@@*/", () => read("app-sowing.js")).replace("/*@@SUPPLY@@*/", () => read("app-supply.js"))].join("\n");
+const jsAll = () => js + "\nwindow.SITE_INDEX = " + JSON.stringify(SITE_INDEX) + ";\n" + read("fx.js");
+// Search index: every section of every page, for the search palette
+const strip = h => h.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+const SITE_INDEX = [];
+PAGES.forEach(p => {
+  const html = read(`pages/${p.id}.html`);
+  for (const m of html.matchAll(/<section class="block[^"]*" id="([^"]+)"([^>]*)>([\s\S]*?)<\/section>/g)) {
+    const toc = (m[2].match(/data-toc="([^"]*)"/) || [])[1];
+    const h = (m[3].match(/<h[23][^>]*>([\s\S]*?)<\/h[23]>/) || [])[1];
+    const eb = (m[3].match(/class="eyebrow"[^>]*>([\s\S]*?)</) || [])[1];
+    if (!h && !toc) continue;
+    SITE_INDEX.push({ f: p.file, p: p.nav, id: m[1], t: strip(h || toc), k: strip((toc || "") + " " + (eb || "")) });
+  }
+  for (const m of html.matchAll(/<div class="part-banner[^"]*" id="([^"]+)"[\s\S]*?<h2>([\s\S]*?)<\/h2>/g)) SITE_INDEX.push({ f: p.file, p: p.nav, id: m[1], t: strip(m[2]), k: "part overview" });
+});
 const header = read("partials/header.html");
 const footer = read("partials/footer.html");
 const fonts = `<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,7 +68,7 @@ ${read(`pages/${p.id}.html`)}
 ${pager(i)}
 ${footer}
 </div>
-${inline ? `<script>\n${js}\n</script>` : `<script src="assets/app.js"></script>`}`;
+${inline ? `<script>\n${jsAll()}\n</script>` : `<script src="assets/app.js"></script>`}`;
   return { head, body };
 }
 
@@ -82,7 +97,7 @@ if (a > -1) {
 } else {
   mkdirSync(join(root, "assets"), { recursive: true });
   writeFileSync(join(root, "assets", "styles.css"), css);
-  writeFileSync(join(root, "assets", "app.js"), js);
+  writeFileSync(join(root, "assets", "app.js"), jsAll());
   PAGES.forEach((p, i) => writeFileSync(join(root, p.file), doc(page(p, i, false))));
   console.log("wrote", PAGES.map(p => p.file).join(", "), "+ assets/");
 }
