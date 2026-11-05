@@ -17,7 +17,7 @@
   }
   /* ---------- storage ---------- */
   const KEY = "hme-study";
-  let S = { done: {}, saved: {}, notes: {}, last: null, known: {} };
+  let S = { done: {}, saved: {}, notes: {}, last: null, known: {}, quiz: {} };
   try { S = Object.assign(S, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) { /* storage unavailable */ }
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* storage unavailable */ } };
 
@@ -151,7 +151,7 @@
       const all = INDEX.length, d = Object.keys(S.done).filter(k => INDEX.some(x => x.f + "#" + x.id === k)).length;
       body.append(h("div", { class: "dr-total" }, ring(all ? d / all : 0, 64), h("div", {}, h("b", { text: `${d} of ${all} sections studied` }), h("small", { text: `${Object.keys(S.saved).length} saved · ${Object.keys(S.notes).length} notes · ${Object.keys(S.known || {}).length}/${CARDS.length} verses` }))));
       if (S.last) body.append(h("a", { class: "dr-cont", href: href(S.last.f + "#" + S.last.id) }, h("small", { text: "Continue where you left off" }), h("b", { text: S.last.t }), h("span", { text: S.last.p })));
-      body.append(h("ul", { class: "dr-parts" }, PAGES.filter(p => totals(p.f)).map(p => h("li", {}, h("a", { href: p.f === P.f ? "#top" : p.f }, ring(pct(p.f), 30), h("span", { text: p.nav }), h("small", { text: `${doneOn(p.f)}/${totals(p.f)}` }))))));
+      body.append(h("ul", { class: "dr-parts" }, PAGES.filter(p => totals(p.f)).map(p => h("li", {}, h("a", { href: p.f === P.f ? "#top" : p.f }, ring(pct(p.f), 30), h("span", { text: p.nav }), h("small", { text: `${doneOn(p.f)}/${totals(p.f)}` + (S.quiz && S.quiz[p.id] ? ` · quiz ${S.quiz[p.id].best}/${S.quiz[p.id].of}` : "") }))))));
       if (d) body.append(h("button", { class: "linkish", type: "button", text: "Reset progress", onclick: () => { if (confirm("Clear all “studied” marks?")) { S.done = {}; save(); paintAll(); location.reload(); } } }));
     }
     if (activeTab === "review") {
@@ -227,9 +227,43 @@
     side.append(h("div", { class: "dr-actions" }, h("button", { class: "btn primary small", type: "button", text: "Open My study", onclick: () => window.__openStudy && window.__openStudy("progress") }), h("button", { class: "btn small", type: "button", text: `Review ${CARDS.length} memory verses`, onclick: () => window.__openStudy && window.__openStudy("review") })));
   }
 
+  /* ---------- end-of-part self-check ---------- */
+  const partOf = id => (id === "garden" || id === "babel") ? "core" : id;
+  const quizFor = id => { try { return (typeof DATA !== "undefined" && DATA.quiz || []).filter(q => q.part === partOf(id)); } catch (e) { return []; } };
+  function selfCheck() {
+    const Q = quizFor(pid); const pager = $(".pager");
+    if (Q.length < 2 || !pager || pid === "connections") return;
+    const sec = h("section", { class: "block selfcheck", id: "selfcheck", "data-toc": "Check yourself" },
+      h("div", { class: "wrap" }, h("div", { class: "sec-head" }, h("p", { class: "eyebrow", text: "Quick check · " + Q.length + " questions" }), h("h2", { text: "Check your understanding" }), h("p", { text: "A short quiz on this part. Your best score is saved in My study." })),
+        h("div", { class: "sc-card", id: "scCard", "aria-live": "polite" })));
+    pager.before(sec);
+    let i = 0, score = 0, order = [];
+    const card = $("#scCard");
+    function start() { order = Q.map((q, k) => k).sort(() => Math.random() - .5); i = 0; score = 0; show(); }
+    function show() {
+      if (i >= order.length) return finish();
+      const q = Q[order[i]];
+      const opts = h("div", { class: "sc-opts" });
+      const fb = h("div", { class: "sc-fb" });
+      q.a.forEach((a, k) => opts.append(h("button", { class: "sc-opt", type: "button", text: a, onclick: () => {
+        $$(".sc-opt", opts).forEach((b, j) => { b.disabled = true; b.classList.toggle("right", j === q.c); b.classList.toggle("wrong", j === k && k !== q.c); });
+        if (k === q.c) { score++; if (window.__burst && !reduce) { const r = opts.children[k].getBoundingClientRect(); window.__burst(r.left + r.width / 2, r.top); } }
+        fb.replaceChildren(h("p", { class: k === q.c ? "ok" : "no", text: (k === q.c ? "Correct. " : "Not quite. ") + (q.x || "") }), h("button", { class: "btn primary small", type: "button", text: i + 1 < order.length ? "Next question ▸" : "See my score ▸", onclick: () => { i++; show(); } }));
+      } })));
+      card.replaceChildren(h("div", { class: "rv-meta" }, h("span", { text: `Question ${i + 1} of ${order.length}` }), h("span", { text: `Score ${score}` })), h("div", { class: "rv-bar" }, h("i", { style: `width:${i / order.length * 100}%` })), h("h3", { text: q.q }), opts, fb);
+    }
+    function finish() {
+      const best = Math.max(score, (S.quiz[pid] || {}).best || 0);
+      S.quiz[pid] = { best, of: Q.length, ts: Date.now() }; save(); paintAll();
+      card.replaceChildren(h("div", { class: "sc-done" }, ring(score / Q.length, 72), h("div", {}, h("b", { text: `You scored ${score} of ${Q.length}` }), h("p", { text: score === Q.length ? "Excellent: you have this part down." : "Review the sections you missed, then try again." }), h("small", { text: `Best: ${best} of ${Q.length}` }))),
+        h("div", { class: "dr-actions" }, h("button", { class: "btn primary small", type: "button", text: "Try again", onclick: start }), h("button", { class: "btn small", type: "button", text: "Review memory verses", onclick: () => window.__openStudy && window.__openStudy("review") })));
+    }
+    start();
+  }
+
   function paintAll() { paintBanner(); paintBadge(); paintRail(); renderDrawer(); }
   function start() {
-    [partsMenu, sectionTools, bannerProgress, trackLast, buildDrawer, journey, paintAll].forEach(fn => { try { fn(); } catch (err) { console.error("study", fn.name, err); } });
+    [selfCheck, partsMenu, sectionTools, bannerProgress, trackLast, buildDrawer, journey, paintAll].forEach(fn => { try { fn(); } catch (err) { console.error("study", fn.name, err); } });
     setTimeout(paintRail, 300);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();

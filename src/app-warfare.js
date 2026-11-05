@@ -249,7 +249,7 @@
   function initWfCurseLine() {
     const T = WF().curseLine, W = 1000, H = 230, n = T.length;
     const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Timeline from the curse in Genesis to no more curse in Revelation", style: { minWidth: "760px" } });
-    svg.append(sv("defs", {}, sv("linearGradient", { id: "wfCurseG", x1: 0, x2: 1 }, sv("stop", { offset: 0, "stop-color": "var(--flame)" }), sv("stop", { offset: .62, "stop-color": "var(--flame)" }), sv("stop", { offset: .74, "stop-color": "var(--accent)" }), sv("stop", { offset: 1, "stop-color": "var(--eden)" }))));
+    svg.append(sv("defs", {}, sv("linearGradient", { id: "wfCurseG", gradientUnits: "userSpaceOnUse", x1: 40, y1: 0, x2: W - 40, y2: 0 }, sv("stop", { offset: 0, "stop-color": "var(--flame)" }), sv("stop", { offset: .62, "stop-color": "var(--flame)" }), sv("stop", { offset: .74, "stop-color": "var(--accent)" }), sv("stop", { offset: 1, "stop-color": "var(--eden)" }))));
     svg.append(sv("path", { class: "draw", d: `M40 120 L${W - 40} 120`, stroke: "url(#wfCurseG)", "stroke-width": 8, "stroke-linecap": "round", pathLength: 1 }));
     const xs = T.map((_, i) => 60 + i * (W - 120) / (n - 1));
     const dots = T.map((t, i) => {

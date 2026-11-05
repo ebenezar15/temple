@@ -137,6 +137,7 @@
       a.append(mk("i"), mk("span", "rl", label.replace(/[<>]/g, "")));
       nav.append(a); return a;
     });
+    if (secs.length > 18) nav.classList.add("dense");
     document.body.append(nav);
     let cur = -1;
     const upd = () => {

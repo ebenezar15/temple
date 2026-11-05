@@ -1374,6 +1374,7 @@
 /*@@SUPPLY@@*/
 /*@@WARFARE@@*/
 /*@@SONS@@*/
+/*@@FAR@@*/
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -1417,7 +1418,7 @@
       [initSsGate, "#ssGate"], [initSsStairs, "#ssStairs"], [initSsBabylons, "#ssBabylons"], [initSsDaniels, "#ssDaniels"], [initSsFire, "#ssFire"],
       [initWfLayers, "#wfLayers"], [initWfWords, "#wfWords"], [initWfChain, "#wfChain"], [initWfArmour, "#wfArmour"], [initWfSpeak, "#wfTargets"], [initWfBind, "#wfBind"],
       [initWfTongue, "#wfTongue"], [initWfBuilder, "#wfDeclOut"], [initWfCompare, "#wfCompare"], [initWfCurseLine, "#wfCurseLine"], [initWfShield, "#wfShield"], [initWfBreak, "#wfCurseTargets"],
-      [initWfFree, "#wfFree"], [initWfSit, "#wfSit"], [initWfTreasury, "#wfTreasury"], [initWfDual, "#wfDual"], [initWfHeirs, "#wfHeirs"], [initWfSpectrum, "#wfSpectrum"], [initWfRoles, "#wfRoleArt"], [initWfTempt, "#wfTempt"], [initWfRhythm, "#wfRhythm"], [initWfObjections, "#wfObjections"],
+      [initWfFree, "#wfFree"], [initWfSit, "#wfSit"], [initWfTreasury, "#wfTreasury"], [initWfDual, "#wfDual"], [initWfHeirs, "#wfHeirs"], [initFaAbove, "#faAbove"], [initFaBody, "#faBody"], [initFaUntil, "#faUntil"], [initFaEnemies, "#faEnemies"], [initFaDeath, "#faDeath"], [initFaDaily, "#faDaily"], [initFaAssign, "#faAssign"], [initWfSpectrum, "#wfSpectrum"], [initWfRoles, "#wfRoleArt"], [initWfTempt, "#wfTempt"], [initWfRhythm, "#wfRhythm"], [initWfObjections, "#wfObjections"],
       [initSnMerge, "#snMerge"], [initSnWord, "#snWord"], [initSnHub, "#snHub"], [initSnExpand, "#snExpand"], [initSnReveal, "#snReveal"], [initSnGrowth, "#snGrowth"],
       [initSnBody, "#snBody"], [initSnLadder, "#snLadder"], [initSnSpheres, "#snSpheres"], [initSnObjections, "#snObjections"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
