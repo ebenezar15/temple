@@ -17,7 +17,7 @@
   }
   /* ---------- storage ---------- */
   const KEY = "hme-study";
-  let S = { done: {}, saved: {}, notes: {}, last: null };
+  let S = { done: {}, saved: {}, notes: {}, last: null, known: {} };
   try { S = Object.assign(S, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) { /* storage unavailable */ }
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* storage unavailable */ } };
 
@@ -29,6 +29,9 @@
   const totals = f => INDEX.filter(x => x.f === f).length;
   const doneOn = f => INDEX.filter(x => x.f === f && S.done[f + "#" + x.id]).length;
   const pct = f => { const t = totals(f); return t ? doneOn(f) / t : 0; };
+  /* memory verses from every part, for the Review tab */
+  const PARTS_MEM = [["kp", "Part IV · Kings and Priests"], ["pr", "Part V · Prophets"], ["ky", "Part VI · The Keys"], ["sw", "Part VII · Sowing and Reaping"], ["wf", "Part VIII · Spiritual Warfare"], ["sn", "Part IX · Heaven and Earth United"]];
+  const CARDS = (() => { try { return PARTS_MEM.flatMap(([k, p]) => ((typeof DATA !== "undefined" && DATA[k] && DATA[k].memory) || []).map(([r, v]) => ({ r, v, p }))); } catch (e) { return []; } })();
   const title = (f, id) => (INDEX.find(x => x.f === f && x.id === id) || {}).t || id;
 
   /* ---------- progress ring ---------- */
@@ -125,7 +128,7 @@
     const btn = $("#studyBtn"); if (!btn) return;
     drawer = h("aside", { class: "drawer", id: "studyDrawer", "aria-label": "My study", hidden: true },
       h("div", { class: "dr-head" }, h("h2", { text: "My study" }), h("button", { class: "dr-x", type: "button", "aria-label": "Close", text: "×", onclick: () => toggle(false) })),
-      h("div", { class: "dr-tabs", role: "tablist" }, ...[["progress", "Progress"], ["saved", "Saved"], ["notes", "Notes"]].map(([k, n]) => (tabs[k] = h("button", { class: "tab", role: "tab", type: "button", "aria-selected": String(k === activeTab), text: n, onclick: () => { activeTab = k; renderDrawer(); } })))),
+      h("div", { class: "dr-tabs", role: "tablist" }, ...[["progress", "Progress"], ["review", "Review"], ["saved", "Saved"], ["notes", "Notes"]].map(([k, n]) => (tabs[k] = h("button", { class: "tab", role: "tab", type: "button", "aria-selected": String(k === activeTab), text: n, onclick: () => { activeTab = k; renderDrawer(); } })))),
       h("div", { class: "dr-body", id: "drBody" }),
       h("p", { class: "dr-foot", text: "Progress, saves and notes stay in this browser on this device." }));
     const veil = h("div", { class: "dr-veil", hidden: true, onclick: () => toggle(false) });
@@ -146,10 +149,24 @@
     const body = $("#drBody"); body.replaceChildren();
     if (activeTab === "progress") {
       const all = INDEX.length, d = Object.keys(S.done).filter(k => INDEX.some(x => x.f + "#" + x.id === k)).length;
-      body.append(h("div", { class: "dr-total" }, ring(all ? d / all : 0, 64), h("div", {}, h("b", { text: `${d} of ${all} sections studied` }), h("small", { text: `${Object.keys(S.saved).length} saved · ${Object.keys(S.notes).length} notes` }))));
+      body.append(h("div", { class: "dr-total" }, ring(all ? d / all : 0, 64), h("div", {}, h("b", { text: `${d} of ${all} sections studied` }), h("small", { text: `${Object.keys(S.saved).length} saved · ${Object.keys(S.notes).length} notes · ${Object.keys(S.known || {}).length}/${CARDS.length} verses` }))));
       if (S.last) body.append(h("a", { class: "dr-cont", href: href(S.last.f + "#" + S.last.id) }, h("small", { text: "Continue where you left off" }), h("b", { text: S.last.t }), h("span", { text: S.last.p })));
       body.append(h("ul", { class: "dr-parts" }, PAGES.filter(p => totals(p.f)).map(p => h("li", {}, h("a", { href: p.f === P.f ? "#top" : p.f }, ring(pct(p.f), 30), h("span", { text: p.nav }), h("small", { text: `${doneOn(p.f)}/${totals(p.f)}` }))))));
       if (d) body.append(h("button", { class: "linkish", type: "button", text: "Reset progress", onclick: () => { if (confirm("Clear all “studied” marks?")) { S.done = {}; save(); paintAll(); location.reload(); } } }));
+    }
+    if (activeTab === "review") {
+      if (!CARDS.length) { body.append(h("p", { class: "dr-empty", text: "No memory verses found." })); return; }
+      const known = CARDS.filter(c => S.known[c.r]).length;
+      const queue = CARDS.filter(c => !S.known[c.r]);
+      body.append(h("div", { class: "rv-meta" }, h("span", { text: `${known} of ${CARDS.length} verses known` }), known ? h("button", { class: "linkish", type: "button", text: "Start over", onclick: () => { S.known = {}; save(); renderDrawer(); } }) : null),
+        h("div", { class: "rv-bar" }, h("i", { style: `width:${known / CARDS.length * 100}%` })));
+      if (!queue.length) { body.append(h("div", { class: "rv-card" }, h("b", { text: "Every memory verse reviewed ✓" }), h("p", { text: "Well done. Start over any time to keep them fresh." }))); if (window.__burst && !reduce) { const r = drawer.getBoundingClientRect(); window.__burst(r.left + r.width / 2, r.top + 200); } return; }
+      const c = queue[Math.floor(Math.random() * queue.length)];
+      const verse = h("blockquote", { text: c.v }); verse.hidden = true;
+      const acts = h("div", { class: "dr-actions" }); acts.hidden = true;
+      const show = h("button", { class: "btn primary small", type: "button", text: "Show the verse", onclick: () => { verse.hidden = false; acts.hidden = false; show.hidden = true; } });
+      acts.append(h("button", { class: "btn small", type: "button", text: "Got it ✓", onclick: () => { S.known[c.r] = Date.now(); save(); renderDrawer(); } }), h("button", { class: "btn small", type: "button", text: "Again ↻", onclick: () => renderDrawer() }));
+      body.append(h("div", { class: "rv-card" }, h("small", { class: "eyebrow", text: c.p }), h("span", { class: "ref", text: c.r }), h("p", { class: "muted small", text: "Say the verse from memory, then check." }), verse, show, acts));
     }
     if (activeTab === "saved") {
       const ks = Object.keys(S.saved).sort((a, b) => S.saved[b].ts - S.saved[a].ts);
@@ -207,7 +224,7 @@
     side.append(S.last ? h("a", { class: "dr-cont", href: S.last.f + "#" + S.last.id }, h("small", { text: "Continue where you left off" }), h("b", { text: S.last.t }), h("span", { text: S.last.p }))
       : h("a", { class: "dr-cont", href: "garden.html" }, h("small", { text: "Start the journey" }), h("b", { text: "Part I · The Garden-Temple" }), h("span", { text: "Eden, the mountain of God and the first sanctuary" })));
     side.append(h("ol", { class: "howto" }, h("li", { text: "Open a part from the map or the Parts menu." }), h("li", { text: "Work through each interactive section." }), h("li", { text: "Mark it ✓ studied, ☆ save it or ✎ write a note." }), h("li", { text: "Review everything in My study." })));
-    side.append(h("button", { class: "btn primary small", type: "button", text: "Open My study", onclick: () => window.__openStudy && window.__openStudy("progress") }));
+    side.append(h("div", { class: "dr-actions" }, h("button", { class: "btn primary small", type: "button", text: "Open My study", onclick: () => window.__openStudy && window.__openStudy("progress") }), h("button", { class: "btn small", type: "button", text: `Review ${CARDS.length} memory verses`, onclick: () => window.__openStudy && window.__openStudy("review") })));
   }
 
   function paintAll() { paintBanner(); paintBadge(); paintRail(); renderDrawer(); }

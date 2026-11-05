@@ -662,6 +662,7 @@
       sower: () => [sv("circle", { cx: 120, cy: -70, r: 34, fill: gold, opacity: .6 }), sv("path", { d: "M-200 40 Q0 -10 200 40 L200 80 L-200 80 Z", fill: "#8a6238", opacity: .5 }), sv("circle", { cx: -40, cy: -70, r: 14, fill: "var(--ink)", opacity: .7 }), sv("path", { d: "M-56 -54 L-24 -54 L-14 30 L-66 30 Z", fill: "var(--ink)", opacity: .6 }), sv("path", { d: "M-24 -40 L20 -60", stroke: "var(--ink)", "stroke-width": 6, opacity: .6 }), ...[0, 1, 2, 3, 4].map(i => sv("circle", { cx: 30 + i * 14, cy: -50 + i * 16, r: 3, fill: gold }))],
       crown: () => [sv("path", { d: "M-150 20 L-150 -40 L-120 -10 L-95 -60 L-70 -10 L-40 -40 L-40 20 Z", fill: gold }), sv("path", { d: "M40 20 L40 -30 Q90 -80 140 -30 L140 20 Z", fill: "var(--surface)", stroke: "var(--muted)", "stroke-width": 3 }), sv("rect", { x: 70, y: -22, width: 40, height: 12, rx: 3, fill: gold }), sv("circle", { cx: 0, cy: -20, r: 30, fill: gold, opacity: .25 }), sv("rect", { x: -160, y: 40, width: 320, height: 8, rx: 4, fill: "var(--muted)", opacity: .5 })],
       shield: () => [sv("path", { d: "M-150 -60 L-60 -20 M-150 -10 L-60 0 M-150 40 L-60 20", stroke: "var(--flame)", "stroke-width": 5, "stroke-linecap": "round", opacity: .7 }), sv("path", { d: "M0 -100 L70 -76 L64 4 Q50 50 0 74 Q-50 50 -64 4 L-70 -76 Z", fill: blue }), sv("path", { d: "M-6 -70 h12 v30 h26 v12 h-26 v54 h-12 v-54 h-26 v-12 h26 Z", fill: gold }), sv("circle", { cx: 120, cy: -50, r: 30, fill: gold, opacity: .3 })],
+      union: () => [sv("circle", { cx: -40, cy: -20, r: 70, fill: gold, opacity: .35 }), sv("circle", { cx: 40, cy: 0, r: 70, fill: green, opacity: .35 }), sv("path", { d: "M0 -60 v80 M-30 -30 h60", stroke: gold, "stroke-width": 8 }), ...[-150, -110, 120, 150].map((x, i) => sv("circle", { cx: x, cy: -50 + i * 30, r: 4, fill: gold }))],
       zig: () => [...[0, 1, 2].map(i => sv("rect", { x: -140 + i * 40, y: 10 - i * 34, width: 280 - i * 80, height: 34, fill: "#b08a5a", opacity: .6 + i * .12 })), sv("rect", { x: -8, y: -20, width: 16, height: 30, fill: "var(--bg-2)" })]
     };
     g.append(...(art[kind] || art.garden)());
@@ -986,7 +987,7 @@
   /* ---------------- Connections web ---------------- */
   function initWeb() {
     const W = 600, C = W / 2, R = 228;
-    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "keys", "sowing", "warfare", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
+    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "keys", "sowing", "warfare", "sons", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
     const nodes = order.map(id => DATA.web.nodes.find(n => n.id === id));
     const pos = {};
     nodes.forEach((n, i) => { const a = -Math.PI / 2 + i / nodes.length * Math.PI * 2; pos[n.id] = [C + Math.cos(a) * R, C + Math.sin(a) * R, a]; });
@@ -1372,6 +1373,7 @@
 /*@@SOWING@@*/
 /*@@SUPPLY@@*/
 /*@@WARFARE@@*/
+/*@@SONS@@*/
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -1415,7 +1417,9 @@
       [initSsGate, "#ssGate"], [initSsStairs, "#ssStairs"], [initSsBabylons, "#ssBabylons"], [initSsDaniels, "#ssDaniels"], [initSsFire, "#ssFire"],
       [initWfLayers, "#wfLayers"], [initWfWords, "#wfWords"], [initWfChain, "#wfChain"], [initWfArmour, "#wfArmour"], [initWfSpeak, "#wfTargets"], [initWfBind, "#wfBind"],
       [initWfTongue, "#wfTongue"], [initWfBuilder, "#wfDeclOut"], [initWfCompare, "#wfCompare"], [initWfCurseLine, "#wfCurseLine"], [initWfShield, "#wfShield"], [initWfBreak, "#wfCurseTargets"],
-      [initWfFree, "#wfFree"], [initWfSpectrum, "#wfSpectrum"], [initWfRoles, "#wfRoleArt"], [initWfTempt, "#wfTempt"], [initWfRhythm, "#wfRhythm"], [initWfObjections, "#wfObjections"],
+      [initWfFree, "#wfFree"], [initWfSit, "#wfSit"], [initWfTreasury, "#wfTreasury"], [initWfDual, "#wfDual"], [initWfHeirs, "#wfHeirs"], [initWfSpectrum, "#wfSpectrum"], [initWfRoles, "#wfRoleArt"], [initWfTempt, "#wfTempt"], [initWfRhythm, "#wfRhythm"], [initWfObjections, "#wfObjections"],
+      [initSnMerge, "#snMerge"], [initSnWord, "#snWord"], [initSnHub, "#snHub"], [initSnExpand, "#snExpand"], [initSnReveal, "#snReveal"], [initSnGrowth, "#snGrowth"],
+      [initSnBody, "#snBody"], [initSnLadder, "#snLadder"], [initSnSpheres, "#snSpheres"], [initSnObjections, "#snObjections"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }

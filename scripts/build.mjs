@@ -20,11 +20,12 @@ const PAGES = [
   { id: "keys", file: "keys.html", title: "The Keys of the Kingdom · Where Heaven Meets Earth", nav: "Part VI · The Keys of the Kingdom" },
   { id: "sowing", file: "sowing.html", title: "Sowing and Reaping · Where Heaven Meets Earth", nav: "Part VII · Sowing and Reaping" },
   { id: "warfare", file: "warfare.html", title: "Spiritual Warfare · Where Heaven Meets Earth", nav: "Part VIII · Spiritual Warfare" },
+  { id: "sons", file: "sons.html", title: "Heaven and Earth United · Where Heaven Meets Earth", nav: "Part IX · Heaven and Earth United" },
   { id: "connections", file: "connections.html", title: "Connections and Quiz · Where Heaven Meets Earth", nav: "Connections & Quiz" }
 ];
 
 const css = read("styles.css");
-const js = [read("data.js"), read("data-serpent.js"), read("data-kings.js"), read("data-prophets.js"), read("data-keys.js"), read("data-sowing.js"), read("data-supply.js"), read("data-warfare.js"), read("app.js").replace("/*@@KINGS@@*/", () => read("app-kings.js")).replace("/*@@PROPHETS@@*/", () => read("app-prophets.js")).replace("/*@@KEYS@@*/", () => read("app-keys.js")).replace("/*@@SOWING@@*/", () => read("app-sowing.js")).replace("/*@@SUPPLY@@*/", () => read("app-supply.js")).replace("/*@@WARFARE@@*/", () => read("app-warfare.js"))].join("\n");
+const js = [read("data.js"), read("data-serpent.js"), read("data-kings.js"), read("data-prophets.js"), read("data-keys.js"), read("data-sowing.js"), read("data-supply.js"), read("data-warfare.js"), read("data-sons.js"), read("app.js").replace("/*@@KINGS@@*/", () => read("app-kings.js")).replace("/*@@PROPHETS@@*/", () => read("app-prophets.js")).replace("/*@@KEYS@@*/", () => read("app-keys.js")).replace("/*@@SOWING@@*/", () => read("app-sowing.js")).replace("/*@@SUPPLY@@*/", () => read("app-supply.js")).replace("/*@@WARFARE@@*/", () => read("app-warfare.js")).replace("/*@@SONS@@*/", () => read("app-sons.js"))].join("\n");
 const jsAll = () => js + "\nwindow.SITE_INDEX = " + JSON.stringify(SITE_INDEX) + ";\nwindow.SITE_PAGES = " + JSON.stringify(PAGES.map(p => ({ id: p.id, f: p.file, nav: p.nav }))) + ";\n" + read("fx.js") + "\n" + read("study.js");
 // Search index: every section of every page, for the search palette
 const strip = h => h.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();

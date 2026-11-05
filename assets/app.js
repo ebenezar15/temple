@@ -2008,6 +2008,216 @@ DATA.wf.memory.push(
 );
 DATA.quiz.push({ q: "According to Proverbs 26:2, a curse that is causeless…", a: ["Always lands eventually", "Does not alight", "Returns to the sender", "Lasts three generations"], c: 1, x: "“Like a sparrow in its flitting … a curse that is causeless does not alight.”" });
 
+/* Part IX: Heaven and earth united — the body of Christ and the manifestation of the sons */
+DATA.sn = {};
+
+/* 1 · Ephesians 1:10 — heaven and earth through the story (overlap 0–1) */
+DATA.sn.merge = [
+  { t: "Eden", ov: .62, ref: "Gen 2:8–15; 3:8", page: "garden.html", d: "Heaven and earth overlapped in a garden-temple. God walked with Adam “in the cool of the day”. Eden was the beachhead, never meant to stay small: the mandate was to fill the earth." },
+  { t: "The fall and Babel", ov: .04, ref: "Gen 3:23–24; 11:1–9", page: "babel.html", d: "Exiled, guarded by cherubim. At Babel people tried to force the overlap from below with a tower “with its top in the heavens”. Heaven and earth were pulled apart." },
+  { t: "Bethel, Sinai and the tabernacle", ov: .24, ref: "Gen 28:12–17; Exod 25:8–9; 40:34", page: "garden.html", d: "God opened thin places: a stairway at Bethel, fire on Sinai, then a tent where his glory filled the earth in one small room. “Let them make me a sanctuary, that I may dwell in their midst.”" },
+  { t: "The temple", ov: .3, ref: "1 Kgs 8:10–11, 27; Isa 6:1–3", page: "garden.html", d: "Solomon’s temple, decorated as Eden, was heaven’s embassy in Jerusalem. Even so, “heaven and the highest heaven cannot contain you”. Isaiah saw the train of God’s robe fill the temple and heard, “the whole earth is full of his glory”." },
+  { t: "The Word became flesh", ov: .55, ref: "John 1:14, 51; Col 2:9", page: "serpent.html", d: "“The Word became flesh and tabernacled among us.” In Jesus heaven and earth met in a person: “the whole fullness of deity dwells bodily”. He is Jacob’s ladder: angels ascend and descend on the Son of Man." },
+  { t: "The cross and the torn veil", ov: .66, ref: "Matt 27:51; Col 1:20; Eph 2:14–16", page: "kings.html", d: "The veil that separated the holy of holies tore from top to bottom. Through the blood of his cross God reconciled “all things, whether on earth or in heaven”. The dividing wall came down." },
+  { t: "Ascension and Pentecost", ov: .76, ref: "Acts 1:9–11; 2:1–4; Eph 4:8–10", page: "babel.html", d: "A man now sits on heaven’s throne, and heaven’s fire sits on people’s heads. Babel reversed: God came down so that his people could be his temple across every language." },
+  { t: "The church, his body", ov: .84, ref: "Eph 1:22–23; 2:19–22; 2 Cor 6:16", page: "prophets.html", d: "“The church, which is his body, the fullness of him who fills all in all.” Believers are “a dwelling place for God by the Spirit”, living stones where heaven touches earth wherever they go." },
+  { t: "All things united in him", ov: 1, ref: "Eph 1:10; Rev 21:1–3; 22:1–5", page: "connections.html", d: "“The dwelling place of God is with man.” New Jerusalem comes down; the whole creation becomes the holy of holies. This was the plan from the beginning, and every step of history moves toward it." }
+];
+
+/* 2 · The word anakephalaiōsis */
+DATA.sn.word = {
+  w: "anakephalaiōsasthai", tr: "to sum up · to head up · to unite under one head",
+  parts: [["ana", "again, back up"], ["kephalē", "head"], ["-aioō", "bring together"]],
+  d: "Paul’s word in Ephesians 1:10 pictures adding up a column of figures and writing the total at the head, or gathering scattered threads into one knot. Everything in heaven and everything on earth is brought together under Christ as head. Ephesians 1:22 uses the same root: God gave him as “head (kephalē) over all things to the church, which is his body”."
+};
+
+/* 3 · Every part of the study, summed up in Christ */
+DATA.sn.hub = [
+  { n: "I", t: "The Garden-Temple", f: "garden.html", c: "eden", d: "Eden was where heaven and earth first overlapped. Ephesians 1:10 is Eden filling the whole earth." },
+  { n: "II", t: "The Serpent and the Seed", f: "serpent.html", c: "flame", d: "The serpent broke the union; the seed crushes his head and restores it (Gen 3:15; Rom 16:20)." },
+  { n: "III", t: "Babel and the City of God", f: "babel.html", c: "babel", d: "Babel forced union from below; God’s city comes down from above (Rev 21:2)." },
+  { n: "IV", t: "Kings and Priests", f: "kings.html", c: "accent", d: "Priests carry earth to heaven; kings carry heaven’s rule to earth. Sons do both (Rev 5:10)." },
+  { n: "V", t: "Prophets and the Fivefold", f: "prophets.html", c: "eden", d: "The fivefold equip the body “to the measure of the stature of the fullness of Christ” (Eph 4:13)." },
+  { n: "VI", t: "The Keys", f: "keys.html", c: "accent", d: "Keys open earth to heaven’s decisions: “on earth as it is in heaven” (Matt 16:19; 6:10)." },
+  { n: "VII", t: "Sowing and Reaping", f: "sowing.html", c: "eden", d: "The kingdom grows like seed until it fills the earth (Matt 13:31–33; Dan 2:35)." },
+  { n: "VIII", t: "Spiritual Warfare", f: "warfare.html", c: "flame", d: "We fight from heavenly places, enforcing Christ’s headship over every power (Eph 1:21–22)." }
+];
+
+/* 4 · God's initial plan: expanding Eden */
+DATA.sn.expand = [
+  { t: "A garden in the east", r: 26, ref: "Gen 2:8, 15", d: "God plants a garden on his mountain and places the man there “to work it and keep it”: priestly service in a sanctuary." },
+  { t: "Fill the earth and subdue it", r: 70, ref: "Gen 1:26–28", d: "The image-bearers are blessed to be fruitful, multiply and fill the earth. In practice that means extending the garden’s order and God’s presence outward." },
+  { t: "Through Abraham, all families", r: 112, ref: "Gen 12:1–3; 22:17–18", d: "After the fall and Babel, God restarts with one family: “in you all the families of the earth shall be blessed.”" },
+  { t: "The glory fills the earth", r: 160, ref: "Num 14:21; Isa 11:9; Hab 2:14", d: "“The earth will be filled with the knowledge of the glory of the LORD as the waters cover the sea.” The prophets saw Eden’s goal restated." },
+  { t: "The stone becomes a mountain", r: 200, ref: "Dan 2:34–35, 44; Matt 13:31–33", d: "A stone cut without hands strikes the empires and “became a great mountain and filled the whole earth”. Jesus’ kingdom grows like a mustard seed and leaven." },
+  { t: "A garden-city covers the world", r: 240, ref: "Rev 21:1–3, 16; 22:1–2", d: "The New Jerusalem is a cube, like the holy of holies, with the river and tree of life. The garden has become a city that fills the new creation." }
+];
+
+/* 5 · Romans 8:19 — the manifestation of the sons */
+DATA.sn.reveal = [
+  { t: "Creation groans", ref: "Rom 8:20–22", d: "Creation was “subjected to futility” and is in “bondage to corruption”. It groans like a woman in labour: pain with a promise." },
+  { t: "Eager longing", ref: "Rom 8:19", d: "Apokaradokia: craning the neck, watching with outstretched head. Creation waits “for the revealing (apokalypsis) of the sons (huioi) of God”." },
+  { t: "Sons led by the Spirit", ref: "Rom 8:14–17", d: "“All who are led by the Spirit of God are sons of God.” Sonship is revealed now as the Spirit leads, and as we cry “Abba! Father!”" },
+  { t: "We groan too", ref: "Rom 8:23–27", d: "We have the firstfruits of the Spirit and wait for “adoption as sons, the redemption of our bodies”. The Spirit himself groans in intercession through us." },
+  { t: "Glory revealed", ref: "Rom 8:18, 21, 29–30", d: "Creation “will be set free … and obtain the freedom of the glory of the children of God.” Sons are conformed to the image of the Son: the firstborn among many brothers." }
+];
+DATA.sn.notThis = [
+  ["Not an elite", "Every believer led by the Spirit is a son (Rom 8:14; Gal 3:26). There is no special class of “manifested sons” above the body."],
+  ["Not only future", "Sons are being revealed now through Spirit-led lives (Phil 2:15), and completely at the resurrection (Rom 8:23; 1 John 3:2)."],
+  ["Not apart from the Son", "We are sons in the Son. Our glory is to be “conformed to the image of his Son” (Rom 8:29), never to replace him."],
+  ["Not escape from creation", "Creation is set free with us, not left behind. Sons heal the world they were made to steward (Rom 8:21)."]
+];
+
+/* 6 · Huios: three words for children */
+DATA.sn.growth = [
+  { w: "nēpios", gk: "νήπιος", t: "Infant", ref: "Gal 4:1–3; 1 Cor 3:1–2; Heb 5:13; Eph 4:14", d: "“The heir, as long as he is a child (nēpios), is no different from a slave, though he is the owner of everything.” Infants own the estate but cannot run it: they need milk, are “tossed to and fro” and remain under guardians.", marks: ["Unskilled in the word of righteousness", "Tossed by every wind of doctrine", "Needs guardians and managers", "Owns everything, governs nothing"] },
+  { w: "teknon", gk: "τέκνον", t: "Born child", ref: "John 1:12–13; 1 John 3:1–2; Rom 8:16", d: "From tiktō, to give birth: a child by nature and new birth. “See what kind of love the Father has given to us, that we should be called children (tekna) of God.” Teknon stresses belonging, family likeness and the Father’s affection.", marks: ["Born of God, not of the will of man", "The Spirit witnesses: you are his child", "Loved before any performance", "Growing in family likeness"] },
+  { w: "huios", gk: "υἱός", t: "Mature son, placed as heir", ref: "Rom 8:14, 19; Gal 4:4–7; Heb 5:14", d: "Huios carries the son’s standing, character and authority to represent his father. Paul pairs it with huiothesia, adoption or “son-placing”: the Roman act that set an heir in full legal standing. “You are no longer a slave, but a son (huios), and if a son, then an heir through God.”", marks: ["Led by the Spirit (Rom 8:14)", "Powers of discernment trained by practice (Heb 5:14)", "Trusted with the Father’s business (Luke 2:49)", "Represents the Father’s name and will"] }
+];
+DATA.sn.daughters = "Sonship language is about inheritance, not gender. In the ancient world sons inherited; in Christ “there is no male and female, for you are all sons (huioi) of God through faith” (Gal 3:26–28). Every daughter is an heir with full standing: “you shall be sons and daughters to me” (2 Cor 6:18).";
+
+/* 7 · The body of Christ */
+DATA.sn.body = [
+  { id: "head", n: "The head: Christ", ref: "Eph 1:22–23; Col 1:18; 2:19", d: "The head directs and the body expresses. All growth comes from “holding fast to the Head, from whom the whole body … grows with a growth that is from God”.", kp: "The King-Priest who rules the whole body." },
+  { id: "eyes", n: "Eyes: prophetic sight", ref: "1 Cor 12:17, 21; Eph 1:17–18", d: "Seeing what God is doing: “having the eyes of your hearts enlightened”. Prophets and seers help the body see.", kp: "Kings need sight to rule rightly (Prov 29:18)." },
+  { id: "mouth", n: "Mouth: proclaiming and declaring", ref: "Rom 10:14–15; Eph 4:15; 1 Pet 4:11", d: "Preaching the gospel, teaching and “speaking the truth in love”: the body speaks Christ’s words on earth.", kp: "Royal decree and priestly blessing (Num 6:23–27)." },
+  { id: "heart", n: "Heart: worship and love", ref: "1 Cor 13:1–3; Eph 3:17–19; Col 3:16", d: "Without love every gift is noise. Worship and love are the pulse that keeps the body alive.", kp: "The priestly heart: ministering to God." },
+  { id: "hands", n: "Hands: serving and healing", ref: "Mark 16:18; Acts 9:36–39; Rom 12:7–8", d: "Laying hands on the sick, serving tables, giving and showing mercy: Christ still touches the world through his body.", kp: "Kings build and steward; priests bless." },
+  { id: "knees", n: "Knees: intercession", ref: "Eph 3:14–16; 6:18; 1 Tim 2:1–2", d: "“I bow my knees before the Father.” Intercession is the body’s posture of priestly mediation for cities and nations.", kp: "Priests standing in the gap." },
+  { id: "feet", n: "Feet: going and sending", ref: "Rom 10:15; Isa 52:7; Matt 28:19", d: "“How beautiful are the feet of those who preach the good news!” Apostles and evangelists carry the body into new territory.", kp: "Kings extending the borders of Eden." },
+  { id: "joints", n: "Joints and ligaments: unity", ref: "Eph 4:16; Col 2:19; Ps 133", d: "The body grows “when each part is working properly”, joined by every ligament. Relationships carry the supply.", kp: "One priesthood, one kingdom: no solo kings." }
+];
+
+/* 8 · What sons and daughters as kings and priests do */
+DATA.sn.ladder = {
+  up: [
+    { t: "Worship", ref: "Rev 5:8; Heb 13:15", d: "Golden bowls of incense, “which are the prayers of the saints”, rise to the throne. Worship is the sacrifice of praise." },
+    { t: "Intercession", ref: "1 Tim 2:1–4; Ezek 22:30", d: "Carrying people, cities and nations before God; standing in the breach." },
+    { t: "Thanksgiving and offering", ref: "Rom 12:1; Phil 4:18", d: "Presenting our bodies, work and gifts as living sacrifices, “a fragrant offering”." },
+    { t: "Repentance for the land", ref: "2 Chr 7:14; Dan 9:3–19", d: "Like Daniel, confessing the sins of a people so that God heals the land." }
+  ],
+  down: [
+    { t: "Blessing", ref: "Num 6:23–27; Gen 12:2", d: "Priests put God’s name on people. Sons release blessing over families, workplaces and cities." },
+    { t: "Healing and deliverance", ref: "Matt 10:7–8; Luke 9:1–2", d: "“Proclaim as you go, ‘The kingdom of heaven is at hand.’ Heal the sick … cast out demons.”" },
+    { t: "Justice and good governance", ref: "Ps 72:1–4; Isa 1:17; Mic 6:8", d: "Kings defend the poor and the fatherless. Sons bring heaven’s justice into law, business and community." },
+    { t: "Building and stewardship", ref: "Gen 2:15; Isa 61:4; Luke 19:13", d: "“They shall build up the ancient ruins.” Work is cultivation of Eden: “Engage in business until I come.”" },
+    { t: "Discipling nations", ref: "Matt 28:18–20; Rev 21:24–26", d: "Teaching nations to obey Christ, until the kings of the earth bring their glory into the city." },
+    { t: "Reconciliation", ref: "2 Cor 5:18–20", d: "“God … gave us the ministry of reconciliation”: ambassadors bringing earth back into union with heaven." }
+  ]
+};
+
+/* 9 · Spheres where heaven touches earth */
+DATA.sn.spheres = [
+  { t: "Family", ref: "Eph 5:22–6:4; Deut 6:6–9", d: "The first temple and kingdom: blessing children, praying together, making home a place of God’s presence." },
+  { t: "Church", ref: "Eph 4:11–16; Acts 2:42–47", d: "Equipping the saints, breaking bread, sharing, worship: a living preview of the age to come." },
+  { t: "Work and business", ref: "Col 3:23–24; Prov 22:29", d: "Excellence, integrity and provision as service to the Lord; the marketplace as a mission field and a mandate." },
+  { t: "City and government", ref: "Jer 29:7; Rom 13:1–7; 1 Tim 2:2", d: "Seeking the welfare of the city, praying for leaders, serving justice." },
+  { t: "Culture and the arts", ref: "Exod 31:1–5; Phil 4:8", d: "Bezalel was filled with the Spirit for craftsmanship. Beauty and truth bear witness to the King." },
+  { t: "Creation", ref: "Gen 2:15; Rom 8:19–21; Ps 24:1", d: "Caring for the earth as stewards who know creation is waiting for its liberation." },
+  { t: "The nations", ref: "Ps 2:8; Matt 24:14; Rev 7:9", d: "Gospel to every people group, until every tribe and tongue worships before the throne." }
+];
+
+DATA.sn.objections = [
+  { k: "serious", q: "“Heaven is our home; earth is going to burn, so why invest in it?”", refs: "Rev 21:1–3; Rom 8:21; Matt 6:10; 2 Pet 3:13",
+    not: "No one denies that the present age will pass away or that heaven is real.",
+    a: "The Bible ends with heaven coming down, not with souls leaving earth for ever: “the dwelling place of God is with man”. Creation will be “set free”, and Peter looks for “new heavens and a new earth in which righteousness dwells”. Jesus taught us to pray for God’s will on earth as in heaven. What we do in the Lord is not in vain (1 Cor 15:58)." },
+  { k: "straw", q: "“The manifestation of the sons means a super-elite will become divine.”", refs: "Rom 8:14, 29; Gal 3:26; 1 John 3:2",
+    not: "This is a distortion of Romans 8.",
+    a: "All believers led by the Spirit are sons; the goal is to be conformed to the image of the Son, the firstborn among many brothers. Sons share his life and inheritance; they never replace him or become another Christ. Glory is received, not seized." },
+  { k: "serious", q: "“The body of Christ is a metaphor; it doesn’t mean Christ acts through us.”", refs: "Acts 1:1; 9:4; 1 Cor 12:27; Eph 1:23",
+    not: "No one is saying the church is Christ, or that the Head and the body are the same.",
+    a: "Luke says his first book covered what Jesus “began to do and teach”, implying Acts records what he continued to do through his people. Jesus asked Saul, “why are you persecuting me?” The church is “the fullness of him who fills all in all”. The Head rules; the body expresses him." },
+  { k: "serious", q: "“Ephesians 1:10 is only about the end; nothing changes before Jesus returns.”", refs: "Eph 1:20–23; 2:6; 3:10; Matt 13:33",
+    not: "No one claims the fullness arrives before the new creation.",
+    a: "Paul says Christ is already seated above every power and already head over all things to the church, and that the church already displays God’s wisdom to the powers. The kingdom works like leaven, spreading until it fills the dough. The summing up is the goal of a process that has already begun." },
+  { k: "straw", q: "“Talk of dominion means Christians should seize political power.”", refs: "Mark 10:42–45; John 18:36; Matt 5:5",
+    not: "This misrepresents servant dominion.",
+    a: "Jesus’ rule comes by service, sacrifice and the Spirit, not by force: “whoever would be great among you must be your servant.” His kingdom is not from this world, yet it is for this world. The meek inherit the earth. Sons influence every sphere as servants and stewards, never as tyrants." },
+  { k: "serious", q: "“Sonship (huios) excludes women.”", refs: "Gal 3:26–28; 2 Cor 6:18; 1 Pet 3:7",
+    not: "No one is denying that Scripture uses male language for sons.",
+    a: "“Son” is legal language for an heir. Paul applies it to all believers, male and female, and adds, “you shall be sons and daughters to me.” Peter calls wives “heirs with you of the grace of life”. Daughters receive full inheritance and full authority in Christ." }
+];
+DATA.sn.study = [
+  { t: "Heaven and earth", q: ["Drag the slider through the story. Which moment surprises you most, and why?", "How does Ephesians 1:10 change your view of the Garden-Temple (Part I) and Babel (Part III)?"] },
+  { t: "Sons", q: ["Are you living more like a nēpios, a teknon or a huios? What would maturity look like this month (Heb 5:14)?", "What is creation waiting for in your workplace or city (Rom 8:19)?"] },
+  { t: "The body", q: ["Which part of the body best describes your function? Who are the joints that connect you (Eph 4:16)?", "Choose one up-ladder and one down-ladder action to practise this week."] }
+];
+DATA.sn.memory = [
+  ["Ephesians 1:9–10", "“Making known to us the mystery of his will … as a plan for the fullness of time, to unite all things in him, things in heaven and things on earth.”"],
+  ["Romans 8:19", "“For the creation waits with eager longing for the revealing of the sons of God.”"],
+  ["Romans 8:14", "“For all who are led by the Spirit of God are sons of God.”"],
+  ["Ephesians 1:22–23", "“He put all things under his feet and gave him as head over all things to the church, which is his body, the fullness of him who fills all in all.”"],
+  ["Galatians 4:7", "“So you are no longer a slave, but a son, and if a son, then an heir through God.”"],
+  ["Revelation 21:3", "“Behold, the dwelling place of God is with man. He will dwell with them, and they will be his people.”"]
+];
+
+DATA.quiz.push(
+  { q: "In Ephesians 1:10, God’s plan is to unite all things in Christ…", a: ["In heaven only", "On earth only", "Things in heaven and things on earth", "After earth is destroyed"], c: 2, x: "“To unite all things in him, things in heaven and things on earth.”" },
+  { q: "Which Greek word does Paul use for mature, placed sons in Romans 8:14 and 19?", a: ["Nēpios", "Teknon", "Huios", "Doulos"], c: 2, x: "Huioi: sons with the standing of heirs, “led by the Spirit”." },
+  { q: "According to Romans 8:21, creation will be…", a: ["Destroyed and forgotten", "Set free from bondage into the freedom of the glory of the children of God", "Left as it is", "Replaced by heaven alone"], c: 1, x: "Creation shares in the liberation of God’s children." }
+);
+DATA.web.nodes.push({ id: "sons", n: "Sons and the body", g: 4, d: "Ephesians 1:10: heaven and earth united in Christ, revealed through his body, the sons and daughters who rule and serve as kings and priests." });
+DATA.web.edges.push(
+  ["sons", "eden", "Eden’s overlap filling the earth"],
+  ["sons", "newjer", "Heaven and earth fully united (Rev 21:3)"],
+  ["sons", "kingpriest", "Sons function as kings and priests"],
+  ["sons", "fivefold", "Equipping the body to maturity (Eph 4:13)"],
+  ["sons", "warfare", "Seated with Christ above every power"]
+);
+Object.assign(DATA.images, {
+  dore: { file: "Paradiso_Canto_31.jpg", cap: "Gustave Doré, <i>The Empyrean</i> (1868), from Dante’s <i>Paradiso</i>: the redeemed gathered as one around the light of God.", ar: "4/5", art: "star" },
+  adam: { file: "Michelangelo_-_Creation_of_Adam_(cropped).jpg", cap: "Michelangelo, <i>The Creation of Adam</i> (c. 1512), Sistine Chapel: the image-bearer made to receive life from above.", ar: "16/9", art: "garden" }
+});
+
+/* ---------- Part VIII addition: seated in the heavenly places ---------- */
+DATA.wf.seated = [
+  { t: "Sit", ref: "Eph 1:3–3:21", d: "Chapters 1–3 are almost all indicative: what God has done. We are blessed, chosen, raised and seated with Christ. Everything begins with rest in a finished work.", post: "Position: raised and seated with him (Eph 2:6)" },
+  { t: "Walk", ref: "Eph 4:1–6:9", d: "“Walk in a manner worthy of the calling.” Heavenly position becomes earthly conduct: unity, holiness, love, wisdom, family and work.", post: "Practice: live out the position (Eph 4:1)" },
+  { t: "Stand", ref: "Eph 6:10–20", d: "Only after sitting and walking does Paul say “stand”. We hold ground on earth from a throne in heaven.", post: "Power: withstand in the evil day (Eph 6:13)" }
+];
+DATA.wf.blessings = [
+  { g: "Father", t: "Chosen in him", ref: "Eph 1:4", now: "You are wanted on purpose; rejection does not define you." },
+  { g: "Father", t: "Holy and blameless before him", ref: "Eph 1:4; Col 1:22", now: "You can come before God without shame or performance." },
+  { g: "Father", t: "Adopted as sons (huiothesia)", ref: "Eph 1:5; Gal 4:5", now: "You are placed as an heir, not hired as a servant." },
+  { g: "Father", t: "Accepted in the Beloved", ref: "Eph 1:6", now: "The Father’s delight in Jesus now rests on you." },
+  { g: "Son", t: "Redemption through his blood", ref: "Eph 1:7; Col 1:13–14", now: "Every chain of the past has been bought out." },
+  { g: "Son", t: "Forgiveness of trespasses", ref: "Eph 1:7; Col 2:13–14", now: "No record of debt stands against you." },
+  { g: "Son", t: "Wisdom and insight", ref: "Eph 1:8–9, 17", now: "You can ask for and expect wisdom for real decisions (Jas 1:5)." },
+  { g: "Son", t: "The mystery of his will revealed", ref: "Eph 1:9–10", now: "You know where history is heading: heaven and earth united." },
+  { g: "Son", t: "An inheritance obtained", ref: "Eph 1:11", now: "You are part of God’s plan and portion." },
+  { g: "Spirit", t: "Sealed with the Spirit", ref: "Eph 1:13; 4:30", now: "You are marked as God’s property and protected." },
+  { g: "Spirit", t: "The down payment (arrabōn)", ref: "Eph 1:14; 2 Cor 1:22", now: "The Spirit is the first instalment of the age to come, now." }
+];
+DATA.wf.dual = [
+  ["Seated with Christ", "Eph 2:6", "Standing in battle", "Eph 6:13", "Fight from rest, not for rest: the battle is held, not won, by you."],
+  ["Citizens of heaven", "Phil 3:20", "Ambassadors on earth", "2 Cor 5:20", "Your passport is heavenly, so your posting on earth is an embassy: represent the King where you live and work."],
+  ["Hidden with Christ in God", "Col 3:3", "A light in the world", "Matt 5:14", "Security in secret makes you brave in public. You don’t need applause to shine."],
+  ["Righteous in him", "2 Cor 5:21", "Growing in holiness", "2 Cor 7:1", "You grow because you are righteous, not to become righteous. Failure sends you to the throne, not away from it."],
+  ["Blessed with every blessing", "Eph 1:3", "Tested by many trials", "Jas 1:2–4", "Trials do not cancel blessing; they reveal and mature it. Count it joy."],
+  ["More than conquerors", "Rom 8:37", "In tribulation", "John 16:33", "Tribulation is real but never final: “take heart; I have overcome the world.”"],
+  ["Complete in him", "Col 2:10", "Pressing on to maturity", "Phil 3:12–14", "Nothing is missing in Christ, so you press on from fullness toward the fullness of the stature of Christ (Eph 4:13)."]
+];
+DATA.wf.heirs = [
+  { t: "The Spirit, the down payment", when: "now", ref: "Eph 1:14; Rom 8:23", d: "The arrabōn: a real first instalment that guarantees the rest. Power, joy and gifts now are a taste of the age to come." },
+  { t: "Sonship and access", when: "now", ref: "Gal 4:6–7; Heb 4:16", d: "Heirs have the run of the Father’s house: boldness at the throne, and the Spirit crying “Abba”." },
+  { t: "The kingdom", when: "now", ref: "Luke 12:32; Col 1:13; Jas 2:5", d: "“It is your Father’s good pleasure to give you the kingdom.” Already transferred into it; heirs of it." },
+  { t: "Suffering with him", when: "now", ref: "Rom 8:17; Phil 3:10", d: "“Heirs of God and fellow heirs with Christ, provided we suffer with him in order that we may also be glorified with him.” Co-heirs share the cross before the crown." },
+  { t: "The nations", when: "growing", ref: "Ps 2:8; Matt 28:18–19", d: "“Ask of me, and I will make the nations your heritage.” The Son’s inheritance is being gathered through his co-heirs’ mission." },
+  { t: "The world", when: "growing", ref: "Rom 4:13; Matt 5:5", d: "Abraham was promised he “would be heir of the world”. The meek inherit the earth." },
+  { t: "All things", when: "then", ref: "Rev 21:7; Heb 1:2; 1 Cor 3:21–23", d: "“The one who conquers will have this heritage.” Christ is “heir of all things”, and “all are yours, and you are Christ’s”." },
+  { t: "Glory and reigning", when: "then", ref: "Rom 8:17–18; 2 Tim 2:12; Rev 22:5", d: "Glorified with him; “they will reign forever and ever”." }
+];
+DATA.wf.objections.push(
+  { k: "serious", q: "“Being seated in heavenly places is only a legal fiction, a status with no effect on earth.”", refs: "Eph 2:6–10; Col 3:1–4; Heb 4:16",
+    not: "No one is claiming we are physically in heaven.",
+    a: "Paul moves straight from “seated with him” to “we are his workmanship, created … for good works” on earth. Colossians says because we are raised with Christ, “seek the things that are above” and then puts to death earthly vices. Position produces practice: access in prayer, freedom from condemnation, authority over the enemy and a heavenly mind in earthly work." },
+  { k: "straw", q: "“If we are co-heirs, we should be rich and never suffer.”", refs: "Rom 8:17; 2 Cor 6:10; Heb 11:13",
+    not: "This turns inheritance into entitlement.",
+    a: "Co-heirship includes the condition “provided we suffer with him”. Paul was “poor, yet making many rich; having nothing, yet possessing everything”. The down payment is real and generous, but the fullness is still ahead." }
+);
+DATA.wf.study.push({ t: "Seated with Christ", q: ["Read Ephesians 1:3–14 aloud. Which blessing do you most need to believe this week?", "Pick one pair from the “dual reality” table. How will the heavenly side change how you face the earthly side?", "What part of your inheritance are you living in now, and what are you still waiting for?"] });
+DATA.wf.memory.push(["Ephesians 2:6", "“And raised us up with him and seated us with him in the heavenly places in Christ Jesus.”"], ["Romans 8:17", "“And if children, then heirs—heirs of God and fellow heirs with Christ, provided we suffer with him in order that we may also be glorified with him.”"]);
+
 /* Where Heaven Meets Earth — interactive behaviour */
 (function () {
   "use strict";
@@ -2672,6 +2882,7 @@ DATA.quiz.push({ q: "According to Proverbs 26:2, a curse that is causeless…", 
       sower: () => [sv("circle", { cx: 120, cy: -70, r: 34, fill: gold, opacity: .6 }), sv("path", { d: "M-200 40 Q0 -10 200 40 L200 80 L-200 80 Z", fill: "#8a6238", opacity: .5 }), sv("circle", { cx: -40, cy: -70, r: 14, fill: "var(--ink)", opacity: .7 }), sv("path", { d: "M-56 -54 L-24 -54 L-14 30 L-66 30 Z", fill: "var(--ink)", opacity: .6 }), sv("path", { d: "M-24 -40 L20 -60", stroke: "var(--ink)", "stroke-width": 6, opacity: .6 }), ...[0, 1, 2, 3, 4].map(i => sv("circle", { cx: 30 + i * 14, cy: -50 + i * 16, r: 3, fill: gold }))],
       crown: () => [sv("path", { d: "M-150 20 L-150 -40 L-120 -10 L-95 -60 L-70 -10 L-40 -40 L-40 20 Z", fill: gold }), sv("path", { d: "M40 20 L40 -30 Q90 -80 140 -30 L140 20 Z", fill: "var(--surface)", stroke: "var(--muted)", "stroke-width": 3 }), sv("rect", { x: 70, y: -22, width: 40, height: 12, rx: 3, fill: gold }), sv("circle", { cx: 0, cy: -20, r: 30, fill: gold, opacity: .25 }), sv("rect", { x: -160, y: 40, width: 320, height: 8, rx: 4, fill: "var(--muted)", opacity: .5 })],
       shield: () => [sv("path", { d: "M-150 -60 L-60 -20 M-150 -10 L-60 0 M-150 40 L-60 20", stroke: "var(--flame)", "stroke-width": 5, "stroke-linecap": "round", opacity: .7 }), sv("path", { d: "M0 -100 L70 -76 L64 4 Q50 50 0 74 Q-50 50 -64 4 L-70 -76 Z", fill: blue }), sv("path", { d: "M-6 -70 h12 v30 h26 v12 h-26 v54 h-12 v-54 h-26 v-12 h26 Z", fill: gold }), sv("circle", { cx: 120, cy: -50, r: 30, fill: gold, opacity: .3 })],
+      union: () => [sv("circle", { cx: -40, cy: -20, r: 70, fill: gold, opacity: .35 }), sv("circle", { cx: 40, cy: 0, r: 70, fill: green, opacity: .35 }), sv("path", { d: "M0 -60 v80 M-30 -30 h60", stroke: gold, "stroke-width": 8 }), ...[-150, -110, 120, 150].map((x, i) => sv("circle", { cx: x, cy: -50 + i * 30, r: 4, fill: gold }))],
       zig: () => [...[0, 1, 2].map(i => sv("rect", { x: -140 + i * 40, y: 10 - i * 34, width: 280 - i * 80, height: 34, fill: "#b08a5a", opacity: .6 + i * .12 })), sv("rect", { x: -8, y: -20, width: 16, height: 30, fill: "var(--bg-2)" })]
     };
     g.append(...(art[kind] || art.garden)());
@@ -2996,7 +3207,7 @@ DATA.quiz.push({ q: "According to Proverbs 26:2, a curse that is causeless…", 
   /* ---------------- Connections web ---------------- */
   function initWeb() {
     const W = 600, C = W / 2, R = 228;
-    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "keys", "sowing", "warfare", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
+    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "keys", "sowing", "warfare", "sons", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
     const nodes = order.map(id => DATA.web.nodes.find(n => n.id === id));
     const pos = {};
     nodes.forEach((n, i) => { const a = -Math.PI / 2 + i / nodes.length * Math.PI * 2; pos[n.id] = [C + Math.cos(a) * R, C + Math.sin(a) * R, a]; });
@@ -5313,6 +5524,376 @@ DATA.quiz.push({ q: "According to Proverbs 26:2, a curse that is causeless…", 
 
   function initWfObjections() { objectionList("#wfObjections", "#wfObjFilter", WF().objections); studyGuide("#wfQuestions", "#wfMemory", WF().study, WF().memory); }
 
+  /* ================ Part IX: heaven and earth united ================ */
+  const SN = () => DATA.sn;
+  const tween = (from, to, ms, fn) => {
+    if (reduceMotion) return fn(to);
+    const t0 = performance.now();
+    const step = t => { const k = Math.min(1, (t - t0) / ms), e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2; fn(from + (to - from) * e); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  };
+  const info = (sel, eyebrow, t, ref, d, extra) => $(sel).replaceChildren(...[el("p", { class: "eyebrow", text: eyebrow }), el("h3", { text: t }), ref ? el("span", { class: "ref", text: ref }) : null, el("p", { html: refify(d) }), ...(extra || [])].filter(Boolean));
+
+  /* 1 · Heaven–earth overlap slider */
+  function initSnMerge() {
+    const M = SN().merge, R = 92, C = 190;
+    const svg = sv("svg", { viewBox: "0 0 520 380", role: "img", "aria-label": "Two circles, heaven and earth, overlapping more or less at each stage of the biblical story" });
+    svg.append(sv("defs", {},
+      sv("radialGradient", { id: "snHeav" }, sv("stop", { offset: 0, "stop-color": "var(--accent)", "stop-opacity": .55 }), sv("stop", { offset: 1, "stop-color": "var(--accent)", "stop-opacity": .14 })),
+      sv("radialGradient", { id: "snEarth" }, sv("stop", { offset: 0, "stop-color": "var(--eden)", "stop-opacity": .5 }), sv("stop", { offset: 1, "stop-color": "var(--eden)", "stop-opacity": .14 })),
+      sv("clipPath", { id: "snClip" }, sv("circle", { id: "snClipC", cx: 260, cy: C, r: R }))));
+    const rays = sv("g", { class: "sn-rays", opacity: 0 }, ...Array.from({ length: 16 }, (_, i) => { const a = i * Math.PI / 8; return sv("line", { x1: 260 + Math.cos(a) * 104, y1: C + Math.sin(a) * 104, x2: 260 + Math.cos(a) * 150, y2: C + Math.sin(a) * 150, stroke: "var(--accent)", "stroke-width": 3, "stroke-linecap": "round" }); }));
+    const heav = sv("circle", { cx: 260, cy: C, r: R, fill: "url(#snHeav)", stroke: "var(--accent)", "stroke-width": 2.5 });
+    const earth = sv("circle", { cx: 260, cy: C, r: R, fill: "url(#snEarth)", stroke: "var(--eden)", "stroke-width": 2.5 });
+    const lens = sv("circle", { cx: 260, cy: C, r: R, fill: "var(--accent)", "fill-opacity": .45, "clip-path": "url(#snClip)", class: "pulse" });
+    const hl = txt(260, 0, "HEAVEN", { "font-size": 13, fill: "var(--accent)", "letter-spacing": ".16em" }), el2 = txt(260, 0, "EARTH", { "font-size": 13, fill: "var(--eden)", "letter-spacing": ".16em" });
+    const stars = sv("g", {}, ...[[-40, -30], [30, -50], [50, -14], [-20, -60], [-58, -6]].map(([x, y]) => sv("circle", { cx: 260 + x, cy: y, r: 2.5, fill: "var(--accent)" })));
+    const hills = sv("path", { d: "", fill: "var(--eden)", "fill-opacity": .5 });
+    const label = txt(260, 0, "", { "font-size": 12.5, fill: "var(--ink)" });
+    svg.append(rays, heav, earth, lens, stars, hills, hl, el2, label);
+    $("#snMerge").append(svg);
+    let cur = 1 - M[0].ov;
+    function draw(off) {
+      const d = off * 100, hy = C - d, ey = C + d;
+      heav.setAttribute("cy", hy); earth.setAttribute("cy", ey); $("#snClipC", svg).setAttribute("cy", ey); lens.setAttribute("cy", hy);
+      hl.setAttribute("y", hy - R + 30); el2.setAttribute("y", ey + R - 18);
+      stars.setAttribute("transform", `translate(0 ${hy})`);
+      hills.setAttribute("d", `M${200} ${ey + 46} Q230 ${ey + 22} 260 ${ey + 40} Q290 ${ey + 18} 320 ${ey + 46} Z`);
+      label.setAttribute("y", C + 5);
+      rays.setAttribute("opacity", Math.max(0, 1 - off * 6));
+    }
+    const r = $("#snMergeRange");
+    function set(i) {
+      r.value = i; const m = M[i], target = 1 - m.ov;
+      tween(cur, target, 800, v => { cur = v; draw(v); });
+      label.textContent = m.ov > .2 ? m.t : "";
+      const part = (DATA.sn.hub.find(h => h.f === m.page) || { n: "", t: "Connections" });
+      info("#snMergeInfo", `Moment ${i + 1} of ${M.length} · overlap ${Math.round(m.ov * 100)}%`, m.t, m.ref, m.d, [el("a", { class: "btn small", href: m.page, text: `See it in ${part.n ? "Part " + part.n : "Connections"} →` })]);
+    }
+    r.addEventListener("input", () => set(+r.value));
+    $("#snMergePlay").addEventListener("click", async () => { for (let i = 0; i < M.length; i++) { set(i); await sleep(1500); } });
+    draw(cur); set(0);
+  }
+
+  /* 2 · anakephalaiōsis: gathering threads */
+  function initSnWord() {
+    const W = SN().word, svg = sv("svg", { viewBox: "0 0 520 320", role: "img", "aria-label": "Threads from heaven and earth gathered into one knot under Christ the head" });
+    svg.append(sv("rect", { width: 520, height: 160, fill: "var(--accent)", "fill-opacity": .07 }), sv("rect", { y: 160, width: 520, height: 160, fill: "var(--eden)", "fill-opacity": .08 }),
+      txt(16, 22, "THINGS IN HEAVEN", { "text-anchor": "start", "font-size": 10.5, fill: "var(--accent)", "letter-spacing": ".12em" }), txt(16, 310, "THINGS ON EARTH", { "text-anchor": "start", "font-size": 10.5, fill: "var(--eden)", "letter-spacing": ".12em" }));
+    const K = [260, 150];
+    const pts = [[40, 50], [110, 30], [190, 70], [330, 60], [420, 30], [490, 70], [30, 270], [120, 300], [200, 250], [320, 290], [410, 250], [490, 290]];
+    const threads = pts.map(([x, y], i) => {
+      const c = i < 6 ? "var(--accent)" : "var(--eden)";
+      const p = sv("path", { d: `M${x} ${y} C${x} ${(y + K[1]) / 2} ${K[0] + (x - K[0]) * .3} ${K[1] + (i < 6 ? -40 : 40)} ${K[0]} ${K[1]}`, fill: "none", stroke: c, "stroke-width": 3, "stroke-linecap": "round", pathLength: 1, class: "thread", style: { transitionDelay: i * .07 + "s" } });
+      svg.append(p, sv("circle", { cx: x, cy: y, r: 6, fill: c }));
+      return p;
+    });
+    const knot = sv("g", { class: "knot" }, sv("circle", { cx: K[0], cy: K[1], r: 18, fill: "var(--surface)", stroke: "var(--ink)", "stroke-width": 3 }), sv("path", { d: `M${K[0] - 9} ${K[1]} q9 -14 18 0 q-9 14 -18 0`, fill: "none", stroke: "var(--ink)", "stroke-width": 2.5 }));
+    const head = sv("g", { class: "headc" }, sv("circle", { cx: 260, cy: 70, r: 30, fill: "var(--accent)", "fill-opacity": .2, class: "pulse" }), sv("path", { d: "M244 82 L242 60 L252 68 L260 54 L268 68 L278 60 L276 82 Z", fill: "var(--accent)" }), sv("line", { x1: 260, y1: 100, x2: 260, y2: 132, stroke: "var(--accent)", "stroke-width": 3, "stroke-dasharray": "3 4" }), txt(250, 116, "Christ, the head", { "text-anchor": "end", "font-size": 12, fill: "var(--accent)" }));
+    svg.append(knot, head);
+    $("#snWord").append(svg);
+    $("#snWordGo").addEventListener("click", () => { svg.classList.remove("gathered"); void svg.getBoundingClientRect(); requestAnimationFrame(() => svg.classList.add("gathered")); });
+    $("#snWordPanel").append(el("p", { class: "eyebrow", text: "Ephesians 1:10" }), el("p", { class: "big-word", text: W.w }), el("p", { class: "muted small", text: W.tr }),
+      el("div", { class: "wparts" }, ...W.parts.flatMap(([a, b], i) => [i ? el("span", { class: "wplus", text: "+" }) : null, el("span", { class: "wpart" }, el("b", { text: a }), el("small", { text: b }))].filter(Boolean))),
+      el("p", { html: refify(W.d) }));
+    $("#snDore").append(photo("dore"));
+  }
+
+  /* 3 · Hub: every part summed up in Christ */
+  function initSnHub() {
+    const H = SN().hub, cx = 260, cy = 260, rad = 190;
+    const svg = sv("svg", { viewBox: "0 0 520 520", role: "img", "aria-label": "Hub diagram: the eight parts of the study connected to Christ at the centre" });
+    svg.append(sv("circle", { cx, cy, r: rad, fill: "none", stroke: "var(--line)", "stroke-width": 2, "stroke-dasharray": "3 6" }));
+    const nodes = H.map((h, i) => {
+      const a = -Math.PI / 2 + i * 2 * Math.PI / H.length, x = cx + Math.cos(a) * (rad + 8), y = cy + Math.sin(a) * rad, c = KC[h.c];
+      svg.append(sv("line", { x1: cx, y1: cy, x2: x, y2: y, stroke: "var(--line)", "stroke-width": 2.5 }), sv("line", { x1: x, y1: y, x2: cx, y2: cy, stroke: c, "stroke-width": 2, class: "flow", opacity: .7 }));
+      const g = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": `Part ${h.n}: ${h.t}` }), () => sel(i));
+      g.append(sv("circle", { class: "rbg", cx: x, cy: y, r: 52, fill: "var(--surface)", stroke: c, "stroke-width": 3 }), txt(x, y - 6, h.n, { "font-size": 17, fill: c, class: "jnum" }));
+      const w = h.t.split(" "), half = Math.ceil(w.length / 2);
+      g.append(txt(x, y + 12, w.slice(0, half).join(" "), { "font-size": 9.5 }), txt(x, y + 24, w.slice(half).join(" "), { "font-size": 9.5 }));
+      return g;
+    });
+    svg.append(...nodes);
+    svg.append(sv("circle", { cx, cy, r: 70, fill: "var(--accent)", "fill-opacity": .16, class: "pulse" }), sv("circle", { cx, cy, r: 54, fill: "var(--surface)", stroke: "var(--accent)", "stroke-width": 3 }),
+      txt(cx, cy - 8, "All things", { "font-size": 13 }), txt(cx, cy + 8, "united", { "font-size": 13 }), txt(cx, cy + 24, "in Christ", { "font-size": 13, fill: "var(--accent)" }));
+    $("#snHub").append(svg);
+    function sel(i) {
+      nodes.forEach((g, j) => $(".rbg", g).setAttribute("fill", j === i ? "var(--glow)" : "var(--surface)"));
+      const h = H[i];
+      info("#snHubPanel", `Part ${h.n}`, h.t, null, h.d, [el("a", { class: "btn primary small", href: h.f, text: `Open Part ${h.n} →` })]);
+    }
+    sel(0);
+  }
+
+  /* 4 · Expanding Eden */
+  function initSnExpand() {
+    const E = SN().expand, cx = 260, cy = 210;
+    const svg = sv("svg", { viewBox: "0 0 520 420", role: "img", "aria-label": "The garden of Eden growing until God's presence fills the whole earth" });
+    svg.append(sv("defs", {}, sv("clipPath", { id: "snEarthClip" }, sv("circle", { cx, cy, r: 190 }))));
+    svg.append(sv("circle", { cx, cy, r: 190, fill: "var(--babel)", "fill-opacity": .14, stroke: "var(--babel)", "stroke-width": 2 }));
+    [["M120 140 q30 -40 80 -20 q20 30 -10 60 q-40 20 -70 -40 Z"], ["M290 110 q50 -20 90 20 q10 40 -30 50 q-50 -10 -60 -70 Z"], ["M180 280 q40 -10 60 30 q-10 40 -50 30 q-30 -30 -10 -60 Z"], ["M330 250 q40 0 50 40 q-20 30 -50 10 Z"]].forEach(([d]) => svg.append(sv("path", { d, fill: "var(--muted)", "fill-opacity": .2 })));
+    const garden = sv("circle", { cx, cy, r: E[0].r, fill: "var(--eden)", "fill-opacity": .5, "clip-path": "url(#snEarthClip)", class: "sn-garden" });
+    const glow = sv("circle", { cx, cy, r: E[0].r + 10, fill: "none", stroke: "var(--accent)", "stroke-width": 3, "stroke-dasharray": "4 6", "clip-path": "url(#snEarthClip)", class: "sn-garden" });
+    svg.append(garden, glow);
+    E.forEach((e, i) => { if (i) svg.append(sv("circle", { cx, cy, r: Math.min(e.r, 188), fill: "none", stroke: "var(--line)", "stroke-dasharray": "2 5" })); });
+    svg.append(sv("g", { transform: `translate(${cx} ${cy})` }, sv("rect", { x: -3, y: -6, width: 6, height: 18, fill: "#6b4a2b" }), sv("circle", { cx: 0, cy: -12, r: 12, fill: "var(--eden)" }), sv("circle", { cx: -4, cy: -14, r: 2.5, fill: "var(--accent)" }), sv("circle", { cx: 5, cy: -9, r: 2.5, fill: "var(--accent)" })));
+    const cube = sv("g", { opacity: 0, style: { transition: "opacity .6s" } }, sv("rect", { x: cx - 24, y: 22, width: 48, height: 40, fill: "var(--accent)", "fill-opacity": .8 }), sv("path", { d: `M${cx - 24} 22 l12 -10 h48 l-12 10 Z M${cx + 24} 22 l12 -10 v40 l-12 10 Z`, fill: "var(--accent)" }), txt(cx + 50, 44, "New Jerusalem", { "text-anchor": "start", "font-size": 11.5, fill: "var(--accent)" }));
+    svg.append(cube, txt(cx, 412, "the earth", { "font-size": 11.5, fill: "var(--babel)" }));
+    $("#snExpand").append(svg);
+    const chips = E.map((e, i) => el("button", { class: "chip", type: "button", text: String(i + 1), "aria-label": e.t, onclick: () => set(i) }));
+    $("#snExpandChips").append(...chips);
+    let cur = E[0].r;
+    function set(i) {
+      selectSet(chips, i);
+      const e = E[i];
+      tween(cur, e.r, 900, v => { cur = v; garden.setAttribute("r", v); glow.setAttribute("r", v + 10); });
+      cube.setAttribute("opacity", i === E.length - 1 ? 1 : 0);
+      info("#snExpandInfo", `Stage ${i + 1} of ${E.length}`, e.t, e.ref, e.d);
+    }
+    $("#snExpandPlay").addEventListener("click", async () => { for (let i = 0; i < E.length; i++) { set(i); await sleep(1500); } });
+    set(0);
+    $("#snAdam").append(photo("adam"));
+  }
+
+  /* 5 · Romans 8: creation and the revealing of sons */
+  function initSnReveal() {
+    const R = SN().reveal, svg = sv("svg", { viewBox: "0 0 900 280", role: "img", "aria-label": "Creation moving from groaning in bondage to glory as the sons of God are revealed" });
+    svg.append(sv("defs", {}, sv("linearGradient", { id: "snSky", x1: 0, y1: 0, x2: 0, y2: 1 }, sv("stop", { offset: 0, "stop-color": "var(--accent)", "stop-opacity": .35 }), sv("stop", { offset: 1, "stop-color": "var(--accent)", "stop-opacity": 0 }))));
+    const sky = sv("rect", { width: 900, height: 220, fill: "url(#snSky)", class: "rv rv4" });
+    const sun = sv("circle", { cx: 760, cy: 230, r: 50, fill: "var(--accent)", class: "rv-sun" });
+    const ground = sv("path", { d: "M0 220 Q150 190 300 214 Q450 236 600 206 Q750 186 900 214 L900 280 L0 280 Z", fill: "var(--muted)", "fill-opacity": .45, class: "rv-ground" });
+    const waves = sv("g", { class: "rv-groan" }, ...[0, 1, 2].map(i => sv("path", { d: `M${60 + i * 30} ${150 - i * 14} q20 -16 40 0 q20 16 40 0`, fill: "none", stroke: "var(--flame)", "stroke-width": 2.5, style: { animationDelay: i * .3 + "s" } })), txt(120, 190, "groaning", { "font-size": 12, fill: "var(--flame)" }));
+    const chains = sv("g", { class: "rv-chains" }, ...[0, 1, 2, 3, 4].map(i => sv("ellipse", { cx: 240 + i * 22, cy: 200, rx: 12, ry: 7, fill: "none", stroke: "var(--ink)", "stroke-width": 3 })), txt(284, 182, "bondage to decay", { "font-size": 11.5, fill: "var(--muted)" }));
+    const watch = sv("g", { class: "rv rv1" }, ...[[600, 196], [650, 190], [700, 196]].map(([x, y]) => sv("g", { transform: `translate(${x} ${y})` }, sv("path", { d: "M0 0 L0 -26 M0 -26 q-10 -6 -6 -16 M0 -26 q10 -6 6 -16", stroke: "var(--eden)", "stroke-width": 3, fill: "none" }))), txt(650, 132, "eager longing", { "font-size": 12, fill: "var(--eden)" }));
+    const sons = sv("g", { class: "rv rv2" }, ...[400, 450, 500].map((x, i) => sv("g", {}, sv("circle", { cx: x, cy: 150, r: 26, fill: "var(--accent)", "fill-opacity": .25, class: "pulse", style: { animationDelay: i * .4 + "s" } }), person(x, 182, 1.3, "var(--accent)"))), txt(450, 104, "sons led by the Spirit", { "font-size": 12.5, fill: "var(--accent)" }));
+    const spirit = sv("g", { class: "rv rv3" }, sv("path", { d: "M380 86 q70 -44 140 0", fill: "none", stroke: "var(--babel)", "stroke-width": 3, "stroke-dasharray": "4 6", class: "flow" }), txt(450, 50, "the Spirit groans with us", { "font-size": 11.5, fill: "var(--babel)" }));
+    const blooms = sv("g", { class: "rv rv4" }, ...[60, 140, 220, 300, 560, 640, 820, 870].map((x, i) => sv("g", { transform: `translate(${x} ${214 - (i % 3) * 6})` }, sv("line", { x1: 0, y1: 0, x2: 0, y2: -22, stroke: "var(--eden)", "stroke-width": 3 }), sv("circle", { cx: 0, cy: -26, r: 7, fill: i % 2 ? "var(--accent)" : "var(--flame)" }), sv("circle", { cx: 0, cy: -26, r: 3, fill: "var(--surface)" }))), txt(150, 140, "freedom of glory", { "font-size": 12.5, fill: "var(--eden)" }));
+    svg.append(sky, sun, sv("path", { d: ground.getAttribute("d"), fill: "var(--surface)" }), ground, waves, chains, watch, spirit, sons, blooms);
+    $("#snReveal").append(svg);
+    const chips = R.map((r, i) => el("button", { class: "chip", type: "button", text: `${i + 1} · ${r.t}`, onclick: () => set(i) }));
+    $("#snRevealChips").append(...chips);
+    function set(i) {
+      selectSet(chips, i);
+      svg.dataset.step = i;
+      $$(".rv", svg).forEach(n => { const k = +n.getAttribute("class").match(/rv(\d)/)[1]; n.classList.toggle("on", k <= i); });
+      const r = R[i]; info("#snRevealPanel", `Romans 8 · step ${i + 1} of ${R.length}`, r.t, r.ref, r.d);
+    }
+    set(0);
+    $("#snNot").append(...SN().notThis.map(([t, d]) => el("div", { class: "card stg not-card" }, el("span", { class: "notx", text: "✕" }), el("h3", { text: t }), el("p", { html: refify(d) }))));
+  }
+
+  /* 6 · nēpios → teknon → huios */
+  function initSnGrowth() {
+    const G = SN().growth, svg = sv("svg", { viewBox: "0 0 900 330", role: "img", "aria-label": "Three steps rising: infant, child and mature son", style: { minWidth: "700px" } });
+    const steps = [[60, 250, 240], [320, 200, 260], [610, 140, 270]];
+    svg.append(sv("path", { d: "M60 300 L60 250 L300 250 L300 200 L580 200 L580 140 L880 140 L880 300 Z", fill: "var(--accent)", "fill-opacity": .08 }), txt(470, 316, "“grow up in every way into him who is the head” · Eph 4:15", { "font-size": 12, "font-style": "italic", "font-weight": 600, fill: "var(--muted)" }));
+    const figs = [
+      () => sv("g", {}, sv("circle", { cx: 0, cy: -34, r: 10, fill: "var(--muted)" }), sv("ellipse", { cx: 0, cy: -12, rx: 14, ry: 12, fill: "var(--muted)" }), sv("path", { d: "M-20 -2 q20 14 40 0", stroke: "var(--babel)", "stroke-width": 3, fill: "none" }), txt(26, -40, "milk", { "text-anchor": "start", "font-size": 10.5, fill: "var(--muted)" })),
+      () => sv("g", {}, sv("circle", { cx: 0, cy: -58, r: 11, fill: "var(--eden)" }), sv("path", { d: "M-14 0 L-12 -44 Q0 -50 12 -44 L14 0 Z", fill: "var(--eden)" }), sv("path", { d: "M14 -36 q26 -6 34 -26", stroke: "var(--eden)", "stroke-width": 5, "stroke-linecap": "round", fill: "none" }), sv("circle", { cx: 52, cy: -66, r: 9, fill: "var(--accent)", "fill-opacity": .5 }), txt(64, -66, "Abba", { "text-anchor": "start", "font-size": 10.5, fill: "var(--accent)" })),
+      () => sv("g", {}, sv("circle", { cx: 0, cy: -90, r: 13, fill: "var(--accent)" }), sv("path", { d: "M-24 0 L-18 -72 Q0 -80 18 -72 L24 0 Z", fill: "var(--accent)", "fill-opacity": .85 }), sv("path", { d: "M-24 0 L-30 -60 L-18 -72", fill: "var(--flame)", "fill-opacity": .6 }), sv("circle", { cx: 30, cy: -46, r: 6, fill: "none", stroke: "var(--ink)", "stroke-width": 3 }), sv("path", { d: "M18 -60 L30 -50", stroke: "var(--accent)", "stroke-width": 5, "stroke-linecap": "round" }), sv("path", { d: "M-10 -106 l4 -10 l6 6 l6 -6 l4 10 Z", fill: "var(--accent)" }), txt(30, 26, "ring, robe, sandals · Luke 15:22", { "font-size": 10.5, fill: "var(--muted)" }))
+    ];
+    const gs = G.map((g, i) => {
+      const [x, y, w] = steps[i];
+      const node = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": `${g.w}: ${g.t}` }), () => sel(i));
+      node.append(sv("rect", { class: "rbg", x, y: y - 6, width: w, height: 6, rx: 3, fill: "var(--line)" }));
+      const f = figs[i](); f.setAttribute("transform", `translate(${x + 60} ${y - 8})`); node.append(f);
+      node.append(txt(x + w - 70, y - 54, g.gk, { "font-size": 22, fill: [KC.muted, KC.eden, KC.accent][i], class: "jnum" }), txt(x + w - 70, y - 34, g.w, { "font-size": 13, "font-style": "italic" }), txt(x + w - 70, y - 18, g.t, { "font-size": 11.5, fill: "var(--muted)" }));
+      svg.append(node); return node;
+    });
+    $("#snGrowth").append(svg);
+    function sel(i) {
+      gs.forEach((g, j) => $(".rbg", g).setAttribute("fill", j === i ? "var(--accent)" : "var(--line)"));
+      const g = G[i];
+      info("#snGrowthPanel", `${g.gk} · ${g.w}`, g.t, g.ref, g.d, [el("ul", { class: "ticks" }, g.marks.map(m => el("li", { html: refify(m) })))]);
+    }
+    sel(2);
+    $("#snDaughters").append(sv("svg", { viewBox: "0 0 24 24", "aria-hidden": "true" }, sv("circle", { cx: 9, cy: 8, r: 4, fill: "currentColor" }), sv("circle", { cx: 16, cy: 9, r: 3.4, fill: "currentColor", opacity: .7 }), sv("path", { d: "M2 21 q7 -12 14 0 Z M12 21 q5 -10 10 0 Z", fill: "currentColor" })), el("div", {}, el("b", { text: "Sons and daughters" }), el("p", { html: refify(SN().daughters) })));
+  }
+
+  /* 7 · Body of Christ */
+  function initSnBody() {
+    const B = SN().body, svg = sv("svg", { viewBox: "0 0 420 500", role: "img", "aria-label": "A body with Christ as the head; select each member" });
+    const col = "var(--babel)";
+    svg.append(sv("g", { opacity: .3 }, sv("rect", { x: 160, y: 120, width: 100, height: 170, rx: 30, fill: col }), sv("path", { d: "M164 140 L104 250 M256 140 L316 250", stroke: col, "stroke-width": 24, "stroke-linecap": "round" }), sv("path", { d: "M182 280 L176 440 M238 280 L244 440", stroke: col, "stroke-width": 28, "stroke-linecap": "round" })));
+    svg.append(sv("circle", { cx: 210, cy: 70, r: 58, fill: "var(--accent)", "fill-opacity": .18, class: "pulse" }), sv("circle", { cx: 210, cy: 70, r: 42, fill: "var(--accent)", "fill-opacity": .85 }), sv("path", { d: "M188 32 L186 14 L198 22 L210 8 L222 22 L234 14 L232 32 Z", fill: "var(--accent)" }));
+    const pos = { head: [210, 70, 46, 270, 18], eyes: [196, 64, 9, 40, 70], mouth: [210, 92, 9, 40, 108], heart: [222, 166, 16, 300, 160], hands: [104, 254, 16, 30, 260], knees: [178, 370, 14, 30, 380], feet: [244, 446, 16, 300, 452], joints: [256, 142, 12, 320, 110] };
+    const icons = { heart: "M0 6 C-10 -2 -8 -10 0 -5 C8 -10 10 -2 0 6 Z" };
+    const gs = B.map((b, i) => {
+      const [x, y, r, lx, ly] = pos[b.id];
+      const g = hit(sv("g", { class: "fnode bpart", tabindex: "0", role: "button", "aria-label": b.n }), () => sel(i));
+      g.append(sv("circle", { class: "rbg", cx: x, cy: y, r, fill: b.id === "head" ? "transparent" : "var(--surface)", stroke: b.id === "head" ? "transparent" : "var(--accent)", "stroke-width": 2.5 }));
+      if (b.id !== "head") g.append(sv("circle", { cx: x, cy: y, r: r + 6, fill: "none", stroke: "var(--accent)", "stroke-width": 1.5, class: "ping" }));
+      if (icons[b.id]) g.append(sv("path", { d: icons[b.id], transform: `translate(${x} ${y})`, fill: "var(--flame)" }));
+      g.append(sv("line", { x1: x, y1: y, x2: lx + (lx > 210 ? -6 : 60), y2: ly - 4, stroke: "var(--line)", "stroke-width": 1.5 }), txt(lx, ly, b.n.split(":")[0].replace(" and ligaments", ""), { "text-anchor": "start", "font-size": 12 }));
+      svg.append(g); return g;
+    });
+    $("#snBody").append(svg);
+    function sel(i) {
+      gs.forEach((g, j) => g.classList.toggle("sel", j === i));
+      const b = B[i];
+      info("#snBodyPanel", "The body of Christ", b.n, b.ref, b.d, [el("p", { class: "use" }, el("b", { text: "As kings and priests: " }), b.kp)]);
+    }
+    sel(0);
+  }
+
+  /* 8 · Two-way ladder */
+  function initSnLadder() {
+    const L = SN().ladder, svg = sv("svg", { viewBox: "0 0 520 500", role: "img", "aria-label": "A ladder between heaven and earth: priestly actions rise, kingly actions descend" });
+    svg.append(sv("rect", { width: 520, height: 70, fill: "var(--accent)", "fill-opacity": .14 }), sv("rect", { y: 430, width: 520, height: 70, fill: "var(--eden)", "fill-opacity": .14 }),
+      txt(260, 40, "HEAVEN · the throne", { "font-size": 12, fill: "var(--accent)", "letter-spacing": ".12em" }), txt(260, 472, "EARTH · the nations", { "font-size": 12, fill: "var(--eden)", "letter-spacing": ".12em" }));
+    svg.append(sv("line", { x1: 230, y1: 60, x2: 230, y2: 440, stroke: "var(--ink)", "stroke-width": 5, opacity: .6 }), sv("line", { x1: 290, y1: 60, x2: 290, y2: 440, stroke: "var(--ink)", "stroke-width": 5, opacity: .6 }));
+    for (let y = 90; y < 440; y += 36) svg.append(sv("line", { x1: 230, y1: y, x2: 290, y2: y, stroke: "var(--ink)", "stroke-width": 4, opacity: .5 }));
+    if (!reduceMotion) [["M245 440 L245 64", "var(--eden)", 0], ["M245 440 L245 64", "var(--eden)", 2], ["M275 64 L275 440", "var(--accent)", 1], ["M275 64 L275 440", "var(--accent)", 3]].forEach(([p, c, b]) => { const d = sv("circle", { r: 6, fill: c }); d.append(sv("animateMotion", { dur: "4s", begin: b + "s", repeatCount: "indefinite", path: p })); svg.append(d); });
+    svg.append(txt(110, 96, "↑ PRIESTS carry up", { "font-size": 11.5, fill: "var(--eden)" }), txt(410, 96, "KINGS bring down ↓", { "font-size": 11.5, fill: "var(--accent)" }));
+    const items = [];
+    const pill = (it, x, y, c, kind, i) => {
+      const g = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": it.t }), () => sel(kind, i));
+      g.append(sv("rect", { class: "rbg", x: x - 92, y: y - 15, width: 184, height: 30, rx: 15, fill: "var(--surface)", stroke: c, "stroke-width": 2 }), txt(x, y + 4.5, it.t, { "font-size": 12 }));
+      svg.append(g); items.push([kind, i, g]);
+    };
+    L.up.forEach((it, i) => pill(it, 110, 400 - i * 80, "var(--eden)", "up", i));
+    L.down.forEach((it, i) => pill(it, 410, 130 + i * 54, "var(--accent)", "down", i));
+    $("#snLadder").append(svg);
+    function sel(kind, i) {
+      items.forEach(([k, j, g]) => $(".rbg", g).setAttribute("fill", k === kind && j === i ? "var(--glow)" : "var(--surface)"));
+      const it = L[kind][i];
+      info("#snLadderPanel", kind === "up" ? "Priestly: earth → heaven" : "Kingly: heaven → earth", it.t, it.ref, it.d);
+    }
+    sel("up", 0);
+  }
+
+  /* 9 · Spheres */
+  function initSnSpheres() {
+    const S = SN().spheres, cx = 260, cy = 250;
+    const svg = sv("svg", { viewBox: "0 0 520 500", role: "img", "aria-label": "Spheres of life around the throne, with heaven's rule spreading outward" });
+    [60, 120, 180].forEach((r, i) => svg.append(sv("circle", { cx, cy, r, fill: "none", stroke: "var(--accent)", "stroke-width": 2, class: "ripple-ring", style: { animationDelay: i * 1 + "s" } })));
+    svg.append(sv("circle", { cx, cy, r: 50, fill: "var(--accent)", "fill-opacity": .2 }), txt(cx, cy - 4, "Thy kingdom", { "font-size": 12.5 }), txt(cx, cy + 12, "come", { "font-size": 12.5, fill: "var(--accent)" }));
+    const cols = ["var(--eden)", "var(--accent)", "var(--babel)", "var(--flame)", "var(--accent)", "var(--eden)", "var(--babel)"];
+    const gs = S.map((s, i) => {
+      const a = -Math.PI / 2 + i * 2 * Math.PI / S.length, x = cx + Math.cos(a) * 190, y = cy + Math.sin(a) * 190;
+      const g = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": s.t }), () => sel(i));
+      const w = s.t.split(" "), two = s.t.length > 10, half = Math.ceil(w.length / 2);
+      g.append(sv("circle", { class: "rbg", cx: x, cy: y, r: 44, fill: "var(--surface)", stroke: cols[i], "stroke-width": 3 }), txt(x, y + (two ? -2 : 5), two ? w.slice(0, half).join(" ") : s.t, { "font-size": 11.5 }));
+      if (two) g.append(txt(x, y + 12, w.slice(half).join(" "), { "font-size": 11.5 }));
+      svg.append(g); return g;
+    });
+    $("#snSpheres").append(svg);
+    function sel(i) { gs.forEach((g, j) => $(".rbg", g).setAttribute("fill", j === i ? "var(--glow)" : "var(--surface)")); const s = S[i]; info("#snSpherePanel", "Sphere of life", s.t, s.ref, s.d); }
+    sel(0);
+  }
+
+  function initSnObjections() { objectionList("#snObjections", "#snObjFilter", SN().objections); studyGuide("#snQuestions", "#snMemory", SN().study, SN().memory); }
+
+  /* ---------- Part VIII·d: seated in the heavenly places ---------- */
+  function initWfSit() {
+    const S = WF().seated, svg = sv("svg", { viewBox: "0 0 520 400", role: "img", "aria-label": "A believer seated with Christ in heavenly places, walking and standing on earth" });
+    svg.append(sv("rect", { width: 520, height: 170, fill: "var(--accent)", "fill-opacity": .1, class: "lv lv0" }), sv("rect", { y: 230, width: 520, height: 170, fill: "var(--eden)", "fill-opacity": .1, class: "lv lv12" }),
+      txt(16, 24, "IN THE HEAVENLY PLACES", { "text-anchor": "start", "font-size": 10.5, fill: "var(--accent)", "letter-spacing": ".12em" }), txt(16, 390, "ON EARTH", { "text-anchor": "start", "font-size": 10.5, fill: "var(--eden)", "letter-spacing": ".12em" }));
+    const throne = (x, c, s) => sv("g", { transform: `translate(${x} 140) scale(${s})` }, sv("path", { d: "M-26 0 L-26 -50 Q-26 -60 -16 -60 L16 -60 Q26 -60 26 -50 L26 0 Z M-34 0 L34 0 L34 8 L-34 8 Z", fill: c, "fill-opacity": .8 }));
+    svg.append(throne(220, "var(--accent)", 1.1), throne(310, "var(--accent)", .9), person(220, 118, 1.2, "var(--ink)"), sv("path", { d: "M210 76 l4 -10 l6 6 l6 -6 l4 10 Z", fill: "var(--accent)" }), person(310, 122, 1, "var(--eden)"),
+      txt(220, 162, "Christ", { "font-size": 11 }), txt(310, 162, "you, in him", { "font-size": 11, fill: "var(--eden)" }));
+    const beam = sv("path", { d: "M310 170 L310 300", stroke: "var(--accent)", "stroke-width": 4, "stroke-dasharray": "4 8", class: "lv lv12 dashmove" });
+    const walker = sv("g", { class: "lv lv1 walker" }, person(0, 0, 1.3, "var(--eden)"));
+    walker.setAttribute("transform", "translate(160 340)");
+    const path = sv("path", { d: "M80 352 L440 352", stroke: "var(--eden)", "stroke-width": 3, "stroke-dasharray": "2 8", class: "lv lv1" });
+    const stander = sv("g", { class: "lv lv2" }, person(310, 340, 1.5, "var(--eden)"), sv("rect", { x: 280, y: 300, width: 16, height: 40, rx: 6, fill: "var(--babel)" }), sv("path", { d: "M330 290 L330 340", stroke: "var(--ink)", "stroke-width": 3 }));
+    const shot = [0, 1, 2].map(i => sv("path", { d: `M${440 + i * 10} ${296 + i * 18} l-26 4`, stroke: "var(--flame)", "stroke-width": 3, class: "lv lv2" }));
+    svg.append(beam, path, walker, stander, ...shot);
+    $("#wfSit").append(svg);
+    const chips = S.map((s, i) => el("button", { class: "chip", type: "button", text: s.t, onclick: () => set(i) }));
+    $("#wfSitChips").append(...chips);
+    function set(i) {
+      selectSet(chips, i); svg.dataset.s = i;
+      $$(".lv", svg).forEach(n => { const k = n.getAttribute("class").match(/lv(\d+)/)[1]; n.classList.toggle("on", k.includes(String(i))); });
+      const s = S[i]; info("#wfSitInfo", `Ephesians · ${i + 1} of 3`, s.t, s.ref, s.d, [el("p", { class: "use" }, el("b", { text: s.post }))]);
+    }
+    set(0);
+  }
+
+  function initWfTreasury() {
+    const B = WF().blessings, cx = 260, cy = 260, n = B.length;
+    const svg = sv("svg", { viewBox: "0 0 520 520", role: "img", "aria-label": "Treasury of every spiritual blessing in Ephesians 1, grouped by Father, Son and Spirit" });
+    const gc = { Father: "var(--accent)", Son: "var(--flame)", Spirit: "var(--babel)" };
+    const arc = (a0, a1, r) => `M${cx + Math.cos(a0) * r} ${cy + Math.sin(a0) * r} A${r} ${r} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${cx + Math.cos(a1) * r} ${cy + Math.sin(a1) * r}`;
+    const ang = i => -Math.PI / 2 + (i + .5) * 2 * Math.PI / n;
+    [["Father", 0, 3], ["Son", 4, 8], ["Spirit", 9, 10]].forEach(([g, a, b]) => {
+      const a0 = ang(a) - Math.PI / n + .03, a1 = ang(b) + Math.PI / n - .03;
+      svg.append(sv("path", { d: arc(a0, a1, 236), fill: "none", stroke: gc[g], "stroke-width": 10, "stroke-linecap": "round", opacity: .5 }));
+      const am = (a0 + a1) / 2; svg.append(txt(cx + Math.cos(am) * 214, cy + Math.sin(am) * 214 + 4, g === "Father" ? "the Father · vv. 3–6" : g === "Son" ? "the Son · vv. 7–12" : "the Spirit · vv. 13–14", { "font-size": 11, fill: gc[g] }));
+    });
+    const chest = sv("g", {}, sv("circle", { cx, cy, r: 70, fill: "var(--accent)", "fill-opacity": .14, class: "pulse" }), sv("rect", { x: cx - 40, y: cy - 16, width: 80, height: 46, rx: 6, fill: "var(--accent)" }), sv("path", { d: `M${cx - 40} ${cy - 16} Q${cx} ${cy - 50} ${cx + 40} ${cy - 16} Z`, fill: "var(--accent)", "fill-opacity": .75 }), sv("rect", { x: cx - 7, y: cy - 6, width: 14, height: 16, rx: 3, fill: "var(--surface)" }), txt(cx, cy + 52, "in Christ", { "font-size": 13 }));
+    svg.append(chest);
+    const gs = B.map((b, i) => {
+      const a = ang(i), x = cx + Math.cos(a) * 160, y = cy + Math.sin(a) * 160;
+      const g = hit(sv("g", { class: "fnode gem", tabindex: "0", role: "button", "aria-label": b.t, style: { animationDelay: i * .08 + "s" } }), () => sel(i));
+      g.append(sv("line", { x1: cx + Math.cos(a) * 74, y1: cy + Math.sin(a) * 74, x2: x - Math.cos(a) * 24, y2: y - Math.sin(a) * 24, stroke: "var(--line)", "stroke-width": 1.5 }),
+        sv("path", { class: "rbg", d: `M${x} ${y - 22} L${x + 20} ${y - 6} L${x + 12} ${y + 18} L${x - 12} ${y + 18} L${x - 20} ${y - 6} Z`, fill: "var(--surface)", stroke: gc[b.g], "stroke-width": 2.5 }), txt(x, y + 5, String(i + 1), { "font-size": 13, fill: gc[b.g] }));
+      svg.append(g); return g;
+    });
+    $("#wfTreasury").append(svg);
+    function sel(i) {
+      gs.forEach((g, j) => $(".rbg", g).setAttribute("fill", j === i ? "var(--glow)" : "var(--surface)"));
+      const b = B[i];
+      $("#wfTreasuryPanel").replaceChildren(el("p", { class: "eyebrow", style: { color: gc[b.g] }, text: `Blessing ${i + 1} of ${n} · from the ${b.g}` }), el("h3", { text: b.t }), el("span", { class: "ref", text: b.ref }), el("p", { class: "use" }, el("b", { text: "On earth this week: " }), b.now),
+        el("div", { class: "htl-controls", style: { marginTop: "6px" } }, el("button", { class: "btn small", type: "button", text: "◂", "aria-label": "Previous blessing", onclick: () => sel((i + n - 1) % n) }), el("button", { class: "btn small", type: "button", text: "▸", "aria-label": "Next blessing", onclick: () => sel((i + 1) % n) })));
+    }
+    sel(0);
+  }
+
+  function initWfDual() {
+    const D = WF().dual, n = D.length, W = 980, bw = (W - 40) / n;
+    const svg = sv("svg", { viewBox: `0 0 ${W} 300`, role: "img", "aria-label": "Pairs of heavenly truths above and earthly experiences below", style: { minWidth: "760px" } });
+    svg.append(sv("rect", { width: W, height: 120, fill: "var(--accent)", "fill-opacity": .08 }), sv("rect", { y: 180, width: W, height: 120, fill: "var(--eden)", "fill-opacity": .08 }),
+      sv("line", { x1: 0, y1: 150, x2: W, y2: 150, stroke: "var(--line)", "stroke-width": 2, "stroke-dasharray": "6 6" }), txt(W - 12, 144, "in Christ (position)", { "text-anchor": "end", "font-size": 11, fill: "var(--accent)" }), txt(W - 12, 166, "in the world (experience)", { "text-anchor": "end", "font-size": 11, fill: "var(--eden)" }));
+    const wrap2 = (s, x, y, c) => { const w = s.split(" "), h = Math.ceil(w.length / 2), two = s.length > 14; return [txt(x, y - (two ? 7 : 0), two ? w.slice(0, h).join(" ") : s, { "font-size": 11.5, fill: c }), two ? txt(x, y + 8, w.slice(h).join(" "), { "font-size": 11.5, fill: c }) : null].filter(Boolean); };
+    const pairs = D.map((d, i) => {
+      const x = 20 + i * bw + bw / 2;
+      const g = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": `${d[0]} and ${d[2]}` }), () => sel(i));
+      g.append(sv("rect", { class: "rt", x: x - bw / 2 + 5, y: 26, width: bw - 10, height: 70, rx: 10, fill: "var(--surface)", stroke: "var(--accent)", "stroke-width": 1.6 }), ...wrap2(d[0], x, 62, "var(--ink)"),
+        sv("rect", { class: "rb", x: x - bw / 2 + 5, y: 204, width: bw - 10, height: 70, rx: 10, fill: "var(--surface)", stroke: "var(--eden)", "stroke-width": 1.6 }), ...wrap2(d[2], x, 240, "var(--ink)"),
+        sv("path", { class: "beamd", d: `M${x} 98 L${x} 200`, stroke: "var(--accent)", "stroke-width": 5, "stroke-linecap": "round", pathLength: 1 }));
+      svg.append(g); return g;
+    });
+    const host = $("#wfDual"); host.classList.add("scroll-x"); host.append(svg);
+    function sel(i) {
+      pairs.forEach((g, j) => g.classList.toggle("sel", j === i));
+      const d = D[i];
+      $("#wfDualPanel").replaceChildren(el("p", { class: "eyebrow", text: `Pair ${i + 1} of ${n}` }), el("div", { class: "dual-row" },
+        el("div", { class: "dual up" }, el("small", { text: "Above: in Christ" }), el("b", { text: d[0] }), el("span", { class: "ref", text: d[1] })),
+        el("div", { class: "dual-arrow", text: "↓" }),
+        el("div", { class: "dual down" }, el("small", { text: "Below: in the world" }), el("b", { text: d[2] }), el("span", { class: "ref", text: d[3] }))), el("p", { class: "use", html: refify(d[4]) }));
+    }
+    sel(0);
+  }
+
+  function initWfHeirs() {
+    const H = WF().heirs, svg = sv("svg", { viewBox: "0 0 520 440", role: "img", "aria-label": "Inheritance meter: the Spirit as down payment now, growing through mission, and the fullness to come" });
+    const zones = [["now", "NOW · the down payment", 0, "var(--eden)"], ["growing", "GROWING · through mission", 1, "var(--babel)"], ["then", "THEN · the fullness", 2, "var(--accent)"]];
+    const top = 40, zh = 120;
+    zones.forEach(([k, t, i, c]) => svg.append(sv("rect", { x: 140, y: top + (2 - i) * zh, width: 360, height: zh - 6, rx: 12, fill: c, "fill-opacity": .08, stroke: c, "stroke-opacity": .4 }), txt(150, top + (2 - i) * zh + 18, t, { "text-anchor": "start", "font-size": 10.5, fill: c, "letter-spacing": ".1em" })));
+    // meter
+    svg.append(sv("rect", { x: 50, y: top, width: 46, height: zh * 3 - 6, rx: 23, fill: "var(--surface)", stroke: "var(--line)", "stroke-width": 2 }));
+    const fill = sv("rect", { x: 54, width: 38, rx: 19, fill: "var(--accent)", y: top + zh * 3 - 10, height: 0 });
+    svg.append(fill, txt(73, top + zh * 3 + 18, "arrabōn", { "font-size": 11.5, "font-style": "italic", fill: "var(--accent)" }));
+    const counts = { now: 0, growing: 0, then: 0 };
+    const gs = H.map((h, i) => {
+      const zi = { now: 0, growing: 1, then: 2 }[h.when], k = counts[h.when]++;
+      const x = 232 + (k % 2) * 180, y = top + (2 - zi) * zh + 48 + Math.floor(k / 2) * 34;
+      const g = hit(sv("g", { class: "fnode", tabindex: "0", role: "button", "aria-label": h.t }), () => sel(i));
+      g.append(sv("rect", { class: "rbg", x: x - 86, y: y - 14, width: 172, height: 28, rx: 14, fill: "var(--surface)", stroke: zones[zi][3], "stroke-width": 2 }), txt(x, y + 4, h.t.length > 27 ? h.t.slice(0, 26) + "…" : h.t, { "font-size": 11 }));
+      svg.append(g); return [g, zi];
+    });
+    $("#wfHeirs").append(svg);
+    let cur = 0;
+    function sel(i) {
+      gs.forEach(([g], j) => $(".rbg", g).setAttribute("fill", j === i ? "var(--glow)" : "var(--surface)"));
+      const h = H[i], zi = gs[i][1], target = (zi + .5) / 3 * (zh * 3 - 14);
+      tween(cur, target, 700, v => { cur = v; fill.setAttribute("height", v); fill.setAttribute("y", top + zh * 3 - 10 - v); });
+      info("#wfHeirsPanel", `Co-heirs · ${zones[zi][1].split(" · ")[0].toLowerCase()}`, h.t, h.ref, h.d);
+    }
+    sel(0);
+  }
+
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -5356,15 +5937,17 @@ DATA.quiz.push({ q: "According to Proverbs 26:2, a curse that is causeless…", 
       [initSsGate, "#ssGate"], [initSsStairs, "#ssStairs"], [initSsBabylons, "#ssBabylons"], [initSsDaniels, "#ssDaniels"], [initSsFire, "#ssFire"],
       [initWfLayers, "#wfLayers"], [initWfWords, "#wfWords"], [initWfChain, "#wfChain"], [initWfArmour, "#wfArmour"], [initWfSpeak, "#wfTargets"], [initWfBind, "#wfBind"],
       [initWfTongue, "#wfTongue"], [initWfBuilder, "#wfDeclOut"], [initWfCompare, "#wfCompare"], [initWfCurseLine, "#wfCurseLine"], [initWfShield, "#wfShield"], [initWfBreak, "#wfCurseTargets"],
-      [initWfFree, "#wfFree"], [initWfSpectrum, "#wfSpectrum"], [initWfRoles, "#wfRoleArt"], [initWfTempt, "#wfTempt"], [initWfRhythm, "#wfRhythm"], [initWfObjections, "#wfObjections"],
+      [initWfFree, "#wfFree"], [initWfSit, "#wfSit"], [initWfTreasury, "#wfTreasury"], [initWfDual, "#wfDual"], [initWfHeirs, "#wfHeirs"], [initWfSpectrum, "#wfSpectrum"], [initWfRoles, "#wfRoleArt"], [initWfTempt, "#wfTempt"], [initWfRhythm, "#wfRhythm"], [initWfObjections, "#wfObjections"],
+      [initSnMerge, "#snMerge"], [initSnWord, "#snWord"], [initSnHub, "#snHub"], [initSnExpand, "#snExpand"], [initSnReveal, "#snReveal"], [initSnGrowth, "#snGrowth"],
+      [initSnBody, "#snBody"], [initSnLadder, "#snLadder"], [initSnSpheres, "#snSpheres"], [initSnObjections, "#snObjections"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();
 
-window.SITE_INDEX = [{"f":"index.html","p":"Home","id":"journey","t":"One road from Eden to the City of God","k":"Your journey Your journey · progress map"},{"f":"index.html","p":"Home","id":"parts","t":"Choose where to begin","k":"Seven parts, one story"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"clues","t":"Why Eden reads like a sanctuary","k":"Eight clues in the text"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"mountain","t":"The mountain of God, in three rings","k":"Cosmic geography"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"tabernacle","t":"Walk through the Tabernacle","k":"A portable Eden · Exodus 25–40"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"ark","t":"The Ark of the Covenant","k":"The footstool of God’s throne"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"adam","t":"Adam: image, priest and king","k":"Man in the sanctuary"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"tree","t":"A golden tree in the holy place","k":"Tree of life → lampstand"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"story","t":"God’s dwelling through history","k":"One plan from Genesis 2 to Revelation 22"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"restored","t":"Genesis 2–3 ↔ Revelation 21–22","k":"The story comes home"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"part1","t":"The Garden Was a Temple","k":"part overview"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"nachash","t":"Nāḥāš: serpent, diviner, shining one","k":"Genesis 3:1 · one Hebrew word"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"not-snake","t":"Six things a garden snake can’t do","k":"Reading Genesis 3 carefully"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"cherub","t":"The guardian cherub who fell","k":"Ezekiel 28:12–19"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"morning-star","t":"“Day Star, son of Dawn”","k":"Isaiah 14:12–15"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"seraph","t":"Seraphim: the burning serpents","k":"Throne guardians"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"curse","t":"The curse, decoded","k":"Genesis 3:14–15"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"seed","t":"The war of the two seeds","k":"Zeraʿ · “offspring, seed”"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"bronze","t":"Look and live","k":"Numbers 21:4–9 · John 3:14–15"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"dragon","t":"“That ancient serpent”","k":"Revelation 12:9 · 20:2"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"serpent","t":"The Serpent and the Seed","k":"part overview"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"babel","t":"The tower everyone pictures","k":"Genesis 11:1–9"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"map","t":"Map of the story","k":"The land of Shinar and beyond"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"ziggurat","t":"What is a ziggurat?","k":"Anatomy of a temple-tower"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"sin","t":"Three layers of Babel’s rebellion","k":"What actually went wrong"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"shem","t":"“Let us make a שֵׁם shem for ourselves”","k":"A Hebrew wordplay"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"nations","t":"Seventy nations and one portion","k":"Deuteronomy 32:8–9 · the Table of Nations"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"gate","t":"“Gate of the gods” and “the gate of heaven”","k":"Two gates"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"pentecost","t":"Pentecost: Babel in reverse","k":"Genesis 11 ↔ Acts 2"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"cities","t":"The city of man and the city of God","k":"A tale of two cities"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"two-cities","t":"Babylon the great, or the New Jerusalem","k":"Revelation 17–18 ↔ 21–22"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"part2","t":"Babel, Babylon and the City of God","k":"part overview"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-design","t":"God’s design: one person, two directions","k":"God’s design Genesis 1–2 · flowchart"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-twist","t":"How it got twisted","k":"How it got twisted From the fall to Babylon · flow"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-split","t":"Why Israel’s offices were separated","k":"Why the offices split Sinai to David · flowchart"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-roles","t":"What priests and kings actually did","k":"Roles, access & authority Responsibilities · access · authority · limits"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-access","t":"Rings of access, then an open way","k":"Rings of access Who could come near?"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-cross","t":"When kings tried to be priests","k":"Crossing the line Boundaries in Israel"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-people","t":"Kings, priests and those who were both","k":"People map Old and New Testament · visual map"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-melch","t":"The order of Melchizedek","k":"Melchizedek Genesis 14 → Psalm 110 → Hebrews 7"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-promises","t":"Promises that meet in one person","k":"The promises Two streams of promise · diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-calling","t":"How we are called to function","k":"Our calling 1 Peter 2:9 · Revelation 5:10"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-map","t":"Eleven movements, two callings","k":"Overview Overview map"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-net","t":"Can you handle being blessed?","k":"Supply & support Isaiah 3:1 · Philippians 4:19 · Luke 5:6–7 · interactive"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-judgment","t":"When the pillars are removed","k":"Signs of judgment Isaiah 3:1–12 · structure diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-build","t":"Babel or Bethel: bricks or living stones","k":"Babel or Bethel Genesis 10–11 · Matthew 16 · 1 Peter 2:5 · building diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-came","t":"Heaven came down","k":"Heaven came down Genesis 11:5 · Revelation 12 · Jude 9 · arena diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-worship","t":"Worship is not a song","k":"Worship is not a song John 4:23–24 · sound diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-gate","t":"Unity, gatekeepers and gossip","k":"Gatekeepers & gossip Matthew 23:13 · Revelation 2:20 · Psalm 1 · gate diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-orphan","t":"From orphan to son","k":"The orphan generation Greek words for growth · Matthew 21:33–39"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-babylons","t":"Babylon 1.0, 2.0 and 3.0","k":"Three Babylons Genesis 11 · Daniel 1 · Revelation 18"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-daniels","t":"A generation of Daniels","k":"A generation of Daniels Daniel 1:8 · Genesis 2:9"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-accord","t":"One accord, then shake off the snake","k":"One accord Acts 2:1–2 · Acts 28:1–6 · animated"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-study","t":"Study guide","k":"Study guide For personal or group study"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kings","t":"Kings and Priests","k":"part overview"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"supply","t":"Supply and Support","k":"part overview"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-office","t":"The prophet: messenger of the covenant","k":"The prophetic office Old Testament · flowchart"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-pairs","t":"Prophets between kings and priests","k":"Prophets with kings & priests Relationship map"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-five","t":"From three offices to five gifts","k":"The fivefold ministry Ephesians 4:7–16"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-changed","t":"What changed, and what did not","k":"What changed Old covenant → new covenant"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-equip","t":"How the five equip kings and priests","k":"Equipping kings & priests Matrix · spheres"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-now","t":"Kings and priests now, not only later","k":"Kings & priests now Daniel 2 · tense map"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-shrunk","t":"How the calling was shrunk","k":"How the purpose shrank Diagnosis · funnel"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-ages","t":"Reading the “end” in its setting","k":"Reading the end-time texts AD 30 → AD 70 → the kingdom age"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-objections","t":"Objections and misunderstandings","k":"Questions & objections Fair questions, honest answers"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-study","t":"Study guide","k":"Study guide For personal or group study"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"prophets","t":"Prophets, the Fivefold and the Kingdom Now","k":"part overview"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-meaning","t":"What keys mean throughout the Bible","k":"What keys mean Genesis to Revelation · concordance map"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-ring","t":"The keyring","k":"The keyring Every key in Scripture"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-palace","t":"Inside the King’s house","k":"The steward’s palace Culture · the royal steward"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-stewards","t":"Two stewards: one key","k":"Shebna and Eliakim Isaiah 22:15–25"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-flow","t":"How the keys connect across Scripture","k":"Connections Joseph to the New Jerusalem · flowchart"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-caesarea","t":"Keys beside the “gates of Hades”","k":"Caesarea Philippi Matthew 16:13–20 · the setting"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-bind","t":"Binding and loosing: heaven first","k":"Binding and loosing Matthew 16:19 · grammar diagram"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-doors","t":"Doors the keys opened","k":"Doors opened The keys in action · Acts to Revelation"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-shrunk","t":"From access to absolution: how the key lost its teeth","k":"From access to absolution Church history · diagram"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-operate","t":"How we operate in the keys","k":"How to operate Practice"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-objections","t":"Objections and misunderstandings","k":"Objections Fair questions, honest answers"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-study","t":"Study guide","k":"Study guide For personal or group study"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"keys","t":"The Keys of the Kingdom","k":"part overview"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-design","t":"God’s design: seed, blessing and harvest","k":"God’s design Genesis 1 → Galatians 6 → Revelation 14 · flowchart"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-laws","t":"Eight laws of the harvest","k":"Laws of the harvest Animated growth diagram"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-soils","t":"One seed, four soils","k":"The four soils Mark 4:1–20 · interactive parable"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-thread","t":"The seed principle through Scripture","k":"Through Scripture Genesis to Revelation · furrow map"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-christ","t":"The seed that died and multiplied","k":"The seed that died John 12:24 · 1 Corinthians 15:20"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-harvest","t":"What you sow, what you reap","k":"Seed and harvest The law of kind · chooser"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-cycle","t":"How sowing connects to blessing","k":"The blessing cycle 2 Corinthians 9:6–15 · cycle diagram"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-grace","t":"When grace interrupts the harvest","k":"Grace and the harvest The great exchange"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-manip","t":"Why kingdom principles can feel like manipulation","k":"Principle or manipulation? Diagnosis"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-objections","t":"Objections and misunderstandings","k":"Objections Fair questions, honest answers"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-study","t":"Study guide","k":"Study guide For personal or group study"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sowing","t":"Sowing and Reaping","k":"part overview"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-battle","t":"The battlefield: who is fighting, and from where","k":"The battlefield Ephesians 1:20 → 2:6 → 6:12 · layered map"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-words","t":"Authority, power, dominion and strongholds: what the words mean","k":"Authority, power, dominion Hebrew and Greek · word pictures"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-chain","t":"Where our authority comes from","k":"Chain of authority Matthew 28:18 · flowchart"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-armour","t":"The armour of God is God’s own armour","k":"The armour of God Ephesians 6:13–18 · Isaiah 59:17 · interactive figure"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-speak","t":"Can we speak to it? Command it?","k":"Can we speak to it? Delays, strongholds, demons, sickness … · evidence map"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-bind","t":"“Whatever you bind on earth shall have been bound in heaven”","k":"Bound in heaven Matthew 16:19 · 18:18 · 12:29 · mirror diagram"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-tongue","t":"Words that build worlds","k":"Words that build worlds Genesis 1 → Romans 4 → 1 Timothy 1 · flowchart"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-builder","t":"Build a declaration from a promise","k":"Declaration builder Promise → faith → declaration · interactive tool"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-compare","t":"Declaration, positive thinking or witchcraft?","k":"Declaration or manipulation? Side-by-side comparison"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-curseline","t":"From the curse to “no more curse”","k":"From curse to no more curse Genesis 3 → Revelation 22 · timeline"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-shield","t":"“There is no enchantment against Jacob”","k":"No causeless curse Numbers 23:23 · Proverbs 26:2 · Isaiah 54:17 · animation"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-break","t":"Can we rebuke, cancel and break it?","k":"Can we break it? Witchcraft, bondages, generational curses … · evidence map"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-free","t":"A path to freedom","k":"A path to freedom Discern → deal → break → be filled · flowchart"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-extremes","t":"Where people go wrong: two ditches and a road","k":"Errors and extremes 1 Peter 5:8–9 · spectrum slider"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-roles","t":"How sons, priests and kings walk in dominion","k":"Sons, priests, kings Revelation 1:6 · three postures in one person"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-jesus","t":"How Jesus fought: “It is written”","k":"“It is written” Matthew 4:1–11 · animation"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-rhythm","t":"A daily battle rhythm","k":"Battle rhythm James 4:7 · Ephesians 6 · cycle diagram"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-objections","t":"Objections and misunderstandings","k":"Objections Fair questions, honest answers"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-study","t":"Study guide","k":"Study guide For personal or group study"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"warfare","t":"Spiritual Warfare and Dominion","k":"part overview"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"declare","t":"Speaking and Prophesying Over Our Lives","k":"part overview"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"curses","t":"Breaking Curses, Witchcraft and Bondages","k":"part overview"},{"f":"connections.html","p":"Connections & Quiz","id":"web","t":"The web of connections","k":"Everything connects"},{"f":"connections.html","p":"Connections & Quiz","id":"quiz","t":"Test yourself","k":"Check what you have seen"},{"f":"connections.html","p":"Connections & Quiz","id":"sources","t":"Further reading","k":"Go deeper"},{"f":"connections.html","p":"Connections & Quiz","id":"connections","t":"Connections &amp; Quiz","k":"part overview"}];
-window.SITE_PAGES = [{"id":"home","f":"index.html","nav":"Home"},{"id":"garden","f":"garden.html","nav":"Part I · The Garden-Temple"},{"id":"serpent","f":"serpent.html","nav":"Part II · The Serpent and the Seed"},{"id":"babel","f":"babel.html","nav":"Part III · Babel and the City of God"},{"id":"kings","f":"kings.html","nav":"Part IV · Kings and Priests"},{"id":"prophets","f":"prophets.html","nav":"Part V · Prophets and the Fivefold"},{"id":"keys","f":"keys.html","nav":"Part VI · The Keys of the Kingdom"},{"id":"sowing","f":"sowing.html","nav":"Part VII · Sowing and Reaping"},{"id":"warfare","f":"warfare.html","nav":"Part VIII · Spiritual Warfare"},{"id":"connections","f":"connections.html","nav":"Connections & Quiz"}];
+window.SITE_INDEX = [{"f":"index.html","p":"Home","id":"journey","t":"One road from Eden to the City of God","k":"Your journey Your journey · progress map"},{"f":"index.html","p":"Home","id":"parts","t":"Choose where to begin","k":"Seven parts, one story"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"clues","t":"Why Eden reads like a sanctuary","k":"Eight clues in the text"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"mountain","t":"The mountain of God, in three rings","k":"Cosmic geography"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"tabernacle","t":"Walk through the Tabernacle","k":"A portable Eden · Exodus 25–40"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"ark","t":"The Ark of the Covenant","k":"The footstool of God’s throne"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"adam","t":"Adam: image, priest and king","k":"Man in the sanctuary"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"tree","t":"A golden tree in the holy place","k":"Tree of life → lampstand"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"story","t":"God’s dwelling through history","k":"One plan from Genesis 2 to Revelation 22"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"restored","t":"Genesis 2–3 ↔ Revelation 21–22","k":"The story comes home"},{"f":"garden.html","p":"Part I · The Garden-Temple","id":"part1","t":"The Garden Was a Temple","k":"part overview"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"nachash","t":"Nāḥāš: serpent, diviner, shining one","k":"Genesis 3:1 · one Hebrew word"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"not-snake","t":"Six things a garden snake can’t do","k":"Reading Genesis 3 carefully"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"cherub","t":"The guardian cherub who fell","k":"Ezekiel 28:12–19"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"morning-star","t":"“Day Star, son of Dawn”","k":"Isaiah 14:12–15"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"seraph","t":"Seraphim: the burning serpents","k":"Throne guardians"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"curse","t":"The curse, decoded","k":"Genesis 3:14–15"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"seed","t":"The war of the two seeds","k":"Zeraʿ · “offspring, seed”"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"bronze","t":"Look and live","k":"Numbers 21:4–9 · John 3:14–15"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"dragon","t":"“That ancient serpent”","k":"Revelation 12:9 · 20:2"},{"f":"serpent.html","p":"Part II · The Serpent and the Seed","id":"serpent","t":"The Serpent and the Seed","k":"part overview"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"babel","t":"The tower everyone pictures","k":"Genesis 11:1–9"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"map","t":"Map of the story","k":"The land of Shinar and beyond"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"ziggurat","t":"What is a ziggurat?","k":"Anatomy of a temple-tower"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"sin","t":"Three layers of Babel’s rebellion","k":"What actually went wrong"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"shem","t":"“Let us make a שֵׁם shem for ourselves”","k":"A Hebrew wordplay"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"nations","t":"Seventy nations and one portion","k":"Deuteronomy 32:8–9 · the Table of Nations"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"gate","t":"“Gate of the gods” and “the gate of heaven”","k":"Two gates"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"pentecost","t":"Pentecost: Babel in reverse","k":"Genesis 11 ↔ Acts 2"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"cities","t":"The city of man and the city of God","k":"A tale of two cities"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"two-cities","t":"Babylon the great, or the New Jerusalem","k":"Revelation 17–18 ↔ 21–22"},{"f":"babel.html","p":"Part III · Babel and the City of God","id":"part2","t":"Babel, Babylon and the City of God","k":"part overview"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-design","t":"God’s design: one person, two directions","k":"God’s design Genesis 1–2 · flowchart"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-twist","t":"How it got twisted","k":"How it got twisted From the fall to Babylon · flow"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-split","t":"Why Israel’s offices were separated","k":"Why the offices split Sinai to David · flowchart"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-roles","t":"What priests and kings actually did","k":"Roles, access & authority Responsibilities · access · authority · limits"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-access","t":"Rings of access, then an open way","k":"Rings of access Who could come near?"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-cross","t":"When kings tried to be priests","k":"Crossing the line Boundaries in Israel"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-people","t":"Kings, priests and those who were both","k":"People map Old and New Testament · visual map"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-melch","t":"The order of Melchizedek","k":"Melchizedek Genesis 14 → Psalm 110 → Hebrews 7"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-promises","t":"Promises that meet in one person","k":"The promises Two streams of promise · diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-calling","t":"How we are called to function","k":"Our calling 1 Peter 2:9 · Revelation 5:10"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-map","t":"Eleven movements, two callings","k":"Overview Overview map"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-net","t":"Can you handle being blessed?","k":"Supply & support Isaiah 3:1 · Philippians 4:19 · Luke 5:6–7 · interactive"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-judgment","t":"When the pillars are removed","k":"Signs of judgment Isaiah 3:1–12 · structure diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-build","t":"Babel or Bethel: bricks or living stones","k":"Babel or Bethel Genesis 10–11 · Matthew 16 · 1 Peter 2:5 · building diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-came","t":"Heaven came down","k":"Heaven came down Genesis 11:5 · Revelation 12 · Jude 9 · arena diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-worship","t":"Worship is not a song","k":"Worship is not a song John 4:23–24 · sound diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-gate","t":"Unity, gatekeepers and gossip","k":"Gatekeepers & gossip Matthew 23:13 · Revelation 2:20 · Psalm 1 · gate diagram"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-orphan","t":"From orphan to son","k":"The orphan generation Greek words for growth · Matthew 21:33–39"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-babylons","t":"Babylon 1.0, 2.0 and 3.0","k":"Three Babylons Genesis 11 · Daniel 1 · Revelation 18"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-daniels","t":"A generation of Daniels","k":"A generation of Daniels Daniel 1:8 · Genesis 2:9"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"ss-accord","t":"One accord, then shake off the snake","k":"One accord Acts 2:1–2 · Acts 28:1–6 · animated"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kp-study","t":"Study guide","k":"Study guide For personal or group study"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"kings","t":"Kings and Priests","k":"part overview"},{"f":"kings.html","p":"Part IV · Kings and Priests","id":"supply","t":"Supply and Support","k":"part overview"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-office","t":"The prophet: messenger of the covenant","k":"The prophetic office Old Testament · flowchart"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-pairs","t":"Prophets between kings and priests","k":"Prophets with kings & priests Relationship map"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-five","t":"From three offices to five gifts","k":"The fivefold ministry Ephesians 4:7–16"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-changed","t":"What changed, and what did not","k":"What changed Old covenant → new covenant"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-equip","t":"How the five equip kings and priests","k":"Equipping kings & priests Matrix · spheres"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-now","t":"Kings and priests now, not only later","k":"Kings & priests now Daniel 2 · tense map"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-shrunk","t":"How the calling was shrunk","k":"How the purpose shrank Diagnosis · funnel"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-ages","t":"Reading the “end” in its setting","k":"Reading the end-time texts AD 30 → AD 70 → the kingdom age"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-objections","t":"Objections and misunderstandings","k":"Questions & objections Fair questions, honest answers"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"pr-study","t":"Study guide","k":"Study guide For personal or group study"},{"f":"prophets.html","p":"Part V · Prophets and the Fivefold","id":"prophets","t":"Prophets, the Fivefold and the Kingdom Now","k":"part overview"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-meaning","t":"What keys mean throughout the Bible","k":"What keys mean Genesis to Revelation · concordance map"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-ring","t":"The keyring","k":"The keyring Every key in Scripture"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-palace","t":"Inside the King’s house","k":"The steward’s palace Culture · the royal steward"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-stewards","t":"Two stewards: one key","k":"Shebna and Eliakim Isaiah 22:15–25"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-flow","t":"How the keys connect across Scripture","k":"Connections Joseph to the New Jerusalem · flowchart"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-caesarea","t":"Keys beside the “gates of Hades”","k":"Caesarea Philippi Matthew 16:13–20 · the setting"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-bind","t":"Binding and loosing: heaven first","k":"Binding and loosing Matthew 16:19 · grammar diagram"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-doors","t":"Doors the keys opened","k":"Doors opened The keys in action · Acts to Revelation"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-shrunk","t":"From access to absolution: how the key lost its teeth","k":"From access to absolution Church history · diagram"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-operate","t":"How we operate in the keys","k":"How to operate Practice"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-objections","t":"Objections and misunderstandings","k":"Objections Fair questions, honest answers"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"ky-study","t":"Study guide","k":"Study guide For personal or group study"},{"f":"keys.html","p":"Part VI · The Keys of the Kingdom","id":"keys","t":"The Keys of the Kingdom","k":"part overview"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-design","t":"God’s design: seed, blessing and harvest","k":"God’s design Genesis 1 → Galatians 6 → Revelation 14 · flowchart"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-laws","t":"Eight laws of the harvest","k":"Laws of the harvest Animated growth diagram"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-soils","t":"One seed, four soils","k":"The four soils Mark 4:1–20 · interactive parable"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-thread","t":"The seed principle through Scripture","k":"Through Scripture Genesis to Revelation · furrow map"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-christ","t":"The seed that died and multiplied","k":"The seed that died John 12:24 · 1 Corinthians 15:20"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-harvest","t":"What you sow, what you reap","k":"Seed and harvest The law of kind · chooser"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-cycle","t":"How sowing connects to blessing","k":"The blessing cycle 2 Corinthians 9:6–15 · cycle diagram"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-grace","t":"When grace interrupts the harvest","k":"Grace and the harvest The great exchange"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-manip","t":"Why kingdom principles can feel like manipulation","k":"Principle or manipulation? Diagnosis"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-objections","t":"Objections and misunderstandings","k":"Objections Fair questions, honest answers"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sw-study","t":"Study guide","k":"Study guide For personal or group study"},{"f":"sowing.html","p":"Part VII · Sowing and Reaping","id":"sowing","t":"Sowing and Reaping","k":"part overview"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-battle","t":"The battlefield: who is fighting, and from where","k":"The battlefield Ephesians 1:20 → 2:6 → 6:12 · layered map"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-words","t":"Authority, power, dominion and strongholds: what the words mean","k":"Authority, power, dominion Hebrew and Greek · word pictures"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-chain","t":"Where our authority comes from","k":"Chain of authority Matthew 28:18 · flowchart"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-armour","t":"The armour of God is God’s own armour","k":"The armour of God Ephesians 6:13–18 · Isaiah 59:17 · interactive figure"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-speak","t":"Can we speak to it? Command it?","k":"Can we speak to it? Delays, strongholds, demons, sickness … · evidence map"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-bind","t":"“Whatever you bind on earth shall have been bound in heaven”","k":"Bound in heaven Matthew 16:19 · 18:18 · 12:29 · mirror diagram"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-tongue","t":"Words that build worlds","k":"Words that build worlds Genesis 1 → Romans 4 → 1 Timothy 1 · flowchart"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-builder","t":"Build a declaration from a promise","k":"Declaration builder Promise → faith → declaration · interactive tool"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-compare","t":"Declaration, positive thinking or witchcraft?","k":"Declaration or manipulation? Side-by-side comparison"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-curseline","t":"From the curse to “no more curse”","k":"From curse to no more curse Genesis 3 → Revelation 22 · timeline"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-shield","t":"“There is no enchantment against Jacob”","k":"No causeless curse Numbers 23:23 · Proverbs 26:2 · Isaiah 54:17 · animation"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-break","t":"Can we rebuke, cancel and break it?","k":"Can we break it? Witchcraft, bondages, generational curses … · evidence map"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-free","t":"A path to freedom","k":"A path to freedom Discern → deal → break → be filled · flowchart"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-sit","t":"Seated with him: sit, walk, stand","k":"Sit, walk, stand The shape of Ephesians · two-level diagram"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-blessings","t":"Every spiritual blessing in Christ","k":"Every spiritual blessing Ephesians 1:3–14 · treasury map"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-dual","t":"Our dual reality: in Christ above, in the world below","k":"Our dual reality Already and not yet · mirror diagram"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-heirs","t":"Co-heirs with Christ: what is ours now, and what is coming","k":"Co-heirs with Christ Romans 8:17 · Galatians 4:7 · inheritance map"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-extremes","t":"Where people go wrong: two ditches and a road","k":"Errors and extremes 1 Peter 5:8–9 · spectrum slider"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-roles","t":"How sons, priests and kings walk in dominion","k":"Sons, priests, kings Revelation 1:6 · three postures in one person"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-jesus","t":"How Jesus fought: “It is written”","k":"“It is written” Matthew 4:1–11 · animation"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-rhythm","t":"A daily battle rhythm","k":"Battle rhythm James 4:7 · Ephesians 6 · cycle diagram"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-objections","t":"Objections and misunderstandings","k":"Objections Fair questions, honest answers"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"wf-study","t":"Study guide","k":"Study guide For personal or group study"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"warfare","t":"Spiritual Warfare and Dominion","k":"part overview"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"declare","t":"Speaking and Prophesying Over Our Lives","k":"part overview"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"curses","t":"Breaking Curses, Witchcraft and Bondages","k":"part overview"},{"f":"warfare.html","p":"Part VIII · Spiritual Warfare","id":"seated","t":"Seated in the Heavenly Places, Co-Heirs with Christ","k":"part overview"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sn-merge","t":"Heaven and earth: pulled apart, coming together","k":"Heaven and earth Ephesians 1:10 · Genesis → Revelation · interactive diagram"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sn-word","t":"“To unite all things under one head”","k":"“Sum up all things” Greek word study · animation"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sn-hub","t":"How every part of this study is summed up in Christ","k":"How every part fits The whole study on one page · hub map"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sn-expand","t":"God’s initial plan: Eden was meant to fill the earth","k":"God’s initial plan Genesis 1:28 → Habakkuk 2:14 → Revelation 21 · growth animation"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sn-reveal","t":"Creation waits for the revealing of the sons of God","k":"The revealing of the sons Romans 8:14–30 · animated flow"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sn-huios","t":"Nēpios, teknon, huios: from infant to heir","k":"Huios: mature sons Galatians 4:1–7 · three Greek words · growth path"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sn-body","t":"The body of Christ: how the Head moves on earth","k":"The body of Christ Ephesians 1:22–23 · 1 Corinthians 12 · Ephesians 4:16 · body map"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sn-ladder","t":"What sons and daughters do as kings and priests","k":"What kings and priests do Genesis 28:12 · John 1:51 · two-way ladder"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sn-spheres","t":"On earth as it is in heaven, in every sphere of life","k":"Heaven in every sphere Matthew 6:10 · radial map"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sn-objections","t":"Objections and misunderstandings","k":"Objections Fair questions, honest answers"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sn-study","t":"Study guide","k":"Study guide For personal or group study"},{"f":"sons.html","p":"Part IX · Heaven and Earth United","id":"sons","t":"Heaven and Earth United: The Body and the Sons","k":"part overview"},{"f":"connections.html","p":"Connections & Quiz","id":"web","t":"The web of connections","k":"Everything connects"},{"f":"connections.html","p":"Connections & Quiz","id":"quiz","t":"Test yourself","k":"Check what you have seen"},{"f":"connections.html","p":"Connections & Quiz","id":"sources","t":"Further reading","k":"Go deeper"},{"f":"connections.html","p":"Connections & Quiz","id":"connections","t":"Connections &amp; Quiz","k":"part overview"}];
+window.SITE_PAGES = [{"id":"home","f":"index.html","nav":"Home"},{"id":"garden","f":"garden.html","nav":"Part I · The Garden-Temple"},{"id":"serpent","f":"serpent.html","nav":"Part II · The Serpent and the Seed"},{"id":"babel","f":"babel.html","nav":"Part III · Babel and the City of God"},{"id":"kings","f":"kings.html","nav":"Part IV · Kings and Priests"},{"id":"prophets","f":"prophets.html","nav":"Part V · Prophets and the Fivefold"},{"id":"keys","f":"keys.html","nav":"Part VI · The Keys of the Kingdom"},{"id":"sowing","f":"sowing.html","nav":"Part VII · Sowing and Reaping"},{"id":"warfare","f":"warfare.html","nav":"Part VIII · Spiritual Warfare"},{"id":"sons","f":"sons.html","nav":"Part IX · Heaven and Earth United"},{"id":"connections","f":"connections.html","nav":"Connections & Quiz"}];
 /* Where Heaven Meets Earth — motion and interaction layer (runs after the app has booted) */
 (function () {
   "use strict";
@@ -5631,7 +6214,7 @@ window.SITE_PAGES = [{"id":"home","f":"index.html","nav":"Home"},{"id":"garden",
   }
   /* ---------- storage ---------- */
   const KEY = "hme-study";
-  let S = { done: {}, saved: {}, notes: {}, last: null };
+  let S = { done: {}, saved: {}, notes: {}, last: null, known: {} };
   try { S = Object.assign(S, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) { /* storage unavailable */ }
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* storage unavailable */ } };
 
@@ -5643,6 +6226,9 @@ window.SITE_PAGES = [{"id":"home","f":"index.html","nav":"Home"},{"id":"garden",
   const totals = f => INDEX.filter(x => x.f === f).length;
   const doneOn = f => INDEX.filter(x => x.f === f && S.done[f + "#" + x.id]).length;
   const pct = f => { const t = totals(f); return t ? doneOn(f) / t : 0; };
+  /* memory verses from every part, for the Review tab */
+  const PARTS_MEM = [["kp", "Part IV · Kings and Priests"], ["pr", "Part V · Prophets"], ["ky", "Part VI · The Keys"], ["sw", "Part VII · Sowing and Reaping"], ["wf", "Part VIII · Spiritual Warfare"], ["sn", "Part IX · Heaven and Earth United"]];
+  const CARDS = (() => { try { return PARTS_MEM.flatMap(([k, p]) => ((typeof DATA !== "undefined" && DATA[k] && DATA[k].memory) || []).map(([r, v]) => ({ r, v, p }))); } catch (e) { return []; } })();
   const title = (f, id) => (INDEX.find(x => x.f === f && x.id === id) || {}).t || id;
 
   /* ---------- progress ring ---------- */
@@ -5739,7 +6325,7 @@ window.SITE_PAGES = [{"id":"home","f":"index.html","nav":"Home"},{"id":"garden",
     const btn = $("#studyBtn"); if (!btn) return;
     drawer = h("aside", { class: "drawer", id: "studyDrawer", "aria-label": "My study", hidden: true },
       h("div", { class: "dr-head" }, h("h2", { text: "My study" }), h("button", { class: "dr-x", type: "button", "aria-label": "Close", text: "×", onclick: () => toggle(false) })),
-      h("div", { class: "dr-tabs", role: "tablist" }, ...[["progress", "Progress"], ["saved", "Saved"], ["notes", "Notes"]].map(([k, n]) => (tabs[k] = h("button", { class: "tab", role: "tab", type: "button", "aria-selected": String(k === activeTab), text: n, onclick: () => { activeTab = k; renderDrawer(); } })))),
+      h("div", { class: "dr-tabs", role: "tablist" }, ...[["progress", "Progress"], ["review", "Review"], ["saved", "Saved"], ["notes", "Notes"]].map(([k, n]) => (tabs[k] = h("button", { class: "tab", role: "tab", type: "button", "aria-selected": String(k === activeTab), text: n, onclick: () => { activeTab = k; renderDrawer(); } })))),
       h("div", { class: "dr-body", id: "drBody" }),
       h("p", { class: "dr-foot", text: "Progress, saves and notes stay in this browser on this device." }));
     const veil = h("div", { class: "dr-veil", hidden: true, onclick: () => toggle(false) });
@@ -5760,10 +6346,24 @@ window.SITE_PAGES = [{"id":"home","f":"index.html","nav":"Home"},{"id":"garden",
     const body = $("#drBody"); body.replaceChildren();
     if (activeTab === "progress") {
       const all = INDEX.length, d = Object.keys(S.done).filter(k => INDEX.some(x => x.f + "#" + x.id === k)).length;
-      body.append(h("div", { class: "dr-total" }, ring(all ? d / all : 0, 64), h("div", {}, h("b", { text: `${d} of ${all} sections studied` }), h("small", { text: `${Object.keys(S.saved).length} saved · ${Object.keys(S.notes).length} notes` }))));
+      body.append(h("div", { class: "dr-total" }, ring(all ? d / all : 0, 64), h("div", {}, h("b", { text: `${d} of ${all} sections studied` }), h("small", { text: `${Object.keys(S.saved).length} saved · ${Object.keys(S.notes).length} notes · ${Object.keys(S.known || {}).length}/${CARDS.length} verses` }))));
       if (S.last) body.append(h("a", { class: "dr-cont", href: href(S.last.f + "#" + S.last.id) }, h("small", { text: "Continue where you left off" }), h("b", { text: S.last.t }), h("span", { text: S.last.p })));
       body.append(h("ul", { class: "dr-parts" }, PAGES.filter(p => totals(p.f)).map(p => h("li", {}, h("a", { href: p.f === P.f ? "#top" : p.f }, ring(pct(p.f), 30), h("span", { text: p.nav }), h("small", { text: `${doneOn(p.f)}/${totals(p.f)}` }))))));
       if (d) body.append(h("button", { class: "linkish", type: "button", text: "Reset progress", onclick: () => { if (confirm("Clear all “studied” marks?")) { S.done = {}; save(); paintAll(); location.reload(); } } }));
+    }
+    if (activeTab === "review") {
+      if (!CARDS.length) { body.append(h("p", { class: "dr-empty", text: "No memory verses found." })); return; }
+      const known = CARDS.filter(c => S.known[c.r]).length;
+      const queue = CARDS.filter(c => !S.known[c.r]);
+      body.append(h("div", { class: "rv-meta" }, h("span", { text: `${known} of ${CARDS.length} verses known` }), known ? h("button", { class: "linkish", type: "button", text: "Start over", onclick: () => { S.known = {}; save(); renderDrawer(); } }) : null),
+        h("div", { class: "rv-bar" }, h("i", { style: `width:${known / CARDS.length * 100}%` })));
+      if (!queue.length) { body.append(h("div", { class: "rv-card" }, h("b", { text: "Every memory verse reviewed ✓" }), h("p", { text: "Well done. Start over any time to keep them fresh." }))); if (window.__burst && !reduce) { const r = drawer.getBoundingClientRect(); window.__burst(r.left + r.width / 2, r.top + 200); } return; }
+      const c = queue[Math.floor(Math.random() * queue.length)];
+      const verse = h("blockquote", { text: c.v }); verse.hidden = true;
+      const acts = h("div", { class: "dr-actions" }); acts.hidden = true;
+      const show = h("button", { class: "btn primary small", type: "button", text: "Show the verse", onclick: () => { verse.hidden = false; acts.hidden = false; show.hidden = true; } });
+      acts.append(h("button", { class: "btn small", type: "button", text: "Got it ✓", onclick: () => { S.known[c.r] = Date.now(); save(); renderDrawer(); } }), h("button", { class: "btn small", type: "button", text: "Again ↻", onclick: () => renderDrawer() }));
+      body.append(h("div", { class: "rv-card" }, h("small", { class: "eyebrow", text: c.p }), h("span", { class: "ref", text: c.r }), h("p", { class: "muted small", text: "Say the verse from memory, then check." }), verse, show, acts));
     }
     if (activeTab === "saved") {
       const ks = Object.keys(S.saved).sort((a, b) => S.saved[b].ts - S.saved[a].ts);
@@ -5821,7 +6421,7 @@ window.SITE_PAGES = [{"id":"home","f":"index.html","nav":"Home"},{"id":"garden",
     side.append(S.last ? h("a", { class: "dr-cont", href: S.last.f + "#" + S.last.id }, h("small", { text: "Continue where you left off" }), h("b", { text: S.last.t }), h("span", { text: S.last.p }))
       : h("a", { class: "dr-cont", href: "garden.html" }, h("small", { text: "Start the journey" }), h("b", { text: "Part I · The Garden-Temple" }), h("span", { text: "Eden, the mountain of God and the first sanctuary" })));
     side.append(h("ol", { class: "howto" }, h("li", { text: "Open a part from the map or the Parts menu." }), h("li", { text: "Work through each interactive section." }), h("li", { text: "Mark it ✓ studied, ☆ save it or ✎ write a note." }), h("li", { text: "Review everything in My study." })));
-    side.append(h("button", { class: "btn primary small", type: "button", text: "Open My study", onclick: () => window.__openStudy && window.__openStudy("progress") }));
+    side.append(h("div", { class: "dr-actions" }, h("button", { class: "btn primary small", type: "button", text: "Open My study", onclick: () => window.__openStudy && window.__openStudy("progress") }), h("button", { class: "btn small", type: "button", text: `Review ${CARDS.length} memory verses`, onclick: () => window.__openStudy && window.__openStudy("review") })));
   }
 
   function paintAll() { paintBanner(); paintBadge(); paintRail(); renderDrawer(); }

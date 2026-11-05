@@ -1083,3 +1083,68 @@ ul.ticks li::before { content: "✓"; position: absolute; left: 4px; color: var(
   .topbar .parts-btn { margin-left: 4px; }
 }
 @media (max-width: 480px) { .parts-menu .nav a { padding: 10px; } }
+
+/* ================= Part IX: heaven and earth united ================= */
+.thread { stroke-dasharray: 1; stroke-dashoffset: 0; opacity: .35; transition: opacity .6s, stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1); }
+#snWord svg:not(.gathered) .thread { stroke-dasharray: .12 .88; }
+#snWord svg.gathered .thread { opacity: 1; animation: drawLine 1.4s cubic-bezier(.4,0,.2,1) both; stroke-dashoffset: 1; }
+#snWord svg.gathered .thread { animation-name: thrd; }
+@keyframes thrd { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+#snWord .knot { transform-box: fill-box; transform-origin: center; }
+#snWord svg.gathered .knot { animation: wpPop .6s cubic-bezier(.3,1.6,.5,1) 1.3s both; }
+#snWord svg.gathered .headc { animation: wpPulse 1.2s ease-in-out 1.6s 2; }
+.big-word { font-size: 1.6rem; font-weight: 800; color: var(--accent); margin: 2px 0; overflow-wrap: anywhere; }
+.wparts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; }
+.wpart { display: grid; padding: 8px 12px; border-radius: 10px; background: var(--glow); border: 1px solid var(--line); animation: wpPop .6s cubic-bezier(.3,1.6,.5,1) both; }
+.wpart b { font-style: italic; }
+.wpart small { color: var(--muted); font-size: .75rem; }
+.wplus { font-weight: 800; color: var(--muted); }
+.rv { opacity: 0; transition: opacity .8s; }
+.rv.on { opacity: 1; }
+.rv-sun { transition: transform 1.2s cubic-bezier(.2,.7,.2,1), opacity 1s; opacity: .2; }
+#snReveal svg[data-step="4"] .rv-sun { transform: translateY(-140px); opacity: 1; }
+#snReveal svg[data-step="3"] .rv-sun { transform: translateY(-60px); opacity: .6; }
+.rv-ground { transition: fill .9s; }
+#snReveal svg[data-step="4"] .rv-ground { fill: var(--eden); }
+.rv-groan path { animation: wpPulse 1.1s ease-in-out infinite; }
+.rv-groan, .rv-chains { transition: opacity .8s, transform .8s; transform-box: fill-box; transform-origin: center; }
+#snReveal svg[data-step="4"] .rv-groan { opacity: 0; }
+#snReveal svg[data-step="4"] .rv-chains { opacity: 0; transform: translateY(30px) rotate(12deg); }
+#snReveal svg[data-step="3"] .rv-chains { transform: rotate(-6deg); }
+.not-card { position: relative; }
+.notx { position: absolute; top: 12px; right: 14px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--flame) 16%, transparent); color: var(--flame); font-weight: 800; }
+.not-card h3 { margin: 0 34px 6px 0; font-size: 1rem; }
+.not-card p { margin: 0; font-size: .9rem; color: var(--muted); }
+.ping { animation: ping 2.2s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes ping { from { transform: scale(.8); opacity: .9; } to { transform: scale(1.6); opacity: 0; } }
+.bpart.sel .rbg { fill: var(--accent); }
+.ripple-ring { transform-box: fill-box; transform-origin: center; animation: ringOut 3s ease-out infinite; opacity: 0; }
+@keyframes ringOut { from { transform: scale(.4); opacity: .7; } to { transform: scale(1.15); opacity: 0; } }
+#snHub svg, #snSpheres svg, #snBody svg, #snLadder svg, #wfTreasury svg, #wfHeirs svg { max-height: 540px; }
+.lv { opacity: .15; transition: opacity .6s; }
+.lv.on { opacity: 1; }
+.lv0.on { opacity: 1; }
+.dashmove.on { animation: dashDown 1s linear infinite; }
+.walker.on { animation: walk 4s ease-in-out infinite alternate; }
+@keyframes walk { from { transform: translate(120px, 340px); } to { transform: translate(400px, 340px); } }
+.gem { animation: wpPop .6s cubic-bezier(.3,1.6,.5,1) both; transform-box: fill-box; transform-origin: center; }
+.beamd { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; }
+#wfDual .fnode.sel .beamd { opacity: 1; animation: thrd .7s ease-out forwards; }
+#wfDual .fnode.sel .rt, #wfDual .fnode.sel .rb { fill: var(--glow); stroke-width: 3; }
+.dual-row { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 12px; align-items: center; margin: 8px 0; }
+.dual { display: grid; gap: 2px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); }
+.dual.up { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.dual.down { background: color-mix(in srgb, var(--eden) 12%, transparent); }
+.dual small { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 800; }
+.dual-arrow { font-size: 1.6rem; color: var(--accent); font-weight: 800; }
+@media (min-width: 561px) { .dual-arrow { transform: rotate(-90deg); } }
+@media (max-width: 560px) { .dual-row { grid-template-columns: minmax(0, 1fr); } .dual-arrow { text-align: center; } }
+@media (prefers-reduced-motion: reduce) { #snWord svg .thread { stroke-dasharray: none; opacity: 1; } .beamd { stroke-dasharray: none; stroke-dashoffset: 0; } }
+
+/* Review flashcards (My study) */
+.rv-card { border: 1px solid var(--line); border-radius: 14px; padding: 18px; background: var(--bg); display: grid; gap: 10px; min-height: 180px; align-content: start; }
+.rv-card .ref { font-size: 1.1rem; }
+.rv-card blockquote { margin: 0; font-size: 1rem; line-height: 1.55; }
+.rv-meta { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: .82rem; font-weight: 700; }
+.rv-bar { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.rv-bar i { display: block; height: 100%; background: var(--eden); transition: width .4s; }
