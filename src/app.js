@@ -25,7 +25,7 @@
       if (k === "html") n.innerHTML = v;
       else if (k === "text") n.textContent = v;
       else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
-      else if (k === "style" && typeof v === "object") Object.assign(n.style, v);
+      else if (k === "style" && typeof v === "object") Object.entries(v).forEach(([sk, sv2]) => sk.startsWith("--") ? n.style.setProperty(sk, sv2) : (n.style[sk] = sv2));
       else n.setAttribute(k, v === true ? "" : v);
     }
   }
@@ -661,6 +661,7 @@
       keys: () => [sv("circle", { cx: 0, cy: -30, r: 46, fill: "none", stroke: gold, "stroke-width": 10 }), ...[-40, -10, 20, 50].map((a, i) => { const r = (90 + a) * Math.PI / 180, x = Math.cos(r) * 46, y = -30 + Math.sin(r) * 46; return sv("g", { transform: `translate(${x} ${y}) rotate(${a})` }, sv("circle", { cx: 0, cy: 12, r: 9, fill: "none", stroke: [gold, blue, "var(--flame)", green][i], "stroke-width": 5 }), sv("rect", { x: -3, y: 21, width: 6, height: 70, fill: [gold, blue, "var(--flame)", green][i] }), sv("rect", { x: 3, y: 78, width: 12, height: 6, fill: [gold, blue, "var(--flame)", green][i] })); })],
       sower: () => [sv("circle", { cx: 120, cy: -70, r: 34, fill: gold, opacity: .6 }), sv("path", { d: "M-200 40 Q0 -10 200 40 L200 80 L-200 80 Z", fill: "#8a6238", opacity: .5 }), sv("circle", { cx: -40, cy: -70, r: 14, fill: "var(--ink)", opacity: .7 }), sv("path", { d: "M-56 -54 L-24 -54 L-14 30 L-66 30 Z", fill: "var(--ink)", opacity: .6 }), sv("path", { d: "M-24 -40 L20 -60", stroke: "var(--ink)", "stroke-width": 6, opacity: .6 }), ...[0, 1, 2, 3, 4].map(i => sv("circle", { cx: 30 + i * 14, cy: -50 + i * 16, r: 3, fill: gold }))],
       crown: () => [sv("path", { d: "M-150 20 L-150 -40 L-120 -10 L-95 -60 L-70 -10 L-40 -40 L-40 20 Z", fill: gold }), sv("path", { d: "M40 20 L40 -30 Q90 -80 140 -30 L140 20 Z", fill: "var(--surface)", stroke: "var(--muted)", "stroke-width": 3 }), sv("rect", { x: 70, y: -22, width: 40, height: 12, rx: 3, fill: gold }), sv("circle", { cx: 0, cy: -20, r: 30, fill: gold, opacity: .25 }), sv("rect", { x: -160, y: 40, width: 320, height: 8, rx: 4, fill: "var(--muted)", opacity: .5 })],
+      shield: () => [sv("path", { d: "M-150 -60 L-60 -20 M-150 -10 L-60 0 M-150 40 L-60 20", stroke: "var(--flame)", "stroke-width": 5, "stroke-linecap": "round", opacity: .7 }), sv("path", { d: "M0 -100 L70 -76 L64 4 Q50 50 0 74 Q-50 50 -64 4 L-70 -76 Z", fill: blue }), sv("path", { d: "M-6 -70 h12 v30 h26 v12 h-26 v54 h-12 v-54 h-26 v-12 h26 Z", fill: gold }), sv("circle", { cx: 120, cy: -50, r: 30, fill: gold, opacity: .3 })],
       zig: () => [...[0, 1, 2].map(i => sv("rect", { x: -140 + i * 40, y: 10 - i * 34, width: 280 - i * 80, height: 34, fill: "#b08a5a", opacity: .6 + i * .12 })), sv("rect", { x: -8, y: -20, width: 16, height: 30, fill: "var(--bg-2)" })]
     };
     g.append(...(art[kind] || art.garden)());
@@ -985,7 +986,7 @@
   /* ---------------- Connections web ---------------- */
   function initWeb() {
     const W = 600, C = W / 2, R = 228;
-    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "keys", "sowing", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
+    const order = ["eden", "mountain", "adam", "serpent", "seed", "tabernacle", "ark", "temple", "kingpriest", "melchizedek", "prophets", "fivefold", "keys", "sowing", "warfare", "jesus", "church", "newjer", "pentecost", "bethel", "abraham", "shem", "nations", "babylon", "babel"];
     const nodes = order.map(id => DATA.web.nodes.find(n => n.id === id));
     const pos = {};
     nodes.forEach((n, i) => { const a = -Math.PI / 2 + i / nodes.length * Math.PI * 2; pos[n.id] = [C + Math.cos(a) * R, C + Math.sin(a) * R, a]; });
@@ -1370,6 +1371,7 @@
 /*@@KEYS@@*/
 /*@@SOWING@@*/
 /*@@SUPPLY@@*/
+/*@@WARFARE@@*/
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -1411,6 +1413,9 @@
       [initSwCycle, "#swCycle"], [initSwExchange, "#swExchange"], [initSwManip, "#swMachine"], [initSwObjections, "#swObjections"], [initSwStudy, "#swQuestions"],
       [initSsMap, "#ssMap"], [initSsNet, "#ssNet"], [initSsPillars, "#ssPillars"], [initSsBuild, "#ssWalls"], [initSsArena, "#ssArena"], [initSsWorship, "#ssSound"],
       [initSsGate, "#ssGate"], [initSsStairs, "#ssStairs"], [initSsBabylons, "#ssBabylons"], [initSsDaniels, "#ssDaniels"], [initSsFire, "#ssFire"],
+      [initWfLayers, "#wfLayers"], [initWfWords, "#wfWords"], [initWfChain, "#wfChain"], [initWfArmour, "#wfArmour"], [initWfSpeak, "#wfTargets"], [initWfBind, "#wfBind"],
+      [initWfTongue, "#wfTongue"], [initWfBuilder, "#wfDeclOut"], [initWfCompare, "#wfCompare"], [initWfCurseLine, "#wfCurseLine"], [initWfShield, "#wfShield"], [initWfBreak, "#wfCurseTargets"],
+      [initWfFree, "#wfFree"], [initWfSpectrum, "#wfSpectrum"], [initWfRoles, "#wfRoleArt"], [initWfTempt, "#wfTempt"], [initWfRhythm, "#wfRhythm"], [initWfObjections, "#wfObjections"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }

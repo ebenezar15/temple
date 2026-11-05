@@ -19,20 +19,18 @@
       <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><circle cx="16" cy="16" r="9" fill="none" stroke="var(--accent)" stroke-width="1.5"/><path d="M6 25 L16 9 L26 25 Z" fill="var(--eden)"/><circle cx="16" cy="10" r="3" fill="var(--accent)"/></svg>
       <span>Where Heaven Meets Earth</span>
     </a>
-    <nav class="nav" aria-label="Pages">
-      <a href="index.html" data-p="home">Home</a>
-      <a href="garden.html" data-p="garden"><span class="pn">I</span> Garden</a>
-      <a href="serpent.html" data-p="serpent"><span class="pn">II</span> Serpent</a>
-      <a href="babel.html" data-p="babel"><span class="pn">III</span> Babel</a>
-      <a href="kings.html" data-p="kings"><span class="pn">IV</span> Kings</a>
-      <a href="prophets.html" data-p="prophets"><span class="pn">V</span> Prophets</a>
-      <a href="keys.html" data-p="keys"><span class="pn">VI</span> Keys</a>
-      <a href="sowing.html" data-p="sowing"><span class="pn">VII</span> Sowing</a>
-      <a href="connections.html" data-p="connections">Connections</a>
-    </nav>
+    <button class="parts-btn" id="partsBtn" type="button" aria-expanded="false" aria-controls="partsMenu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+      <span class="pb-l">Parts</span><span class="pb-cur" id="pbCur"></span>
+      <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9 l6 6 l6 -6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
     <button class="search-btn" id="searchBtn" type="button" aria-label="Search the study (Ctrl+K)">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 16 L21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
       <span class="sl">Search</span><kbd>⌘K</kbd>
+    </button>
+    <button class="study-btn" id="studyBtn" type="button" aria-expanded="false" aria-controls="studyDrawer" aria-label="My study: progress, saved sections and notes">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3 h12 v18 l-6 -4 l-6 4 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+      <span class="sl">My study</span><span class="badge" id="studyCount" hidden></span>
     </button>
     <button class="scheme-btn" id="schemeBtn" aria-expanded="false" aria-controls="schemePanel">
       <span class="dots" aria-hidden="true"><i style="background:var(--eden)"></i><i style="background:var(--accent)"></i><i style="background:var(--babel)"></i></span>
@@ -40,6 +38,23 @@
     </button>
   </div>
   <div class="progress" id="progress"></div>
+  <div class="parts-menu" id="partsMenu" hidden>
+    <div class="wrap">
+      <p class="eyebrow">The study · choose a part</p>
+      <nav class="nav" aria-label="Pages">
+        <a href="index.html" data-p="home" style="--pc: var(--accent)"><span class="pn">⌂</span><span class="pm-t"><b>Home</b><small>Start and your journey</small></span><span class="pm-ring" data-f="index.html"></span></a>
+        <a href="garden.html" data-p="garden" style="--pc: var(--eden)"><span class="pn">I</span><span class="pm-t"><b>The Garden-Temple</b><small>Eden, the mountain, tabernacle and temple</small></span><span class="pm-ring" data-f="garden.html"></span></a>
+        <a href="serpent.html" data-p="serpent" style="--pc: var(--flame)"><span class="pn">II</span><span class="pm-t"><b>The Serpent and the Seed</b><small>Genesis 3:15 to Revelation 12</small></span><span class="pm-ring" data-f="serpent.html"></span></a>
+        <a href="babel.html" data-p="babel" style="--pc: var(--babel)"><span class="pn">III</span><span class="pm-t"><b>Babel and the City of God</b><small>Ziggurats, Babylon and Pentecost</small></span><span class="pm-ring" data-f="babel.html"></span></a>
+        <a href="kings.html" data-p="kings" style="--pc: var(--accent)"><span class="pn">IV</span><span class="pm-t"><b>Kings and Priests</b><small>The royal priesthood, plus Supply and Support</small></span><span class="pm-ring" data-f="kings.html"></span></a>
+        <a href="prophets.html" data-p="prophets" style="--pc: var(--eden)"><span class="pn">V</span><span class="pm-t"><b>Prophets and the Fivefold</b><small>Equipping kings and priests now</small></span><span class="pm-ring" data-f="prophets.html"></span></a>
+        <a href="keys.html" data-p="keys" style="--pc: var(--accent)"><span class="pn">VI</span><span class="pm-t"><b>The Keys of the Kingdom</b><small>The key of David, binding and loosing</small></span><span class="pm-ring" data-f="keys.html"></span></a>
+        <a href="sowing.html" data-p="sowing" style="--pc: var(--eden)"><span class="pn">VII</span><span class="pm-t"><b>Sowing and Reaping</b><small>Seed, harvest and blessing</small></span><span class="pm-ring" data-f="sowing.html"></span></a>
+        <a href="warfare.html" data-p="warfare" style="--pc: var(--flame)"><span class="pn">VIII</span><span class="pm-t"><b>Spiritual Warfare</b><small>Dominion, declarations, curses broken</small></span><span class="pm-ring" data-f="warfare.html"></span></a>
+        <a href="connections.html" data-p="connections" style="--pc: var(--babel)"><span class="pn">∞</span><span class="pm-t"><b>Connections &amp; Quiz</b><small>The whole web, then test yourself</small></span><span class="pm-ring" data-f="connections.html"></span></a>
+      </nav>
+    </div>
+  </div>
 </header>
 
 <div class="scheme-panel" id="schemePanel" hidden role="dialog" aria-label="Colour scheme">
@@ -252,7 +267,7 @@
 </main>
 <nav class="pager" aria-label="Previous and next page"><div class="wrap">
   <a class="pg prev" href="keys.html"><small>← Previous</small><b>Part VI · The Keys of the Kingdom</b></a>
-  <a class="pg next" href="connections.html"><small>Next →</small><b>Connections &amp; Quiz</b></a>
+  <a class="pg next" href="warfare.html"><small>Next →</small><b>Part VIII · Spiritual Warfare</b></a>
 </div></nav>
 <footer>
   <div class="wrap">

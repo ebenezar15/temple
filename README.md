@@ -1,6 +1,6 @@
 # Where Heaven Meets Earth
 
-An interactive, animated Bible study in seven parts:
+An interactive, animated Bible study in eight parts:
 
 - **Part I: The Garden-Temple.** Eden as God's sanctuary on his mountain, Adam as priest-king, the Tabernacle as a portable Eden, the Ark of the Covenant and its journey, Solomon's Temple, and the New Jerusalem as Eden fulfilled.
 - **Part II: The Serpent and the Seed.** The Hebrew *nāḥāš* (serpent, diviner, shining one), why the serpent of Genesis 3 reads as a divine being inside God's sanctuary, Ezekiel 28's fallen guardian cherub and the high priest's breastpiece, Isaiah 14's "Day Star", seraphim as burning serpents, the curse decoded, the war of the two seeds from Genesis 3:15 to Revelation 12, the bronze serpent and John 3:14, and "that ancient serpent".
@@ -9,10 +9,19 @@ An interactive, animated Bible study in seven parts:
 - **Part V: Prophets, the Fivefold and the Kingdom Now** (a detailed study). The Old Testament prophetic office and its relationships with kings and priests, the five ministries of Ephesians 4 and how each equips believers as kings and priests, what changed between the covenants, why the royal priesthood is a present calling, how the church narrowed that calling, the AD 70 setting of Jesus' end-time warnings, and objections answered.
 - **Part VI: The Keys of the Kingdom** (a detailed study). What keys mean throughout the Bible, the key of the house of David and the royal steward, Caesarea Philippi, binding and loosing, doors opened in Acts, how the keys were narrowed to forgiveness alone, how to operate in them, and objections answered.
 - **Part VII: Sowing and Reaping** (a detailed study). God's seed principle from Genesis 1 and 8 to the final harvest, eight laws of the harvest, the four soils, the principle traced through Scripture, Christ the seed that died, the connection to blessing, grace and the great exchange, why kingdom principles can feel like manipulation, and objections answered.
+- **Part VIII: Spiritual Warfare and Dominion** (a detailed study). Ephesians 6:12 and the layered battlefield, authority (*exousia*), power (*dynamis*), dominion and strongholds, the chain of authority, the armour of God as God's own armour, what Scripture shows we may speak to and command, and binding and loosing ("shall have been bound in heaven"). It also covers **speaking and prophesying over our lives** (the power of declaration, a declaration builder, and declaration compared with positive thinking and witchcraft) and **breaking curses, witchcraft and bondages** (from the curse to "no more curse", Proverbs 26:2, an evidence map, the Bible's own verbs for "cancel" and "break", and a path to freedom). Then come errors and extremes, sons, priests and kings in battle, Jesus' "It is written", a daily battle rhythm, and objections answered.
 
 ## Interactive pieces
 
 Flip-card clues · switchable "cosmic mountain" diagram (Eden, Sinai, Tabernacle, Temple, New Jerusalem) · walk-through Tabernacle plan · explorable Ark with an animated journey map · creation-as-temple table · animated menorah · God's-dwelling timeline · Genesis ↔ Revelation mirror · layered map of the ancient Near East (rivers of Eden, Shinar, Abraham's route, the exile, Pentecost nations) · build-a-ziggurat with a Genesis 11:5 zoom-out · to-scale height chart · Shem genealogy · seventy-nations animation · Jacob's stairway · Babel/Pentecost comparison slider · "mighty works of God" in 17 languages · two-cities timeline · Babylon vs New Jerusalem table · connections web · Venn diagram of *nāḥāš* · Ezekiel 28 verse walker with breastpiece gems · morning-star animation and Philippians 2 "two paths" chart · seraph/cherub illustration · the serpent's descent from God's mountain to the lake of fire · animated two-seeds timeline · "look and live" bronze serpent · 14-question quiz.
+
+## Learning tools
+
+- **Parts menu**: every part as a tile, each with a progress ring.
+- **Study tools on every section**: ✓ Mark studied, ☆ Save and ✎ Note (notes save as you type).
+- **My study** drawer: overall progress, "continue where you left off", saved sections, and all notes, which you can copy or download.
+- **Your journey** map on the home page: one road through all the parts, with rings that fill as you study.
+- Progress, saves and notes are stored only in your browser on this device.
 
 ## Motion and navigation
 
@@ -31,7 +40,7 @@ Text is set in **Avenir Next**. Avenir Next is a commercial typeface: it is used
 
 | Page | Contents |
 | --- | --- |
-| `index.html` | Home: introduction and a guide to the three parts |
+| `index.html` | Home: introduction, your journey map and a guide to the parts |
 | `garden.html` | Part I: The Garden-Temple |
 | `serpent.html` | Part II: The Serpent and the Seed |
 | `babel.html` | Part III: Babel, Babylon and the City of God |
@@ -39,6 +48,7 @@ Text is set in **Avenir Next**. Avenir Next is a commercial typeface: it is used
 | `prophets.html` | Part V: Prophets, the Fivefold and the Kingdom Now |
 | `keys.html` | Part VI: The Keys of the Kingdom |
 | `sowing.html` | Part VII: Sowing and Reaping |
+| `warfare.html` | Part VIII: Spiritual Warfare and Dominion |
 | `connections.html` | Connections web, quiz and further reading |
 
 Each part page opens with an "on this page" list of its sections and ends with previous/next links.
@@ -64,6 +74,8 @@ Source lives in `src/`:
 | `src/data-prophets.js`, `src/app-prophets.js` | Content and interactive code for Part V: prophets and the fivefold |
 | `src/data-keys.js`, `src/app-keys.js` | Content and interactive code for Part VI: the keys of the kingdom |
 | `src/data-sowing.js`, `src/app-sowing.js` | Content and interactive code for Part VII: sowing and reaping |
+| `src/data-warfare.js`, `src/app-warfare.js` | Content and interactive code for Part VIII: spiritual warfare, declarations, curses |
+| `src/study.js` | Learning layer: parts menu, progress, saves, notes, My study drawer, journey map |
 | `src/app.js` | Interactive behaviour |
 
 After editing, rebuild the pages:

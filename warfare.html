@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spiritual Warfare · Where Heaven Meets Earth</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="An interactive Bible study: the garden-temple, the serpent and the seed, and Babel, Babylon and the City of God.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Noto+Serif+Hebrew:wght@500&family=Noto+Sans+Cuneiform&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="page" data-page="warfare">
+<header class="topbar" id="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Where Heaven Meets Earth, home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><circle cx="16" cy="16" r="9" fill="none" stroke="var(--accent)" stroke-width="1.5"/><path d="M6 25 L16 9 L26 25 Z" fill="var(--eden)"/><circle cx="16" cy="10" r="3" fill="var(--accent)"/></svg>
+      <span>Where Heaven Meets Earth</span>
+    </a>
+    <button class="parts-btn" id="partsBtn" type="button" aria-expanded="false" aria-controls="partsMenu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+      <span class="pb-l">Parts</span><span class="pb-cur" id="pbCur"></span>
+      <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9 l6 6 l6 -6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+    <button class="search-btn" id="searchBtn" type="button" aria-label="Search the study (Ctrl+K)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 16 L21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <span class="sl">Search</span><kbd>⌘K</kbd>
+    </button>
+    <button class="study-btn" id="studyBtn" type="button" aria-expanded="false" aria-controls="studyDrawer" aria-label="My study: progress, saved sections and notes">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3 h12 v18 l-6 -4 l-6 4 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+      <span class="sl">My study</span><span class="badge" id="studyCount" hidden></span>
+    </button>
+    <button class="scheme-btn" id="schemeBtn" aria-expanded="false" aria-controls="schemePanel">
+      <span class="dots" aria-hidden="true"><i style="background:var(--eden)"></i><i style="background:var(--accent)"></i><i style="background:var(--babel)"></i></span>
+      <span class="lbl">Colours</span>
+    </button>
+  </div>
+  <div class="progress" id="progress"></div>
+  <div class="parts-menu" id="partsMenu" hidden>
+    <div class="wrap">
+      <p class="eyebrow">The study · choose a part</p>
+      <nav class="nav" aria-label="Pages">
+        <a href="index.html" data-p="home" style="--pc: var(--accent)"><span class="pn">⌂</span><span class="pm-t"><b>Home</b><small>Start and your journey</small></span><span class="pm-ring" data-f="index.html"></span></a>
+        <a href="garden.html" data-p="garden" style="--pc: var(--eden)"><span class="pn">I</span><span class="pm-t"><b>The Garden-Temple</b><small>Eden, the mountain, tabernacle and temple</small></span><span class="pm-ring" data-f="garden.html"></span></a>
+        <a href="serpent.html" data-p="serpent" style="--pc: var(--flame)"><span class="pn">II</span><span class="pm-t"><b>The Serpent and the Seed</b><small>Genesis 3:15 to Revelation 12</small></span><span class="pm-ring" data-f="serpent.html"></span></a>
+        <a href="babel.html" data-p="babel" style="--pc: var(--babel)"><span class="pn">III</span><span class="pm-t"><b>Babel and the City of God</b><small>Ziggurats, Babylon and Pentecost</small></span><span class="pm-ring" data-f="babel.html"></span></a>
+        <a href="kings.html" data-p="kings" style="--pc: var(--accent)"><span class="pn">IV</span><span class="pm-t"><b>Kings and Priests</b><small>The royal priesthood, plus Supply and Support</small></span><span class="pm-ring" data-f="kings.html"></span></a>
+        <a href="prophets.html" data-p="prophets" style="--pc: var(--eden)"><span class="pn">V</span><span class="pm-t"><b>Prophets and the Fivefold</b><small>Equipping kings and priests now</small></span><span class="pm-ring" data-f="prophets.html"></span></a>
+        <a href="keys.html" data-p="keys" style="--pc: var(--accent)"><span class="pn">VI</span><span class="pm-t"><b>The Keys of the Kingdom</b><small>The key of David, binding and loosing</small></span><span class="pm-ring" data-f="keys.html"></span></a>
+        <a href="sowing.html" data-p="sowing" style="--pc: var(--eden)"><span class="pn">VII</span><span class="pm-t"><b>Sowing and Reaping</b><small>Seed, harvest and blessing</small></span><span class="pm-ring" data-f="sowing.html"></span></a>
+        <a href="warfare.html" data-p="warfare" style="--pc: var(--flame)"><span class="pn">VIII</span><span class="pm-t"><b>Spiritual Warfare</b><small>Dominion, declarations, curses broken</small></span><span class="pm-ring" data-f="warfare.html"></span></a>
+        <a href="connections.html" data-p="connections" style="--pc: var(--babel)"><span class="pn">∞</span><span class="pm-t"><b>Connections &amp; Quiz</b><small>The whole web, then test yourself</small></span><span class="pm-ring" data-f="connections.html"></span></a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="scheme-panel" id="schemePanel" hidden role="dialog" aria-label="Colour scheme">
+  <h4>Colour scheme</h4>
+  <div class="scheme-grid" id="schemeGrid"></div>
+  <div class="accent-row">
+    <label for="accentPick">Custom highlight colour</label>
+    <input type="color" id="accentPick" value="#a87a1c">
+  </div>
+  <button class="linkish" id="accentReset" type="button">Reset highlight to scheme default</button>
+</div>
+
+<main id="main">
+<!-- ============ PART VIII: SPIRITUAL WARFARE AND DOMINION ============ -->
+<div class="part-banner" id="warfare">
+  <div class="wrap">
+    <div class="part-num" aria-hidden="true">VIII</div>
+    <div>
+      <p class="eyebrow">Part eight · a detailed study</p>
+      <h2>Spiritual Warfare and Dominion</h2>
+      <p>“We do not wrestle against flesh and blood” (<span class="ref">Eph 6:12</span>). This part covers who the enemy is and where Christ has put him, what authority, power and dominion mean, and what we may speak to and command. It also shows where people go wrong and how sons, priests and kings enforce a victory that has already been won.</p>
+      <nav class="toc" aria-label="On this page"></nav>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="wf-battle" data-toc="The battlefield">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Ephesians 1:20 → 2:6 → 6:12 · layered map</p>
+      <h2>The battlefield: who is fighting, and from where</h2>
+      <p>Paul describes where Christ is seated (chapter 1) and where we are seated (chapter 2) before he describes the battle (chapter 6). Select a layer of the map.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="wfLayers"></div>
+      <div class="panel" id="wfLayerPanel" aria-live="polite"></div>
+    </div>
+    <h3 class="mt">The four words of Ephesians 6:12</h3>
+    <div class="grid-4 mt-s" id="wfPowers"></div>
+    <div class="split even mt">
+      <div class="prose reveal">
+        <p>Ephesians 6 uses wrestling language (<i>palē</i>): close, personal and hand to hand. Notice the verbs, though: “be strong in the Lord”, “put on”, “stand”, “withstand”, “pray”. The chapter never sends the church off to hunt the enemy. It tells the church to hold ground that Christ has already taken.</p>
+        <p>The powers are real but subordinate. They are created (<span class="ref">Col 1:16</span>), disarmed (<span class="ref">Col 2:15</span>), made subject to Christ (<span class="ref">1 Pet 3:22</span>), and shown God’s wisdom through the church (<span class="ref">Eph 3:10</span>).</p>
+      </div>
+      <div id="wfMichael"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="wf-words" data-toc="Authority, power, dominion">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Hebrew and Greek · word pictures</p>
+      <h2>Authority, power, dominion and strongholds: what the words mean</h2>
+      <p>Select a card to see its picture come alive.</p>
+    </div>
+    <div class="grid-4" id="wfWords"></div>
+    <div class="panel mt" id="wfWordPanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="block" id="wf-chain" data-toc="Chain of authority">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Matthew 28:18 · flowchart</p>
+      <h2>Where our authority comes from</h2>
+      <p>Authority flows down from the Father, through the Son, to those who live under it. Select any step.</p>
+    </div>
+    <div class="stage scroll-x" id="wfChain"></div>
+    <div class="panel mt" id="wfChainPanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="block alt" id="wf-armour" data-toc="The armour of God">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Ephesians 6:13–18 · Isaiah 59:17 · interactive figure</p>
+      <h2>The armour of God is God’s own armour</h2>
+      <p>Isaiah pictures the LORD himself putting on righteousness as a breastplate and salvation as a helmet. Paul hands that same armour to the church. Select each piece, or suit up.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="wfArmour"></div>
+      <div class="panel">
+        <div id="wfArmourPanel" aria-live="polite"></div>
+        <div class="htl-controls" style="margin-top:0"><button class="btn primary small" id="wfSuitUp" type="button">Put on the whole armour ▸</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="wf-speak" data-toc="Can we speak to it?">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Delays, strongholds, demons, sickness … · evidence map</p>
+      <h2>Can we speak to it? Command it?</h2>
+      <p>Each tile is a target people command in prayer. Its colour shows what the New Testament actually models. Filter by colour or select a tile for the evidence.</p>
+    </div>
+    <div class="chips" id="wfLegend" role="group" aria-label="Filter by what Scripture models"></div>
+    <div class="split mt">
+      <div class="target-grid" id="wfTargets"></div>
+      <div class="panel" id="wfTargetPanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="wf-bind" data-toc="Bound in heaven">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Matthew 16:19 · 18:18 · 12:29 · mirror diagram</p>
+      <h2>“Whatever you bind on earth shall have been bound in heaven”</h2>
+      <p>Heaven moves first and earth agrees. Drag the slider, or press play, to watch a decision in heaven carried out on earth.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="wfBind"></div>
+      <div class="panel">
+        <label class="slider-lab" for="wfBindRange">Heaven → agreement → earth</label>
+        <input class="range" type="range" id="wfBindRange" min="0" max="3" step="1" value="0">
+        <div id="wfBindInfo" aria-live="polite"></div>
+        <div class="htl-controls" style="margin-top:0"><button class="btn primary small" id="wfBindPlay" type="button">Play ▸</button> <a class="btn small" href="keys.html#ky-bind">Binding and loosing in Part VI →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPEAKING OVER OUR LIVES ============ -->
+<div class="part-banner sub-banner" id="declare">
+  <div class="wrap">
+    <div class="part-num" aria-hidden="true">VIII·b</div>
+    <div>
+      <p class="eyebrow">Proverbs 18:21 · Romans 4:17 · 1 Timothy 1:18</p>
+      <h2>Speaking and Prophesying Over Our Lives</h2>
+      <p>“Death and life are in the power of the tongue.” The power of declaration: what Scripture means by it, how to prophesy what God has said over your life, and how it differs from positive thinking and magic.</p>
+      <nav class="toc" data-group="dc" aria-label="Speaking over our lives sections"></nav>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="wf-tongue" data-group="dc" data-toc="Words that build worlds">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Genesis 1 → Romans 4 → 1 Timothy 1 · flowchart</p>
+      <h2>Words that build worlds</h2>
+      <p>God speaks, and we were made to speak after him. Follow how Scripture links words, faith and prophecy.</p>
+    </div>
+    <div class="stage scroll-x" id="wfTongue"></div>
+    <div class="split mt">
+      <div class="stage" id="wfRudder"></div>
+      <div class="panel">
+        <div id="wfTonguePanel" aria-live="polite"></div>
+        <div class="chips" id="wfRudderChips" role="group" aria-label="Speak life or death"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="wf-builder" data-group="dc" data-toc="Declaration builder">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Promise → faith → declaration · interactive tool</p>
+      <h2>Build a declaration from a promise</h2>
+      <p>Choose an area of life. The builder starts from a promise God has made and turns it into words you can speak over yourself, your family and your future.</p>
+    </div>
+    <div class="chips" id="wfDeclChips" role="group" aria-label="Choose an area of life"></div>
+    <div class="split mt">
+      <div class="stage" id="wfDeclArt"></div>
+      <div class="panel" id="wfDeclOut" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="wf-compare" data-group="dc" data-toc="Declaration or manipulation?">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Side-by-side comparison</p>
+      <h2>Declaration, positive thinking or witchcraft?</h2>
+      <p>The words can sound alike. What differs is the source, the centre and the posture.</p>
+    </div>
+    <div class="ctable-wrap reveal"><table class="ctable" id="wfCompare"></table></div>
+  </div>
+</section>
+
+<!-- ============ CURSES, WITCHCRAFT, BONDAGES ============ -->
+<div class="part-banner sub-banner" id="curses">
+  <div class="wrap">
+    <div class="part-num" aria-hidden="true">VIII·c</div>
+    <div>
+      <p class="eyebrow">Galatians 3:13 · Proverbs 26:2 · Acts 19:18–20</p>
+      <h2>Breaking Curses, Witchcraft and Bondages</h2>
+      <p>Can we rebuke, cancel and break witchcraft, bondages and curses? The short answer is yes: in Jesus’ name and on the basis of the cross, never by retaliation. This part covers the evidence, the boundaries and a path to freedom.</p>
+      <nav class="toc" data-group="cu" aria-label="Curses and bondages sections"></nav>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="wf-curseline" data-group="cu" data-toc="From curse to no more curse">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Genesis 3 → Revelation 22 · timeline</p>
+      <h2>From the curse to “no more curse”</h2>
+      <p>Select any point on the line. The cross sits at the centre of the story.</p>
+    </div>
+    <div class="stage scroll-x" id="wfCurseLine"></div>
+    <div class="panel mt" id="wfCursePanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="block alt" id="wf-shield" data-group="cu" data-toc="No causeless curse">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Numbers 23:23 · Proverbs 26:2 · Isaiah 54:17 · animation</p>
+      <h2>“There is no enchantment against Jacob”</h2>
+      <p>Send the arrows and watch them meet the cross and the shield of faith. Then open a door, and see why repentance matters.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="wfShield"></div>
+      <div class="panel">
+        <div class="chips" id="wfShieldMode" role="group" aria-label="Choose a scenario"></div>
+        <div id="wfShieldInfo" aria-live="polite"></div>
+        <div class="htl-controls" style="margin-top:0"><button class="btn primary small" id="wfShieldGo" type="button">Send the arrows ▸</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="wf-break" data-group="cu" data-toc="Can we break it?">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Witchcraft, bondages, generational curses … · evidence map</p>
+      <h2>Can we rebuke, cancel and break it?</h2>
+      <p>Select a tile to see what Scripture says and how to respond.</p>
+    </div>
+    <div class="chips" id="wfCurseLegend" role="group" aria-label="Filter by response"></div>
+    <div class="split mt">
+      <div class="target-grid" id="wfCurseTargets"></div>
+      <div class="panel" id="wfCurseTargetPanel" aria-live="polite"></div>
+    </div>
+    <h3 class="mt">The Bible’s own verbs for “cancel” and “break”</h3>
+    <div class="grid-5 mt-s" id="wfVerbs"></div>
+  </div>
+</section>
+
+<section class="block alt" id="wf-free" data-group="cu" data-toc="A path to freedom">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Discern → deal → break → be filled · flowchart</p>
+      <h2>A path to freedom</h2>
+      <p>Start at the top and select each step. The two branches meet at the cross.</p>
+    </div>
+    <div class="stage scroll-x" id="wfFree"></div>
+    <div class="panel mt" id="wfFreePanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============ BALANCE, ROLES, PRACTICE ============ -->
+<section class="block" id="wf-extremes" data-toc="Errors and extremes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">1 Peter 5:8–9 · spectrum slider</p>
+      <h2>Where people go wrong: two ditches and a road</h2>
+      <p>Drag along the spectrum, from seeing a demon behind everything to believing there is no spiritual realm at all.</p>
+    </div>
+    <div class="stage" id="wfSpectrum"></div>
+    <input class="range" type="range" id="wfSpecRange" min="0" max="100" value="50" aria-label="Position on the spectrum">
+    <div class="panel mt" id="wfSpecPanel" aria-live="polite"></div>
+    <h3 class="mt">Eight common errors</h3>
+    <div class="grid-4 mt-s" id="wfErrors"></div>
+  </div>
+</section>
+
+<section class="block alt" id="wf-roles" data-toc="Sons, priests, kings">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Revelation 1:6 · three postures in one person</p>
+      <h2>How sons, priests and kings walk in dominion</h2>
+      <p>Select a role. Every believer carries all three.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="wfRoleArt"></div>
+      <div class="panel" id="wfRolePanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="wf-jesus" data-toc="“It is written”">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Matthew 4:1–11 · animation</p>
+      <h2>How Jesus fought: “It is written”</h2>
+      <p>Three attacks and three answers, all from Deuteronomy. Step through the wilderness battle.</p>
+    </div>
+    <div class="stage" id="wfTempt"></div>
+    <div class="htl-controls">
+      <button class="btn small" id="wfTemptPrev" type="button">◂ Back</button>
+      <button class="btn primary small" id="wfTemptNext" type="button">Next attack ▸</button>
+    </div>
+    <div class="panel mt" id="wfTemptPanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="block alt" id="wf-rhythm" data-toc="Battle rhythm">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">James 4:7 · Ephesians 6 · cycle diagram</p>
+      <h2>A daily battle rhythm</h2>
+      <p>Seven movements from Scripture, in a cycle. Select one, or let it turn.</p>
+    </div>
+    <div class="split even">
+      <div class="stage" id="wfRhythm"></div>
+      <div class="panel" id="wfRhythmPanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="wf-objections" data-toc="Objections">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Fair questions, honest answers</p>
+      <h2>Objections and misunderstandings</h2>
+    </div>
+    <div class="chips" id="wfObjFilter" role="group" aria-label="Filter objections"></div>
+    <div class="objs mt" id="wfObjections"></div>
+  </div>
+</section>
+
+<section class="block alt" id="wf-study" data-toc="Study guide">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">For personal or group study</p>
+      <h2>Study guide</h2>
+    </div>
+    <div class="grid-2">
+      <div class="stack" id="wfQuestions"></div>
+      <div class="memory" id="wfMemory"></div>
+    </div>
+    <blockquote class="big mt reveal">“The God of peace will soon crush Satan under your feet. The grace of our Lord Jesus Christ be with you.”<cite>Romans 16:20</cite></blockquote>
+  </div>
+</section>
+
+</main>
+<nav class="pager" aria-label="Previous and next page"><div class="wrap">
+  <a class="pg prev" href="sowing.html"><small>← Previous</small><b>Part VII · Sowing and Reaping</b></a>
+  <a class="pg next" href="connections.html"><small>Next →</small><b>Connections &amp; Quiz</b></a>
+</div></nav>
+<footer>
+  <div class="wrap">
+    <p><b>Where Heaven Meets Earth</b>: an interactive Bible study on the garden-temple, the serpent and the seed, and the two cities.</p>
+    <p>Artwork via Wikimedia Commons (public domain or as credited on each image). Maps and diagrams are simplified illustrations.</p>
+    <p><a href="#top">Back to top ↑</a></p>
+  </div>
+</footer>
+
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
