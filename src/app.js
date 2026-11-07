@@ -1378,6 +1378,7 @@
 /*@@FAR@@*/
 /*@@MIND@@*/
 /*@@SANCT@@*/
+/*@@BODY@@*/
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -1426,6 +1427,7 @@
       [initSnBody, "#snBody"], [initSnLadder, "#snLadder"], [initSnSpheres, "#snSpheres"], [initSnObjections, "#snObjections"],
       [initMnRom, "#mnWords"], [initMnVocab, "#mnVocab"], [initMnPath, "#mnPath"], [initMnCaptive, "#mnCaptive"], [initMnExchange, "#mnLies"], [initMnMeans, "#mnMeans"],
       [initMnFilter, "#mnFilter"], [initMnGlory, "#mnGlory"], [initMnMindset, "#mnMindset"], [initMnDaily, "#mnChecklist"], [initMnObjections, "#mnObjections"],
+      [initBtLine, "#btLine"], [initBtPattern, "#btTemple"], [initBtCode, "#btHelix"], [initBtLive, "#btLive"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }
