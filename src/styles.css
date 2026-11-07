@@ -1375,3 +1375,39 @@ ul.ticks li::before { content: "✓"; position: absolute; left: 4px; color: var(
 .live-card p { margin: 2px 0 0; font-size: .88rem; color: var(--muted); grid-column: 2; }
 @media (max-width: 900px) { .live-ring { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .live-ring { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- body-temple facts ---------- */
+.num-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.num-h { margin: 0 0 10px; color: var(--accent); } .num-h.body { color: var(--babel); }
+.num-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.num-tile { padding: 14px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent); animation: wpPop .6s cubic-bezier(.3,1.6,.5,1) var(--d) both; }
+.num-tile.b { border-top-color: var(--babel); }
+.num-tile small { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 800; color: var(--muted); }
+.num-line { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin: 2px 0; }
+.num-v { font-size: 2rem; font-weight: 800; color: var(--ink); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.num-line span { font-weight: 700; color: var(--muted); font-size: .9rem; }
+.num-tile p { margin: 4px 0 0; font-size: .86rem; color: var(--muted); }
+@media (max-width: 900px) { .num-cols { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 420px) { .num-grid { grid-template-columns: minmax(0, 1fr); } }
+.heart-beat { transform-box: fill-box; transform-origin: center; animation: beat .857s ease-in-out infinite; }
+@keyframes beat { 0%, 100% { transform: scale(1); } 12% { transform: scale(1.14); } 24% { transform: scale(.98); } 36% { transform: scale(1.08); } }
+.live-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 8px 0 12px; }
+.live-row > div { display: grid; padding: 12px; border-radius: 12px; background: color-mix(in srgb, var(--flame) 10%, var(--surface)); border: 1px solid var(--line); }
+.live-num { font-size: 2rem; font-weight: 800; color: var(--flame); font-variant-numeric: tabular-nums; }
+.live-row small { color: var(--muted); font-weight: 700; }
+#btHeart svg, #btZoom svg { max-height: 460px; }
+.zoomg { transform-box: view-box; transform-origin: 200px 200px; transition: transform 1.2s cubic-bezier(.6,0,.2,1); }
+.dna-tape { overflow: hidden; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); padding: 10px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.tape-inner { display: flex; width: max-content; animation: tape 40s linear infinite; }
+.tape-run { display: flex; gap: 6px; padding-right: 6px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-weight: 800; font-size: 1.1rem; }
+.tape-run i { font-style: normal; }
+@keyframes tape { to { transform: translateX(-50%); } }
+.bk { transform-box: fill-box; transform-origin: bottom; transform: scaleY(0); transition: transform .5s cubic-bezier(.3,1.4,.5,1); }
+#btLibrary svg.full .bk { transform: none; }
+.fc-scr { background: color-mix(in srgb, var(--accent) 10%, var(--surface)); } .fc-scr small { color: var(--accent); }
+.fc-face .hint { font-size: .75rem; color: var(--muted); margin-top: auto; }
+#btFacts .fc-above { background: color-mix(in srgb, var(--babel) 12%, var(--surface)); border-color: var(--babel); } #btFacts .fc-above small { color: var(--babel); }
+.further { position: relative; border-style: dashed; }
+.further h3 { margin: 16px 0 6px; font-size: 1rem; } .further p { margin: 0; font-size: .9rem; color: var(--muted); }
+.spec { position: absolute; top: 10px; right: 12px; font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--flame); background: color-mix(in srgb, var(--flame) 12%, transparent); padding: 3px 8px; border-radius: 999px; }
+@media (prefers-reduced-motion: reduce) { .bk { transform: none; } }

@@ -217,7 +217,7 @@
       txt(260, 40, "HEAVEN · the throne", { "font-size": 12, fill: "var(--accent)", "letter-spacing": ".12em" }), txt(260, 472, "EARTH · the nations", { "font-size": 12, fill: "var(--eden)", "letter-spacing": ".12em" }));
     svg.append(sv("line", { x1: 230, y1: 60, x2: 230, y2: 440, stroke: "var(--ink)", "stroke-width": 5, opacity: .6 }), sv("line", { x1: 290, y1: 60, x2: 290, y2: 440, stroke: "var(--ink)", "stroke-width": 5, opacity: .6 }));
     for (let y = 90; y < 440; y += 36) svg.append(sv("line", { x1: 230, y1: y, x2: 290, y2: y, stroke: "var(--ink)", "stroke-width": 4, opacity: .5 }));
-    if (!reduceMotion) [["M245 440 L245 64", "var(--eden)", 0], ["M245 440 L245 64", "var(--eden)", 2], ["M275 64 L275 440", "var(--accent)", 1], ["M275 64 L275 440", "var(--accent)", 3]].forEach(([p, c, b]) => { const d = sv("circle", { r: 6, fill: c }); d.append(sv("animateMotion", { dur: "4s", begin: b + "s", repeatCount: "indefinite", path: p })); svg.append(d); });
+    if (!reduceMotion) [["M245 440 L245 64", "var(--eden)", 0], ["M245 440 L245 64", "var(--eden)", 2], ["M275 64 L275 440", "var(--accent)", 1], ["M275 64 L275 440", "var(--accent)", 3]].forEach(([p, c, b]) => { const d = sv("circle", { r: 6, fill: c }); d.append(sv("animateMotion", { dur: "4s", begin: -b + "s", repeatCount: "indefinite", path: p })); svg.append(d); });
     svg.append(txt(110, 96, "↑ PRIESTS carry up", { "font-size": 11.5, fill: "var(--eden)" }), txt(410, 96, "KINGS bring down ↓", { "font-size": 11.5, fill: "var(--accent)" }));
     const items = [];
     const pill = (it, x, y, c, kind, i) => {

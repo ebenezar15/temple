@@ -58,7 +58,7 @@
     t(380, 136, "KING", "var(--babel)", "end", 13); t(380, 178, "authority · stewardship · justice", "var(--muted)", "end", 11);
     if (!reduceMotion) {
       [["M210 262 L210 40", "var(--eden)", 0], ["M210 40 L210 262", "var(--eden)", 1.5], ["M210 150 L374 150", "var(--babel)", .7], ["M210 150 L46 150", "var(--babel)", 2.2]].forEach(([p, c, b]) => {
-        const dot = sv("circle", { r: 5, fill: c }); dot.append(sv("animateMotion", { dur: "3s", repeatCount: "indefinite", path: p, begin: b + "s" })); svg.append(dot);
+        const dot = sv("circle", { r: 5, fill: c }); dot.append(sv("animateMotion", { dur: "3s", repeatCount: "indefinite", path: p, begin: -b + "s" })); svg.append(dot);
       });
     }
     $("#kpAxis").append(svg);

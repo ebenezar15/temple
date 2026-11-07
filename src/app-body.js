@@ -38,7 +38,7 @@
     // cell
     const cs = sv("svg", { viewBox: "0 0 400 300", role: "img", "aria-label": "Body and cell: blood vessel, interstitial fluid, cell membrane with proteins, mitochondria, nucleus with DNA" });
     const cg = {};
-    cg.altar = sv("g", { class: "ly" }, sv("path", { d: "M14 20 Q60 150 14 280", stroke: "var(--flame)", "stroke-width": 26, fill: "none", "stroke-opacity": .55, "stroke-linecap": "round" }), ...[0, 1, 2, 3].map(k => sv("circle", { r: 5, fill: "var(--flame)" }, reduceMotion ? null : sv("animateMotion", { dur: "3s", begin: k * .75 + "s", repeatCount: "indefinite", path: "M14 20 Q60 150 14 280" }))), txt(36, 296, "blood", { "font-size": 11 }));
+    cg.altar = sv("g", { class: "ly" }, sv("path", { d: "M14 20 Q60 150 14 280", stroke: "var(--flame)", "stroke-width": 26, fill: "none", "stroke-opacity": .55, "stroke-linecap": "round" }), ...[0, 1, 2, 3].map(k => sv("circle", { r: 5, fill: "var(--flame)" }, reduceMotion ? null : sv("animateMotion", { dur: "3s", begin: -(k * .75) + "s", repeatCount: "indefinite", path: "M14 20 Q60 150 14 280" }))), txt(36, 296, "blood", { "font-size": 11 }));
     cg.laver = sv("g", { class: "ly" }, sv("rect", { x: 56, y: 24, width: 336, height: 252, rx: 40, fill: "var(--babel)", "fill-opacity": .12 }), ...[[80, 50], [100, 250], [370, 60], [372, 240], [90, 150]].map(([x, y]) => sv("circle", { cx: x, cy: y, r: 3, fill: "var(--babel)", "fill-opacity": .6, class: "pulse" })), txt(110, 20, "interstitial fluid", { "font-size": 11 }));
     cg.house = sv("g", { class: "ly" }, sv("ellipse", { cx: 228, cy: 150, rx: 140, ry: 105, fill: "var(--surface)", stroke: "var(--ink)", "stroke-width": 1, "stroke-opacity": .3 }), txt(228, 270, "the cell", { "font-size": 11 }));
     cg.door = sv("g", { class: "ly" }, sv("ellipse", { cx: 228, cy: 150, rx: 140, ry: 105, fill: "none", stroke: "var(--babel)", "stroke-width": 5 }), ...[200, 230, 160, 330].map(a => { const r = a * Math.PI / 180; return sv("rect", { x: 228 + Math.cos(r) * 140 - 5, y: 150 + Math.sin(r) * 105 - 9, width: 10, height: 18, rx: 4, fill: "var(--eden)", transform: `rotate(${a} ${228 + Math.cos(r) * 140} ${150 + Math.sin(r) * 105})` }); }), txt(340, 270, "membrane", { "font-size": 11 }), txt(340, 284, "+ proteins", { "font-size": 10, fill: "var(--eden)" }));
@@ -106,4 +106,104 @@
     const icons = ["M0 -12 L10 6 H-10 Z", "M-8 0 H8 M0 -8 V8", "M-10 4 Q0 -12 10 4", "M-6 10 V-2 Q0 -12 6 -2 V10", "M-10 -4 A4 4 0 1 0 -9.9 -4 M10 -4 A4 4 0 1 0 10.1 -4 M-14 10 Q-10 0 -6 10 M6 10 Q10 0 14 10", "M0 -12 L3 -3 L12 -3 L5 3 L8 12 L0 6 L-8 12 L-5 3 L-12 -3 L-3 -3 Z"];
     $("#btLive").append(...BT().live.map((l, i) => el("div", { class: "live-card", style: { "--d": i * .1 + "s" } }, sv("svg", { viewBox: "-16 -16 32 32", "aria-hidden": "true" }, sv("path", { d: icons[i], fill: "none", stroke: "currentColor", "stroke-width": 2.2, "stroke-linecap": "round", "stroke-linejoin": "round" })), el("b", { text: l.t }), el("span", { class: "ref", text: l.ref }), el("p", { text: l.d }))));
     studyGuide("#btQuestions", "#btMemory", BT().study, BT().memory);
+  }
+
+  /* ---------- related facts: numbers, heart, zoom, book, flip cards ---------- */
+  function countUp(node, to, ms) {
+    const fmt = v => Math.round(v).toLocaleString();
+    if (reduceMotion || !("IntersectionObserver" in window)) { node.textContent = fmt(to); return; }
+    node.textContent = "0";
+    const io = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; io.disconnect(); const t0 = performance.now(); const step = t => { const k = Math.min(1, (t - t0) / ms); node.textContent = fmt(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); }), { threshold: .4 });
+    io.observe(node);
+  }
+  function initBtNumbers() {
+    const N = BT().numbers;
+    [["#btNumT", N.temple, "t"], ["#btNumB", N.body, "b"]].forEach(([sel, arr, k]) => $(sel).append(...arr.map((x, i) => {
+      const num = el("b", { class: "num-v" });
+      countUp(num, x.n, 1400 + i * 150);
+      return el("div", { class: "num-tile " + k, style: { "--d": i * .08 + "s" } }, el("small", { text: x.t }), el("div", { class: "num-line" }, num, el("span", { text: x.unit })), el("p", { html: refify(x.d) }));
+    })));
+  }
+
+  function initBtHeart() {
+    const svg = sv("svg", { viewBox: "0 0 420 400", role: "img", "aria-label": "The heart pumping blood around two loops: to the lungs and to the body" });
+    const pul = "M210 170 C120 170 120 40 210 40 C300 40 300 170 210 170", sys = "M210 210 C60 210 60 370 210 370 C360 370 360 210 210 210";
+    svg.append(sv("path", { d: pul, fill: "none", stroke: "var(--babel)", "stroke-width": 16, "stroke-opacity": .25 }), sv("path", { d: sys, fill: "none", stroke: "var(--flame)", "stroke-width": 16, "stroke-opacity": .25 }));
+    // lungs and body
+    svg.append(sv("path", { d: "M150 30 Q120 60 130 100 Q160 110 180 70 Q176 40 150 30 Z M270 30 Q300 60 290 100 Q260 110 240 70 Q244 40 270 30 Z", fill: "var(--babel)", "fill-opacity": .35 }), txt(210, 24, "lungs · oxygen in", { "font-size": 11.5, fill: "var(--babel)" }),
+      sv("rect", { x: 160, y: 340, width: 100, height: 46, rx: 12, fill: "var(--flame)", "fill-opacity": .18 }), txt(210, 368, "body · every cell", { "font-size": 11.5, fill: "var(--flame)" }));
+    if (!reduceMotion) {
+      [[pul, "var(--babel)", 4, 4], [sys, "var(--flame)", 6, 6]].forEach(([d, c, n, dur]) => { for (let k = 0; k < n; k++) { const dot = sv("circle", { r: 5, fill: c }); dot.append(sv("animateMotion", { dur: dur + "s", begin: -(k * dur / n) + "s", repeatCount: "indefinite", path: d })); svg.append(dot); } });
+    }
+    svg.append(sv("g", { class: "heart-beat" }, sv("path", { d: "M210 236 C150 200 158 150 190 150 C202 150 208 158 210 166 C212 158 218 150 230 150 C262 150 270 200 210 236 Z", fill: "var(--flame)" }), sv("path", { d: "M196 168 q-10 10 -4 24", stroke: "#fff", "stroke-opacity": .5, "stroke-width": 4, fill: "none", "stroke-linecap": "round" })));
+    svg.append(txt(330, 200, "the altar", { "text-anchor": "start", "font-size": 11.5, fill: "var(--muted)", "font-style": "italic" }), txt(330, 214, "of the body", { "text-anchor": "start", "font-size": 11.5, fill: "var(--muted)", "font-style": "italic" }));
+    $("#btHeart").append(svg);
+    const beats = el("b", { class: "live-num", text: "0" }), litres = el("b", { class: "live-num", text: "0.0" });
+    $("#btHeartPanel").append(el("p", { class: "eyebrow", text: "Live, since you opened this page (at 70 beats a minute)" }),
+      el("div", { class: "live-row" }, el("div", {}, beats, el("small", { text: "heartbeats" })), el("div", {}, litres, el("small", { text: "litres pumped" }))),
+      el("ul", { class: "ticks" }, ...["A drop of blood makes a full circuit of the body in about a minute at rest.", "The right side of the heart sends blood to the lungs; the left side sends it to the whole body: two loops, one heart.", "William Harvey first described the full circulation in 1628. Leviticus had already said “the life of the flesh is in the blood” (Lev 17:11).", "Like the altar fire that was never to go out (Lev 6:13), the heart beats from about three weeks after conception until death."].map(t => el("li", { html: refify(t) }))));
+    const t0 = Date.now();
+    setInterval(() => { const n = Math.floor((Date.now() - t0) / 60000 * 70); beats.textContent = n.toLocaleString(); litres.textContent = (n * .07).toFixed(1); }, 860);
+  }
+
+  function initBtZoom() {
+    const Z = BT().zoom, n = Z.length, R = 180;
+    const svg = sv("svg", { viewBox: "0 0 400 400", role: "img", "aria-label": "Zooming inward through nested rooms of the temple and the body" });
+    svg.append(sv("defs", {}, sv("clipPath", { id: "btZc" }, sv("rect", { width: 400, height: 400, rx: 12 }))));
+    const g = sv("g", { class: "zoomg" }), wrap = sv("g", { "clip-path": "url(#btZc)" }, g);
+    const tc = ["var(--muted)", "var(--eden)", "var(--babel)", "var(--accent)", "var(--flame)", "var(--accent)"];
+    Z.forEach((z, k) => {
+      const r = R / Math.pow(2, k), c = tc[k];
+      g.append(sv("circle", { cx: 200, cy: 200, r, fill: c, "fill-opacity": .08 + k * .03 }),
+        sv("path", { d: `M200 ${200 - r} A${r} ${r} 0 0 0 200 ${200 + r}`, fill: "none", stroke: "var(--accent)", "stroke-width": 3, "vector-effect": "non-scaling-stroke" }),
+        sv("path", { d: `M200 ${200 - r} A${r} ${r} 0 0 1 200 ${200 + r}`, fill: "none", stroke: "var(--babel)", "stroke-width": 3, "vector-effect": "non-scaling-stroke" }));
+      for (let d = 0; d < 6; d++) { const a = d * 1.05 + k, rr = r * .78; g.append(sv("circle", { cx: 200 + Math.cos(a) * rr, cy: 200 + Math.sin(a) * rr, r: r * .035, fill: c, "fill-opacity": .6 })); }
+    });
+    const r5 = R / 32;
+    g.append(sv("rect", { x: 200 - r5 * .75, y: 200 - r5 * .5, width: r5 * .3, height: r5 * .9, rx: r5 * .12, fill: "var(--muted)" }), sv("rect", { x: 200 - r5 * .4, y: 200 - r5 * .5, width: r5 * .3, height: r5 * .9, rx: r5 * .12, fill: "var(--muted)" }),
+      sv("path", { d: `M${200 + r5 * .15} ${200 - r5 * .5} q${r5 * .3} ${r5 * .25} 0 ${r5 * .5} t0 ${r5 * .5} M${200 + r5 * .45} ${200 - r5 * .5} q${-r5 * .3} ${r5 * .25} 0 ${r5 * .5} t0 ${r5 * .5}`, fill: "none", stroke: "var(--flame)", "stroke-width": 2.5, "vector-effect": "non-scaling-stroke" }));
+    svg.append(wrap, sv("line", { x1: 200, y1: 0, x2: 200, y2: 400, stroke: "var(--line)", "stroke-dasharray": "3 5" }));
+    const lt = txt(14, 22, "", { "text-anchor": "start", "font-size": 12, fill: "var(--accent)" }), rt = txt(386, 22, "", { "text-anchor": "end", "font-size": 12, fill: "var(--babel)" });
+    svg.append(sv("rect", { x: 6, y: 6, width: 160, height: 24, rx: 12, fill: "var(--surface)", "fill-opacity": .85 }), sv("rect", { x: 234, y: 6, width: 160, height: 24, rx: 12, fill: "var(--surface)", "fill-opacity": .85 }), lt, rt,
+      txt(100, 392, "TEMPLE", { "font-size": 10.5, fill: "var(--accent)", "letter-spacing": ".14em" }), txt(300, 392, "BODY", { "font-size": 10.5, fill: "var(--babel)", "letter-spacing": ".14em" }));
+    $("#btZoom").append(svg);
+    const r = $("#btZoomRange");
+    function set(k) {
+      r.value = k; g.style.transform = `scale(${Math.pow(2, k)})`;
+      const z = Z[k]; lt.textContent = z.temple[0]; rt.textContent = z.body[0];
+      $("#btZoomInfo").replaceChildren(el("p", { class: "eyebrow", text: `Level ${k + 1} of ${n}` }),
+        el("div", { class: "pair" }, el("div", { class: "pair-t" }, el("small", { text: "Temple" }), el("b", { text: z.temple[0] }), el("span", { html: refify(z.temple[1]) })), el("div", { class: "pair-eq", text: "↔" }), el("div", { class: "pair-c" }, el("small", { text: "Body" }), el("b", { text: z.body[0] }), el("span", { text: z.body[1] }))));
+    }
+    r.addEventListener("input", () => set(+r.value));
+    $("#btZoomPlay").addEventListener("click", async () => { for (let k = 0; k < n; k++) { set(k); await sleep(1500); } });
+    set(0);
+  }
+
+  function initBtBook() {
+    const L = "ACGT", cols = { A: "var(--eden)", C: "var(--babel)", G: "var(--accent)", T: "var(--flame)" };
+    let seq = ""; for (let i = 0; i < 160; i++) seq += L[(i * 7 + (i * i) % 11) % 4];
+    const strip = () => el("span", { class: "tape-run" }, ...[...seq].map(ch => el("i", { text: ch, style: { color: cols[ch] } })));
+    $("#btTape").append(el("div", { class: "tape-inner" }, strip(), strip()));
+    const svg = sv("svg", { viewBox: "0 0 420 312", role: "img", "aria-label": "A library of about a thousand books, the length of one copy of the human genome" });
+    const books = [];
+    for (let s = 0; s < 5; s++) {
+      svg.append(sv("rect", { x: 20, y: 74 + s * 46, width: 380, height: 5, fill: "#8a6238", "fill-opacity": .6 }));
+      for (let b = 0; b < 20; b++) { const h = 30 + ((b * 7 + s * 3) % 9); const bk = sv("rect", { class: "bk", x: 26 + b * 18.5, y: 74 + s * 46 - h, width: 14, height: h, rx: 2, fill: [cols.A, cols.C, cols.G, cols.T][(b + s) % 4], "fill-opacity": .8, style: { transitionDelay: (s * 20 + b) * 12 + "ms" } }); svg.append(bk); books.push(bk); }
+    }
+    svg.append(txt(210, 22, "100 spines × 10 = about 1,000 books of 1,000 pages", { "font-size": 12 }), txt(210, 304, "≈ 3.1 billion letters in one copy of your genome", { "font-size": 12, fill: "var(--muted)" }));
+    $("#btLibrary").append(svg);
+    const show = () => svg.classList.add("full");
+    if (reduceMotion || !("IntersectionObserver" in window)) show(); else { const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { show(); io.disconnect(); } }), { threshold: .4 }); io.observe(svg); }
+    $("#btBookFacts").append(...BT().book.map(([t, d]) => el("div", { class: "card stg" }, el("h3", { text: t }), el("p", { text: d }))));
+  }
+
+  function initBtFacts() {
+    $("#btFacts").append(...BT().facts.map(f => {
+      const b = el("button", { class: "flipcard", type: "button", "aria-pressed": "false" },
+        el("div", { class: "fc-inner" }, el("div", { class: "fc-face fc-under fc-scr" }, el("small", { text: "Scripture says" }), el("p", { html: refify(f.s) }), el("span", { class: "hint", text: "Tap to flip" })),
+          el("div", { class: "fc-face fc-above" }, el("small", { text: "What we now know" }), el("p", { text: f.k }))));
+      b.addEventListener("click", () => { const on = b.classList.toggle("flipped"); b.setAttribute("aria-pressed", String(on)); });
+      return b;
+    }));
+    $("#btFurther").append(...BT().further.map(([t, d]) => el("div", { class: "card stg further" }, el("span", { class: "spec", text: "speculative" }), el("h3", { text: t }), el("p", { html: refify(d) }))));
   }

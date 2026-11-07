@@ -68,3 +68,52 @@ Object.assign(DATA.images, {
   cell: { file: "Animal_cell_structure_en.svg", cap: "Diagram of an animal cell, showing the membrane, organelles such as mitochondria, and the nucleus at the centre.", ar: "4/3", art: "temple" },
   dna: { file: "DNA_Structure+Key+Labelled.pn_NoBB.png", cap: "The DNA double helix: two strands carrying the code of life.", ar: "4/3", art: "keys" }
 });
+
+/* ---------- Related facts ---------- */
+DATA.bt.numbers = {
+  temple: [
+    { n: 100, unit: "× 50 cubits", t: "The court", d: "About 45 × 23 m, enclosed by linen hangings 5 cubits high (Exod 27:9–18)." },
+    { n: 30, unit: "× 10 cubits", t: "The tent", d: "About 13.5 × 4.5 m: the holy place and the most holy place (Exod 26:15–30)." },
+    { n: 10, unit: "cubit cube", t: "The most holy place", d: "A perfect cube, about 4.5 m each way; Solomon’s inner sanctuary doubled it to 20 (1 Kgs 6:20)." },
+    { n: 34, unit: "kg of gold", t: "The lampstand", d: "Hammered from one talent of pure gold, roughly 34 kg (Exod 25:31, 39)." },
+    { n: 12, unit: "loaves", t: "The bread", d: "One for each tribe, renewed every Sabbath (Lev 24:5–8)." },
+    { n: 4, unit: "spices", t: "The incense", d: "Stacte, onycha, galbanum and frankincense, “seasoned with salt, pure and holy” (Exod 30:34–35)." }
+  ],
+  body: [
+    { n: 30, unit: "trillion cells", t: "Living stones", d: "Estimates of the cells in an adult body range from about 30 to 37 trillion." },
+    { n: 100000, unit: "heartbeats a day", t: "The altar never rests", d: "At about 70 beats a minute the heart beats over 100,000 times a day." },
+    { n: 7000, unit: "litres a day", t: "Blood pumped", d: "About 5 litres a minute at rest: some 7,000 litres every day." },
+    { n: 2, unit: "million per second", t: "New red blood cells", d: "Bone marrow makes roughly 2 million red blood cells every second." },
+    { n: 2, unit: "metres of DNA", t: "In every nucleus", d: "Stretched out, the DNA in one cell nucleus would be about 2 m long, folded into a space a few millionths of a metre across." },
+    { n: 60, unit: "% water", t: "A body of water", d: "About 60% of an adult’s body weight is water; roughly 11 litres of it is interstitial fluid bathing the cells." }
+  ]
+};
+DATA.bt.zoom = [
+  { temple: ["The camp of Israel", "Twelve tribes encamped around the tabernacle (Num 2)."], body: ["The whole body", "About 1.7 m tall, built from some 30 trillion cells."] },
+  { temple: ["The court", "About 45 m long, entered by one gate (Exod 27:9–16)."], body: ["The bloodstream", "Roughly 100,000 km of vessels, an often-quoted estimate, reaching every tissue."] },
+  { temple: ["The tent", "About 13.5 m long, behind the door screen (Exod 26:36)."], body: ["The cell", "Typically 10–100 micrometres across, wrapped in its membrane."] },
+  { temple: ["The holy place", "Light, bread and incense (Heb 9:2)."], body: ["The cytoplasm", "Hundreds to thousands of mitochondria in a busy cell."] },
+  { temple: ["The most holy place", "A 10-cubit cube behind the veil (Heb 9:3)."], body: ["The nucleus", "About 6 micrometres across, behind a double membrane with thousands of pores."] },
+  { temple: ["The tablets in the ark", "Two tablets “written with the finger of God” (Exod 31:18)."], body: ["The DNA double helix", "Two strands just 2 nanometres wide, carrying about 3 billion letters."] }
+];
+DATA.bt.book = [
+  ["A four-letter alphabet", "DNA is written in four chemical “letters”: A, C, G and T. Their order spells out the instructions for building proteins."],
+  ["About 3 billion letters", "One copy of the human genome is about 3.1 billion letters long; each cell carries two copies, one from each parent."],
+  ["A thousand books", "Printed at about 3,000 letters a page, one copy would fill roughly a thousand books of a thousand pages each."],
+  ["About 20,000 genes", "Only a small part of the text codes for proteins: roughly 20,000 genes. The rest helps regulate, fold and organise the code."]
+];
+DATA.bt.facts = [
+  { s: "“The life of the flesh is in the blood” (Lev 17:11).", k: "Blood carries oxygen, nutrients, heat and immune defence to every cell. William Harvey published the first full account of its circulation in 1628." },
+  { s: "Priests had to wash at the laver “so that they may not die” (Exod 30:20–21).", k: "In 1847 Ignaz Semmelweis cut deaths in a maternity ward dramatically simply by having doctors wash their hands." },
+  { s: "The unclean were to wash “in running water” (Lev 15:13).", k: "Running water removes contamination far better than standing water; modern hygiene guidance still says to rinse under running water." },
+  { s: "Infectious skin disease meant living “outside the camp” for a time (Lev 13:46).", k: "Isolating the sick remains a basic public-health measure. The word quarantine comes from the Venetian forty days of the 1300s." },
+  { s: "“You knitted me together … intricately woven” (Ps 139:13, 15).", k: "The Hebrew raqam suggests embroidery. In the womb the heart begins to beat around three weeks after conception." },
+  { s: "“A joyful heart is good medicine” (Prov 17:22).", k: "Research links positive emotion and social connection with better health outcomes, though the effects are complex." }
+];
+DATA.bt.further = [
+  ["The veil ↔ the nuclear envelope", "The nucleus sits behind a double membrane pierced by thousands of tightly guarded pores, as the most holy place sat behind the veil."],
+  ["The showbread ↔ ribosomes", "Ribosomes read copies of the code and assemble proteins, the cell’s daily “bread”, as the table held bread before the Lord."],
+  ["The incense ↔ cell signalling", "Cells constantly send chemical messages to one another and to the body, as incense rose continually before God."],
+  ["The lamp burning continually ↔ ATP", "Mitochondria produce ATP non-stop; an adult turns over roughly their own body weight in ATP every day. The lamp was to burn “regularly” (Exod 27:20)."]
+];
+DATA.quiz.push({ q: "Roughly how many times does the human heart beat in a day?", a: ["About 1,000", "About 10,000", "About 100,000", "About 10 million"], c: 2, x: "At about 70 beats a minute: over 100,000 a day." });

@@ -1427,7 +1427,7 @@
       [initSnBody, "#snBody"], [initSnLadder, "#snLadder"], [initSnSpheres, "#snSpheres"], [initSnObjections, "#snObjections"],
       [initMnRom, "#mnWords"], [initMnVocab, "#mnVocab"], [initMnPath, "#mnPath"], [initMnCaptive, "#mnCaptive"], [initMnExchange, "#mnLies"], [initMnMeans, "#mnMeans"],
       [initMnFilter, "#mnFilter"], [initMnGlory, "#mnGlory"], [initMnMindset, "#mnMindset"], [initMnDaily, "#mnChecklist"], [initMnObjections, "#mnObjections"],
-      [initBtLine, "#btLine"], [initBtPattern, "#btTemple"], [initBtCode, "#btHelix"], [initBtLive, "#btLive"],
+      [initBtLine, "#btLine"], [initBtPattern, "#btTemple"], [initBtCode, "#btHelix"], [initBtLive, "#btLive"], [initBtNumbers, "#btNumT"], [initBtHeart, "#btHeart"], [initBtZoom, "#btZoom"], [initBtBook, "#btLibrary"], [initBtFacts, "#btFacts"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }
