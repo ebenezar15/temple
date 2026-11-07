@@ -10,7 +10,7 @@ An interactive, animated Bible study in ten parts:
 - **Part VI: The Keys of the Kingdom** (a detailed study). What keys mean throughout the Bible, the key of the house of David and the royal steward, Caesarea Philippi, binding and loosing, doors opened in Acts, how the keys were narrowed to forgiveness alone, how to operate in them, and objections answered.
 - **Part VII: Sowing and Reaping** (a detailed study). God's seed principle from Genesis 1 and 8 to the final harvest, eight laws of the harvest, the four soils, the principle traced through Scripture, Christ the seed that died, the connection to blessing, grace and the great exchange, why kingdom principles can feel like manipulation, and objections answered.
 - **Part VIII: Spiritual Warfare and Dominion** (a detailed study). Ephesians 6:12 and the layered battlefield, authority (*exousia*), power (*dynamis*), dominion and strongholds, the chain of authority, the armour of God as God's own armour, what Scripture shows we may speak to and command, and binding and loosing ("shall have been bound in heaven"). It also covers **speaking and prophesying over our lives** (the power of declaration, a declaration builder, and declaration compared with positive thinking and witchcraft) and **breaking curses, witchcraft and bondages** (from the curse to "no more curse", Proverbs 26:2, an evidence map, the Bible's own verbs for "cancel" and "break", and a path to freedom). It adds **seated in the heavenly places** ("heavenly places" pictured as the sanctuary with a tabernacle walk-through; the holy place's lampstand, showbread and incense as the priestly privileges of illumination, fellowship and access; privileges, not powers; sit, walk, stand; every spiritual blessing of Ephesians 1:3–14; our dual reality; co-heirs with Christ and the *huios* difference) and **far above all** (the four power words of Ephesians 1:19, the five things Christ is above, "the feet are in the body", Psalm 110:1 "sit … until", every enemy to be put under his feet, death as the last enemy and what the body does about it now, living from above in daily life, and the body's assignment). Then come errors and extremes, sons, priests and kings in battle, Jesus' "It is written", a daily battle rhythm, and objections answered.
-- **Part IX: Heaven and Earth United** (the capstone). Ephesians 1:10 and the heaven–earth overlap through the whole story, *anakephalaiōsis* (summing up all things under one head), how every part of the study fits, God's initial plan of Eden filling the earth, Romans 8 and the revealing of the sons of God, *nēpios*, *teknon* and *huios*, the body of Christ, what sons and daughters do as kings and priests, heaven in every sphere of life, and objections answered.
+- **Part IX: Heaven and Earth United** (the capstone). Ephesians 1:10 and the heaven–earth overlap through the whole story, *anakephalaiōsis* (summing up all things under one head), how every part of the study fits, God's initial plan of Eden filling the earth, Romans 8 and the revealing of the sons of God, *nēpios*, *teknon* and *huios*, the body of Christ, what sons and daughters do as kings and priests, heaven in every sphere of life, and objections answered. It closes with **Beyond the Second Veil: Full Union with God**: the veil torn from top to bottom (an illuminated animation from Eden’s cherubim to the open way), the Day of Atonement and Christ entering once for all, an interactive ark (mercy seat, tablets, manna, budded rod), when the way was fully opened, a John 14:20 union motion graphic with seven pictures of union, and “face to face”.
 - **Part X: Renewing the Mind and Transformation** (a detailed study). Romans 12:2 word by word with a conformed/transformed metamorphosis animation, the Bible's vocabulary of the inner life, how a thought becomes a life (Romans 8:5–6), taking every thought captive, a lie-for-truth exchange tool, the means God uses to renew the mind, the Philippians 4:8 thought filter, 2 Corinthians 3:18 "from one degree of glory to another", moving from an orphan mindset to a son's, a daily renewal tracker, and objections answered.
 
 ## Interactive pieces
@@ -25,6 +25,11 @@ Flip-card clues · switchable "cosmic mountain" diagram (Eden, Sinai, Tabernacle
 - **Your journey** map on the home page: one road through all the parts, with rings that fill as you study.
 - **Check your understanding**: a short quiz at the end of each part, with your best score kept in My study.
 - Progress, saves and notes are stored only in your browser on this device.
+
+## Illumination and design
+
+- Every part banner carries an illuminated medallion with slowly turning light rays, a gilded shimmer across the title and an illuminated initial capital.
+- Ornamental flourishes above each section heading, a “section x of y” badge, gilded hover light on cards and panels, and sanctuary light rays in the home hero.
 
 ## Motion and navigation
 
@@ -85,6 +90,7 @@ Source lives in `src/`:
 | `src/data-mind.js`, `src/app-mind.js` | Content and interactive code for Part X: renewing the mind |
 | `src/data-sanct.js`, `src/app-sanct.js` | Part VIII add-on: “heavenly places” as the sanctuary (light, bread, incense) |
 | `src/data-body.js`, `src/app-body.js` | Part I add-on: your body is a temple (temple and cell parallels) |
+| `src/data-veil.js`, `src/app-veil.js` | Part IX add-on: the second veil and full union with God |
 | `src/study.js` | Learning layer: parts menu, progress, saves, notes, My study drawer, journey map |
 | `src/app.js` | Interactive behaviour |
 

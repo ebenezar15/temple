@@ -1379,6 +1379,7 @@
 /*@@MIND@@*/
 /*@@SANCT@@*/
 /*@@BODY@@*/
+/*@@VEIL@@*/
   /* ---------------- Multi-page chrome: active page, table of contents, home cards ---------------- */
   function initPages() {
     const pageEl = $(".page");
@@ -1399,6 +1400,23 @@
       });
     });
     $$(".pc-art").forEach(n => n.append(fallbackArt(n.dataset.art, "4/3")));
+    // illuminated medallion in each part banner
+    const artFor = { garden: "garden", serpent: "serpent", babel: "zig", kings: "crown", prophets: "star", keys: "keys", sowing: "sower", warfare: "shield", sons: "union", mind: "butterfly", connections: "web" };
+    const subArt = { secondveil: "union", bodytemple: "temple", supply: "crown", declare: "star", curses: "shield", seated: "crown", farabove: "star" };
+    $$("main .part-banner").forEach(pb => {
+      const sub = pb.classList.contains("sub-banner");
+      const kind = sub ? subArt[pb.id] : artFor[id];
+      if (!kind) return;
+      const m = sv("svg", { viewBox: "0 0 300 300", class: "medal", "aria-hidden": "true" });
+      m.append(sv("defs", {}, sv("clipPath", { id: "mc-" + pb.id }, sv("circle", { cx: 150, cy: 150, r: 104 }))),
+        sv("circle", { cx: 150, cy: 150, r: 146, fill: "none", stroke: "var(--accent)", "stroke-width": 1.5, "stroke-opacity": .5 }),
+        sv("g", { class: "medal-dots" }, ...Array.from({ length: 36 }, (_, i) => { const t = i * Math.PI / 18; return sv("circle", { cx: 150 + Math.cos(t) * 132, cy: 150 + Math.sin(t) * 132, r: i % 3 ? 2 : 4, fill: "var(--accent)" }); })),
+        sv("circle", { cx: 150, cy: 150, r: 116, fill: "none", stroke: "var(--accent)", "stroke-width": 5 }),
+        sv("circle", { cx: 150, cy: 150, r: 108, fill: "var(--bg-2)" }));
+      const art = fallbackArt(kind, "1/1"); art.setAttribute("x", 46); art.setAttribute("y", 46); art.setAttribute("width", 208); art.setAttribute("height", 208);
+      m.append(sv("g", { "clip-path": `url(#mc-${pb.id})`, class: "medal-art" }, art), sv("path", { d: "M150 4 l6 12 l-6 12 l-6 -12 Z M150 272 l6 12 l-6 12 l-6 -12 Z M4 150 l12 -6 l12 6 l-12 6 Z M272 150 l12 -6 l12 6 l-12 6 Z", fill: "var(--accent)" }));
+      pb.append(el("div", { class: "banner-art" + (sub ? " sub" : ""), "aria-hidden": "true" }, el("div", { class: "ba-rays" }), m));
+    });
     if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) setTimeout(() => t.scrollIntoView(), 60); }
   }
 
@@ -1428,6 +1446,7 @@
       [initMnRom, "#mnWords"], [initMnVocab, "#mnVocab"], [initMnPath, "#mnPath"], [initMnCaptive, "#mnCaptive"], [initMnExchange, "#mnLies"], [initMnMeans, "#mnMeans"],
       [initMnFilter, "#mnFilter"], [initMnGlory, "#mnGlory"], [initMnMindset, "#mnMindset"], [initMnDaily, "#mnChecklist"], [initMnObjections, "#mnObjections"],
       [initBtLine, "#btLine"], [initBtPattern, "#btTemple"], [initBtCode, "#btHelix"], [initBtLive, "#btLive"], [initBtNumbers, "#btNumT"], [initBtHeart, "#btHeart"], [initBtZoom, "#btZoom"], [initBtBook, "#btLibrary"], [initBtFacts, "#btFacts"],
+      [initVlTear, "#vlVeil"], [initVlAtone, "#vlAtone"], [initVlArk, "#vlArk"], [initVlLine, "#vlLine"], [initVlUnion, "#vlOrbit"], [initVlFace, "#vlFace"], [initVlLive, "#vlLive"],
       [initWeb, "#webStage"], [initQuiz, "#quizBox"], [initSources, "#sourceList"], [initScroll]];
     steps.forEach(([fn, need]) => { if (need && !$(need)) return; try { fn(); } catch (err) { console.error(fn.name, err); } });
   }

@@ -1411,3 +1411,95 @@ ul.ticks li::before { content: "✓"; position: absolute; left: 4px; color: var(
 .further h3 { margin: 16px 0 6px; font-size: 1rem; } .further p { margin: 0; font-size: .9rem; color: var(--muted); }
 .spec { position: absolute; top: 10px; right: 12px; font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--flame); background: color-mix(in srgb, var(--flame) 12%, transparent); padding: 3px 8px; border-radius: 999px; }
 @media (prefers-reduced-motion: reduce) { .bk { transform: none; } }
+
+
+/* ================= Part IX·b: the second veil ================= */
+.vl-half { transition: transform 1.4s cubic-bezier(.6,0,.2,1) .7s; transform-box: view-box; }
+#vlVeil svg.torn .vl-half[data-dir="-1"] { transform: translateX(-210px) skewY(-4deg); }
+#vlVeil svg.torn .vl-half[data-dir="1"] { transform: translateX(210px) skewY(4deg); }
+.vl-tearline { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; }
+#vlVeil svg.torn .vl-tearline { opacity: 1; animation: thrd .7s ease-in forwards, fadeOut .4s 1.3s forwards; }
+@keyframes fadeOut { to { opacity: 0; } }
+.vl-glory { transition: opacity 1s, transform 2s; transform-box: view-box; transform-origin: 240px 190px; opacity: .25; }
+#vlVeil svg.torn .vl-glory { opacity: 1; transform: scale(1.08); }
+#vlVeil svg.torn .vl-glory line { animation: wpPulse 2s ease-in-out infinite; }
+.cher-card { text-align: left; font: inherit; color: var(--ink); cursor: pointer; position: relative; padding-top: 30px; }
+.cher-card h3 { margin: 0 0 4px; font-size: 1rem; }
+.cher-n { position: absolute; top: 10px; left: 14px; font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 1.1rem; color: var(--accent); font-weight: 700; }
+.cher-card[aria-pressed="true"] { background: var(--glow); box-shadow: inset 0 0 0 2px var(--accent); }
+.actor { transition: opacity .5s; }
+.cloud circle { animation: wpPulse 1.6s ease-in-out infinite; }
+.vl-vt, .vl-vb { transition: transform 1s cubic-bezier(.6,0,.2,1); transform-box: fill-box; } .vl-vt { transform-origin: top; } .vl-vb { transform-origin: bottom; }
+#vlAtone svg.opened .vl-vt { transform: scaleY(.12); }
+#vlAtone svg.opened .vl-vb { transform: scaleY(.12); }
+#vlAtone svg.opened .vl-holiest { fill-opacity: .4; }
+.ark-lid, .ark-item { transition: transform .9s cubic-bezier(.3,1.2,.4,1), opacity .6s; transform-box: view-box; }
+.ark-item { opacity: 0; transform: translateY(40px); }
+#vlArk svg.open .ark-lid { transform: translate(0, -150px) rotate(-6deg); }
+#vlArk svg.open .ark-item { opacity: 1; transform: none; }
+.ark-item.sel, .ark-lid.sel { filter: drop-shadow(0 0 8px var(--accent)); }
+#vlArk svg, #vlVeil svg, #vlOrbit svg, #vlFace svg { max-height: 460px; }
+.u-f, .u-s, .u-y { transition: transform 1.6s cubic-bezier(.6,0,.2,1); }
+.u-in { transition: opacity .8s .9s; }
+.pic-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; }
+.pic-card { display: grid; justify-items: center; gap: 6px; text-align: center; font: inherit; font-size: .85rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 8px; cursor: pointer; transition: all .25s; animation: wpPop .6s cubic-bezier(.3,1.6,.5,1) var(--d) both; }
+.pic-card svg { width: 44px; height: 44px; color: var(--accent); background: var(--glow); border-radius: 50%; padding: 6px; }
+.pic-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.pic-card[aria-pressed="true"] { background: var(--glow); box-shadow: inset 0 0 0 2px var(--accent); }
+@media (max-width: 1100px) { .pic-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .pic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.fveil { transition: transform 1s cubic-bezier(.3,.7,.2,1), opacity 1s; transform-box: fill-box; transform-origin: top center; }
+.fveil.off { transform: translateY(-40px) scaleY(.1); opacity: 0; }
+.face-light { transition: opacity 1s, transform 1.2s; transform-box: view-box; transform-origin: 220px 160px; }
+.face-light line { animation: wpPulse 3s ease-in-out infinite; }
+
+/* ================= Redesign: illumination layer ================= */
+/* light rays and medallion in banners */
+.part-banner { position: relative; overflow: hidden; isolation: isolate; }
+.part-banner .wrap { position: relative; z-index: 2; }
+.banner-art { position: absolute; right: max(2vw, 16px); top: 50%; width: clamp(200px, 22vw, 320px); aspect-ratio: 1; transform: translateY(-46%); z-index: 1; pointer-events: none; }
+.banner-art.sub { width: clamp(160px, 16vw, 240px); }
+.banner-art .medal { width: 100%; height: 100%; filter: drop-shadow(0 10px 30px color-mix(in srgb, var(--accent) 35%, transparent)); animation: medalIn 1.4s cubic-bezier(.2,.8,.2,1) both, floaty 7s ease-in-out 1.4s infinite; }
+@keyframes medalIn { from { opacity: 0; transform: scale(.7) rotate(-20deg); } }
+@keyframes floaty { 50% { transform: translateY(-10px); } }
+.medal-dots { transform-box: view-box; transform-origin: 150px 150px; animation: spin 60s linear infinite; }
+.ba-rays { position: absolute; inset: -60%; background: repeating-conic-gradient(from 0deg, color-mix(in srgb, var(--accent) 22%, transparent) 0deg 4deg, transparent 4deg 18deg); -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 62%); mask-image: radial-gradient(circle, #000 0%, transparent 62%); animation: spin 90s linear infinite; opacity: .8; }
+.part-banner .wrap > div:last-child { max-width: min(760px, 62vw); }
+@media (max-width: 1100px) { .banner-art { opacity: .18; right: -40px; } .part-banner .wrap > div:last-child { max-width: none; } }
+@media (max-width: 560px) { .banner-art { width: 220px; right: -70px; top: 30%; } }
+/* gilded shimmer on part titles */
+.part-banner h2 { position: relative; display: inline-block; }
+.part-banner h2::after { content: ""; position: absolute; inset: -4px -12px; background: linear-gradient(105deg, transparent 35%, color-mix(in srgb, var(--accent) 45%, transparent) 50%, transparent 65%); background-size: 260% 100%; background-position: 130% 0; mix-blend-mode: soft-light; pointer-events: none; animation: gild 6s ease-in-out 1.6s infinite; }
+@keyframes gild { 0% { background-position: 130% 0; } 40%, 100% { background-position: -130% 0; } }
+/* illuminated initials */
+.part-banner .wrap > div:last-child > p:not(.eyebrow)::first-letter,
+.prose > p:first-child::first-letter {
+  float: left; font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-weight: 700;
+  font-size: 3.4em; line-height: .82; padding: 8px 10px 6px; margin: 4px 10px 0 0;
+  color: var(--accent-ink); background: radial-gradient(circle at 30% 25%, color-mix(in srgb, var(--accent) 70%, #fff) 0%, var(--accent) 55%, color-mix(in srgb, var(--accent) 70%, #000) 100%);
+  border: 3px double color-mix(in srgb, var(--accent) 60%, var(--ink)); border-radius: 6px;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 35%, transparent), inset 0 0 0 2px color-mix(in srgb, #fff 30%, transparent);
+}
+.sub-banner .wrap > div:last-child > p:not(.eyebrow)::first-letter { font-size: 2.8em; }
+/* ornamental flourish above section headings */
+.sec-head::before { content: ""; display: block; width: 132px; height: 18px; background: var(--accent); opacity: .75;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 132 18'%3E%3Cpath d='M0 9 H48 M84 9 H132' stroke='%23000' stroke-width='1.5'/%3E%3Cpath d='M66 1 L72 9 L66 17 L60 9 Z' fill='%23000'/%3E%3Ccircle cx='54' cy='9' r='2.5'/%3E%3Ccircle cx='78' cy='9' r='2.5'/%3E%3Cpath d='M30 9 q6 -8 12 0 q-6 8 -12 0 M90 9 q6 -8 12 0 q-6 8 -12 0' fill='none' stroke='%23000' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat left center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 132 18'%3E%3Cpath d='M0 9 H48 M84 9 H132' stroke='%23000' stroke-width='1.5'/%3E%3Cpath d='M66 1 L72 9 L66 17 L60 9 Z' fill='%23000'/%3E%3Ccircle cx='54' cy='9' r='2.5'/%3E%3Ccircle cx='78' cy='9' r='2.5'/%3E%3Cpath d='M30 9 q6 -8 12 0 q-6 8 -12 0 M90 9 q6 -8 12 0 q-6 8 -12 0' fill='none' stroke='%23000' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat left center / contain;
+  transform-origin: left; transform: scaleX(.2); transition: transform 1s cubic-bezier(.2,.8,.2,1); }
+.sec-head.in::before { transform: none; }
+.sec-head h2::after { background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 40%, #fff), var(--eden)); background-size: 200% 100%; animation: gild2 4s linear infinite; }
+@keyframes gild2 { to { background-position: -200% 0; } }
+/* section index badge */
+.sec-idx { display: inline-flex; align-items: baseline; gap: 2px; margin-right: 10px; padding: 2px 9px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--accent) 50%, var(--line)); background: var(--glow); letter-spacing: .04em; font-size: .9em; }
+.sec-idx b { color: var(--accent); }
+/* gilded hover on cards and panels */
+.card, .panel, .stage { transition: box-shadow .4s, border-color .4s, transform .3s; }
+.card:hover, .panel:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 20%, transparent), 0 12px 32px color-mix(in srgb, var(--accent) 14%, transparent); }
+/* sanctuary light in the hero */
+.hero { position: relative; overflow: hidden; isolation: isolate; }
+.hero::before { content: ""; position: absolute; inset: -40%; z-index: -1; background: repeating-conic-gradient(from 10deg at 70% 35%, color-mix(in srgb, var(--accent) 8%, transparent) 0deg 3deg, transparent 3deg 15deg); -webkit-mask-image: radial-gradient(circle at 70% 35%, #000, transparent 55%); mask-image: radial-gradient(circle at 70% 35%, #000, transparent 55%); animation: spin 120s linear infinite; transform-origin: 70% 35%; }
+@media (prefers-reduced-motion: reduce) {
+  .banner-art .medal, .medal-dots, .ba-rays, .part-banner h2::after, .sec-head h2::after, .hero::before { animation: none !important; }
+  #vlArk svg.open .ark-item { opacity: 1; transform: none; }
+  .vl-tearline { display: none; }
+}

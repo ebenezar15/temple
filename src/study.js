@@ -79,6 +79,9 @@
       if (!INDEX.some(x => x.f === P.f && x.id === sec.id)) return;
       const key = P.f + "#" + sec.id, t = title(P.f, sec.id);
       const head = $(".sec-head", sec) || $(".wrap", sec); if (!head) return;
+      const pageSecs = INDEX.filter(x => x.f === P.f), idx = pageSecs.findIndex(x => x.id === sec.id);
+      const eb = $(".sec-head .eyebrow", sec);
+      if (eb && idx > -1) eb.prepend(h("span", { class: "sec-idx", "aria-label": `Section ${idx + 1} of ${pageSecs.length}` }, h("b", { text: String(idx + 1) }), " / " + pageSecs.length));
       const mk = (cls, label, icon) => h("button", { class: "stool " + cls, type: "button", "aria-pressed": "false" }, h("span", { class: "si", "aria-hidden": "true", text: icon }), h("span", { class: "sl", text: label }));
       const bDone = mk("st-done", "Mark studied", "✓"), bSave = mk("st-save", "Save", "☆"), bNote = mk("st-note", "Note", "✎");
       const bar = h("div", { class: "stools", role: "group", "aria-label": "Study tools for " + t }, bDone, bSave, bNote);
