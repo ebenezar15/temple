@@ -32,6 +32,19 @@
   /* memory verses from every part, for the Review tab */
   const PARTS_MEM = [["kp", "Part IV · Kings and Priests"], ["pr", "Part V · Prophets"], ["ky", "Part VI · The Keys"], ["sw", "Part VII · Sowing and Reaping"], ["wf", "Part VIII · Spiritual Warfare"], ["sn", "Part IX · Heaven and Earth United"], ["mn", "Part X · Renewing the Mind"]];
   const CARDS = (() => { try { return PARTS_MEM.flatMap(([k, p]) => ((typeof DATA !== "undefined" && DATA[k] && DATA[k].memory) || []).map(([r, v]) => ({ r, v, p }))); } catch (e) { return []; } })();
+  /* glossary of Hebrew and Greek terms gathered from every part */
+  const GLOSS = (() => {
+    try {
+      const src = [["ky", "words", "Part VI"], ["wf", "powers", "Part VIII"], ["wf", "words", "Part VIII"], ["wf", "verbs", "Part VIII"], ["sc", "glossary", "Part VIII"], ["fa", "power", "Part VIII"], ["fa", "above", "Part VIII"], ["sn", "growth", "Part IX"], ["mn", "words", "Part X"], ["mn", "vocab", "Part X"]];
+      const out = [], seen = new Set();
+      src.forEach(([k, a, p]) => ((DATA[k] && DATA[k][a]) || []).forEach(x => {
+        const w = x.w || x.gk, t = x.t || x.n || [x.tr, x.gloss].filter(Boolean).join(" · "), d = (x.d || "").replace(/<[^>]+>/g, "");
+        if (!w || seen.has(w + t)) return; seen.add(w + t); out.push({ w, t, d, p });
+      }));
+      if (DATA.sn && DATA.sn.word) out.push({ w: DATA.sn.word.w, t: DATA.sn.word.tr, d: DATA.sn.word.d, p: "Part IX" });
+      return out.sort((a, b) => a.w.localeCompare(b.w));
+    } catch (e) { return []; }
+  })();
   const title = (f, id) => (INDEX.find(x => x.f === f && x.id === id) || {}).t || id;
 
   /* ---------- progress ring ---------- */
@@ -128,7 +141,7 @@
     const btn = $("#studyBtn"); if (!btn) return;
     drawer = h("aside", { class: "drawer", id: "studyDrawer", "aria-label": "My study", hidden: true },
       h("div", { class: "dr-head" }, h("h2", { text: "My study" }), h("button", { class: "dr-x", type: "button", "aria-label": "Close", text: "×", onclick: () => toggle(false) })),
-      h("div", { class: "dr-tabs", role: "tablist" }, ...[["progress", "Progress"], ["review", "Review"], ["saved", "Saved"], ["notes", "Notes"]].map(([k, n]) => (tabs[k] = h("button", { class: "tab", role: "tab", type: "button", "aria-selected": String(k === activeTab), text: n, onclick: () => { activeTab = k; renderDrawer(); } })))),
+      h("div", { class: "dr-tabs", role: "tablist" }, ...[["progress", "Progress"], ["review", "Review"], ["glossary", "Glossary"], ["saved", "Saved"], ["notes", "Notes"]].map(([k, n]) => (tabs[k] = h("button", { class: "tab", role: "tab", type: "button", "aria-selected": String(k === activeTab), text: n, onclick: () => { activeTab = k; renderDrawer(); } })))),
       h("div", { class: "dr-body", id: "drBody" }),
       h("p", { class: "dr-foot", text: "Progress, saves and notes stay in this browser on this device." }));
     const veil = h("div", { class: "dr-veil", hidden: true, onclick: () => toggle(false) });
@@ -167,6 +180,12 @@
       const show = h("button", { class: "btn primary small", type: "button", text: "Show the verse", onclick: () => { verse.hidden = false; acts.hidden = false; show.hidden = true; } });
       acts.append(h("button", { class: "btn small", type: "button", text: "Got it ✓", onclick: () => { S.known[c.r] = Date.now(); save(); renderDrawer(); } }), h("button", { class: "btn small", type: "button", text: "Again ↻", onclick: () => renderDrawer() }));
       body.append(h("div", { class: "rv-card" }, h("small", { class: "eyebrow", text: c.p }), h("span", { class: "ref", text: c.r }), h("p", { class: "muted small", text: "Say the verse from memory, then check." }), verse, show, acts));
+    }
+    if (activeTab === "glossary") {
+      const q = h("input", { type: "search", class: "gl-q", placeholder: `Search ${GLOSS.length} Hebrew and Greek words…`, "aria-label": "Search the glossary" });
+      const list = h("ul", { class: "dr-list gl" });
+      const draw = () => { const v = q.value.trim().toLowerCase(); list.replaceChildren(...GLOSS.filter(g => !v || (g.w + " " + g.t + " " + g.d).toLowerCase().includes(v)).map(g => h("li", {}, h("div", { class: "gl-item" }, h("b", { text: g.w }), h("span", { text: g.t }), h("p", { text: g.d }), h("small", { text: g.p }))))); };
+      q.addEventListener("input", draw); body.append(q, list); draw(); setTimeout(() => q.focus(), 50); return;
     }
     if (activeTab === "saved") {
       const ks = Object.keys(S.saved).sort((a, b) => S.saved[b].ts - S.saved[a].ts);
