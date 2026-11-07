@@ -30,7 +30,7 @@
   const doneOn = f => INDEX.filter(x => x.f === f && S.done[f + "#" + x.id]).length;
   const pct = f => { const t = totals(f); return t ? doneOn(f) / t : 0; };
   /* memory verses from every part, for the Review tab */
-  const PARTS_MEM = [["kp", "Part IV · Kings and Priests"], ["pr", "Part V · Prophets"], ["ky", "Part VI · The Keys"], ["sw", "Part VII · Sowing and Reaping"], ["wf", "Part VIII · Spiritual Warfare"], ["sn", "Part IX · Heaven and Earth United"]];
+  const PARTS_MEM = [["kp", "Part IV · Kings and Priests"], ["pr", "Part V · Prophets"], ["ky", "Part VI · The Keys"], ["sw", "Part VII · Sowing and Reaping"], ["wf", "Part VIII · Spiritual Warfare"], ["sn", "Part IX · Heaven and Earth United"], ["mn", "Part X · Renewing the Mind"]];
   const CARDS = (() => { try { return PARTS_MEM.flatMap(([k, p]) => ((typeof DATA !== "undefined" && DATA[k] && DATA[k].memory) || []).map(([r, v]) => ({ r, v, p }))); } catch (e) { return []; } })();
   const title = (f, id) => (INDEX.find(x => x.f === f && x.id === id) || {}).t || id;
 

@@ -1213,3 +1213,79 @@ ul.ticks li::before { content: "✓"; position: absolute; left: 4px; color: var(
 .sc-done { display: flex; align-items: center; gap: 16px; }
 .sc-done b { font-size: 1.2rem; } .sc-done p { margin: 4px 0; }
 .rail.dense { gap: 3px; } .rail.dense a { height: 13px; } .rail.dense i { width: 6px; height: 6px; } .rail.dense a.on i { width: 10px; height: 10px; box-shadow: 0 0 0 3px var(--glow); }
+
+/* ================= Part X: renewing the mind ================= */
+.verse-words { display: flex; flex-wrap: wrap; gap: 8px; }
+.vw { display: grid; gap: 2px; text-align: left; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; cursor: pointer; border-bottom: 4px solid var(--c, var(--accent)); transition: all .2s; }
+.vw small { font-style: italic; color: var(--muted); font-size: .78rem; }
+.vw.vw-out { --c: var(--flame); } .vw.vw-in { --c: var(--eden); }
+.vw:hover { transform: translateY(-2px); }
+.vw[aria-pressed="true"] { background: color-mix(in srgb, var(--c) 14%, var(--surface)); box-shadow: inset 0 0 0 2px var(--c); }
+#mnMeta svg .mm-conf, #mnMeta svg .mm-trans { transition: opacity .5s; }
+#mnMeta svg:not([data-mode="out"]) .mm-conf { opacity: 0; pointer-events: none; }
+#mnMeta svg[data-mode="out"] .mm-trans { opacity: 0; }
+#mnMeta svg[data-mode="out"] .mould { animation: press 2.4s ease-in-out infinite; }
+#mnMeta svg[data-mode="out"] .blob { animation: squash 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom center; }
+@keyframes press { 0%, 100% { transform: translateY(0); } 45%, 60% { transform: translateY(42px); } }
+@keyframes squash { 0%, 100% { transform: none; } 45%, 60% { transform: scale(1.25, .55); } }
+.mt-s0, .mt-s1, .mt-s2 { transition: opacity .7s, transform .7s; transform-box: fill-box; transform-origin: center; opacity: .12; }
+#mnMeta svg[data-stage="0"] .mt-s0, #mnMeta svg[data-stage="1"] .mt-s1, #mnMeta svg[data-stage="2"] .mt-s2 { opacity: 1; }
+#mnMeta svg[data-stage="2"] .mt-s2 { transform: translateY(-14px); }
+.wings { animation: flap .6s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+@keyframes flap { to { transform: scaleX(.55); } }
+.heb-tr { font-style: italic; }
+.lie-list { display: grid; gap: 8px; align-content: start; }
+.lie-btn { display: flex; gap: 10px; align-items: center; text-align: left; font: inherit; font-weight: 600; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; cursor: pointer; transition: all .2s; }
+.lie-btn .lx { width: 24px; height: 24px; flex: none; display: grid; place-items: center; border-radius: 50%; background: color-mix(in srgb, var(--flame) 16%, transparent); color: var(--flame); font-weight: 800; font-size: .8rem; transition: all .3s; }
+.lie-btn:hover { border-color: var(--accent); transform: translateX(3px); }
+.lie-btn[aria-pressed="true"] { background: var(--glow); box-shadow: inset 0 0 0 2px var(--eden); }
+.lie-btn[aria-pressed="true"] .lx { background: var(--eden); color: #fff; transform: rotate(90deg); }
+.lie-card, .truth-card { transform-box: view-box; transition: none; }
+.lie-card .crack { stroke-dasharray: 160; stroke-dashoffset: 160; }
+#mnSwap svg.go .lie-card .crack { animation: crackIn .4s ease-out forwards; }
+@keyframes crackIn { to { stroke-dashoffset: 0; } }
+#mnSwap svg.go .lie-card { animation: lieFall 1s cubic-bezier(.5,0,.8,.4) .5s forwards; }
+@keyframes lieFall { to { transform: translateY(120px) rotate(6deg); opacity: 0; } }
+.truth-card { opacity: 0; }
+#mnSwap svg.go .truth-card { animation: truthRise .8s cubic-bezier(.2,.8,.2,1) 1.1s forwards; }
+@keyframes truthRise { from { transform: translateY(30px) scale(.9); opacity: 0; } to { transform: none; opacity: 1; } }
+.lie-line { margin: 0; color: var(--flame); font-weight: 600; }
+.orb { filter: drop-shadow(0 0 8px currentColor); transition: fill .3s; }
+.gbar, .gmark { transition: fill .3s; }
+.veil { transition: transform 1s cubic-bezier(.3,.7,.2,1), opacity 1s; transform-box: fill-box; transform-origin: top center; }
+.veil.off { transform: translateY(-80px) scaleY(.3); opacity: 0; }
+#mnGlory svg g, #mnGlory svg circle, #mnGlory svg line { transition: opacity .8s, r .8s, fill .8s, fill-opacity .8s; }
+.mind-switch { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.switch { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; font: inherit; font-weight: 800; cursor: pointer; color: var(--ink); }
+.sw-knob { position: relative; width: 52px; height: 28px; border-radius: 14px; background: color-mix(in srgb, var(--flame) 30%, var(--line)); transition: background .3s; }
+.sw-knob::after { content: ""; position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%; background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,.25); transition: transform .3s cubic-bezier(.3,1.4,.5,1); }
+.switch[aria-checked="true"] .sw-knob { background: var(--eden); }
+.switch[aria-checked="true"] .sw-knob::after { transform: translateX(24px); }
+.switch .sw-l { color: var(--flame); } .switch .sw-r { color: var(--muted); }
+.switch[aria-checked="true"] .sw-l { color: var(--muted); } .switch[aria-checked="true"] .sw-r { color: var(--eden); }
+.mindset { display: grid; gap: 8px; }
+.ms-row { display: grid; grid-template-columns: 140px minmax(0, 1fr) auto; gap: 14px; align-items: center; text-align: left; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--flame); border-radius: 12px; padding: 12px 16px; cursor: pointer; transition: border-color .4s var(--d), background .4s var(--d); }
+.mindset.son .ms-row { border-left-color: var(--eden); background: color-mix(in srgb, var(--eden) 7%, var(--surface)); }
+.ms-flip { display: grid; perspective: 800px; }
+.ms-face { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; transition: transform .6s cubic-bezier(.3,.7,.2,1) var(--d); }
+.ms-son { transform: rotateX(180deg); color: var(--eden); font-weight: 600; }
+.ms-orphan { color: var(--ink); }
+.mindset.son .ms-orphan { transform: rotateX(-180deg); }
+.mindset.son .ms-son { transform: none; }
+.ms-row .ref { white-space: nowrap; }
+@media (max-width: 720px) { .ms-row { grid-template-columns: minmax(0, 1fr); gap: 4px; } .ms-row .ref { white-space: normal; } }
+.chk { display: grid; grid-template-columns: auto auto minmax(0, 1fr); align-items: center; gap: 10px; padding: 10px 4px; border-bottom: 1px dashed var(--line); cursor: pointer; }
+.chk input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.chk-box { width: 24px; height: 24px; border-radius: 7px; border: 2px solid var(--line); display: grid; place-items: center; transition: all .25s; }
+.chk input:checked + .chk-box { background: var(--eden); border-color: var(--eden); }
+.chk input:checked + .chk-box::after { content: "✓"; color: #fff; font-weight: 800; font-size: .85rem; }
+.chk input:focus-visible + .chk-box { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chk b { display: block; font-weight: 600; } .chk small.ref { font-size: .78rem; }
+.chk input:checked ~ span b { text-decoration: line-through; color: var(--muted); }
+.chk > span:last-child { grid-column: 3; }
+.chk input { grid-column: 1; }
+#mnMeans svg, #mnGlory svg { max-height: 540px; }
+@media (prefers-reduced-motion: reduce) {
+  #mnSwap svg.go .lie-card { opacity: 0; }
+  #mnSwap svg.go .truth-card { opacity: 1; }
+}

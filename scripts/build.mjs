@@ -21,12 +21,13 @@ const PAGES = [
   { id: "sowing", file: "sowing.html", title: "Sowing and Reaping · Where Heaven Meets Earth", nav: "Part VII · Sowing and Reaping" },
   { id: "warfare", file: "warfare.html", title: "Spiritual Warfare · Where Heaven Meets Earth", nav: "Part VIII · Spiritual Warfare" },
   { id: "sons", file: "sons.html", title: "Heaven and Earth United · Where Heaven Meets Earth", nav: "Part IX · Heaven and Earth United" },
+  { id: "mind", file: "mind.html", title: "Renewing the Mind · Where Heaven Meets Earth", nav: "Part X · Renewing the Mind" },
   { id: "connections", file: "connections.html", title: "Connections and Quiz · Where Heaven Meets Earth", nav: "Connections & Quiz" }
 ];
 
 const css = read("styles.css");
 const tag = (f, part) => read(f) + `\n;DATA.quiz.forEach(q => { q.part = q.part || "${part}"; });\n`;
-const js = [tag("data.js", "core"), tag("data-serpent.js", "serpent"), tag("data-kings.js", "kings"), tag("data-prophets.js", "prophets"), tag("data-keys.js", "keys"), tag("data-sowing.js", "sowing"), tag("data-supply.js", "kings"), tag("data-warfare.js", "warfare"), tag("data-sons.js", "sons"), tag("data-far.js", "warfare"), read("app.js").replace("/*@@KINGS@@*/", () => read("app-kings.js")).replace("/*@@PROPHETS@@*/", () => read("app-prophets.js")).replace("/*@@KEYS@@*/", () => read("app-keys.js")).replace("/*@@SOWING@@*/", () => read("app-sowing.js")).replace("/*@@SUPPLY@@*/", () => read("app-supply.js")).replace("/*@@WARFARE@@*/", () => read("app-warfare.js")).replace("/*@@SONS@@*/", () => read("app-sons.js")).replace("/*@@FAR@@*/", () => read("app-far.js"))].join("\n");
+const js = [tag("data.js", "core"), tag("data-serpent.js", "serpent"), tag("data-kings.js", "kings"), tag("data-prophets.js", "prophets"), tag("data-keys.js", "keys"), tag("data-sowing.js", "sowing"), tag("data-supply.js", "kings"), tag("data-warfare.js", "warfare"), tag("data-sons.js", "sons"), tag("data-far.js", "warfare"), tag("data-mind.js", "mind"), read("app.js").replace("/*@@KINGS@@*/", () => read("app-kings.js")).replace("/*@@PROPHETS@@*/", () => read("app-prophets.js")).replace("/*@@KEYS@@*/", () => read("app-keys.js")).replace("/*@@SOWING@@*/", () => read("app-sowing.js")).replace("/*@@SUPPLY@@*/", () => read("app-supply.js")).replace("/*@@WARFARE@@*/", () => read("app-warfare.js")).replace("/*@@SONS@@*/", () => read("app-sons.js")).replace("/*@@FAR@@*/", () => read("app-far.js")).replace("/*@@MIND@@*/", () => read("app-mind.js"))].join("\n");
 const jsAll = () => js + "\nwindow.SITE_INDEX = " + JSON.stringify(SITE_INDEX) + ";\nwindow.SITE_PAGES = " + JSON.stringify(PAGES.map(p => ({ id: p.id, f: p.file, nav: p.nav }))) + ";\n" + read("fx.js") + "\n" + read("study.js");
 // Search index: every section of every page, for the search palette
 const strip = h => h.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();

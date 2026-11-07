@@ -1,6 +1,6 @@
 # Where Heaven Meets Earth
 
-An interactive, animated Bible study in nine parts:
+An interactive, animated Bible study in ten parts:
 
 - **Part I: The Garden-Temple.** Eden as God's sanctuary on his mountain, Adam as priest-king, the Tabernacle as a portable Eden, the Ark of the Covenant and its journey, Solomon's Temple, and the New Jerusalem as Eden fulfilled.
 - **Part II: The Serpent and the Seed.** The Hebrew *nāḥāš* (serpent, diviner, shining one), why the serpent of Genesis 3 reads as a divine being inside God's sanctuary, Ezekiel 28's fallen guardian cherub and the high priest's breastpiece, Isaiah 14's "Day Star", seraphim as burning serpents, the curse decoded, the war of the two seeds from Genesis 3:15 to Revelation 12, the bronze serpent and John 3:14, and "that ancient serpent".
@@ -11,6 +11,7 @@ An interactive, animated Bible study in nine parts:
 - **Part VII: Sowing and Reaping** (a detailed study). God's seed principle from Genesis 1 and 8 to the final harvest, eight laws of the harvest, the four soils, the principle traced through Scripture, Christ the seed that died, the connection to blessing, grace and the great exchange, why kingdom principles can feel like manipulation, and objections answered.
 - **Part VIII: Spiritual Warfare and Dominion** (a detailed study). Ephesians 6:12 and the layered battlefield, authority (*exousia*), power (*dynamis*), dominion and strongholds, the chain of authority, the armour of God as God's own armour, what Scripture shows we may speak to and command, and binding and loosing ("shall have been bound in heaven"). It also covers **speaking and prophesying over our lives** (the power of declaration, a declaration builder, and declaration compared with positive thinking and witchcraft) and **breaking curses, witchcraft and bondages** (from the curse to "no more curse", Proverbs 26:2, an evidence map, the Bible's own verbs for "cancel" and "break", and a path to freedom). It adds **seated in the heavenly places** (sit, walk, stand; every spiritual blessing of Ephesians 1:3–14; our dual reality; co-heirs with Christ and the *huios* difference) and **far above all** (the four power words of Ephesians 1:19, the five things Christ is above, "the feet are in the body", Psalm 110:1 "sit … until", every enemy to be put under his feet, death as the last enemy and what the body does about it now, living from above in daily life, and the body's assignment). Then come errors and extremes, sons, priests and kings in battle, Jesus' "It is written", a daily battle rhythm, and objections answered.
 - **Part IX: Heaven and Earth United** (the capstone). Ephesians 1:10 and the heaven–earth overlap through the whole story, *anakephalaiōsis* (summing up all things under one head), how every part of the study fits, God's initial plan of Eden filling the earth, Romans 8 and the revealing of the sons of God, *nēpios*, *teknon* and *huios*, the body of Christ, what sons and daughters do as kings and priests, heaven in every sphere of life, and objections answered.
+- **Part X: Renewing the Mind and Transformation** (a detailed study). Romans 12:2 word by word with a conformed/transformed metamorphosis animation, the Bible's vocabulary of the inner life, how a thought becomes a life (Romans 8:5–6), taking every thought captive, a lie-for-truth exchange tool, the means God uses to renew the mind, the Philippians 4:8 thought filter, 2 Corinthians 3:18 "from one degree of glory to another", moving from an orphan mindset to a son's, a daily renewal tracker, and objections answered.
 
 ## Interactive pieces
 
@@ -52,6 +53,7 @@ Text is set in **Avenir Next**. Avenir Next is a commercial typeface: it is used
 | `sowing.html` | Part VII: Sowing and Reaping |
 | `warfare.html` | Part VIII: Spiritual Warfare and Dominion |
 | `sons.html` | Part IX: Heaven and Earth United |
+| `mind.html` | Part X: Renewing the Mind |
 | `connections.html` | Connections web, quiz and further reading |
 
 Each part page opens with an "on this page" list of its sections and ends with previous/next links.
@@ -80,6 +82,7 @@ Source lives in `src/`:
 | `src/data-warfare.js`, `src/app-warfare.js` | Content and interactive code for Part VIII: spiritual warfare, declarations, curses |
 | `src/data-sons.js`, `src/app-sons.js` | Content and interactive code for Part IX and the “seated with Christ” sections of Part VIII |
 | `src/data-far.js`, `src/app-far.js` | Part VIII add-on: far above all, enemies under his feet, the last enemy |
+| `src/data-mind.js`, `src/app-mind.js` | Content and interactive code for Part X: renewing the mind |
 | `src/study.js` | Learning layer: parts menu, progress, saves, notes, My study drawer, journey map |
 | `src/app.js` | Interactive behaviour |
 
