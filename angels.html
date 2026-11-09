@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Heavenly Host · Where Heaven Meets Earth</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="An interactive Bible study: the garden-temple, the serpent and the seed, and Babel, Babylon and the City of God.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Noto+Serif+Hebrew:wght@500&family=Noto+Sans+Cuneiform&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="page" data-page="angels">
+<header class="topbar" id="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Where Heaven Meets Earth, home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/><circle cx="16" cy="16" r="9" fill="none" stroke="var(--accent)" stroke-width="1.5"/><path d="M6 25 L16 9 L26 25 Z" fill="var(--eden)"/><circle cx="16" cy="10" r="3" fill="var(--accent)"/></svg>
+      <span>Where Heaven Meets Earth</span>
+    </a>
+    <button class="parts-btn" id="partsBtn" type="button" aria-expanded="false" aria-controls="partsMenu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+      <span class="pb-l">Parts</span><span class="pb-cur" id="pbCur"></span>
+      <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9 l6 6 l6 -6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+    <button class="search-btn" id="searchBtn" type="button" aria-label="Search the study (Ctrl+K)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 16 L21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <span class="sl">Search</span><kbd>⌘K</kbd>
+    </button>
+    <button class="study-btn" id="studyBtn" type="button" aria-expanded="false" aria-controls="studyDrawer" aria-label="My study: progress, saved sections and notes">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3 h12 v18 l-6 -4 l-6 4 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+      <span class="sl">My study</span><span class="badge" id="studyCount" hidden></span>
+    </button>
+    <button class="scheme-btn" id="schemeBtn" aria-expanded="false" aria-controls="schemePanel">
+      <span class="dots" aria-hidden="true"><i style="background:var(--eden)"></i><i style="background:var(--accent)"></i><i style="background:var(--babel)"></i></span>
+      <span class="lbl">Colours</span>
+    </button>
+  </div>
+  <div class="progress" id="progress"></div>
+  <div class="parts-menu" id="partsMenu" hidden>
+    <div class="wrap">
+      <p class="eyebrow">The study · choose a part</p>
+      <nav class="nav" aria-label="Pages">
+        <a href="index.html" data-p="home" style="--pc: var(--accent)"><span class="pn">⌂</span><span class="pm-t"><b>Home</b><small>Start and your journey</small></span><span class="pm-ring" data-f="index.html"></span></a>
+        <a href="garden.html" data-p="garden" style="--pc: var(--eden)"><span class="pn">I</span><span class="pm-t"><b>The Garden-Temple</b><small>Eden, the tabernacle, and your body as a temple</small></span><span class="pm-ring" data-f="garden.html"></span></a>
+        <a href="serpent.html" data-p="serpent" style="--pc: var(--flame)"><span class="pn">II</span><span class="pm-t"><b>The Serpent and the Seed</b><small>Genesis 3:15 to Revelation 12</small></span><span class="pm-ring" data-f="serpent.html"></span></a>
+        <a href="babel.html" data-p="babel" style="--pc: var(--babel)"><span class="pn">III</span><span class="pm-t"><b>Babel and the City of God</b><small>Ziggurats, Babylon and Pentecost</small></span><span class="pm-ring" data-f="babel.html"></span></a>
+        <a href="kings.html" data-p="kings" style="--pc: var(--accent)"><span class="pn">IV</span><span class="pm-t"><b>Kings and Priests</b><small>The royal priesthood, plus Supply and Support</small></span><span class="pm-ring" data-f="kings.html"></span></a>
+        <a href="prophets.html" data-p="prophets" style="--pc: var(--eden)"><span class="pn">V</span><span class="pm-t"><b>Prophets and the Fivefold</b><small>Equipping kings and priests now</small></span><span class="pm-ring" data-f="prophets.html"></span></a>
+        <a href="keys.html" data-p="keys" style="--pc: var(--accent)"><span class="pn">VI</span><span class="pm-t"><b>The Keys of the Kingdom</b><small>The key of David, binding and loosing</small></span><span class="pm-ring" data-f="keys.html"></span></a>
+        <a href="sowing.html" data-p="sowing" style="--pc: var(--eden)"><span class="pn">VII</span><span class="pm-t"><b>Sowing and Reaping</b><small>Seed, harvest and blessing</small></span><span class="pm-ring" data-f="sowing.html"></span></a>
+        <a href="warfare.html" data-p="warfare" style="--pc: var(--flame)"><span class="pn">VIII</span><span class="pm-t"><b>Spiritual Warfare</b><small>Dominion, declarations, far above all</small></span><span class="pm-ring" data-f="warfare.html"></span></a>
+        <a href="sons.html" data-p="sons" style="--pc: var(--accent)"><span class="pn">IX</span><span class="pm-t"><b>Heaven and Earth United</b><small>Ephesians 1:10, the body and the sons</small></span><span class="pm-ring" data-f="sons.html"></span></a>
+        <a href="mind.html" data-p="mind" style="--pc: var(--babel)"><span class="pn">X</span><span class="pm-t"><b>Renewing the Mind</b><small>Transformation from the inside out</small></span><span class="pm-ring" data-f="mind.html"></span></a>
+        <a href="angels.html" data-p="angels" style="--pc: var(--flame)"><span class="pn">XI</span><span class="pm-t"><b>The Heavenly Host</b><small>Cherubim, seraphim, wheels, with a fact-check</small></span><span class="pm-ring" data-f="angels.html"></span></a>
+        <a href="connections.html" data-p="connections" style="--pc: var(--babel)"><span class="pn">∞</span><span class="pm-t"><b>Connections &amp; Quiz</b><small>The whole web, then test yourself</small></span><span class="pm-ring" data-f="connections.html"></span></a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="scheme-panel" id="schemePanel" hidden role="dialog" aria-label="Colour scheme">
+  <h4>Colour scheme</h4>
+  <div class="scheme-grid" id="schemeGrid"></div>
+  <div class="accent-row">
+    <label for="accentPick">Custom highlight colour</label>
+    <input type="color" id="accentPick" value="#a87a1c">
+  </div>
+  <button class="linkish" id="accentReset" type="button">Reset highlight to scheme default</button>
+</div>
+
+<main id="main">
+<!-- ============ PART XI: THE HEAVENLY HOST ============ -->
+<div class="part-banner" id="angels">
+  <div class="wrap">
+    <div class="part-num" aria-hidden="true">XI</div>
+    <div>
+      <p class="eyebrow">Part eleven · a field guide, with a fact-check</p>
+      <h2>The Heavenly Host: A Field Guide to Biblical Angels</h2>
+      <p>“Above him stood the seraphim. Each had six wings” (<span class="ref">Isa 6:2</span>). Scripture has a whole vocabulary for the beings around God’s throne: messengers, holy ones, cherubim, seraphim, wheels, watchers, princes and powers. This part looks at what each one is, where it appears, what the ancient world helps us see, and how ideas about angels grew over the centuries. It also checks a popular video’s claims against other sources, without naming its presenter.</p>
+      <nav class="toc" aria-label="On this page"></nav>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="an-word" data-toc="“Angel” is a job title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Hebrew malʾāk · Greek angelos · animated badge</p>
+      <h2>“Angel” is a job title, not a species</h2>
+      <p>Malʾāk and angelos both mean messenger. The Bible gives the title to humans and to spirits alike. Select each messenger and watch who receives the badge.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="anBadge"></div>
+      <div class="panel" id="anBadgePanel" aria-live="polite"></div>
+    </div>
+    <div class="chips mt" id="anMessengers" role="group" aria-label="Messengers in Scripture"></div>
+  </div>
+</section>
+
+<section class="block alt" id="an-council" data-toc="The heavenly council">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Psalm 82 · 89 · 1 Kings 22:19 · council diagram</p>
+      <h2>Who they are: the council around the throne</h2>
+      <p>God enthroned, a court of holy ones around him. “Angel” is what one of them is called when he is sent. Select each title.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="anCouncil"></div>
+      <div class="panel" id="anCouncilPanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="an-field" data-toc="Field guide">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Nine kinds of heavenly beings · illustrated field guide</p>
+      <h2>A field guide to the heavenly host</h2>
+      <p>Select a being to see its illustration, where it appears, what it looks like, what it does, and whether the Bible actually calls it an angel.</p>
+    </div>
+    <div class="field-grid" id="anField"></div>
+    <div class="field-detail mt" id="anFieldPanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="block alt" id="an-cherub" data-toc="Cherubim">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Genesis 3:24 → Revelation 4 · timeline and scale model</p>
+      <h2>Cherubim: the guardians at God’s door</h2>
+      <p>From Eden’s gate to Solomon’s inner room, cherubim guard God’s presence. Follow the timeline, then stand a person beside Solomon’s golden giants for scale.</p>
+    </div>
+    <div class="stage scroll-x" id="anCherubLine"></div>
+    <div class="panel mt" id="anCherubPanel" aria-live="polite"></div>
+    <div class="split mt">
+      <div class="stage" id="anScale"></div>
+      <div id="anLamassu"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="an-faces" data-toc="Four faces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Ezekiel 1:10 · 10:14 · rotating figure</p>
+      <h2>Man, lion, ox, eagle: why these four faces?</h2>
+      <p>Watch the four faces turn, then compare three ways readers have explained them.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="anFaces"></div>
+      <div class="panel">
+        <div class="chips" id="anFaceChips" role="group" aria-label="Choose a reading"></div>
+        <div id="anFacePanel" aria-live="polite"></div>
+      </div>
+    </div>
+    <div class="split even mt">
+      <div class="prose reveal">
+        <p>A curious detail: when Ezekiel describes the faces again (<span class="ref">Ezek 10:14</span>), the ox face is replaced by “the face of a cherub”. If cherubim were pictured as bull-bodied guardians, the two descriptions mean the same thing. The oldest Greek translation leaves the verse out, as though scribes noticed the puzzle.</p>
+        <p>Revelation gathers it all together: four living creatures “like a lion … like an ox … with the face of a man … like an eagle in flight”, each with six wings and full of eyes (<span class="ref">Rev 4:7–8</span>).</p>
+      </div>
+      <div id="anEzekiel"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="an-wheels" data-toc="Wheels within wheels">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Ezekiel 1:15–21 · gyroscope animation · from vehicle to meme</p>
+      <h2>Wheels within wheels: vehicle, angel, meme</h2>
+      <p>The ophanim are simply wheels on God’s throne-chariot. Watch them turn, then step through how they were promoted.</p>
+    </div>
+    <div class="split">
+      <div class="stage" id="anWheel"></div>
+      <div class="panel">
+        <div class="chips" id="anWheelChips" role="group" aria-label="Steps"></div>
+        <div id="anWheelPanel" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="an-seraph" data-toc="Seraphim">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Numbers 21 · Isaiah 6 · Egypt’s uraeus · animation</p>
+      <h2>Seraphim: the burning serpents who cover their faces</h2>
+      <p>Press the button to watch a seraph take a coal from the altar and touch Isaiah’s lips. Then follow the word śārāp through Scripture.</p>
+    </div>
+    <div class="split">
+      <div class="stack">
+        <div class="stage" id="anSeraph"></div>
+        <div class="htl-controls" style="margin-top:0"><button class="btn primary small" id="anCoal" type="button">“Your guilt is taken away” ▸</button> <a class="btn small" href="serpent.html">The serpent in Part II →</a></div>
+      </div>
+      <div class="stack">
+        <div class="chips" id="anSeraphChips" role="group" aria-label="Steps"></div>
+        <div class="panel" id="anSeraphPanel" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="an-princes" data-toc="Michael, Gabriel and the princes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Daniel 10 · Jude 9 · Luke 1 · animated map</p>
+      <h2>Michael, Gabriel and the princes of the nations</h2>
+      <p>Daniel prays; the answer is resisted for 21 days by “the prince of Persia” until Michael comes. Press play to watch the conflict over the map.</p>
+    </div>
+    <div class="split">
+      <div class="stack">
+        <div class="stage" id="anMap"></div>
+        <div class="htl-controls" style="margin-top:0"><button class="btn primary small" id="anMapPlay" type="button">Play Daniel 10 ▸</button> <a class="btn small" href="warfare.html#wf-speak">Spiritual warfare in Part VIII →</a></div>
+      </div>
+      <div class="panel" id="anMapPanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="an-growth" data-toc="How ideas about angels grew">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Daniel → 1 Enoch → Tobit → Dead Sea Scrolls → New Testament → today · timeline</p>
+      <h2>How ideas about angels grew</h2>
+      <p>The Bible gives a handful of mysterious, mostly unnamed beings; later writers named, ranked and filled in details. Then the New Testament pulled back. Select each era.</p>
+    </div>
+    <div class="stage scroll-x" id="anGrowth"></div>
+    <div class="panel mt" id="anGrowthPanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="block alt" id="an-choirs" data-toc="The nine choirs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Pseudo-Dionysius · Gregory the Great · Dante, Paradiso 28 · ranking ladder</p>
+      <h2>The nine choirs: an old, beautiful chart</h2>
+      <p>Around AD 500, a writer arranged every biblical title into nine ranks. Switch between his order and Gregory the Great’s, and watch two ranks trade places.</p>
+    </div>
+    <div class="split">
+      <div class="stack">
+        <div class="chips" id="anChoirToggle" role="group" aria-label="Choose an order"></div>
+        <div class="stage" id="anChoirs"></div>
+      </div>
+      <div class="stack">
+        <div class="panel" id="anChoirPanel" aria-live="polite"></div>
+        <div id="anSistine"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="an-jesus" data-toc="Angels and Jesus">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Hebrews 1 · the Gospels · path</p>
+      <h2>Angels in the life of Jesus, and far below him</h2>
+      <p>Angels appear at every turning point of Jesus’ life, yet Hebrews insists: “to which of the angels has he ever said, ‘You are my Son’?” Follow the path.</p>
+    </div>
+    <div class="stage scroll-x" id="anJesus"></div>
+    <div class="panel mt" id="anJesusPanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="block alt" id="an-myths" data-toc="Myths">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Flip cards · myth and Scripture</p>
+      <h2>Eight angel myths</h2>
+      <p>Flip each myth to see what Scripture and history actually say.</p>
+    </div>
+    <div class="daily-grid" id="anMyths"></div>
+  </div>
+</section>
+
+<section class="block" id="an-review" data-toc="Fact-check review">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The source video compared with Scripture, scholarship and history</p>
+      <h2>Fact-check: how well do the claims hold up?</h2>
+      <p>Each claim from the source video, checked against the biblical text, standard references and historical sources. Filter by verdict.</p>
+    </div>
+    <div class="verdict-meter" id="anMeter"></div>
+    <div class="chips mt" id="anReviewFilter" role="group" aria-label="Filter by verdict"></div>
+    <div class="review-list mt" id="anReview"></div>
+    <h3 class="mt">What the overview leaves out</h3>
+    <div class="grid-3 mt-s" id="anMissing"></div>
+    <div class="callout mt reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L15 9 L22 9 L16.5 13.5 L18.5 21 L12 16.5 L5.5 21 L7.5 13.5 L2 9 L9 9 Z" fill="currentColor"/></svg><div><b>Overall review</b><p>The video is engaging, rooted in the text and honest about which ideas are theories. Its core claims hold up well: “angel” is a job title, the winged beings are not called angels, cherubim are throne guardians, seraphim are fiery serpents, and the nine choirs and the pinhead debate come from later centuries. Three cautions: a few details need nuance (Abaddon in Revelation 9:11 is also a named angel; Uzziah reigned 52 years); the star-chart reading of Ezekiel is attractive but speculative; and some major New Testament themes, such as angels giving the law and worshipping the Son, are left out.</p></div></div>
+  </div>
+</section>
+
+<section class="block alt" id="an-objections" data-toc="Objections">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Fair questions, honest answers</p>
+      <h2>Objections and misunderstandings</h2>
+    </div>
+    <div class="chips" id="anObjFilter" role="group" aria-label="Filter objections"></div>
+    <div class="objs mt" id="anObjections"></div>
+  </div>
+</section>
+
+<section class="block" id="an-study" data-toc="Study guide">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">For personal or group study</p>
+      <h2>Study guide</h2>
+    </div>
+    <div class="grid-2">
+      <div class="stack" id="anQuestions"></div>
+      <div class="memory" id="anMemory"></div>
+    </div>
+    <blockquote class="big mt reveal">“And day and night they never cease to say, ‘Holy, holy, holy, is the Lord God Almighty, who was and is and is to come!’”<cite>Revelation 4:8</cite></blockquote>
+  </div>
+</section>
+
+</main>
+<nav class="pager" aria-label="Previous and next page"><div class="wrap">
+  <a class="pg prev" href="mind.html"><small>← Previous</small><b>Part X · Renewing the Mind</b></a>
+  <a class="pg next" href="connections.html"><small>Next →</small><b>Connections &amp; Quiz</b></a>
+</div></nav>
+<footer>
+  <div class="wrap">
+    <p><b>Where Heaven Meets Earth</b>: an interactive Bible study on the garden-temple, the serpent and the seed, and the two cities.</p>
+    <p>Artwork via Wikimedia Commons (public domain or as credited on each image). Maps and diagrams are simplified illustrations.</p>
+    <p><a href="#top">Back to top ↑</a></p>
+  </div>
+</footer>
+
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>

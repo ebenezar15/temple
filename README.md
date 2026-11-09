@@ -1,6 +1,6 @@
 # Where Heaven Meets Earth
 
-An interactive, animated Bible study in ten parts:
+An interactive, animated Bible study in eleven parts:
 
 - **Part I: The Garden-Temple.** Eden as God's sanctuary on his mountain, Adam as priest-king, the Tabernacle as a portable Eden, the Ark of the Covenant and its journey, Solomon's Temple, and the New Jerusalem as Eden fulfilled. It also includes **Your Body Is a Temple**: the body as a temple through Scripture (Psalm 139, John 2:21, 1 Corinthians 3:16 and 6:19), synchronised temple and cell diagrams with a "journey inward" animation (altar ↔ blood, laver ↔ interstitial fluid, door ↔ membrane, lampstand ↔ mitochondria, ark ↔ nucleus), two tablets and two strands of DNA, animated "by the numbers" counters, a live heart and circulation animation, a zoom from the camp to the tablets and from the body to DNA, the genome as a library, "Scripture says / what we now know" flip cards, and living as a temple.
 - **Part II: The Serpent and the Seed.** The Hebrew *nāḥāš* (serpent, diviner, shining one), why the serpent of Genesis 3 reads as a divine being inside God's sanctuary, Ezekiel 28's fallen guardian cherub and the high priest's breastpiece, Isaiah 14's "Day Star", seraphim as burning serpents, the curse decoded, the war of the two seeds from Genesis 3:15 to Revelation 12, the bronze serpent and John 3:14, and "that ancient serpent".
@@ -12,6 +12,7 @@ An interactive, animated Bible study in ten parts:
 - **Part VIII: Spiritual Warfare and Dominion** (a detailed study). Ephesians 6:12 and the layered battlefield, authority (*exousia*), power (*dynamis*), dominion and strongholds, the chain of authority, the armour of God as God's own armour, what Scripture shows we may speak to and command, and binding and loosing ("shall have been bound in heaven"). It also covers **speaking and prophesying over our lives** (the power of declaration, a declaration builder, and declaration compared with positive thinking and witchcraft) and **breaking curses, witchcraft and bondages** (from the curse to "no more curse", Proverbs 26:2, an evidence map, the Bible's own verbs for "cancel" and "break", and a path to freedom). It adds **seated in the heavenly places** ("heavenly places" pictured as the sanctuary with a tabernacle walk-through; the holy place's lampstand, showbread and incense as the priestly privileges of illumination, fellowship and access; privileges, not powers; sit, walk, stand; every spiritual blessing of Ephesians 1:3–14; our dual reality; co-heirs with Christ and the *huios* difference) and **far above all** (the four power words of Ephesians 1:19, the five things Christ is above, "the feet are in the body", Psalm 110:1 "sit … until", every enemy to be put under his feet, death as the last enemy and what the body does about it now, living from above in daily life, and the body's assignment). Then come errors and extremes, sons, priests and kings in battle, Jesus' "It is written", a daily battle rhythm, and objections answered.
 - **Part IX: Heaven and Earth United** (the capstone). Ephesians 1:10 and the heaven–earth overlap through the whole story, *anakephalaiōsis* (summing up all things under one head), how every part of the study fits, God's initial plan of Eden filling the earth, Romans 8 and the revealing of the sons of God, *nēpios*, *teknon* and *huios*, the body of Christ, what sons and daughters do as kings and priests, heaven in every sphere of life, and objections answered. It closes with **Beyond the Second Veil: Full Union with God**: the veil torn from top to bottom (an illuminated animation from Eden’s cherubim to the open way), the Day of Atonement and Christ entering once for all, an interactive ark (mercy seat, tablets, manna, budded rod), when the way was fully opened, a John 14:20 union motion graphic with seven pictures of union, and “face to face”.
 - **Part X: Renewing the Mind and Transformation** (a detailed study). Romans 12:2 word by word with a conformed/transformed metamorphosis animation, the Bible's vocabulary of the inner life, how a thought becomes a life (Romans 8:5–6), taking every thought captive, a lie-for-truth exchange tool, the means God uses to renew the mind, the Philippians 4:8 thought filter, 2 Corinthians 3:18 "from one degree of glory to another", moving from an orphan mindset to a son's, a daily renewal tracker, and objections answered.
+- **Part XI: The Heavenly Host** (a field guide with a fact-check). “Angel” as a job title (malʾāk, angelos), the council around the throne, an illustrated field guide to nine kinds of heavenly beings, cherubim through Scripture with Solomon’s cherubim to scale, Ezekiel’s four faces and three readings of them, the wheels within wheels from vehicle to angel to meme, the seraphim as burning serpents, Michael, Gabriel and the princes of the nations (Daniel 10), how ideas about angels grew (1 Enoch, Tobit, Jubilees, the Dead Sea Scrolls), the nine choirs, angels in the life of Jesus, eight myths, and a claim-by-claim review of a popular video against Scripture, scholarship and history.
 
 ## Interactive pieces
 
@@ -59,6 +60,7 @@ Text is set in **Avenir Next**. Avenir Next is a commercial typeface: it is used
 | `warfare.html` | Part VIII: Spiritual Warfare and Dominion |
 | `sons.html` | Part IX: Heaven and Earth United |
 | `mind.html` | Part X: Renewing the Mind |
+| `angels.html` | Part XI: The Heavenly Host |
 | `connections.html` | Connections web, quiz and further reading |
 
 Each part page opens with an "on this page" list of its sections and ends with previous/next links.
@@ -91,6 +93,7 @@ Source lives in `src/`:
 | `src/data-sanct.js`, `src/app-sanct.js` | Part VIII add-on: “heavenly places” as the sanctuary (light, bread, incense) |
 | `src/data-body.js`, `src/app-body.js` | Part I add-on: your body is a temple (temple and cell parallels) |
 | `src/data-veil.js`, `src/app-veil.js` | Part IX add-on: the second veil and full union with God |
+| `src/data-angels.js`, `src/app-angels.js` | Content, fact-check and interactive code for Part XI: the heavenly host |
 | `src/study.js` | Learning layer: parts menu, progress, saves, notes, My study drawer, journey map |
 | `src/app.js` | Interactive behaviour |
 

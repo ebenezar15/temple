@@ -30,12 +30,12 @@
   const doneOn = f => INDEX.filter(x => x.f === f && S.done[f + "#" + x.id]).length;
   const pct = f => { const t = totals(f); return t ? doneOn(f) / t : 0; };
   /* memory verses from every part, for the Review tab */
-  const PARTS_MEM = [["bt", "Part I · Your Body Is a Temple"], ["kp", "Part IV · Kings and Priests"], ["pr", "Part V · Prophets"], ["ky", "Part VI · The Keys"], ["sw", "Part VII · Sowing and Reaping"], ["wf", "Part VIII · Spiritual Warfare"], ["sn", "Part IX · Heaven and Earth United"], ["mn", "Part X · Renewing the Mind"]];
+  const PARTS_MEM = [["bt", "Part I · Your Body Is a Temple"], ["kp", "Part IV · Kings and Priests"], ["pr", "Part V · Prophets"], ["ky", "Part VI · The Keys"], ["sw", "Part VII · Sowing and Reaping"], ["wf", "Part VIII · Spiritual Warfare"], ["sn", "Part IX · Heaven and Earth United"], ["mn", "Part X · Renewing the Mind"], ["an", "Part XI · The Heavenly Host"]];
   const CARDS = (() => { try { return PARTS_MEM.flatMap(([k, p]) => ((typeof DATA !== "undefined" && DATA[k] && DATA[k].memory) || []).map(([r, v]) => ({ r, v, p }))); } catch (e) { return []; } })();
   /* glossary of Hebrew and Greek terms gathered from every part */
   const GLOSS = (() => {
     try {
-      const src = [["ky", "words", "Part VI"], ["wf", "powers", "Part VIII"], ["wf", "words", "Part VIII"], ["wf", "verbs", "Part VIII"], ["sc", "glossary", "Part VIII"], ["fa", "power", "Part VIII"], ["fa", "above", "Part VIII"], ["sn", "growth", "Part IX"], ["mn", "words", "Part X"], ["mn", "vocab", "Part X"]];
+      const src = [["ky", "words", "Part VI"], ["wf", "powers", "Part VIII"], ["wf", "words", "Part VIII"], ["wf", "verbs", "Part VIII"], ["sc", "glossary", "Part VIII"], ["fa", "power", "Part VIII"], ["fa", "above", "Part VIII"], ["sn", "growth", "Part IX"], ["mn", "words", "Part X"], ["mn", "vocab", "Part X"], ["an", "glossary", "Part XI"]];
       const out = [], seen = new Set();
       src.forEach(([k, a, p]) => ((DATA[k] && DATA[k][a]) || []).forEach(x => {
         const w = x.w || x.gk, t = x.t || x.n || [x.tr, x.gloss].filter(Boolean).join(" · "), d = (x.d || "").replace(/<[^>]+>/g, "");
